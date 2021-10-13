@@ -22,20 +22,32 @@ Typiquement, en tant qu'utilisateur nous n'intervenons jamais directement sur le
   ↳ :file_folder: `.git`
   
   ↳ ...
+  
+Sur la présente page d'accueil, vous trouverez plus bas une liste des dépôts de la chaire auxquels vous avez accès.
 
-#### Commandes et principe
+#### Fonctionnement de base
 
-Traditionnellement, _git_ prescrit aux utilisateurs un [ensemble de commandes](https://git-scm.com/docs) à exécuter dans une console, à partir de l'intérieur d'un dépôt, pour produire des effets spécifiques.
-Toutefois, les utilisateurs qui ne cherchent qu'à utiliser des fonctionnalités de base de _git_ peuvent aujourd'hui profiter d'interfaces graphiques qui simplifient l'exécution de ces commandes via des boutons et des champs d'entrée de texte.
+_À venir_
+
+#### Commandes principales
+
+Traditionnellement, _git_ prescrit aux utilisateurs un [ensemble de commandes](https://git-scm.com/docs) à exécuter dans une console (par exemple, _Terminal_ sur MacOS ou _CMD_ sur Windows), à partir de l'intérieur d'un dépôt, pour produire des effets spécifiques. Si vous désirez utiliser _git_ localement, sur votre propre ordinateur plutôt que via un fureteur, votre ordinateur aura besoin d'une interface afin d'interpréter les commandes. Les utilisateurs qui ne cherchent qu'à utiliser des fonctionnalités de base de _git_ peuvent aujourd'hui profiter d'interfaces graphiques qui simplifient l'utilisation de _git_ via des boutons et des champs d'entrée de texte (voir plus bas). Si vous désirez quand même explorer l'interface de ligne de commande, vous devrez télécharger la version adéquate pour votre système d'exploitation [ici](https://git-scm.com/download).
+
+- `git init` :
+- `git add` :
+- `git commit` :
+- `git push` :
+- `git merge` :
+- `git rebase` :
 
 ### De _git_ à GitHub
 
-GitHub constitue une plateforme où héberger gratuitement des projets qui utilisent le système _git_.
-Qui plus est, le site propose un ensemble d'outils et de canaux de communications qui s'articulent autour du fonctionnement de _git_
+GitHub constitue une plateforme où nous pouvons héberger gratuitement des projets qui utilisent le système _git_.
+Qui plus est, le site propose un ensemble d'outils et de canaux de communications supplémentaires qui s'articulent autour du fonctionnement de _git_
 pour gérer plus largement les projets et pour faciliter un pont plus directe entre le contenu des projets, les discussions, et la contribution des collaborateurs.
 
 Pour simplifier l'expérience des utilisateurs moins familiers avec les interactions par lignes de commandes,
-GitHub offre aussi une [interface graphique](https://desktop.github.com/) :sparkles:.
+GitHub offre une [interface graphique pour bureau](https://desktop.github.com/) :sparkles: en plus du site ci-présent.
 
 #### _Projects_
 
