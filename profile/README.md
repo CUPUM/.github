@@ -8,14 +8,14 @@ La chaire détient aussi un site-vitrine: :globe_with_meridians:  http://www.une
 
 ### «&nbsp;_Git_&nbsp;» ? Quelques notions de base
 
-[_Git_](https://git-scm.com/) est un système _open source_ de contrôle de version qui permet de gérer rigoureusement les fichiers sources d'un et de conserver le récit des modifications.
+[_Git_](https://git-scm.com/) est un système _open source_ de contrôle de version qui permet de gérer rigoureusement les fichiers sources d'un projet et de conserver le récit complet des versions en enregistrant uniquement les modifications qui les distinguent.
 Ce système a initialement été développé par le créateur de Linux, [Linus Torvalds](https://fr.wikipedia.org/wiki/Linus_Torvalds).
 
 #### Dépôt
 
 Le «&nbsp;dépôt&nbsp;» (ou plus souvent «&nbsp;_repo_&nbsp;» de l'anglais «&nbsp;_repository_&nbsp;») est la base de tous les projets adoptant le système _git_.
 Il s'agit essentiellement d'un répertoire qui contient, en plus des dossiers et documents que nous créons, un dossier `.git` servant entre autres à conserver l'historique des modifications.
-Typiquement, en tant qu'utilisateur nous n'intervenons jamais directement dans le contenu de ce dossier, mais utiliserons plutôt des commandes ou des interfaces graphiques pour déclencher les fonctionnalités ou événements souhaités.
+Typiquement, en tant qu'utilisateur nous n'intervenons jamais directement sur le contenu de ce dossier, mais utiliserons plutôt des commandes ou des interfaces pour déclencher les fonctionnalités ou ajuster les configurations souhaitées.
 
 :file_folder: `Mon-dépôt`
 
@@ -25,7 +25,7 @@ Typiquement, en tant qu'utilisateur nous n'intervenons jamais directement dans l
 
 #### Commandes et principe
 
-Traditionnellement, _git_ prescrit aux utilisateurs un [ensemble de commandes](https://git-scm.com/docs) à exécuter dans une console pour produire des effets spécifiques.
+Traditionnellement, _git_ prescrit aux utilisateurs un [ensemble de commandes](https://git-scm.com/docs) à exécuter dans une console, à partir de l'intérieur d'un dépôt, pour produire des effets spécifiques.
 Toutefois, les utilisateurs qui ne cherchent qu'à utiliser des fonctionnalités de base de _git_ peuvent aujourd'hui profiter d'interfaces graphiques qui simplifient l'exécution de ces commandes via des boutons et des champs d'entrée de texte.
 
 ### De _git_ à GitHub
