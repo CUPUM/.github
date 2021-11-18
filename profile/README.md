@@ -29,16 +29,16 @@ Sur la présente page d'accueil, vous trouverez plus bas une liste des dépôts 
 
 _À venir_
 
-#### Commandes principales
+#### Commandes
 
-Traditionnellement, _git_ prescrit aux utilisateurs un [ensemble de commandes](https://git-scm.com/docs) à exécuter dans une console (par exemple, _Terminal_ sur MacOS ou _CMD_ sur Windows), à partir de l'intérieur d'un dépôt, pour produire des effets spécifiques. Si vous désirez utiliser _git_ localement, sur votre propre ordinateur plutôt que via un fureteur, votre ordinateur aura besoin d'une interface afin d'interpréter les commandes. Les utilisateurs qui ne cherchent qu'à utiliser des fonctionnalités de base de _git_ peuvent aujourd'hui profiter d'interfaces graphiques qui simplifient l'utilisation de _git_ via des boutons et des champs d'entrée de texte (voir plus bas). Si vous désirez quand même explorer l'interface de ligne de commande, vous devrez télécharger la version adéquate pour votre système d'exploitation [ici](https://git-scm.com/download).
+Traditionnellement, _git_ prescrit aux utilisateurs un [ensemble de commandes](https://git-scm.com/docs) à exécuter dans une console (par exemple, _Terminal_ sur MacOS ou _CMD_ sur Windows), à partir de l'intérieur d'un dépôt, pour produire des effets spécifiques. Si vous désirez utiliser _git_ localement, sur votre propre ordinateur plutôt que via un fureteur, votre ordinateur aura besoin d'une interface afin d'interpréter les commandes. Les utilisateurs qui ne cherchent qu'à utiliser des fonctionnalités de base de _git_ peuvent aujourd'hui profiter d'interfaces graphiques qui simplifient l'utilisation de _git_ via des boutons et des champs d'entrée de texte (voir plus bas). Si vous désirez quand même explorer l'interface de ligne de commande, vous devrez [télécharger la version adéquate pour votre système d'exploitation](https://git-scm.com/download).
 
-- `git init` :
-- `git add` :
-- `git commit` :
-- `git push` :
-- `git merge` :
-- `git rebase` :
+Quelques liens utiles pour commencer:
+- [init](https://git-scm.com/docs/git-init/fr)
+- [add](https://git-scm.com/docs/git-add/fr)
+- [status](https://git-scm.com/docs/git-status/fr)
+- [commit](https://git-scm.com/docs/git-commit/fr)
+- [push](https://git-scm.com/docs/git-push/fr)
 
 ### De _git_ à GitHub
 
