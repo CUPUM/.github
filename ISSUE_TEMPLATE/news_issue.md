@@ -1,5 +1,3 @@
-> Draft issue template (view in raw)
-
 --------
 name: News
 about: Production and publication of a news. It will usually be labeled as `communication`.
