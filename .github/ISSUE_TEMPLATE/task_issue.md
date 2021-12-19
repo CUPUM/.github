@@ -20,3 +20,9 @@ Describe this task here
 ## List of actions
 1. [ ] Action 1
 2. [ ] Action 2
+
+
+<!-- Assign task to someone -->
+<!-- Add labels if needed -->
+<!-- Register with project -->
+<!-- Define milestone if needed --> 
