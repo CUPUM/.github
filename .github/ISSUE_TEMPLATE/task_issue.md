@@ -4,9 +4,6 @@ about: A small task that is, most likely, part of an Epic.
 ---
 <!-- Issue title should mirror the Task Title. -->
 
-## Task Title
-Task: Type title here
-
 
 ## Task Description
 Describe this task here
