@@ -6,4 +6,4 @@ Vous êtes présentement sur la page GitHub de la _Chaire UNESCO en paysage urba
 
 :globe_with_meridians: La chaire détient aussi un site-vitrine:  http://www.unesco-paysage.umontreal.ca/
 
-:open_book: Pour consulter des informations plus complètes sur l'utilisation de la plateforme GitHub à la chaire, [visitez le _wiki_](https://github.com/CUPUM/.github/wiki).
+:bookmark_tabs: Pour consulter des informations plus complètes en ce qui concerne l'utilisation de la plateforme GitHub à la chaire, [référez-vous au _wiki_](https://github.com/CUPUM/.github/wiki).
