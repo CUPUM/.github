@@ -12,11 +12,6 @@ about: A task large enough that is needs to be divided into smaller tasks.
 Describe this epic task here
 
 
-## Epic Parent
-<!-- The link below should link to its Epic Parent. -->
-[Parent: Epic Issue Title](https://github.com/cupum/general/issues/1)
-
-
 ## List of Tasks (Complete in order)
 1. [ ] Task 1: Task Title
 2. [ ] Task 2: Task Title
