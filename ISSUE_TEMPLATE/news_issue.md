@@ -1,6 +1,6 @@
 --------
 name: News
-about: Production and publication of a news. It will usually be labeled as `communication`.
+about: Production and publication of a news. It will usually be labeled as communication.
 --------
 
 <!-- Issue title should mirror the News Title. -->
