@@ -37,7 +37,7 @@ After cloning the repo, initialize the project and its dependencies locally:
 #Insert here: procedure for development experience (running dev server, etc.)
 ```
 
-## Preparing a distribution
+## Using this project
 
 ### Building
 
