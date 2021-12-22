@@ -24,7 +24,7 @@
 After cloning the repo, initialize the project and its dependencies locally:
 
 ```bash
-#Insert here: installation procedure
+#Installation procedure
 ```
 
 <!--- Insert here: complimentary information --->
@@ -34,7 +34,7 @@ After cloning the repo, initialize the project and its dependencies locally:
 <!--- What do collaborators have to do/run locally to start developping on this project --->
 
 ```bash
-#Insert here: procedure for development experience (running dev server, etc.)
+#Procedure for development experience (running dev server, etc.)
 ```
 
 ## Using this project
@@ -44,7 +44,7 @@ After cloning the repo, initialize the project and its dependencies locally:
 <!--- Insert here: complimentary information --->
 
 ```bash
-#Insert here: how can collaborators do a build of the project
+#How can collaborators do a build of the project
 ```
 
 ### Previewing or running a build
@@ -52,7 +52,7 @@ After cloning the repo, initialize the project and its dependencies locally:
 <!--- Insert here: complimentary information --->
 
 ```bash
-#Insert here: how can collaborators do a build of the project
+#How can collaborators preview and/or run a build of the project
 ```
 
 ## Deploying
@@ -60,7 +60,7 @@ After cloning the repo, initialize the project and its dependencies locally:
 <!--- Insert here: complimentary information --->
 
 ```bash
-#Insert here: how to publish or deploy the project
+#How to publish or deploy the project
 ```
 
 ## Additionnal ressources
