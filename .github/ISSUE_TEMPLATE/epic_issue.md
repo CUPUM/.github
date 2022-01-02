@@ -13,8 +13,8 @@ Describe this epic task here
 
 
 ## List of Tasks (Complete in order)
-1. [ ] Task 1: Task Title
-2. [ ] Task 2: Task Title
+- [ ] Task: Task Title
+- [ ] Task: Task Title
 
 
 <!-- Assign epic to people concerned -->

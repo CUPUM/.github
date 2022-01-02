@@ -18,8 +18,8 @@ Describe this task here
 
 
 ## List of actions
-1. [ ] Action 1
-2. [ ] Action 2
+- [ ] Action:
+- [ ] Action:
 
 
 <!-- Assign task to someone -->
