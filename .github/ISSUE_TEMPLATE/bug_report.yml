@@ -28,17 +28,17 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: Logs
-      description: Please include browser console and server logs around the time this bug occurred. Please try not to insert an image but copy paste the log text.
-      render: shell
-    validations:
-      required: false
-  - type: textarea
-    attributes:
       label: System Info
       description: Include here any system-specific information that could help identify or justify the bug's source.
       render: shell
       placeholder: OS, Dependency version(s), Browser(s)
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Relevant logs
+      description: Please include any relevant console logs around the time this bug occurred. Try not to insert an image but copy paste the log text.
+      render: shell
     validations:
       required: false
   - type: dropdown
