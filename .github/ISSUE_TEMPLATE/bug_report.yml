@@ -9,12 +9,14 @@ body:
     attributes:
       label: Current Behavior
       description: A concise description of the problematic behavior.
+      placeholder: Current behavior
     validations:
       required: true
   - type: textarea
     attributes:
       label: Expected Behavior
       description: A concise description of the how the feature should behave.
+      placeholder: Expected behavior
     validations:
       required: true
   - type: textarea
@@ -45,7 +47,7 @@ body:
       options:
         - Annoyance
         - Serious (but can be worked around)
-        - Critical (breaks the platform)
+        - Critical (currently breaks usability of the platform)
     validations:
       required: true
   - type: textarea
