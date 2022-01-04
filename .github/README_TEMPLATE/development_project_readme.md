@@ -1,4 +1,3 @@
-
 <!--- Conservez uniquement les sections pertinentes pour le projet --->
 <!--- Vous pouvez ajuster les titres de certaines sections pour mieux représenter la nature du projet --->
 <!--- par exemple: « Running a build » pourrait aussi être « Training the model » --->
