@@ -13,8 +13,8 @@ Describe this epic task here
 
 
 ## List of Tasks (Complete in order)
-- [ ] [Task: Task Title](https://github.com/cupum/_repo_name_/issues/_#_)
-- [ ] [Task: Task Title](https://github.com/cupum/_repo_name_/issues/_#_)
+- [ ] Task: Task Title <!-- Add issue link if exist -->
+- [ ] Task: Task Title <!-- Add issue link if exist -->
 
 
 <!-- Assign epic to people concerned -->
