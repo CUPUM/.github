@@ -2,7 +2,9 @@
 name: Epic
 about: A task large enough that is needs to be divided into smaller tasks.
 ---
-
+<!-- Add task date if meeting or event -->
+<!-- Add dateline if hard deadline -->
+<!-- Ex. “Task: Do this, due Jan. 5” -->
 # Epic Description
 Describe this epic task here
 
