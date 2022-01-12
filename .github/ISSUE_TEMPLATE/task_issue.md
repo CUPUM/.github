@@ -2,10 +2,11 @@
 name: Task
 about: A small task that is, most likely, part of an Epic.
 ---
-<!-- Name task “Task: Name of the task” -->
-<!-- Add task date if meeting or event -->
-<!-- Add dateline if hard deadline -->
+<!-- 1. Name task “Task: Name of the task” -->
+<!-- 2. Add task date if meeting or event -->
+<!-- 3. Add dateline if hard deadline -->
 <!-- Ex. “Task: Do this, due Jan. 5” -->
+
 # Task Description
 Describe this task here
 
@@ -15,7 +16,7 @@ Describe this task here
 - [ ] Action: <!-- Use URL link if exsiting issue in other repo -->
 
 
-<!-- Assign task to someone -->
-<!-- Add labels if needed -->
-<!-- Register with project -->
-<!-- Define milestone if needed --> 
+<!-- 4. Assign task to someone -->
+<!-- 5. Add labels if needed -->
+<!-- 6. Register with project -->
+<!-- 7. Define milestone if needed --> 
