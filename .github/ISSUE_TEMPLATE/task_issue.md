@@ -2,6 +2,10 @@
 name: Task
 about: A small task that is, most likely, part of an Epic.
 ---
+<!-- Name task “Task: Name of the task” -->
+<!-- Add task date if meeting or event -->
+<!-- Add dateline if hard deadline -->
+<!-- Ex. “Task: Do this, due Jan. 5” -->
 # Task Description
 Describe this task here
 
