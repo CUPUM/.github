@@ -2,9 +2,11 @@
 name: Epic
 about: A task large enough that is needs to be divided into smaller tasks.
 ---
-<!-- Add task date if meeting or event -->
-<!-- Add dateline if hard deadline -->
+<!-- 1. Name Epic task-->
+<!-- 2. Add task date if meeting or event -->
+<!-- 3. Add dateline if hard deadline -->
 <!-- Ex. “Task: Do this, due Jan. 5” -->
+
 # Epic Description
 Describe this epic task here
 
@@ -14,7 +16,7 @@ Describe this epic task here
 - [ ] Task: Task Title <!-- Use URL link if inside another repo -->
 
 
-<!-- Assign epic to people concerned -->
-<!-- Add labels if needed -->
-<!-- Register with project -->
-<!-- Define milestone if needed --> 
+<!-- 4. Assign epic to people concerned -->
+<!-- 5. Add labels if needed -->
+<!-- 6. Register with project -->
+<!-- 7. Define milestone if needed -->
