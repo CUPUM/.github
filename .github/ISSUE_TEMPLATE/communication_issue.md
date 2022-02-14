@@ -1,6 +1,6 @@
 ---
 name: communication
-description: Template for preparing communication content
+about: Template for preparing communication content
 ---
 
 # Type de comm
