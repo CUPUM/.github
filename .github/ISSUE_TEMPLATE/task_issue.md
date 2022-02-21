@@ -1,6 +1,7 @@
 ---
 name: Task
 about: A small task that is, most likely, part of an Epic.
+title: Task: [Task name]
 ---
 <!-- 1. Name task “Task: Name of the task” -->
 <!-- 2. Add task date if meeting or event -->
