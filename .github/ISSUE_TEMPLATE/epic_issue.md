@@ -1,6 +1,7 @@
 ---
 name: Epic
 about: A task large enough that is needs to be divided into smaller tasks.
+title: 'Epic: [Epic name]'
 ---
 <!-- 1. Name Epic task-->
 <!-- 2. Add task date if meeting or event -->
