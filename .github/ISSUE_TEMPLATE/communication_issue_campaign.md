@@ -4,11 +4,11 @@ about: Template for preparing communication weekly content
 ---
 
 # Posts completed
-- [ ] #1
-- [ ] #2
-- [ ] #3
-- [ ] #4
-- [ ] #5
+- [ ] 1st
+- [ ] 2nd
+- [ ] 3rd
+- [ ] 4th
+- [ ] 5th
 
 # Preliminaries
 
@@ -24,91 +24,18 @@ about: Template for preparing communication weekly content
 - [ ] Déposer une image représentative du projet [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
 - [ ] Valider la pertinence du visuel
 
-# Monday
-
-## Type de post
-- [ ] Projet
-
-## Publication du presskit sur le site internet
-- [ ] Publication en français
-- [ ] Publication en anglais
-
 ## Produire les visuels pour les réseaux sociaux
 - [ ] Utiliser le [template](https://cirrus.gnp.umontreal.ca/index.php/f/415932) adapté et déposer [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304) selon la nomenclature : nom-projet-aaaammjj
 - [ ] Déposer les visuels [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
-
-## Publication sur les réseaux sociaux
-
-### Écrire une caption
 - [ ] Créer un texte court pour chacun des réseaux sociaux à partir du presskit en utilisant le [template](https://cirrus.gnp.umontreal.ca/index.php/f/414293)
 
-### Hashtags liés à la publication
-
-Ajouter les hastags à la caption : <!-- Définissez les hashtags de la publication -->
-
-### Personnes à tag
-Ajouter personnes concernées à la caption : <!-- Définissez les personnes à identifier sur la publication et trouver leurs réseaux sociaux -->
-
-## Publications
-
-- [ ] Facebook
-- [ ] Instagram
-- [ ] Twitter
-
-# Tuesday
+# 1st post
 
 ## Type de post
-- [ ] Visuel
-- [ ] Vidéo
-- [ ] Citation post
-- [ ] Citation story
-
-## Trouver une image (post visuel)
-- [ ] Déposer le visuel [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
-- [ ] Valider la pertinence du visuel
-
-## Produire les visuels projet ou citation pour les réseaux sociaux
-- [ ] Utiliser le [template](https://cirrus.gnp.umontreal.ca/index.php/f/415932) adapté et déposer [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304) selon la nomenclature : nom-projet-aaaammjj
-- [ ] Déposer les visuels [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
-
-## Publication sur les réseaux sociaux
-
-### Écrire une caption
-- [ ] Créer un texte court pour chacun des réseaux sociaux à partir du presskit en utilisant le [template](https://cirrus.gnp.umontreal.ca/index.php/f/414293)
-
-### Hashtags liés à la publication
-
-Ajouter les hastags à la caption : <!-- Définissez les hashtags de la publication -->
-
-### Personnes à tag
-Ajouter personnes concernées à la caption : <!-- Définissez les personnes à identifier sur la publication et trouver leurs réseaux sociaux -->
-
-## Publications
-
-- [ ] Facebook
-- [ ] Instagram
-- [ ] Twitter
-
-# Wednesday
-
-## Type de post
-- [ ] Visuel
-- [ ] Vidéo
-- [ ] Citation post
-- [ ] Citation story
-
-## Trouver une image (post visuel)
-- [ ] Déposer le visuel [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
-- [ ] Valider la pertinence du visuel
-
-## Produire les visuels projet ou citation pour les réseaux sociaux
-- [ ] Utiliser le [template](https://cirrus.gnp.umontreal.ca/index.php/f/415932) adapté et déposer [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304) selon la nomenclature : nom-projet-aaaammjj
-- [ ] Déposer les visuels [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
-
-## Publication sur les réseaux sociaux
-
-### Écrire une caption
-- [ ] Créer un texte court pour chacun des réseaux sociaux à partir du presskit en utilisant le [template](https://cirrus.gnp.umontreal.ca/index.php/f/414293)
+- [ ] Project
+- [ ] Story
+- [ ] Video
+- [ ] Quote
 
 ### Hashtags liés à la publication
 
@@ -124,26 +51,13 @@ Ajouter personnes concernées à la caption : <!-- Définissez les personnes à 
 - [ ] Twitter
 - [ ] Linkedin
 
-# Thursday
+# 2nd post
 
 ## Type de post
-- [ ] Visuel
-- [ ] Vidéo
-- [ ] Citation post
-- [ ] Citation story
-
-## Trouver une image (post visuel)
-- [ ] Déposer le visuel [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
-- [ ] Valider la pertinence du visuel
-
-## Produire les visuels projet ou citation
-- [ ] Utiliser le [template](https://cirrus.gnp.umontreal.ca/index.php/f/415932) adapté et déposer [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304) selon la nomenclature : nom-projet-aaaammjj
-- [ ] Déposer les visuels [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
-
-## Publication sur les réseaux sociaux
-
-### Écrire une caption
-- [ ] Créer un texte court pour chacun des réseaux sociaux à partir du presskit en utilisant le [template](https://cirrus.gnp.umontreal.ca/index.php/f/414293)
+- [ ] Project
+- [ ] Story
+- [ ] Video
+- [ ] Quote
 
 ### Hashtags liés à la publication
 
@@ -159,35 +73,66 @@ Ajouter personnes concernées à la caption : <!-- Définissez les personnes à 
 - [ ] Twitter
 - [ ] Linkedin
 
-# Friday
+# 3rd post
 
 ## Type de post
-- [ ] Visuel
-- [ ] Vidéo
-- [ ] Citation post
-- [ ] Citation story
-
-## Trouver une image (post visuel)
-- [ ] Déposer le visuel [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
-- [ ] Valider la pertinence du visuel
-
-## Produire les visuels projet ou citation
-- [ ] Utiliser le [template](https://cirrus.gnp.umontreal.ca/index.php/f/415932) adapté et déposer [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304) selon la nomenclature : nom-projet-aaaammjj
-- [ ] Déposer les visuels [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
-
-## Publication sur les réseaux sociaux
-
-### Écrire une caption
-- [ ] Créer un texte court pour chacun des réseaux sociaux à partir du presskit en utilisant le [template](https://cirrus.gnp.umontreal.ca/index.php/f/414293)
+- [ ] Project
+- [ ] Story
+- [ ] Video
+- [ ] Quote
 
 ### Hashtags liés à la publication
 
 Ajouter les hastags à la caption : <!-- Définissez les hashtags de la publication -->
 
-#### Personnes à tag
+### Personnes à tag
 Ajouter personnes concernées à la caption : <!-- Définissez les personnes à identifier sur la publication et trouver leurs réseaux sociaux -->
 
-### Publications
+## Publications
+
+- [ ] Facebook
+- [ ] Instagram
+- [ ] Twitter
+- [ ] Linkedin
+
+# 4th post
+
+## Type de post
+- [ ] Project
+- [ ] Story
+- [ ] Video
+- [ ] Quote
+
+### Hashtags liés à la publication
+
+Ajouter les hastags à la caption : <!-- Définissez les hashtags de la publication -->
+
+### Personnes à tag
+Ajouter personnes concernées à la caption : <!-- Définissez les personnes à identifier sur la publication et trouver leurs réseaux sociaux -->
+
+## Publications
+
+- [ ] Facebook
+- [ ] Instagram
+- [ ] Twitter
+- [ ] Linkedin
+
+# 5th post
+
+## Type de post
+- [ ] Project
+- [ ] Story
+- [ ] Video
+- [ ] Quote
+
+### Hashtags liés à la publication
+
+Ajouter les hastags à la caption : <!-- Définissez les hashtags de la publication -->
+
+### Personnes à tag
+Ajouter personnes concernées à la caption : <!-- Définissez les personnes à identifier sur la publication et trouver leurs réseaux sociaux -->
+
+## Publications
 
 - [ ] Facebook
 - [ ] Instagram
