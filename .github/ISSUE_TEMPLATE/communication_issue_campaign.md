@@ -12,19 +12,21 @@ about: Template for preparing communication weekly content
 
 # Preliminaries
 
-## Production du presstkit
+## Presstkit
 - [ ] Créer un dossier [ici](https://cirrus.gnp.umontreal.ca/index.php/f/405934) selon cette nomenclature : aaaammjj-press_kit-noms-news_title
 - [ ] Rédiger le brouillon en format txt
 - [ ] Valider le brouillon et enregistrer [ici](https://cirrus.gnp.umontreal.ca/index.php/f/405934)
 - [ ] Créer le communiqué de presse en français selon le [template](https://cirrus.gnp.umontreal.ca/index.php/f/412212) et déposer [ici](https://cirrus.gnp.umontreal.ca/index.php/f/405934)
 - [ ] Créer le communiqué de presse en anglais selon le [template](https://cirrus.gnp.umontreal.ca/index.php/f/412212) et déposer [ici](https://cirrus.gnp.umontreal.ca/index.php/f/405934)
 
-## Création du dossier pour les visuels
+# Visuals
+
+### Création du dossier pour les visuels
 - [ ] Créer un dossier [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304) selon cette nomenclature : aaaammjj-projet
 - [ ] Déposer une image représentative du projet [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
 - [ ] Valider la pertinence du visuel
 
-## Produire les visuels pour les réseaux sociaux
+### Produire les visuels pour les réseaux sociaux
 - [ ] Utiliser le [template](https://cirrus.gnp.umontreal.ca/index.php/f/415932) adapté et déposer [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304) selon la nomenclature : nom-projet-aaaammjj
 - [ ] Déposer les visuels [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304)
 - [ ] Créer un texte court pour chacun des réseaux sociaux à partir du presskit en utilisant le [template](https://cirrus.gnp.umontreal.ca/index.php/f/414293)
