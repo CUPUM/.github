@@ -19,7 +19,7 @@ about: Template for preparing communication weekly content
 - [ ] Créer le communiqué de presse en français selon le [template](https://cirrus.gnp.umontreal.ca/index.php/f/412212) et déposer [ici](https://cirrus.gnp.umontreal.ca/index.php/f/405934)
 - [ ] Créer le communiqué de presse en anglais selon le [template](https://cirrus.gnp.umontreal.ca/index.php/f/412212) et déposer [ici](https://cirrus.gnp.umontreal.ca/index.php/f/405934)
 
-# Visuals
+## Visuals
 
 ### Création du dossier pour les visuels
 - [ ] Créer un dossier [ici](https://cirrus.gnp.umontreal.ca/index.php/f/410304) selon cette nomenclature : aaaammjj-projet
