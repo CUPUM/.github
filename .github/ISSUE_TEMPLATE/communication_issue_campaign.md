@@ -4,11 +4,11 @@ about: Template for preparing communication weekly content
 ---
 
 # Posts completed
-- [ ] Monday
-- [ ] Tuesday
-- [ ] Wednesday
-- [ ] Thursday
-- [ ] Friday
+- [ ] #1
+- [ ] #2
+- [ ] #3
+- [ ] #4
+- [ ] #5
 
 # Preliminaries
 
