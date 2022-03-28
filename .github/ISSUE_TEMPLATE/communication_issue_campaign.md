@@ -59,6 +59,7 @@ Ajouter personnes concernées à la caption : <!-- Définissez les personnes à 
 
 ## Type de post
 - [ ] Visuel
+- [ ] Vidéo
 - [ ] Citation post
 - [ ] Citation story
 
@@ -92,6 +93,7 @@ Ajouter personnes concernées à la caption : <!-- Définissez les personnes à 
 
 ## Type de post
 - [ ] Visuel
+- [ ] Vidéo
 - [ ] Citation post
 - [ ] Citation story
 
@@ -126,6 +128,7 @@ Ajouter personnes concernées à la caption : <!-- Définissez les personnes à 
 
 ## Type de post
 - [ ] Visuel
+- [ ] Vidéo
 - [ ] Citation post
 - [ ] Citation story
 
@@ -160,6 +163,7 @@ Ajouter personnes concernées à la caption : <!-- Définissez les personnes à 
 
 ## Type de post
 - [ ] Visuel
+- [ ] Vidéo
 - [ ] Citation post
 - [ ] Citation story
 
