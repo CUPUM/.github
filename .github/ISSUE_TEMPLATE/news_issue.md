@@ -1,62 +1,40 @@
 ---
 name: News
-about: Production and publication of a news. It will usually be labeled as communication.
+about: Communication template (for single posts or weekly campaigns)
 ---
+# Création du presstkit
+- [ ] Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/press_kits) selon cette nomenclature : aaaammjj-press_kit-noms-news_title
+- [ ] Rédiger le brouillon en format txt et l'enregistrer dans le dossier
+- [ ] Valider le brouillon
+- [ ] Créer le communiqué de presse en français selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_fr-20211228.docx) et le déposer dans le dossier
+- [ ] Créer le communiqué de presse en anglais selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_en-20211228.docx) et le déposer dans le dossier
 
-<!-- Issue title should mirror the News Title. -->
+# Conception de posts
+> Pour une campagne : Min 3 posts - Max 5 posts
 
-## News Title
+- [ ] News 
+- [ ] Photo
+- [ ] Vidéo
+- [ ] Quote
+- [ ] Conférence
 
-News: Awesome News Title
+# Production des visuels
+> Au besoin, la charte graphique de la chaire se trouve [içi](https://github.com/CUPUM/communication/blob/main/templates/CHAIRE_UNESCO_PaysageUrbain_chartegraphique.pdf)
+- [ ] Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/visuals) selon cette nomenclature : aaaammjj-projet
+- [ ] Produire le(s) visuels en anglais selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
+- [ ] Produire le(s) visuels en français selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
+- [ ] Déposer le(s) visuel(s) dans le dossier selon la nomenclature : nom-projet-aaaammjj
 
-## News Hook
+# Production des captions 
+- [ ] Créer un texte pour le(s) visuel(s) à partir du presskit en utilisant le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post)
+- [ ] Ajouter les hashtags à la caption (#)
+- [ ] Ajouter les personnes concernées à la caption (@)
 
-The UNESCO Chair in Urban Landscape wishes to announce that...
+# Publication sur les réseaux sociaux
+ > Seuls les posts sur Facebook sont en français 
 
-## News Description
-
-The UNESCO Chair in Urban Landscape wishes to announce that...
-
-## Websites
-* UNESCO Chair in Urban Landscape: http://www.unesco-paysage.umontreal.ca/en/
-* Organisation 2:
-* ...
-* Person 1:
-* Person 2:
-* ... 
-
-## Social Media Handles
-### Instagram (check list of handles)
-* UNESCO Chair in Urban Landscape: @unesco.studio
-* Organisation 2:
-* ...
-* Person 1:
-* Person 2
-* ...
-* University of Montréal: @umontreal 
-
-### Twitter (check list of handles)
-* UNESCO Chair in Urban Landscape: @unesco_studio
-* Organisation 2:
-* ...
-* Person 1:
-* Person 2
-* ...
-* University of Montréal: @umontreal
-* Canadian Commission for UNESCO: @CCUNESCO 
-
-### Hashtags (check list of hashtags)
-#urbandesign #architecture #landscapearchitecture #urbanplanning
-
-## List of Tasks (Complete in order)
-
-1. [ ] Task 1: Draft Press Release
-2. [ ] Task 2: Translate Press Release
-3. [ ] Task 3: Obtain approval from people mentioned
-4. [ ] Task 4: Find copyright free image
-5. [ ] Task 5: Compile Press Release files
-6. [ ] Task 6. Post on website
-7. [ ] Task 7: Prepare social media posts from templates
-8. [ ] Task 8: Post on social medias
-9. [ ] Task 9: Issue Press Release
-10. [ ] Task 10: Create engagement over social media
+- [ ] Publier visuel 1 sur Instagram, Facebook, Linkedin et Twitter
+- [ ] Publier visuel 2 sur Instagram, Facebook, Linkedin et Twitter
+- [ ] Publier visuel 3 sur Instagram, Facebook, Linkedin et Twitter
+- [ ] Publier visuel 4 sur Instagram, Facebook, Linkedin et Twitter (au besoin) 
+- [ ] Publier visuel 5 sur Instagram, Facebook, Linkedin et Twitter (au besoin) 
