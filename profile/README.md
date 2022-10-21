@@ -1,4 +1,4 @@
-![UNESCO chair banner](beaudrymarchand-banner-20221021.svg)
+![UNESCO chair banner](https://raw.githubusercontent.com/CUPUM/.github/main/profile/beaudrymarchand-banner-20221021.svg)
 
 # Bienvenue!
 
