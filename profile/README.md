@@ -1,3 +1,5 @@
+![UNESCO chair banner](beaudrymarchand-banner-20221021.svg)
+
 # Bienvenue!
 
 Vous êtes présentement sur la page GitHub de la _Chaire UNESCO en paysage urbain de l’Université de Montréal_. Vous pouvez ici suivre le développement des différents projets et participer aux discussions et travaux de votre groupe.
