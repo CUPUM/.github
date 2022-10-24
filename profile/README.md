@@ -1,4 +1,4 @@
-![UNESCO chair banner](https://raw.githubusercontent.com/CUPUM/.github/main/profile/beaudrymarchand-banner-20221021.svg)
+![UNESCO chair banner](https://raw.githubusercontent.com/CUPUM/.github/main/profile/beaudrymarchand-banner_borderless-20221024.svg)
 
 <h2 align="center">Bienvenue sur le GitHub de la Chaire UNESCO en paysage urbain!</h2>
 <p align="center">Vous êtes présentement sur la page GitHub de la <em>Chaire UNESCO en paysage urbain de l’Université de Montréal</em>.<br>Vous pouvez ici suivre le développement des différents projets et participer aux discussions et travaux de votre groupe.</p>
