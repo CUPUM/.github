@@ -2,14 +2,18 @@
 name: News
 about: Communication template (for single posts or weekly campaigns)
 ---
-# Création du presstkit
-- [ ] Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/press_kits) selon cette nomenclature : aaaammjj-press_kit-noms-news_title
-- [ ] Rédiger le brouillon en format txt et l'enregistrer dans le dossier
-- [ ] Valider le brouillon
-- [ ] Créer le communiqué de presse en français selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_fr-20211228.docx) et le déposer dans le dossier
-- [ ] Créer le communiqué de presse en anglais selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_en-20211228.docx) et le déposer dans le dossier
+# Description du projet
+Décrire le projet içi.
 
-# Conception de posts
+# Création du presstkit
+- [ ] Action: Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/press_kits) selon cette nomenclature : aaaammjj-press_kit-noms-news_title
+- [ ] Action: Créer le communiqué de presse en FR selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_fr-20211228.docx) ou en EN selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_en-20211228.docx) et le déposer dans le dossier
+- [ ] Action: Tag @sjinko pour validation du brouillon
+- [ ] Action: Tranduire le communiqué (FR > EN ou EN > FR)
+- [ ] Action: Mettre communiquées (FR et EN) en ligne sur le site web
+- [ ] Action: Commenter '@sjinko, à qui envoyer ce communiqué?' 
+
+# Types de posts
 > Pour une campagne : Min 3 posts - Max 5 posts
 
 - [ ] News 
@@ -19,7 +23,9 @@ about: Communication template (for single posts or weekly campaigns)
 - [ ] Conférence
 
 # Production des visuels
+> Des images gratuites et libres de droit se trouvent [içi](https://unsplash.com)  
 > Au besoin, la charte graphique de la chaire se trouve [içi](https://github.com/CUPUM/communication/blob/main/templates/CHAIRE_UNESCO_PaysageUrbain_chartegraphique.pdf)
+
 - [ ] Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/visuals) selon cette nomenclature : aaaammjj-projet
 - [ ] Produire le(s) visuels en anglais selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
 - [ ] Produire le(s) visuels en français selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
