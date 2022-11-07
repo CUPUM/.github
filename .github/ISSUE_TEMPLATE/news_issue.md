@@ -8,9 +8,9 @@ Décrire le projet içi.
 # Création du presstkit
 - [ ] Action: Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/press_kits) selon cette nomenclature : aaaammjj-press_kit-noms-news_title
 - [ ] Action: Créer le communiqué de presse en FR selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_fr-20211228.docx) ou en EN selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_en-20211228.docx) et le déposer dans le dossier
-- [ ] Action: Tag @sjinko pour validation du communiqué
+- [ ] Action: Tag @sjinko pour valider le communiqué
 - [ ] Action: Tranduire le communiqué (FR > EN ou EN > FR)
-- [ ] Action: Mettre communiquées (FR et EN) en ligne sur le site web
+- [ ] Action: Mettre les communiquées (FR et EN) en ligne sur le site web
 - [ ] Action: Commenter '@sjinko, à qui envoyer ce communiqué?' 
 
 # Types de posts
