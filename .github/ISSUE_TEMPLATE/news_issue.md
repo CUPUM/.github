@@ -24,7 +24,7 @@ Décrire le projet içi.
 
 # Production des visuels
 > Des images gratuites et libres de droit se trouvent [içi](https://unsplash.com)  
-> Au besoin, la charte graphique de la chaire se trouve [içi](https://github.com/CUPUM/communication/blob/main/templates/CHAIRE_UNESCO_PaysageUrbain_chartegraphique.pdf)
+> La charte graphique de la chaire se trouve [içi](https://github.com/CUPUM/communication/blob/main/templates/CHAIRE_UNESCO_PaysageUrbain_chartegraphique.pdf)
 
 - [ ] Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/visuals) selon cette nomenclature : aaaammjj-projet
 - [ ] Produire le(s) visuels en anglais selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
