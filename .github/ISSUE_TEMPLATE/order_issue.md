@@ -7,15 +7,13 @@ title: 'Order: [Product name] for [purpose or end user]'
 # Order description
 - End user:
 - Purpose:
-- Items names:
-  1. ...
-  2. ...
-- Items cost:
-  1. ...
-  2. ...
-- Total cost:
+- Items:
+  | Name | Cost <!-- Specify currency if not in CAD --> |
+  | :--- | ---: |
+  | Placeholder | 00 $ |
+  | **Total** | **00 $** |
 - Project funds: <!-- Project funding to use for the purchase-->
-- Handler: C. Benoît, chantal.benoit@umontreal.ca
+- Handler: C. Benoît
 
 ## Providers
 
