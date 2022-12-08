@@ -15,7 +15,11 @@ title: 'Order: [Product name] for [purpose or end user]'
   | **Total** | **00.00 $** |
 - Project funds: <!-- Project funding to use for the purchase-->
 
-## Providers
+## References
+
+If you are uncertain of the process prescribed by the school for the purchase planned here, refer to the university's [**documentation on making a purchase request**](https://approvisionnement.umontreal.ca/faire-une-demande-dachat/faire-une-demande-dachat/#moins-de-25-000). Although it can often simplify the task, it is not always necessary to limit the product choices to a pre-approved provider (such as INSO).
+
+### Providers
 
 | Provider | Catalog | Contact |
 | --- | --- | --- |
