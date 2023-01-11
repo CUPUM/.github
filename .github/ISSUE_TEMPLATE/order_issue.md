@@ -14,6 +14,14 @@ title: 'Order: [Product name] for [purpose or end user]'
   | Item 2  | 00.00 | <!-- Add items by copy-pasting -->
   | **Total** | **00.00 $** |
 - Project funds: <!-- Project funding to use for the purchase-->
+- Delivery address:
+  ```yml
+  # Privileged address for correct package handling by the school:
+  Université de Montréal - S. Koseki
+  CP 6128 Succursale Centre-ville
+  Pavillon de la Faculté de l’aménagement local 3072
+  Montréal (Québec) H3C 3J7
+  ```
 
 ## References
 
