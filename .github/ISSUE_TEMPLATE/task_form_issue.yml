@@ -1,5 +1,5 @@
-name: "Task form"
-description: "Create a new task (potentially under an epic)"
+name: Task form
+description: Create a new task (potentially under an epic)
 body:
   - type: markdown
     attributes:
