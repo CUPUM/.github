@@ -5,7 +5,7 @@ about: Communication template (for single posts or weekly campaigns)
 # Description du projet
 Décrire le projet içi.
 
-# Création du presstkit
+# Création du presskit
 - [ ] Action: Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/press_kits) selon cette nomenclature : aaaammjj-press_kit-noms-news_title
 - [ ] Action: Créer le communiqué de presse en FR selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_fr-20211228.docx) ou en EN selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_en-20211228.docx) et le déposer dans le dossier
 - [ ] Action: Tag @sjinko pour valider le communiqué
