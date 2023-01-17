@@ -4,7 +4,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        "Fill out the following form to create a new task"
+        Fill out the following form to create a new task
   - type: textarea
     attributes:
       label: "Task description"
