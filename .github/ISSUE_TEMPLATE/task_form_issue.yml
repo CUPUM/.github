@@ -1,4 +1,4 @@
-name: Task
+name: Task form
 description: Create a new task (potentially under an epic)
 body:
   - type: markdown
