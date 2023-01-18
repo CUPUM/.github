@@ -19,7 +19,7 @@ body:
     attributes:
       label: "Funds"
       description: "Specify which project or funding to use for the purchase."
-- type: textarea
+  - type: textarea
     attributes:
       label: "Items"
       description: "Provide an exhaustive list of the items comprised in this order."
