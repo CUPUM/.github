@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        "# Order description"
+        # Order description
         Complete the fields below to outline the order's details and needs as well as to launch the purchase process
   - type: input
     attributes:
