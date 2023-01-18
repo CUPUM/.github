@@ -69,6 +69,7 @@ body:
         
         # Actions
   - type: checkboxes
+    id: actions
     attributes:
       options:
         - label: Choose material from provider’s catalog
