@@ -5,8 +5,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        # Order description
-        Complete the fields below to outline the order's details and needs as well as to launch the purchase process
+        "# Order description
+        Complete the fields below to outline the order's details and needs as well as to launch the purchase process"
   - type: field
     attributes:
       label: "End user(s)"
