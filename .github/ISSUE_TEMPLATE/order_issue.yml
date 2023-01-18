@@ -7,3 +7,11 @@ body:
       value: |
         "# Order description"
         Complete the fields below to outline the order's details and needs as well as to launch the purchase process
+  - type: input
+    attributes:
+      label: "End user(s)"
+      description: "Who is this order carried out for?"
+  - type: input
+    attributes:
+      label: "Purpose"
+      description: "What will the acquired material be used for?"
