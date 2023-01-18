@@ -67,9 +67,9 @@ body:
         | --- | --- | --- |
         | INSO | https://shop.inso.ca/catalogue | infoudem@inso.ca |
         
+        # Actions
   - type: checkboxes
     attributes:
-      label: "Actions"
       options:
         - label: Choose material from provider’s catalog
         - label: Email provider, with detailed list of items and specifying funding source (prices are adjusted in certain cases)
