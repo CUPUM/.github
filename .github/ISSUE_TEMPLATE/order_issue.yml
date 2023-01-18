@@ -59,11 +59,13 @@ body:
         - Autre (UPS, FedEx, etc.)
   - type: markdown
     attributes:
-      label: "References & providers"
       value: |
-        "If you are uncertain of the process prescribed by the school for the purchase planned here, refer to the university's [**documentation on making a purchase request**](https://approvisionnement.umontreal.ca/faire-une-demande-dachat/faire-une-demande-dachat/#moins-de-25-000). Although it can often simplify the task, it is not always necessary to limit the product choices to a pre-approved provider (such as INSO)."
-        "You will find below a list of providers and contacts from where to get quotes"
-        "| Provider | Catalog | Contact |"
-        "| --- | --- | --- |"
-        "| INSO | https://shop.inso.ca/catalogue | infoudem@inso.ca |"
+        # Providers & References
+        If you are uncertain of the process prescribed by the school for the purchase planned here, refer to the university's [**documentation on making a purchase request**](https://approvisionnement.umontreal.ca/faire-une-demande-dachat/faire-une-demande-dachat/#moins-de-25-000).
+        Although it can often simplify the task, it is not always necessary to limit the product choices to a pre-approved provider (such as INSO).
+        
+        You will find below a list of providers and contacts from where to get quotes:
+        | Provider | Catalog | Contact |
+        | --- | --- | --- |
+        | INSO | https://shop.inso.ca/catalogue | infoudem@inso.ca |
        
