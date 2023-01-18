@@ -5,28 +5,5 @@ body:
   - type: markdown
     attributes:
       value: |
-        "# Order description
-        Complete the fields below to outline the order's details and needs as well as to launch the purchase process"
-  - type: field
-    attributes:
-      label: "End user(s)"
-      description: "Who is this order carried out for?"
-  - type: field
-    attributes:
-      label: "Purpose"
-      description: "What will the acquired material be used for?"
-  - type: textarea
-    attributes:
-      label: "Items"
-      description: "Provide an exhaustive list of the items comprised in this order."
-      value: |
-        "| Name | Cost <!-- Specify currency if not in CAD --> |"
-        "| :--- | ---: |"
-        "| Item 1 | 00.00 |"
-        "| Item 1 | 00.00 |"
-        " <!-- Append items by copy-pasting -->"
-        "| **Total** | **00.00** |"
-  - type: field
-    attributes:
-      label: "Funds"
-      description: "Specify which project or funding to use for the purchase."
+        "# Order description"
+        Complete the fields below to outline the order's details and needs as well as to launch the purchase process
