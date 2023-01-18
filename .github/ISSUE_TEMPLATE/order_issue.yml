@@ -33,14 +33,13 @@ body:
         | **Total** | **00.00** |
   - type: dropdown
     attributes:
-      label: "Shipping carrier"
+      label: "Shipping carrier & delivery"
       options:
         - Poste Canada
         - Autre (UPS, FedEx, etc.)
   - type: markdown
     attributes:
       value: |
-        ## Delivery address
         Si la livraison est effectuée par Poste Canada, utiliser l'adresse suivante:
         ```yml
         Université de Montréal
@@ -71,9 +70,13 @@ body:
         # Actions
   - type: checkboxes
     attributes:
-      label: "Order actions"
       options:
         - label: Choose material from provider’s catalog
         - label: Email provider, with detailed list of items and specifying funding source (prices are adjusted in certain cases)
         - label: Create ordre project folder in [orders directory](https://github.com/CUPUM/general/tree/main/equipment/orders) as ```yyyymmdd-[order_project_name]``` (ex. 20221124-mac_book_air_koseki)
-       
+        - label: Place all documents in newly created ordre project folder
+        - label: Forward submission document to the C. Benoit (chantal.benoit@umontreal.ca) with Shin in cc.
+        - label: Wait for order (add ```waiting``` tag)
+        - label: Email C. Benoit to confirming reception of order
+        - label: Append new items to [equipment log](https://github.com/CUPUM/general/blob/main/equipment/beaudrymarchand-log-equipment-20221013.csv)
+        - label: Place all additional documents (receipts, warranty, etc.) in created order project folder
