@@ -31,6 +31,12 @@ body:
         | Item 1 | 00.00 |
         <!-- Append items by copy-pasting -->
         | **Total** | **00.00** |
+  - type: dropdown
+    attributes:
+      label: "Shipping carrier"
+      options:
+        - Poste Canada
+        - Autre (UPS, FedEx, etc.)
   - type: markdown
     attributes:
       value: |
@@ -43,7 +49,6 @@ body:
         Montréal (Québec) H3C 3J7
         ```
         Le colis sera reçu par la DI puis livré au pavillon. Un préposé l'amènera au local indiqué.
-
         Si la livraison est effectuée par un livreur (UPS, FedEx, etc.), utiliser cette adresse:
         ```yml
         Pavillon Roger-Gaudry / Campus Réception – Quai #1
@@ -51,12 +56,6 @@ body:
         2900 boulevard Edouard-Montpetit
         Montréal, QC, H3T 1J4
         ```
-  - type: dropdown
-    attributes:
-      label: "Shipping carrier"
-      options:
-        - Poste Canada
-        - Autre (UPS, FedEx, etc.)
   - type: markdown
     attributes:
       value: |
@@ -68,4 +67,13 @@ body:
         | Provider | Catalog | Contact |
         | --- | --- | --- |
         | INSO | https://shop.inso.ca/catalogue | infoudem@inso.ca |
+        
+        # Actions
+  - type: checkboxes
+    attributes:
+      label: "Order actions"
+      options:
+        - label: Choose material from provider’s catalog
+        - label: Email provider, with detailed list of items and specifying funding source (prices are adjusted in certain cases)
+        - label: Create ordre project folder in [orders directory](https://github.com/CUPUM/general/tree/main/equipment/orders) as ```yyyymmdd-[order_project_name]``` (ex. 20221124-mac_book_air_koseki)
        
