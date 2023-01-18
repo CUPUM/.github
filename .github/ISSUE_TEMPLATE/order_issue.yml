@@ -1,0 +1,70 @@
+name: Order form
+description: Kickstart a new material order process
+title: "Order: [Product name] for [purpose or end user]"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Order description
+        Complete the fields below to outline the order's details and needs as well as to launch the purchase process
+  - type: field
+    attributes:
+      label: "End user(s)"
+      description: "Who is this order carried out for?"
+  - type: field
+    attributes:
+      label: "Purpose"
+      description: "What will the acquired material be used for?"
+  - type: textarea
+    attributes:
+      label: "Items"
+      description: "Provide an exhaustive list of the items comprised in this order."
+      value: |
+        "| Name | Cost <!-- Specify currency if not in CAD --> |"
+        "| :--- | ---: |"
+        "| Item 1 | 00.00 |"
+        "| Item 1 | 00.00 |"
+        " <!-- Append items by copy-pasting -->"
+        "| **Total** | **00.00** |"
+  - type: field
+    attributes:
+      label: "Funds"
+      description: "Specify which project or funding to use for the purchase."
+  - type: mardown
+    attributes:
+      label: "Delivery address"
+      value: |
+        "# Si la livraison est effectuée par Poste Canada, utiliser l'adresse suivante:"
+        "Université de Montréal"
+        "Pavillon de la Faculté de l'aménagement, École d'architecture de paysage"
+        "CP 6128 Succursale Centre-ville"
+        "Montréal (Québec) H3C 3J7"
+        "# Le colis sera reçu par la DI puis livré au pavillon. Un préposé l'amènera au local indiqué."
+        "-"
+        "# Si la livraison est effectuée par un livreur (UPS, FedEx, etc.), utiliser cette adresse:"
+        "Pavillon Roger-Gaudry / Campus Réception – Quai #1"
+        "École d’architecture de paysage – Local [0000]"
+        "2900 boulevard Edouard-Montpetit"
+        "Montréal, QC, H3T 1J4"
+      render: yml
+  - type: dropdown
+    attributes:
+      label: "Shipping carrier"
+      options:
+        - Poste Canada
+        - Autre (UPS, FedEx, etc.)
+  - type: mardown
+    attributes:
+      label: "References & providers"
+      value: |
+        "If you are uncertain of the process prescribed by the school for the purchase planned here, refer to the university's [**documentation on making a purchase request**](https://approvisionnement.umontreal.ca/faire-une-demande-dachat/faire-une-demande-dachat/#moins-de-25-000). Although it can often simplify the task, it is not always necessary to limit the product choices to a pre-approved provider (such as INSO)."
+        "You will find below a list of providers and contacts from where to get quotes"
+        "| Provider | Catalog | Contact |"
+        "| --- | --- | --- |"
+        "| INSO | https://shop.inso.ca/catalogue | infoudem@inso.ca |"
+  - type: checkboxes
+    attributes:
+      label: "Order actions"
+      options:
+        - label: Choose material from provider’s catalog
+        - label: Email provider, with detailed list of items and specifying funding source (prices are adjusted in certain cases)
