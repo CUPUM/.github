@@ -2,11 +2,10 @@ name: Order form
 description: Kickstart a new material order process
 title: "Order: [Product name] for [purpose or end user]"
 body:
-  - type: markdown
+  - type: textarea
     attributes:
-      value: |
-        # Order description
-        Complete the fields below to outline the order's details and needs as well as to launch the purchase process
+      label: Order description
+      description: "Provide a summary of the order's details and needs."
   - type: input
     attributes:
       label: "End user(s)"
