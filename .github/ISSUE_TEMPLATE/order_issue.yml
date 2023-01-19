@@ -24,12 +24,11 @@ body:
       label: "Items"
       description: "Provide an exhaustive list of the items comprised in this order."
       value: |
+        <!-- Append items by copy-pasting -->
         |Name | Cost (Specify currency if not in CAD) |
-        | --- | --- |
         | :--- | ---: |
         | Item 1 | 00.00 |
         | Item 1 | 00.00 |
-        <!-- Append items by copy-pasting -->
         | **Total** | **00.00** |
   - type: dropdown
     attributes:
