@@ -1,40 +1,56 @@
 ---
 name: Order IT material
-about: Managing the order process for goods and services.
+description: Managing the order process for goods and services.
 title: 'Order: [Product name] for [purpose or end user]'
 ---
 <!-- 1. Describe order -->
-# Order description
-- End user:
-- Purpose:
-- Items:
-  | Name | Cost <!-- Specify currency if not in CAD --> |
-  | :--- | ---: |
-  | Item 1  | 00.00 |
-  | Item 2  | 00.00 | <!-- Add items by copy-pasting -->
-  | **Total** | **00.00 $** |
-- Project funds: <!-- Project funding to use for the purchase-->
-- Delivery address:
-  ```yml
-  # Privileged address for correct package handling by the school:
-  Université de Montréal - S. Koseki
-  CP 6128 Succursale Centre-ville
-  Pavillon de la Faculté de l’aménagement local 3072
-  Montréal (Québec) H3C 3J7
-  ```
+## Order description
+### End user / purpose
 
-## References
+### Items
+| Name | Cost <!-- Specify currency if not in CAD --> |
+| :--- | ---: |
+| Item 1  | 00.00 |
+| Item 2  | 00.00 | <!-- Add items by copy-pasting -->
+| **Total** | **00.00 $** |
+
+### Funds to use
+<!-- Project funding to use for the purchase-->
+
+### Delivery
+
+#### Poste Canada
+
+If shipping is done through Poste Canada, use the following address:
+```yml
+Université de Montréal
+Pavillon de la Faculté de l'aménagement, École d'architecture de paysage
+CP 6128 Succursale Centre-ville
+Montréal (Québec) H3C 3J7
+```
+Once received by the school, the package will be transfered to the faculty building and then delivered directly to the indicated room.
+
+#### Any other
+
+Else, if shipping is done through another company (UPS, FedEx, etc.), use:
+```yml
+Pavillon Roger-Gaudry / Campus Réception – Quai #1
+École d’architecture de paysage – Local [0000]
+2900 boulevard Edouard-Montpetit
+Montréal, QC, H3T 1J4
+```
+
+### References
 
 If you are uncertain of the process prescribed by the school for the purchase planned here, refer to the university's [**documentation on making a purchase request**](https://approvisionnement.umontreal.ca/faire-une-demande-dachat/faire-une-demande-dachat/#moins-de-25-000). Although it can often simplify the task, it is not always necessary to limit the product choices to a pre-approved provider (such as INSO).
 
-### Providers
+#### Providers
 
 | Provider | Catalog | Contact |
 | --- | --- | --- |
 | INSO | https://shop.inso.ca/catalogue | infoudem@inso.ca |
 
-<!-- 2. Proceed with order -->
-# Order actions:
+## Order actions:
 
 - [ ] — Action: Choose material from provider’s catalog
 - [ ] — Action: Email provider, with detailed items' list and specifying funding source (prices are adjusted in certain cases)
