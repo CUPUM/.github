@@ -1,6 +1,6 @@
 ---
 name: Order IT material
-description: Managing the order process for goods and services.
+about: Managing the order process for goods and services.
 title: 'Order: [Product name] for [purpose or end user]'
 ---
 <!-- 1. Describe order -->
