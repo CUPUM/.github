@@ -1,6 +1,6 @@
 name: Task v2
 title: "Task: "
-description: "Create a new task to describe and assign work. Tasks can list or link other tasks, but should ultimately contain work of their own. In lieu of epics, meta-tasks, or large-scope concerns, please use projects or milestones."
+description: "Create a new task to describe and assign work. Tasks can list or link other tasks, but should ultimately contain work of their own. Please use projects in lieu of epics."
 body:
   - type: textarea
     attributes:
