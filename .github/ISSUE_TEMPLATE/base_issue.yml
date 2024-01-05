@@ -13,6 +13,6 @@ body:
       label: "Work / steps to complete"
       value: |
       "## To do"
-      "- ..."
+      1. ...
     validations:
       required: true
