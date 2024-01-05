@@ -11,6 +11,8 @@ body:
   - type: textarea
     attributes:
       label: "Work / steps to complete"
-      value: "## To do"
+      value: |
+      "## To do"
+      - ...
     validations:
       required: true
