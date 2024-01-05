@@ -5,11 +5,9 @@ body:
   - type: textarea
     attributes:
       label: Description
-      value: "# Task description"
+      value: "## Task description"
     validations:
       required: true
   - type: textarea
     attributes:
-      value: |
-      To do
-      - ...
+      value: "## To do"
