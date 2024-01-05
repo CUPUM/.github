@@ -1,0 +1,16 @@
+name: Task
+title: Task: 
+description: Create a new task to describe and assign work. Tasks can list or link other tasks, but should ultimately contain work of their own. In lieu of epics, meta-tasks, or large-scope concerns, please use projects or milestones.
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      value: |
+      "# Task description"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      value: |
+        "# To do
+- ..."
