@@ -11,7 +11,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Attendees
+        ### Attendees
         Append any attending or invited team members to this issue's list of assignees.
   - type: textarea
     attributes:
