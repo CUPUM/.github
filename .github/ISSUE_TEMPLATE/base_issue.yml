@@ -10,6 +10,4 @@ body:
       required: true
   - type: textarea
     attributes:
-      value: |
-        "# To do
-- ..."
+      value: "# To do" /n "- ..."
