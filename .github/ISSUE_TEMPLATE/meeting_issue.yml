@@ -4,7 +4,7 @@ description: "Create and track a meeting."
 body:
   - type: input
     attributes:
-      label: "## Calendar event"
+      label: Calendar event
       description: Add a link to a relevant calendar event (Outlook or other) that people can refer to in order to track the date & time and outside attendees.
     validations:
       required: false
@@ -15,13 +15,13 @@ body:
         Append any attending or invited team members to this issue's list of assignees.
   - type: textarea
     attributes:
-      label: "## Order of the day"
+      label: Order of the day
       description: Plan points to discuss in chronological order. Optionally tag people associated to each points or groups of points.
     validations:
       required: true
   - type: textarea
     attributes:
-      label: "## Minutes"
+      label: Minutes
       value: "_(Add meeting notes here)_"
       description: "Use this section to take meeting notes or synthesize attendees' notes."
     validations:
