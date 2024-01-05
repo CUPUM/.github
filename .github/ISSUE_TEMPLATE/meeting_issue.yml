@@ -6,6 +6,7 @@ body:
     attributes:
       label: "## Calendar event"
       description: Add a link to a relevant calendar event (Outlook or other) that people can refer to in order to track the date & time and outside attendees.
+    validations:
       required: false
   - type: markdown
     attributes:
