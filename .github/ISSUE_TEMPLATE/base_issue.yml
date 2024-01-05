@@ -9,6 +9,6 @@ body:
     validations:
       required: true
   - type: textarea
-    label: Work / steps to complete
+    label: "Work / steps to complete"
     attributes:
       value: "## To do"
