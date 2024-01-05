@@ -7,7 +7,6 @@ body:
       label: Description
       value: |
         ## Task description
-        
     validations:
       required: true
   - type: textarea
@@ -15,7 +14,6 @@ body:
       label: "Work / steps to complete"
       value: |
         ## To do
-        
         - ...
     validations:
       required: true
