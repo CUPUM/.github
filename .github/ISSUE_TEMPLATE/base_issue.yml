@@ -5,15 +5,14 @@ body:
   - type: textarea
     attributes:
       label: Description
-      value: |
-        ## Task description
+      description: "Provide a broad description of the work to be done. Don't skimp on linking to other issues to help contextualize readers."
     validations:
       required: true
   - type: textarea
     attributes:
-      label: "Work / steps to complete"
+      label: To do
+      description:  "Specify at least one action to do to progress this issue. You can append new actions as the work better defines itself through feedback."
       value: |
-        ## To do
-        - ...
+        - [ ] ...
     validations:
       required: true
