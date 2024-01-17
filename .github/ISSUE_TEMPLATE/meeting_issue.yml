@@ -8,13 +8,6 @@ body:
       description: Add a link to a relevant calendar event that people can refer to in order to track the date & time and outside attendees.
     validations:
       required: false
-  - type: input
-    attributes:
-      label: Date and time
-      description: "Specify the meeting's date and time following the `YYYY-MM-DD HH:MM` format, where HH should be a **24-hour-clock** time".
-      placeholder: "YYYY-MM-DD HH:MM"
-    validations:
-      required: false
   - type: markdown
     attributes:
       value: |
