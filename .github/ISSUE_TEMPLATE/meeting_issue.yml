@@ -8,6 +8,11 @@ body:
       description: Add a link to a relevant calendar event that people can refer to in order to track the date & time and outside attendees.
     validations:
       required: false
+  - type: input
+    attributes:
+      label: Date and time
+    validations:
+      required: false
   - type: markdown
     attributes:
       value: |
