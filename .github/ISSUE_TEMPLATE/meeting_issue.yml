@@ -1,6 +1,7 @@
 name: Meeting
 description: "Create and track a meeting."
 title: "Meeting: "
+project: "@org: Meetings"
 body:
   - type: input
     attributes:
