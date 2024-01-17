@@ -34,12 +34,15 @@ body:
     attributes:
       label: Order of the day
       description: Plan points to discuss in chronological order. Optionally tag people associated to each points or groups of points.
+      placeholder: |
+        - Discussion point
+        - ...
     validations:
       required: true
   - type: textarea
     attributes:
       label: Minutes
-      value: "_(Add meeting notes here)_"
+      value: "<sub><i>(Add meeting notes here)</i></sub>"
       description: "Use this section to take meeting notes or synthesize attendees' notes after the issue has been created."
     validations:
       required: false
