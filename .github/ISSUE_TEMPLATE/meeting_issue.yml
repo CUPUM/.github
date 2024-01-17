@@ -43,6 +43,6 @@ body:
     attributes:
       label: Minutes
       value: "<sub><i>(Add meeting notes here)</i></sub>"
-      description: "Use this section to take meeting notes or synthesize attendees' notes after the issue has been created."
+      description: "Use this section to take meeting notes or synthesize attendees' notes **after the issue has been created**."
     validations:
       required: false
