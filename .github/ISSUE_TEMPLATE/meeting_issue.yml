@@ -1,7 +1,7 @@
 name: Meeting
 description: "Create and track a meeting."
 title: "Meeting: "
-projects: ["@org: Meetings"]
+projects: ["CUPUM/149"]
 body:
   - type: input
     attributes:
