@@ -1,11 +1,18 @@
 name: Meeting
-title: "Meeting: "
 description: "Create and track a meeting."
+title: "Meeting: "
 body:
   - type: input
     attributes:
-      label: Calendar event
-      description: Add a link to a relevant calendar event (Outlook or other) that people can refer to in order to track the date & time and outside attendees.
+      label: Event or invite link
+      description: Add a link to a relevant calendar event that people can refer to in order to track the date & time and outside attendees.
+    validations:
+      required: false
+  - type: input
+    attributes:
+      label: Date and time
+      description: "Specify the meeting's date and time following the `YYYY-MM-DD HH:MM` format, where HH should be a **24-hour-clock** time".
+      placeholder: YYYY-MM-DD HH:MM
     validations:
       required: false
   - type: markdown
@@ -13,6 +20,12 @@ body:
       value: |
         ### Attendees
         Append any attending or invited team members to this issue's list of assignees.
+  - type: textarea
+    attributes:
+      label: Reported points
+      description: Synthesize relevant past meeting discussion points or link to prefacing issues.
+    validations:
+      required: false
   - type: textarea
     attributes:
       label: Order of the day
