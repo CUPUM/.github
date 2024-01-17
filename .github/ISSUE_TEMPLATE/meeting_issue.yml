@@ -25,6 +25,9 @@ body:
     attributes:
       label: Reported points
       description: Synthesize relevant past meeting discussion points or link to prefacing issues.
+      placeholder: |
+        - Reported point
+        - ...
     validations:
       required: false
   - type: textarea
