@@ -1,0 +1,22 @@
+name: Onboarding
+description: "Streamline onboarding of new members or collaborators."
+title: "Onboarding: N. Last Name"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Onboardee
+        If the person being onboarded already has a GitHub account, assign them this issue.
+  - type: textarea
+    attributes:
+      label: To do
+      value: |
+        - [ ] Register on GitHub
+        - [ ] @iolyd: [Invite onboardee to the organization](https://github.com/orgs/CUPUM/people)
+        - [ ] @iolyd: [Add onboardee to relevant team(s)](https://github.com/orgs/CUPUM/teams)
+        - [ ] Getting started with GitHub ([Documentation](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account))
+        - [ ] Step 2
+        - [ ] ...
+      description: "List the steps to complete in order to fully onboard the new member."
+    validations:
+      required: true
