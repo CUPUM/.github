@@ -9,13 +9,19 @@ body:
         If the person being onboarded already has a GitHub account, assign them this issue.
   - type: textarea
     attributes:
+      label: Projects/teams
+      description: List projects or teams for which the onboardee sohuld get access.
+      placeholder: |
+        - ...
+  - type: textarea
+    attributes:
       label: To do
       value: |
         - [ ] Register on GitHub
+        - [ ] Request temporary invited collaborator Wi-Fi access
         - [ ] @iolyd: [Invite onboardee to the organization](https://github.com/orgs/CUPUM/people)
         - [ ] @iolyd: [Add onboardee to relevant team(s)](https://github.com/orgs/CUPUM/teams)
         - [ ] Getting started with GitHub ([Documentation](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account))
-        - [ ] Step 2
         - [ ] ...
       description: "List the steps to complete in order to fully onboard the new member."
     validations:
