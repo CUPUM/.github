@@ -3,6 +3,12 @@ description: "Create and track a meeting."
 title: "Meeting: "
 projects: ["CUPUM/149"]
 body:
+  - type: textarea
+    attributes:
+      label: Preparation steps
+      description: List things to do in preparation for the meeting, such as coordinating a date and time, sending a calendar invitation, etc.
+      placeholder: |
+        - ...
   - type: input
     attributes:
       label: Date and time
@@ -31,8 +37,7 @@ body:
     attributes:
       label: Order of the day
       description: Plan points to discuss in chronological order. Optionally tag people associated to each points or groups of points.
-      placeholder: |
-        - Discussion point
+      value: |
         - ...
     validations:
       required: true
@@ -43,3 +48,4 @@ body:
       description: "Use this section to take meeting notes or synthesize attendees' notes **after the issue has been created**."
     validations:
       required: false
+      
