@@ -44,7 +44,7 @@ body:
   attributes:
     label: Meeting description
     description: Describe the objective, context and key information
-    placeholder: - This meeting serves to ...
+    placeholder: This meeting serves to ...
 
 ## Meeting agenda
 - type: textarea
