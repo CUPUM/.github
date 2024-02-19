@@ -11,9 +11,9 @@ body:
     attributes:
       value: |
         Onboarding refers to the introduction of a new member or collaborator to the chair's activity's and platforms.
-        
-        Giving an adequate name to your onboarding issue is important to ensure proper tracking. The title should specify the onboardee's name, 
-        *e.g. “Onboarding: E. Beaudry Marchand"*
+
+        Giving an adequate name to your onboarding issue is important to ensure proper tracking. The title should specify the onboardee's, respecting the following format:
+        *“Onboarding: E. Beaudry Marchand"*
 
   - type: textarea
     attributes:
@@ -32,8 +32,9 @@ body:
         - [ ] @iolyd: [Add onboardee to relevant team(s)](https://github.com/orgs/CUPUM/teams)
         - [ ] @iolyd: Request temporary invited collaborator Wi-Fi access
         - [ ] @iolyd: Schedule an onboarding meeting with the arriving collaborator
-        - [ ] @delphineduplain: Schedule an onboarding meeting with the arriving collaborator
-        - [ ] Coordinating team member: Schedule an onboarding meeting with the arriving collaborator
+        - [ ] @delphineduplain: Schedule an introduction meeting with the arriving collaborator
+        - [ ] @team: Schedule an introduction meeting with the arriving collaborator
+        - [ ] @team: Make sure the onboardee is added to the list of invited people the relevant calendar events
 
   - type: textarea
     attributes:
