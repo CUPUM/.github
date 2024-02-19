@@ -3,6 +3,11 @@ description: "Plan, organize and record meetings"
 title: "Meet: "
 body:
 
+- type: textarea
+  attributes:
+    label: Meeting agendy
+    description: Describe the objective, context and key information
+    value: "TBD"
   
 - type: textarea
   attributes:
