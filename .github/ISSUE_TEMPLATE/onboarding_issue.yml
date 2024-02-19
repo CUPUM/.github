@@ -22,13 +22,14 @@ body:
 
   - type: textarea
     attributes:
-      label: List of actions for chair members
+      label: List of actions for chair staff
       value: |
         - [ ] @iolyd: [Invite onboardee to the organization](https://github.com/orgs/CUPUM/people)
         - [ ] @iolyd: [Add onboardee to relevant team(s)](https://github.com/orgs/CUPUM/teams)
         - [ ] @iolyd: Request temporary invited collaborator Wi-Fi access
-        - [ ] @iolyd: Schedule an onboarding session with the arriving collaborator
-        - [ ] @delphineduplain: Schedule meeting with onboardee
+        - [ ] @iolyd: Schedule an onboarding meeting with the arriving collaborator
+        - [ ] @delphineduplain: Schedule an onboarding meeting with the arriving collaborator
+        - [ ] Coordinating team member: Schedule an onboarding meeting with the arriving collaborator
 
   - type: textarea
     attributes:
@@ -37,5 +38,6 @@ body:
       value: |
         - [ ] Register on GitHub
         - [ ] Skim through the documentation on [Getting started with GitHub](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
+        - [ ] 
     validations:
       required: true
