@@ -12,7 +12,7 @@ body:
 
 - type: markdown
   attributes: 
-    value: **Assign this issue to all people participating to the meeting**"
+    value: "**Assign this issue to all people participating to the meeting**"
 
 - type: textarea
   attributes:
