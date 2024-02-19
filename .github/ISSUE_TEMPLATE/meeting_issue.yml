@@ -1,51 +1,72 @@
 name: Meeting
-description: "Create and track a meeting."
-title: "Meeting: "
-projects: ["CUPUM/149"]
+description: "Manage and track meetings"
+title: "Meet: "
+projects:
 body:
-  - type: textarea
+
+# --> INSERT URL RESSOURCE
+
+## Issue guidelines
+  - type: markdown
     attributes:
-      label: Preparation steps
-      description: List things to do in preparation for the meeting, such as coordinating a date and time, sending a calendar invitation, etc.
-      placeholder: |
-        - ...
+      value: |
+        # Meeting issues
+        Meeting issues servce to plan, organize, record and follow up on all meetings conducted. The title of the meeting issue should specify mode, persons and date of the meeting: *e.g. “Meet: Phone call with Martin Duchamp and Carine Genou about PublicSpace.AI on Jan. 23”*
+
+## Meeting participants
+  - type: markdown
+    attribute:
+      value: For Chair participants, add as issue assignees -->
+  - type: input
+    attribute:
+        label: External participants
+        description : |
+          List full names and affiliation of non-chair participants to the meeting    
+        placeholder: |
+          * Martin Duchamp (Ville de Montréal)
+          * Carine Genou (Ville de Laval)
+        value: TBD  
+
+## Meeting location 
+  - type: input
+    attributes:
+        label: Location
+        description: |
+          Specify where the meeting takes place. e.g. “Faculté de l’aménagement”, “Zoom”, ”Phone", ”UNESCO HQ“
+        placeholder: Phone/Zoom/Teams/Building...
+        value: TBD
+
+## Meeting time
   - type: input
     attributes:
       label: Date and time
       description: |
-        Specify the meeting's date and time following the `YYYY-MM-DD HH:MM` format, where HH should be a **24-hour-clock** time.
-        Please also make sure to set the date in the `@org: Meetings` project item automatically created from this issue.
+        Indicate when the meeting take place. e.g. "2024-12-31 22:05"
       placeholder: YYYY-MM-DD HH:MM
-      value: YYYY-MM-DD HH:MM
-    validations:
-      required: false
-  - type: markdown
-    attributes:
-      value: |
-        ### Attendees
-        Append any attending or invited team members to this issue's list of assignees.
+      value: TBD
+
+## Meeting description
   - type: textarea
     attributes:
-      label: Reported points
-      description: Synthesize relevant past meeting discussion points or link to prefacing issues.
+      label: Meeting description
+      description: Describe the objective, context and key information
       placeholder: |
-        - Reported point
-        - ...
-    validations:
-      required: false
+        - This meeting serves to ...
+
+## Meeting agenda
   - type: textarea
     attributes:
-      label: Order of the day
-      description: Plan points to discuss in chronological order. Optionally tag people associated to each points or groups of points.
+      label: Meeting agendy
+      description: Describe the objective, context and key information
       value: |
-        - ...
-    validations:
-      required: true
+        # Agenda
+
+  
   - type: textarea
     attributes:
-      label: Minutes
-      value: "<sub><i>(Add meeting notes here)</i></sub>"
-      description: "Use this section to take meeting notes or synthesize attendees' notes **after the issue has been created**."
-    validations:
-      required: false
-      
+      label: Meeting notes
+      description: Based on the agenda, summarize key information, decisions and resources 
+      placeholder: |
+        # Topic 1
+          - ...
+          - ...
