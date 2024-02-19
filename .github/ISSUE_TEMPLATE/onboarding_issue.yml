@@ -1,27 +1,24 @@
 name: Onboarding
 description: |
   Streamline onboarding of new members or collaborators.
-  Onboarding refers to the introduction of a new member or collaborator to the chair's activity's and platforms.
-  Explaining accesses and workings of the chair's digital platforms"
 title: "Onboarding: N. Last Name"
 body:
 
   - type: markdown
     attributes:
       value: |
-        ## How to use the Onboarding template
-        ### Give an adequate name to your onboarding issue
-        The title of this issue should follow the format `Onboarding: [First name] [Last name]`
-        ### Getting the collaborator ready on GitHub
-        If the person being onboarded already has a GitHub account, assign them this issue.
-        Otherwise, let them know they should sign up for an account.
+        Onboarding refers to the introduction of a new member or collaborator to the chair's activity's and platforms.
+        
+        Give an adequate name to your onboarding issue. The title of this issue should follow the format `Onboarding: [First name] [Last name]`
 
   - type: textarea
     attributes:
-      label: Projects/teams
-      description: List projects or teams for which the onboardee should get access.
+      label: Project teams
+      description: |
+        List the teams for which the onboardee should gain access to work on their assigned projects.
+        You can find a list of the organisation's teams [here](https://github.com/orgs/CUPUM/teams).
       placeholder: |
-        - Project name...
+        - [ ] ...
 
   - type: textarea
     attributes:
