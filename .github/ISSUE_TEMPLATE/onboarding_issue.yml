@@ -1,7 +1,10 @@
 name: Onboarding
 description: |
-  Streamline onboarding of new members or collaborators.
-title: "Onboarding: N. Last Name"
+  Streamline the onboarding of a new chair member or collaborator.
+title: "Onboarding: "
+assignees:
+  - iolyd
+  - delphineduplain
 body:
 
   - type: markdown
