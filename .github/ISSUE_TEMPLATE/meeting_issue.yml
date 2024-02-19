@@ -10,9 +10,19 @@ body:
       The title of the meeting issue should specify mode, persons and date of the meeting:
       *e.g. “Meet: Phone call with Martin Duchamp and Carine Genou about PublicSpace.AI on Jan. 23”*
 
-- type: markdown
-  attributes: 
-    value: "**Assign this issue to all people participating to the meeting**"
+- type: textarea
+  attributes:
+    label: List of actions
+    description: Actions to organize meeting
+    value: |
+      - [ ] Action: Assign meeting issue to internal participants
+      - [ ] Action: File meeting issue to project
+      - [ ] Action: Schedule meeting with guests
+      - [ ] Action: Define meeting agenda
+      - [ ] Action: Share meeting agenda with guests
+      - [ ] Action: Hold meeting and take notes
+      - [ ] Action: Convert actionable items to issues
+      - [ ] Action: Write back to guest(s) with next steps
 
 - type: textarea
   attributes:
@@ -57,19 +67,9 @@ body:
 - type: textarea
   attributes:
     label: Actionable items
-    description: List actions to turn into issues
+    description: List meeting points to turn into issues
     value: |
       - [ ] Task: ...
       - [ ] Task: ...
       - [ ] Task: ...
 
-- type: textarea
-  attributes:
-    label: List of actions
-    description: Actions to organize meeting
-    value: |
-      - [ ] Action: Schedule meeting
-      - [ ] Action: Define meeting agenda
-      - [ ] Action: Hold meeting and take notes
-      - [ ] Action: Convert actionable items to issues
-      - [ ] Action: Write back to guest(s) with next steps
