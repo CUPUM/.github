@@ -2,27 +2,40 @@ name: Onboarding
 description: "Streamline onboarding of new members or collaborators."
 title: "Onboarding: N. Last Name"
 body:
+
   - type: markdown
     attributes:
       value: |
-        ### Onboardee
+        ## How to use the Onboarding template
+        ### Give an adequate name to your onboarding issue
+        The title of this issue should follow the format `Onboarding: [First name] [Last name]`
+        ### Getting the collaborator ready on GitHub
         If the person being onboarded already has a GitHub account, assign them this issue.
+        Otherwise, let them know they should sign up for an account.
+
   - type: textarea
     attributes:
       label: Projects/teams
-      description: List projects or teams for which the onboardee sohuld get access.
+      description: List projects or teams for which the onboardee should get access.
       placeholder: |
-        - ...
+        - Project name...
+
   - type: textarea
     attributes:
-      label: To do
+      label: List of actions for chair members
       value: |
-        - [ ] Register on GitHub
-        - [ ] Request temporary invited collaborator Wi-Fi access
         - [ ] @iolyd: [Invite onboardee to the organization](https://github.com/orgs/CUPUM/people)
         - [ ] @iolyd: [Add onboardee to relevant team(s)](https://github.com/orgs/CUPUM/teams)
-        - [ ] Getting started with GitHub ([Documentation](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account))
-        - [ ] ...
-      description: "List the steps to complete in order to fully onboard the new member."
+        - [ ] @iolyd: Request temporary invited collaborator Wi-Fi access
+        - [ ] @iolyd: Schedule an onboarding session with the arriving collaborator
+        - [ ] @delphineduplain: Schedule meeting with onboardee
+
+  - type: textarea
+    attributes:
+      label: To do for arriving collaborator
+      description: "List the steps to complete in order to fully onboard the new member once they have arrived."
+      value: |
+        - [ ] Register on GitHub
+        - [ ] Skim through the documentation on [Getting started with GitHub](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
     validations:
       required: true
