@@ -5,6 +5,13 @@ body:
 
 - type: input
   attributes:
+    label: Location
+    description: Specify where the meeting takes place. e.g. “Faculté de l’aménagement”, “Zoom”, ”Phone", ”UNESCO HQ“
+    placeholder: Phone/Zoom/Teams/Building...
+    value: "TBD"
+
+- type: input
+  attributes:
     label: Date and time
     description: Indicate when the meeting take place. e.g. `2024-12-31 22:05`
     placeholder: YYYY-MM-DD HH:MM
