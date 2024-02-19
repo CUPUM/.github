@@ -1,28 +1,46 @@
 name: Onboarding
-description: "Streamline onboarding of new members or collaborators."
-title: "Onboarding: N. Last Name"
+description: |
+  Streamline the onboarding of a new chair member or collaborator.
+title: "Onboarding: "
+assignees:
+  - iolyd
+  - delphineduplain
 body:
+
   - type: markdown
     attributes:
       value: |
-        ### Onboardee
-        If the person being onboarded already has a GitHub account, assign them this issue.
+        Onboarding refers to the introduction of a new member or collaborator to the chair's activity's and platforms.
+
+        Giving an adequate name to your onboarding issue is important to ensure proper tracking. The title should specify the onboardee's, respecting the following format:
+        *“Onboarding: E. Beaudry Marchand"*
+
   - type: textarea
     attributes:
-      label: Projects/teams
-      description: List projects or teams for which the onboardee sohuld get access.
+      label: Project teams
+      description: |
+        List the teams for which the onboardee should gain access to work on their assigned projects.
+        You can find a list of the organisation's teams [here](https://github.com/orgs/CUPUM/teams).
       placeholder: |
-        - ...
+        - [ ] ...
+
   - type: textarea
     attributes:
-      label: To do
+      label: List of actions for chair staff
       value: |
-        - [ ] Register on GitHub
-        - [ ] Request temporary invited collaborator Wi-Fi access
         - [ ] @iolyd: [Invite onboardee to the organization](https://github.com/orgs/CUPUM/people)
         - [ ] @iolyd: [Add onboardee to relevant team(s)](https://github.com/orgs/CUPUM/teams)
-        - [ ] Getting started with GitHub ([Documentation](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account))
-        - [ ] ...
-      description: "List the steps to complete in order to fully onboard the new member."
-    validations:
-      required: true
+        - [ ] @iolyd: Request temporary invited collaborator Wi-Fi access
+        - [ ] @iolyd: Schedule an onboarding meeting with the arriving collaborator
+        - [ ] @delphineduplain: Schedule an introduction meeting with the arriving collaborator
+        - [ ] @team: Schedule an introduction meeting with the arriving collaborator
+        - [ ] @team: Make sure the onboardee is added to the list of invited people the relevant calendar events
+
+  - type: textarea
+    attributes:
+      label: To do for arriving collaborator
+      description: "List the steps to complete in order to fully onboard the new member once they have arrived."
+      value: |
+        - [ ] Register on GitHub
+        - [ ] Skim through the documentation on [Getting started with GitHub](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
+        - [ ] 🎉 Open your first issue! 🎉
