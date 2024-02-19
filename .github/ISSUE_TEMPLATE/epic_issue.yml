@@ -1,0 +1,27 @@
+name: Epic v2
+description: "Create and track related tasks under a common Epic."
+title: "Epic: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Give a relevant title to your epic
+        Epics should have a title that doesn't simply reiterate what its contained tasks already state. It should summarize the scope of work.
+
+        ### Assign to a project
+        Make sure to assign your epic to a project.
+  - type: textarea
+    attributes:
+      label: Epic description
+      description: Describe the concerns handled through the tasks you will list under this common epic.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Tasks
+      description: List all the tasks related to this epic, preferably in logical order of priority. Use linked references to the tasks as much as possible.
+      placeholder: |
+        - [ ] #...
+    validations:
+      required: false
+      
