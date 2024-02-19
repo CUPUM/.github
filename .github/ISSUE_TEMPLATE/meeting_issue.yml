@@ -17,11 +17,11 @@ body:
 - type: input
   attribute:
     label: External participants
-    description : "List full names and affiliation of non-chair participants to the meeting"    
+    description : List full names and affiliation of non-chair participants to the meeting
     placeholder: |
     * Martin Duchamp (Ville de Montréal)
     * Carine Genou (Ville de Laval)
-    value: "TBD"  
+    value: "TBD"
 
 ## Meeting location 
 - type: input
