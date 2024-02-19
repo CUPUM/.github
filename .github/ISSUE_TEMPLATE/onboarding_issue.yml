@@ -41,6 +41,4 @@ body:
       value: |
         - [ ] Register on GitHub
         - [ ] Skim through the documentation on [Getting started with GitHub](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
-        - [ ] 
-    validations:
-      required: true
+        - [ ] 🎉 Open your first issue! 🎉
