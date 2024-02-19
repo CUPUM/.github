@@ -12,14 +12,14 @@ body:
 #  attribute: 
 #    value: "For Chair participants, add as issue assignees -->"
 
-#- type: textarea
-#  attribute:
-#    label: External participants
-#    description: List full names and affiliation of non-chair participants to the meeting
-#    placeholder: |
-#     - Carine Genou (Ville de Laval)
-#      - Martin Duchamp (Ville de Montréal)
-#    value: "TBD"
+- type: textarea
+  attributes:
+    label: External participants
+    description: List full names and affiliation of non-chair participants to the meeting
+    placeholder: |
+     - Carine Genou (Ville de Laval)
+     - Martin Duchamp (Ville de Montréal)
+    value: "TBD"
 
 - type: input
   attributes:
