@@ -53,7 +53,7 @@ body:
 - type: textarea
   attributes:
     label: Meeting agenda
-    description: Describe the objective, context and key information
+    description: List points to be discussed from most to least important
     placeholder: "TBD"
 
 - type: textarea
