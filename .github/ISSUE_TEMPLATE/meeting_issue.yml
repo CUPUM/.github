@@ -5,6 +5,12 @@ body:
 
 - type: textarea
   attributes:
+    label: Meeting description
+    description: Describe the objective, context and key information
+    placeholder: This meeting serves to ...
+
+- type: textarea
+  attributes:
     label: Meeting agendy
     description: Describe the objective, context and key information
     value: "TBD"
