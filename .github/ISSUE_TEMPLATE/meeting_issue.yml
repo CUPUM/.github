@@ -8,8 +8,8 @@ body:
 ## Issue guidelines
 - type: markdown
   attributes:
-    value: "Meeting issues serve to plan, organize, record and follow up on all meetings conducted. The title of the meeting issue should specify mode, persons and date of the meeting: *e.g. “Meet: Phone call with Martin Duchamp and Carine Genou about PublicSpace.AI on Jan. 23”*"
-
+    value: "TBD" 
+    
 ## Meeting participant
 - type: markdown
   attribute:
