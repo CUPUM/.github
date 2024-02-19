@@ -3,6 +3,13 @@ description: "Plan, organize and record meetings"
 title: "Meet: "
 body:
 
+- type: input
+  attributes:
+    label: Date and time
+    description: Indicate when the meeting take place. e.g. `2024-12-31 22:05`
+    placeholder: YYYY-MM-DD HH:MM
+    value: "TBD"
+
 - type: textarea
   attributes:
     label: Meeting description
