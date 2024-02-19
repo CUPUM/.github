@@ -19,8 +19,8 @@ body:
     label: External participants
     description : List full names and affiliation of non-chair participants to the meeting
     placeholder: |
-    - Martin Duchamp (Ville de Montréal)
-    - Carine Genou (Ville de Laval)
+      - Martin Duchamp (Ville de Montréal)
+      - Carine Genou (Ville de Laval)
     value: "TBD"
 
 ## Meeting location 
