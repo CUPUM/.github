@@ -1,18 +1,18 @@
 name: Meeting
-description: "Plan, organize and record meetings"
+description: "Plan, organize, record and follow up on meetings"
 title: "Meet: "
 body:
 
 - type: markdown
   attributes:
     value: |
-      Meeting issues serve to plan, organize, record and follow up on all meetings conducted. 
+      Meeting issues serve to plan, organize, record and follow up on internal and external meetings. 
       The title of the meeting issue should specify mode, persons and date of the meeting:
       *e.g. “Meet: Phone call with Martin Duchamp and Carine Genou about PublicSpace.AI on Jan. 23”*
 
 - type: markdown
   attributes: 
-    value: "For Chair participants, add as issue assignees -->"
+    value: **Assign this issue to all people participating to the meeting**"
 
 - type: textarea
   attributes:
@@ -45,12 +45,31 @@ body:
     label: Meeting agenda
     description: Describe the objective, context and key information
     placeholder: "TBD"
-  
+
 - type: textarea
   attributes:
     label: Meeting notes
     description: Based on the agenda, summarize key information, decisions and resources 
-    placeholder: |
-      **Topic 1**
+    value: |
       - ...
       - ...
+   
+- type: textarea
+  attributes:
+    label: Actionable items
+    description: List actions to turn into issues
+    value: |
+      - [ ] Task: ...
+      - [ ] Task: ...
+      - [ ] Task: ...
+
+- type: textarea
+  attributes:
+    label: List of actions
+    descrpition: Actions to organize meeting
+    value: |
+      - [ ] Action: Schedule meeting
+      - [ ] Action: Define meeting agenda
+      - [ ] Action: Hold meeting and take notes
+      - [ ] Action: Convert actionable items to issues
+      - [ ] Action: Write back to guest(s) with next steps
