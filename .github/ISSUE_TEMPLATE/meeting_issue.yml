@@ -13,6 +13,13 @@ body:
     value: "For Chair participants, add as issue assignees -->"
 
 - type: input
+  attribute:
+    label: External participants
+    description : List full names and affiliation of non-chair participants to the meeting
+    placeholder: "..."
+    value: "TBD"
+
+- type: input
   attributes:
     label: Location
     description: Specify where the meeting takes place. e.g. “Faculté de l’aménagement”, “Zoom”, ”Phone", ”UNESCO HQ“
