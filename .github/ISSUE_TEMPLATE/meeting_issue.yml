@@ -9,13 +9,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Meeting issues** | 
-        Meeting issues servce to plan, organize, record and follow up on all meetings conducted. The title of the meeting issue should specify mode, persons and date of the meeting: *e.g. “Meet: Phone call with Martin Duchamp and Carine Genou about PublicSpace.AI on Jan. 23”*
+        "**Meeting issues** | 
+        Meeting issues servce to plan, organize, record and follow up on all meetings conducted. The title of the meeting issue should specify mode, persons and date of the meeting: *e.g. “Meet: Phone call with Martin Duchamp and Carine Genou about PublicSpace.AI on Jan. 23”*"
 
 ## Meeting participants
   - type: markdown
     attribute:
-      value: For Chair participants, add as issue assignees -->
+      value: "For Chair participants, add as issue assignees -->"
   - type: input
     attribute:
         label: External participants
@@ -32,7 +32,7 @@ body:
         label: Location
         description: Specify where the meeting takes place. e.g. “Faculté de l’aménagement”, “Zoom”, ”Phone", ”UNESCO HQ“
         placeholder: Phone/Zoom/Teams/Building...
-        value: TBD
+        value: "TBD"
 
 ## Meeting time
   - type: input
@@ -40,7 +40,7 @@ body:
       label: Date and time
       description: Indicate when the meeting take place. e.g. "2024-12-31 22:05"
       placeholder: YYYY-MM-DD HH:MM
-      value: TBD
+      value: "TBD"
 
 ## Meeting description
   - type: textarea
@@ -56,7 +56,7 @@ body:
       label: Meeting agendy
       description: Describe the objective, context and key information
       value: |
-        **Agenda**
+        "**Agenda**"
 
   
   - type: textarea
