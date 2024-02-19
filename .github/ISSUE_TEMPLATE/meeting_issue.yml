@@ -3,15 +3,6 @@ description: "Plan, organize and record meetings"
 title: "Meet: "
 body:
 
-- type: markdown
-  attributes:
-    value: |
-      Meeting issues serve to plan, organize, record and follow up on all meetings conducted. The title of the meeting issue should specify mode, persons and date of the meeting: *e.g. “Meet: Phone call with Martin Duchamp and Carine Genou about PublicSpace.AI on Jan. 23”*
-
-- type: markdown
-  attribute:
-    value: "For Chair participants, add as issue assignees -->"
-
 - type: textarea
   attribute:
     label: External participants
