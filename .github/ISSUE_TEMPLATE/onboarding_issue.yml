@@ -12,7 +12,8 @@ body:
       value: |
         Onboarding refers to the introduction of a new member or collaborator to the chair's activity's and platforms.
         
-        Give an adequate name to your onboarding issue. The title of this issue should follow the format `Onboarding: [First name] [Last name]`
+        Giving an adequate name to your onboarding issue is important to ensure proper tracking. The title should specify the onboardee's name, 
+        *e.g. “Onboarding: E. Beaudry Marchand"*
 
   - type: textarea
     attributes:
