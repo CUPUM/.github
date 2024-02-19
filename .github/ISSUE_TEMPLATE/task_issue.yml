@@ -1,0 +1,27 @@
+name: Task v2
+description: Create A small task that is, most likely, part of an Epic.
+title: "Task: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        #### Give a relevant title to your task
+        Tasks should have concise titles that clearly state the core of the work to be done.
+
+        #### Assign to a project
+        Make sure to assign the task to a project.
+  - type: textarea
+    attributes:
+      label: Task description
+      description: Describe the work to be done.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: To do
+      description: List all the steps to complete in order to close the task. Remember that you can assign work to collegues by tagging them using `@...`.
+      placeholder: |
+        - [ ] Action: ...
+    validations:
+      required: false
+      
