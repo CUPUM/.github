@@ -21,21 +21,18 @@ body:
     placeholder: |
      - Carine Genou (Ville de Laval)
      - Martin Duchamp (Ville de Montréal)
-    value: "TBD"
 
 - type: input
   attributes:
     label: Location
     description: Specify where the meeting takes place. e.g. “Faculté de l’aménagement”, “Zoom”, ”Phone", ”UNESCO HQ“
     placeholder: Phone/Zoom/Teams/Building...
-    value: "TBD"
 
 - type: input
   attributes:
     label: Date and time
     description: Indicate when the meeting take place. e.g. `2024-12-31 22:05`
     placeholder: YYYY-MM-DD HH:MM
-    value: "TBD"
 
 - type: textarea
   attributes:
@@ -45,9 +42,9 @@ body:
 
 - type: textarea
   attributes:
-    label: Meeting agendy
+    label: Meeting agenda
     description: Describe the objective, context and key information
-    value: "TBD"
+    placeholder: "TBD"
   
 - type: textarea
   attributes:
