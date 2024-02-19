@@ -12,6 +12,12 @@ body:
 
 - type: textarea
   attributes:
+    label: Meeting description
+    description: Describe the objective, context and key information
+    placeholder: This meeting serves to ...
+
+- type: textarea
+  attributes:
     label: List of actions
     description: Actions to organize meeting
     value: |
@@ -43,12 +49,6 @@ body:
     label: Date and time
     description: Indicate when the meeting take place. e.g. `2024-12-31 22:05`
     placeholder: YYYY-MM-DD HH:MM
-
-- type: textarea
-  attributes:
-    label: Meeting description
-    description: Describe the objective, context and key information
-    placeholder: This meeting serves to ...
 
 - type: textarea
   attributes:
