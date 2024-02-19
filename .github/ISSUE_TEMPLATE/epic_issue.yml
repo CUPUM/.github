@@ -8,10 +8,10 @@ body:
       value: |
         ## How to create an Epic
         
-        ### Define a relevant title
+        #### Define a relevant title
         Epics should have a title that doesn't simply reiterate what its contained tasks already state. It should summarize the scope of work.
 
-        ### Assign to a project
+        #### Assign to a project
         Make sure to assign your epic to a project.
   
   # This section contains the user-input fields.
