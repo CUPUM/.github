@@ -10,8 +10,7 @@ body:
 
 - type: markdown
   attribute: 
-    value: | 
-      For Chair participants, add as issue assignees
+    value: "For Chair participants, add as issue assignees -->"
 
 - type: textarea
   attribute:
