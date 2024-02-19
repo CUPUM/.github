@@ -3,6 +3,16 @@ description: "Plan, organize and record meetings"
 title: "Meet: "
 body:
 
+
+- type: input
+  attribute:
+    label: External participants
+    description : List full names and affiliation of non-chair participants to the meeting
+    placeholder: |
+      - Martin Duchamp (Ville de Montréal)
+      - Carine Genou (Ville de Laval)
+    value: "TBD"
+
 - type: input
   attributes:
     label: Location
