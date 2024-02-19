@@ -5,10 +5,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        ### Give a relevant title to your epic
+        #### Give a relevant title to your epic
         Epics should have a title that doesn't simply reiterate what its contained tasks already state. It should summarize the scope of work.
 
-        ### Assign to a project
+        #### Assign to a project
         Make sure to assign your epic to a project.
   - type: textarea
     attributes:
