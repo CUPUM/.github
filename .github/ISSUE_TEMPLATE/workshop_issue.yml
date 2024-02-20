@@ -54,11 +54,12 @@ body:
 - type: textarea
   attributes:
     label: Workshop agenda
-    description: Clearly describe ech activities to be held, duration, objectives, means, etc.
+    description: Clearly describe each activity to be held, its duration, objectives, means, etc.
     placeholder: |
       # Activity 1 (15 minutes)
       This activity serve to ... it last 15 minutes and is animated by *** and ***. 
       In the first five minutes ... 
+      
       # Activity 2 (10 minutes)
       ...
        
