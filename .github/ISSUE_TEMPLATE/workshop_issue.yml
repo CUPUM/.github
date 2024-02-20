@@ -36,7 +36,7 @@ body:
     label: External participants
     description: List full names and affiliation of non-chair participants to the meeting
     placeholder: |
-      - Lucie Pigeon (Université du Québec à Montréaé)
+      - Lucie Pigeon (Université du Québec à Montréal)
       - René Petit (ONU Habitat)
 
 - type: input
@@ -56,9 +56,10 @@ body:
     label: Workshop agenda
     description: List activities to be held and duration
     placeholder: |
-      - Activity 1 (15 minutes)
-      - Activity 2 (10 minutes)
-      - ...
+      # Activity 1 (15 minutes)
+      This activity is animated by *** and ***. In the first five minutes ... 
+      # Activity 2 (10 minutes)
+      ...
        
 - type: textarea
   attributes:
