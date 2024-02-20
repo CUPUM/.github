@@ -9,9 +9,9 @@ body:
     value: |
       Epics issues serve to manage and track complex sets of tasks. 
       1. Name the epic clearly by stating what will be achieverd using an action verb the details
-      Eg. *"Publish 'AI & Cities' paper in *Nature* by Oct. 1"*
-      2. Assign *one* person. The assignee is responsible to coordinate listed tasks and deliver the epic in time
-      3. Add to one or more projects. The project manager is responsible to to coordinate added epics and deliver the project on time. 
+      Eg. *"Epic: Publish 'AI & Cities' paper in *Nature* by Oct. 1"*
+      2. Assign **one** person. The assignee is responsible to coordinate listed tasks and deliver the epic in time
+      3. Add to one or more projects. Project managers are responsible to coordinate epics and deliver projects on time 
 
 # Epic description
 - type: textarea
@@ -27,6 +27,6 @@ body:
     description: |
       List tasks required to complete the epic. Tasks can be listed then created as issues or linked using url or \#
     placeholder: |
-      - [ ] Task: *name of tasks"
-      - [ ] Task: *#n* (if in the same repo)
+      - [ ] Task: name of tasks
+      - [ ] Task: #n (if in the same repo)
 
