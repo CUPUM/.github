@@ -31,4 +31,6 @@ body:
       List actions required to complete the task. Actions can be listed then created as issues and assigned to others.
     placeholder: |
       - [ ] Action: name of action
+      - [ ] Meet: name of meeting
+      - [ ] Workshop: name of workshop
 
