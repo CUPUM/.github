@@ -1,32 +1,32 @@
 name: Epic v2
-description: "Create and track related tasks under a common Epic."
+description: "Complex sets of tasks"
 title: "Epic: "
 body:
 
-  # This section gives guidelines on how to create an adequate epic. 
-  - type: markdown
-    attributes:
-      value: |
-        Epics should have a title that doesn't simply reiterate what its contained tasks already state.
-        It should summarize the scope of work.
+# Guidelines
+- type: markdown
+  attributes:
+    value: |
+      Epics issues serve to manage and track complex sets of tasks. 
+      The title should clearly state the goal of the epic with an action verb the deadline
+      Eg. *"Publish 'AI & Cities' paper in *Nature* by Oct. 1"*
+      There should be **only one person assigned** at the time 
+      The assignee is responsible to coordinate listed tasks and deliver the epic in time
 
-        Make sure to assign your epic to a project.
-
+# Epic description
   - type: textarea
     attributes:
       label: Epic description
-      description: Describe the concerns handled through the tasks you will list under this common epic.
-    validations:
-      required: false
+      description: Describe what should be achieved and how
+      placeholder: This epic serves to ...
 
+# List of tasks
   - type: textarea
     attributes:
       label: List of tasks
       description: |
-        List all the tasks required to complete this epic, preferably in logical order of priority.
-        Remember that you can use `#...` to link to existing tasks and automatically track their progress within this list. 
-      value: |
-        - [ ] Task: TBD
-    validations:
-      required: false
+        List tasks required to complete the epic. Tasks can be listed then created as issues or linked using url or #
+      placeholder: |
+        - [ ] Task: *name of tasks"
+        - [ ] Task: *#n* (if in the same repo)
 
