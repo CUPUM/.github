@@ -7,10 +7,10 @@ body:
 - type: markdown
   attributes:
     value: |
-      Epics issues serve to manage and track complex sets of tasks. They are managed by one assignee who organizes, document and track the epic
+      Epics issues serve to manage and track complex sets of tasks. They are managed by one assignee who organizes, documents, tracks and closes the epic. To create an epic:
       1. Name the epic clearly by stating what will be achieverd using an action verb the details
       Eg. *"Epic: Publish 'AI & Cities' paper in *Nature* by Oct. 1"*
-      2. Assign **one** person. The assignee is responsible to coordinate listed tasks and deliver the epic on time
+      2. Assign **one** person. The epic assignee is responsible to coordinate listed tasks and deliver the epic on time
       3. Add to relevant projects. Project managers are responsible to coordinate epics and deliver projects on time 
 
 # Epic description
