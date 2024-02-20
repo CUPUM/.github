@@ -7,8 +7,11 @@ body:
   attributes:
     value: |
       Meeting issues serve to plan, organize, record and follow up on internal and external meetings. 
-      The title of the meeting issue should specify mode, persons and date of the meeting:
+      1. Name the meeting issue specifying mode, persons and date of the meeting:
       *e.g. “Meet: Phone call with Martin Duchamp and Carine Genou about PublicSpace.AI on Jan. 23”*
+      2. Assign the meeting issue to internal participants
+      3. Add the meeting issue to the relevant project
+      4. Link back the meeting issue to the epic or task issues it supports
 
 - type: textarea
   attributes:
@@ -21,8 +24,6 @@ body:
     label: List of actions
     description: Actions to organize meeting
     value: |
-      - [ ] Action: Assign meeting issue to internal participants
-      - [ ] Action: File meeting issue to project
       - [ ] Action: Schedule meeting with guests
       - [ ] Action: Define meeting agenda
       - [ ] Action: Share meeting agenda with guests
