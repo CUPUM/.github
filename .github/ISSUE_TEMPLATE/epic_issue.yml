@@ -17,9 +17,11 @@ body:
 - type: textarea
   attributes:
     label: Epic description
-    description: Clearly describe the 'why', 'how' and 'what' of the epic
-    placeholder: This epic serves to ...
-
+    description: Clearly describe the 'why', 'how' and 'what' of the epic. To facilitate working with related documents, put a GitHub hyperlink to the concerned folder and external URLs. You can also drop images or other material necessary here directly. 
+    placeholder: |
+      This epic serves to ...
+      Project folder: https://github.com/CUPUM/...
+      More info on website: https://...
 # List of tasks
 - type: textarea
   attributes:
