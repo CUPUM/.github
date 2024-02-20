@@ -14,19 +14,19 @@ body:
       The assignee is responsible to coordinate listed tasks and deliver the epic in time
 
 # Epic description
-  - type: textarea
-    attributes:
-      label: Epic description
-      description: Describe what should be achieved and how
-      placeholder: This epic serves to ...
+- type: textarea
+  attributes:
+    label: Epic description
+    description: Describe what should be achieved and how
+    placeholder: This epic serves to ...
 
 # List of tasks
-  - type: textarea
-    attributes:
-      label: List of tasks
-      description: |
-        List tasks required to complete the epic. Tasks can be listed then created as issues or linked using url or #
-      placeholder: |
-        - [ ] Task: *name of tasks"
-        - [ ] Task: *#n* (if in the same repo)
+- type: textarea
+  attributes:
+    label: List of tasks
+    description: |
+      List tasks required to complete the epic. Tasks can be listed then created as issues or linked using url or #
+    placeholder: |
+      - [ ] Task: *name of tasks"
+     - [ ] Task: *#n* (if in the same repo)
 
