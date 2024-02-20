@@ -31,6 +31,6 @@ body:
     placeholder: |
       - [ ] Task: name of tasks
       - [ ] Task: use the GitHub # hyperlink (if in the same repo)
-      - [ ] Meeting: name of meeting
+      - [ ] Meet: name of meeting
       - [ ] Workshop: name of workshop
 
