@@ -1,27 +1,34 @@
-name: Task v2
-description: Create A small task that is, most likely, part of an Epic.
+name: Task
+description: "Simple sets of actions"
 title: "Task: "
 body:
-  - type: markdown
-    attributes:
-      value: |
-        #### Give a relevant title to your task
-        Tasks should have concise titles that clearly state the core of the work to be done.
 
-        #### Assign to a project
-        Make sure to assign the task to a project.
-  - type: textarea
-    attributes:
-      label: Task description
-      description: Describe the work to be done.
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: To do
-      description: List all the steps to complete in order to close the task. Remember that you can assign work to collegues by tagging them using `@...`.
-      placeholder: |
-        - [ ] Action: ...
-    validations:
-      required: false
-      
+# Guidelines
+- type: markdown
+  attributes:
+    value: |
+      Task issues serve to manage and track simple sets of actions. They are managed by one assignee who organizes, documents, tracks and closes the task. To create a task:
+      1. Name the task clearly by stating what will be achieverd using an action verb the details
+      Eg. *"Task: Write draft of 'AI & Cities' paper by Jun. 15"*
+      2. Assign **one** person. The task assignee is responsible to coordinate listed actions and deliver the task on time
+      3. Add to relevant projects. Project managers are responsible to coordinate epics and deliver projects on time
+      4. Link back to an epic issue. With a few exceptions, every task should belong to at least one epic in the same repo
+
+# Epic description
+- type: textarea
+  attributes:
+    label: Task description
+    description: Clearly describe the 'why', 'how' and 'what' of the task. To facilitate working with related documents, put a GitHub hyperlink to the concerned folder and external URLs. You can also drop images or other material necessary here directly. 
+    placeholder: |
+      This task serves to ...
+      Project folder: https://github.com/CUPUM/...
+      More info on website: https://...
+# List of actions
+- type: textarea
+  attributes:
+    label: List of actions
+    description: |
+      List actions required to complete the task. Actions can be listed then created as issues and assigned to others.
+    placeholder: |
+      - [ ] Action: name of action
+
