@@ -8,10 +8,10 @@ body:
   attributes:
     value: |
       Epics issues serve to manage and track complex sets of tasks. 
-      The title should clearly state the goal of the epic with an action verb the deadline
+      1. Name the epic clearly by stating what will be achieverd using an action verb the details
       Eg. *"Publish 'AI & Cities' paper in *Nature* by Oct. 1"*
-      There should be **only one person assigned** at the time 
-      The assignee is responsible to coordinate listed tasks and deliver the epic in time
+      2. Assign *one* person. The assignee is responsible to coordinate listed tasks and deliver the epic in time
+      3. Add to one or more projects. The project manager is responsible to to coordinate added epics and deliver the project on time. 
 
 # Epic description
 - type: textarea
