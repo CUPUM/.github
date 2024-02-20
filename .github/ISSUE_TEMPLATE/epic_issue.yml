@@ -28,5 +28,5 @@ body:
       List tasks required to complete the epic. Tasks can be listed then created as issues or linked using url or \#
     placeholder: |
       - [ ] Task: *name of tasks"
-     - [ ] Task: *#n* (if in the same repo)
+      - [ ] Task: *#n* (if in the same repo)
 
