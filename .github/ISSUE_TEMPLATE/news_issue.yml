@@ -5,6 +5,13 @@ body:
 
   - type: textarea
     attributes:
+      label: Description du projet
+      description: Ajoutez un sommaire du projet concerné pour contextualiser la campagne de communication. 
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
       label: Création du presskit
       value: |
         - [ ] Action: Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/press_kits) selon cette nomenclature : aaaammjj-press_kit-noms-news_title
