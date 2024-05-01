@@ -3,18 +3,45 @@ description: "Communication template (for single posts or weekly campaigns)."
 title: "News: "
 body:
 
-  - type: markdown
-    attributes:
-      value: |
-        Epics should have a title that doesn't simply reiterate what its contained tasks already state.
-        It should summarize the scope of work.
-
-        Make sure to assign your epic to a project.
-
   - type: textarea
     attributes:
       label: Presskit preparation
       description: Prepare all the material necessary for publishing across the chair's platforms.
+      value: |
+        - [ ] Action: Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/press_kits) selon cette nomenclature : aaaammjj-press_kit-noms-news_title
+        - [ ] Action: Créer le communiqué de presse en FR selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_fr-20211228.docx) ou en EN selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_en-20211228.docx) et le déposer dans le dossier
+        - [ ] Action: Tag @sjinko pour valider le communiqué
+        - [ ] Action: Tranduire le communiqué (FR > EN ou EN > FR)
+        - [ ] Action: Mettre les communiquées (FR et EN) en ligne sur le site web
+        - [ ] Action: Commenter '@sjinko, à qui envoyer ce communiqué?' 
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Types of posts
+      description: For a campaign, target between 3 posts minimum and 5 posts maximum.
+      value: |
+        > For a campaign, target between 3 posts minimum and 5 posts maximum.
+        - [ ] News 
+        - [ ] Photo
+        - [ ] Vidéo
+        - [ ] Quote
+        - [ ] Conférence
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Production of visuals
+      value: |
+        > Des images gratuites et libres de droit se trouvent [içi](https://unsplash.com)  
+        > La charte graphique de la chaire se trouve [içi](https://github.com/CUPUM/communication/blob/main/templates/CHAIRE_UNESCO_PaysageUrbain_chartegraphique.pdf)
+
+        - [ ] Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/visuals) selon cette nomenclature : aaaammjj-projet
+        - [ ] Produire le(s) visuels en anglais selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
+        - [ ] Produire le(s) visuels en français selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
+        - [ ] Déposer le(s) visuel(s) dans le dossier selon la nomenclature : nom-projet-aaaammjj
     validations:
       required: false
 
