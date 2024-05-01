@@ -5,8 +5,7 @@ body:
 
   - type: textarea
     attributes:
-      label: Presskit preparation
-      description: Prepare all the material necessary for publishing across the chair's platforms.
+      label: Création du presskit
       value: |
         - [ ] Action: Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/press_kits) selon cette nomenclature : aaaammjj-press_kit-noms-news_title
         - [ ] Action: Créer le communiqué de presse en FR selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_fr-20211228.docx) ou en EN selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_en-20211228.docx) et le déposer dans le dossier
@@ -19,10 +18,10 @@ body:
 
   - type: textarea
     attributes:
-      label: Types of posts
-      description: For a campaign, target between 3 posts minimum and 5 posts maximum.
+      label: Types de publications
+      description: Pour une campagne : Min 3 posts - Max 5 posts.
       value: |
-        > For a campaign, target between 3 posts minimum and 5 posts maximum.
+        > Pour une campagne : Min 3 posts - Max 5 posts.
         - [ ] News 
         - [ ] Photo
         - [ ] Vidéo
@@ -33,7 +32,7 @@ body:
 
   - type: textarea
     attributes:
-      label: Production of visuals
+      label: Production des visuels
       value: |
         > Des images gratuites et libres de droit se trouvent [içi](https://unsplash.com)  
         > La charte graphique de la chaire se trouve [içi](https://github.com/CUPUM/communication/blob/main/templates/CHAIRE_UNESCO_PaysageUrbain_chartegraphique.pdf)
@@ -47,12 +46,24 @@ body:
 
   - type: textarea
     attributes:
-      label: List of tasks
-      description: |
-        List all the tasks required to complete this epic, preferably in logical order of priority.
-        Remember that you can use `#...` to link to existing tasks and automatically track their progress within this list. 
+      label: Production des _captions_
       value: |
-        - [ ] Task: TBD
+        - [ ] Créer un texte pour le(s) visuel(s) à partir du presskit en utilisant le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post)
+        - [ ] Ajouter les hashtags à la caption (#)
+        - [ ] Ajouter les personnes concernées à la caption (@)
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Publication sur les réseaux sociaux
+      value: |
+        > Seuls les publications sur Facebook sont en français 
+        - [ ] Publier visuel 1 sur Instagram, Facebook, Linkedin et Twitter
+        - [ ] Publier visuel 2 sur Instagram, Facebook, Linkedin et Twitter
+        - [ ] Publier visuel 3 sur Instagram, Facebook, Linkedin et Twitter
+        - [ ] Publier visuel 4 sur Instagram, Facebook, Linkedin et Twitter (au besoin) 
+        - [ ] Publier visuel 5 sur Instagram, Facebook, Linkedin et Twitter (au besoin)
     validations:
       required: false
 
