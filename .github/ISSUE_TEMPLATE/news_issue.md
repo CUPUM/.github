@@ -10,7 +10,6 @@ Décrire le projet içi.
 - [ ] Action: Créer le communiqué de presse en FR selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_fr-20211228.docx) ou en EN selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_en-20211228.docx) et le déposer dans le dossier
 - [ ] Action: Tag @sjinko pour valider le communiqué
 - [ ] Action: Tranduire le communiqué (FR > EN ou EN > FR)
-- [ ] Action: Mettre les communiquées (FR et EN) en ligne sur le site web
 - [ ] Action: Commenter '@sjinko, à qui envoyer ce communiqué?' 
 
 # Types de posts
@@ -39,8 +38,15 @@ Décrire le projet içi.
 # Publication sur les réseaux sociaux
  > Seuls les posts sur Facebook sont en français 
 
-- [ ] Publier visuel 1 sur Instagram, Facebook, Linkedin et Twitter
-- [ ] Publier visuel 2 sur Instagram, Facebook, Linkedin et Twitter
-- [ ] Publier visuel 3 sur Instagram, Facebook, Linkedin et Twitter
-- [ ] Publier visuel 4 sur Instagram, Facebook, Linkedin et Twitter (au besoin) 
-- [ ] Publier visuel 5 sur Instagram, Facebook, Linkedin et Twitter (au besoin) 
+- [ ] Publier visuel 1 sur Instagram, Facebook, Linkedin 
+- [ ] Publier visuel 2 sur Instagram, Facebook, Linkedin 
+- [ ] Publier visuel 3 sur Instagram, Facebook, Linkedin 
+- [ ] Publier visuel 4 sur Instagram, Facebook, Linkedin (au besoin) 
+
+# Autres publications 
+ > Seuls les projets de recherche-création sont publiés dans l'infolettre de l'UdeM
+
+- [ ] [CUPUM](https://github.com/CUPUM/cupum.github.io) 
+- [ ] Site de la Faculté (Courriel à marie.torres-toulemont@umontreal.ca)
+- [ ] [UdeM infolettre](https://forms.office.com/pages/responsepage.aspx?id=7O9-0kcq50uYHg-Jd_ox2PFgO1Ld0UJAslkNGN5NycNUN0dQWDdHMDA5UUY2RUNPQlQ4N0o0Nk5XSy4u&web=1&wdLOR=cE08CDE28-B8EF-7849-93EF-8E8F15F6F170)
+ 
