@@ -47,6 +47,6 @@ Décrire le projet içi.
  > Seuls les projets de recherche-création sont publiés dans l'infolettre de l'UdeM
 
 - [ ] [CUPUM](https://github.com/CUPUM/cupum.github.io) 
-- [ ] Site de la Faculté (Courriel à marie.torres-toulemont@umontreal.ca)
+- [ ] [Site de la Faculté](https://forms.office.com/pages/responsepage.aspx?id=7O9-0kcq50uYHg-Jd_ox2M5bizKbGatEt3RzDdHVvZpUNkI0Wk0wSlRQUTNDTjc3Rk5FNlFWQjlITy4u&origin=lprLink) 
 - [ ] [UdeM infolettre](https://forms.office.com/pages/responsepage.aspx?id=7O9-0kcq50uYHg-Jd_ox2PFgO1Ld0UJAslkNGN5NycNUN0dQWDdHMDA5UUY2RUNPQlQ4N0o0Nk5XSy4u&web=1&wdLOR=cE08CDE28-B8EF-7849-93EF-8E8F15F6F170)
  
