@@ -1,0 +1,30 @@
+name: Hiring
+description: "Steps to hire a new collaborator or extend contracts"
+title: "Hire: "
+body:
+
+# Guidelines
+- type: markdown
+  attributes:
+    value: |
+      Who, what, where, when why,... and more!
+
+# Responsabilities and KPIs outline
+- type: textarea
+  attributes:
+    label: Cahier des charges
+    value: |
+      | Tâches | Proportion | Indicateur clé |
+      | :--    | :--        | :--            |
+      |  |  |  |
+
+# List of actions
+- type: textarea
+  attributes:
+    label: List of actions
+    description: |
+      List actions required to complete the hiring process. Make sure to specify relevant people where applicable by tagging them in the task name. 
+    placeholder: |
+      - [ ] Définir le cahier des charges
+      - [ ] @sjinko: Valider le cahier des charges
+      - [ ] @delphine: Produire le cahier des charges
