@@ -1,13 +1,36 @@
 name: Hiring
 description: "Steps to hire a new collaborator or extend contracts"
-title: "Hire: "
+title: "Hire: [student name] as research assistant for [semester]"
 body:
 
 # Guidelines
 - type: markdown
   attributes:
     value: |
-      Who, what, where, when why,... and more!
+      Give an adequate title to your hiring issue.
+      - Specify the student's name
+      - Specify the semester, example: `A25` for _automne 2025_
+
+# Responsabilities and KPIs outline
+- type: textarea
+  attributes:
+    label: Détails d'embauche
+    value: |
+      - Nom:
+      - Prénom:
+      - Courriel (pour nouvel auxiliaire seulement):
+      - Cycle d’études (pour nouvel auxiliaire seulement):
+      - Programme d’études (pour nouvel auxiliaire seulement):
+      - Date de début:
+      - Date de fin:
+      - Projet:
+      - Total d'heures:
+      - Jours de travail:
+        - [ ] Lundi
+        - [ ] Mardi
+        - [ ] Mercredi
+        - [ ] Jeudi
+        - [ ] Vendredi
 
 # Responsabilities and KPIs outline
 - type: textarea
@@ -22,9 +45,18 @@ body:
 - type: textarea
   attributes:
     label: List of actions
-    description: |
-      List actions required to complete the hiring process. Make sure to specify relevant people where applicable by tagging them in the task name. 
     placeholder: |
-      - [ ] Définir le cahier des charges
-      - [ ] @sjinko: Valider le cahier des charges
-      - [ ] @delphine: Produire le cahier des charges
+      _Étapes préliminaires pour nouveau contrat de 35h + ou recherche de candidature:_
+      - [ ] Action: Compléter le formulaire d’affichage au département
+      - [ ] Action: Envoyer le formulaire à I. Couillard
+      - [ ] Action: Réceptionner les candidatures
+      - [ ] Action: Évaluer les candidatures
+      - [ ] Action: Confirmer l’attribution du poste à la personne retenue
+      _Étapes obligatoires:_
+      - [ ] - [ ] Action: Créer le cahier des charges
+      - [ ] Action: Faire approuver le cahier des charges par @sjinko
+      - [ ] Action: Confirmer avec @sjinko le compte à imputer
+      - [ ] Action: Remplir le fichier Excel de suivi des postes d’auxiliaires
+      - [ ] Action: Envoyer le fichier Excel à I. Couillard pour création du contrat
+      - [ ] Action: Envoyer le cahier des charges à l’auxiliaire
+      - [ ] Action: Rencontrer auxiliaire pour séance de feedback @sjinko
