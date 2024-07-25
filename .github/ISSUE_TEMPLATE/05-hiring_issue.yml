@@ -35,7 +35,7 @@ body:
 # Responsabilities and KPIs outline
 - type: textarea
   attributes:
-    label: Work specifications and key performance indicators
+    label: Cahier des charges
     value: |
       | Tâches | Proportion | Indicateur clé |
       | :--    | :--        | :--            |
@@ -45,7 +45,7 @@ body:
 # List of actions
 - type: textarea
   attributes:
-    label: List of actions
+    label: Liste d'actions
     value: |
       _Étapes préliminaires pour nouveau contrat de 35h + ou recherche de candidature:_
       - [ ] Action: Compléter le formulaire d’affichage au département
