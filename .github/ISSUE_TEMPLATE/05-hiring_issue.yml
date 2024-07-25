@@ -48,13 +48,16 @@ body:
     label: Liste d'actions
     value: |
       _Étapes préliminaires pour nouveau contrat de 35h + ou recherche de candidature:_
+      
       - [ ] Action: Compléter le formulaire d’affichage au département
       - [ ] Action: Envoyer le formulaire à I. Couillard
       - [ ] Action: Réceptionner les candidatures
       - [ ] Action: Évaluer les candidatures
       - [ ] Action: Confirmer l’attribution du poste à la personne retenue
+      
       _Étapes obligatoires:_
-      - [ ] - [ ] Action: Créer le cahier des charges
+      
+      - [ ] Action: Créer le cahier des charges
       - [ ] Action: Faire approuver le cahier des charges par @sjinko
       - [ ] Action: Confirmer avec @sjinko le compte à imputer
       - [ ] Action: Remplir le fichier Excel de suivi des postes d’auxiliaires
