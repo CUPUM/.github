@@ -11,7 +11,7 @@ body:
       - Specify the student's name
       - Specify the semester, example: `A25` for _automne 2025_
 
-# Responsabilities and KPIs outline
+# Details of hiree and employment
 - type: textarea
   attributes:
     label: Détails d'embauche
@@ -35,17 +35,18 @@ body:
 # Responsabilities and KPIs outline
 - type: textarea
   attributes:
-    label: Cahier des charges
+    label: Work specifications and key performance indicators
     value: |
       | Tâches | Proportion | Indicateur clé |
       | :--    | :--        | :--            |
-      |  |  |  |
+      | Tâche 1 | 25% | 5000$ |
+      | Tâche 2 | 75% | 29 participants |
 
 # List of actions
 - type: textarea
   attributes:
     label: List of actions
-    placeholder: |
+    value: |
       _Étapes préliminaires pour nouveau contrat de 35h + ou recherche de candidature:_
       - [ ] Action: Compléter le formulaire d’affichage au département
       - [ ] Action: Envoyer le formulaire à I. Couillard
