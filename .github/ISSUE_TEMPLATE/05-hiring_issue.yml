@@ -14,53 +14,53 @@ body:
 # Details of hiree and employment
 - type: textarea
   attributes:
-    label: Détails d'embauche
+    label: Hiring details
     value: |
-      - Nom:
-      - Prénom:
-      - Courriel (pour nouvel auxiliaire seulement):
-      - Cycle d’études (pour nouvel auxiliaire seulement):
-      - Programme d’études (pour nouvel auxiliaire seulement):
-      - Date de début:
-      - Date de fin:
-      - Projet:
-      - Total d'heures:
-      - Jours de travail:
-        - [ ] Lundi
-        - [ ] Mardi
-        - [ ] Mercredi
-        - [ ] Jeudi
-        - [ ] Vendredi
+      - Last name:
+      - First name:
+      - Email (new assistant only):
+      - Study cycle (new assistant only):
+      - Program (new assistant only):
+      - Start date:
+      - End date:
+      - Project:
+      - Total number of hours:
+      - Work days:
+        - [ ] Monday
+        - [ ] Tuesday
+        - [ ] Wednesday
+        - [ ] Thursday
+        - [ ] Friday
 
 # Responsabilities and KPIs outline
 - type: textarea
   attributes:
-    label: Cahier des charges
+    label: Statement of work
     value: |
-      | Tâches | Proportion | Indicateur clé |
+      | Task | Key Performance Indicator | Percentage |
       | :--    | :--        | :--            |
-      | Tâche 1 | 25% | 5000$ |
-      | Tâche 2 | 75% | 29 participants |
+      | Apply for funding | 5000$ | 25% |
+      | Recruit participants | 29 participants | 75% |
 
 # List of actions
 - type: textarea
   attributes:
-    label: Liste d'actions
+    label: List of actions
     value: |
-      _Étapes préliminaires pour nouveau contrat de 35h + ou recherche de candidature:_
+      _Preliminary steps for 35h+ new contract or candidate recruitment:_
       
-      - [ ] Action: Compléter le formulaire d’affichage au département
-      - [ ] Action: Envoyer le formulaire à I. Couillard
-      - [ ] Action: Réceptionner les candidatures
-      - [ ] Action: Évaluer les candidatures
-      - [ ] Action: Confirmer l’attribution du poste à la personne retenue
+      - [ ] Action: Complete job posting form
+      - [ ] Action: Send form to I. Couillard
+      - [ ] Action: Receive applications
+      - [ ] Action: Evaluate applications
+      - [ ] Action: Confirm position to the choosen candidate
       
-      _Étapes obligatoires:_
+      _Mandatory steps:_
       
-      - [ ] Action: Créer le cahier des charges
-      - [ ] Action: Faire approuver le cahier des charges par @sjinko
-      - [ ] Action: Confirmer avec @sjinko le compte à imputer
-      - [ ] Action: Remplir le fichier Excel de suivi des postes d’auxiliaires
-      - [ ] Action: Envoyer le fichier Excel à I. Couillard pour création du contrat
-      - [ ] Action: Envoyer le cahier des charges à l’auxiliaire
-      - [ ] Action: Rencontrer auxiliaire pour séance de feedback @sjinko
+      - [ ] Action: Create statement of work
+      - [ ] Action: Get statement of work approuved by @sjinko
+      - [ ] Action: Confirm account with @sjinko 
+      - [ ] Action: Fill research assistants Excel form
+      - [ ] Action: Send research assistants Excel form to I. Couillard
+      - [ ] Action: Send statement of work to research assistant
+      - [ ] Action: Meet research assistant for feedback session @sjinko
