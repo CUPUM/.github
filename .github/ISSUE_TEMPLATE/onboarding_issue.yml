@@ -3,7 +3,6 @@ description: |
   Streamline the onboarding of a new chair member or collaborator.
 title: "Onboarding: "
 assignees:
-  - iolyd
   - delphineduplain
 body:
 
@@ -13,7 +12,7 @@ body:
         Onboarding refers to the introduction of a new member or collaborator to the chair's activity's and platforms.
 
         Giving an adequate name to your onboarding issue is important to ensure proper tracking. The title should specify the onboardee's, respecting the following format:
-        *“Onboarding: E. Beaudry Marchand"*
+        *“Onboarding: F. Law Olmsted"*
 
   - type: textarea
     attributes:
@@ -28,10 +27,10 @@ body:
     attributes:
       label: List of actions for chair staff
       value: |
-        - [ ] @iolyd: [Invite onboardee to the organization](https://github.com/orgs/CUPUM/people)
-        - [ ] @iolyd: [Add onboardee to relevant team(s)](https://github.com/orgs/CUPUM/teams)
-        - [ ] @iolyd: Request temporary invited collaborator Wi-Fi access
-        - [ ] @iolyd: Schedule an onboarding meeting with the arriving collaborator
+        - [ ] [Invite onboardee to the organization](https://github.com/orgs/CUPUM/people)
+        - [ ] [Add onboardee to relevant team(s)](https://github.com/orgs/CUPUM/teams)
+        - [ ] Request creation of temporary SIM account for invited collaborator using [the indicated form](https://ti.umontreal.ca/formulaires/formulaire-de-demande-pour-les-services-client-unite/) ([See additionnal information here](https://wiki.umontreal.ca/display/SIE/Compte+utilisateur))
+        - [ ] Schedule an onboarding meeting with the arriving collaborator
         - [ ] @delphineduplain: Schedule an introduction meeting with the arriving collaborator
         - [ ] @team: Schedule an introduction meeting with the arriving collaborator
         - [ ] @team: Make sure the onboardee is added to the list of invited people the relevant calendar events
