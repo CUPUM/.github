@@ -17,7 +17,7 @@ body:
 - type: textarea
   attributes:
     label: Epic context
-    description: Clearly describe what prompts you to create this Epic issue. You can also drop images or other material necessary here directly.
+    description: Clearly describe what prompts you to create this Epic issue. State any important information such as deadlines, collaborators, limitations, warnings, etc.
     placeholder: |
       This epic results from the decision taken to ...
 - type: textarea
