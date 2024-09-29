@@ -16,12 +16,31 @@ body:
 # Epic description
 - type: textarea
   attributes:
-    label: Epic description
-    description: Clearly describe the 'why', 'how' and 'what' of the epic. To facilitate working with related documents, put a GitHub hyperlink to the concerned folder and external URLs. You can also drop images or other material necessary here directly. 
+    label: Epic context
+    description: Clearly describe what prompts you to create this Epic issue. You can also drop images or other material necessary here directly.
+    placeholder: |
+      This epic results from the decision taken to ...
+- type: textarea
+  attributes:
+    label: Epic objectives
+    description: Clearly describe the 'why' of the epic. 
     placeholder: |
       This epic serves to ...
+- type: textarea
+  attributes:
+    label: Epic ressources
+    description: Clearly describe 'how' to manage this epic. To facilitate working with related documents, put a GitHub hyperlink to the concerned folder and external URLs.
+    placeholder: |
+      To realize this epic issue we ...
       Project folder: https://github.com/CUPUM/...
       More info on website: https://...
+- type: textarea
+  attributes:
+    label: Epic delivrables
+    description: Clearly describe the outputs of the epic. List all documents, events and changes that will result from accomplishing the tasks listes in the epic. 
+    placeholder: |
+      At the end of this epic, we should have ...
+
 # List of tasks
 - type: textarea
   attributes:
