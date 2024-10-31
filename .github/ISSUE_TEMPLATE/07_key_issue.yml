@@ -1,0 +1,60 @@
+name: Key Attribution
+description: "Manage the attribution, tracking, and return of keys for new collaborators."
+title: "Key Attribution: "
+body:
+
+# Guidelines
+- type: markdown
+  attributes:
+    value: |
+      This template manages the attribution of keys to new collaborators, including request, registration, tracking, and return processes. Each key has a unique identifying code that must be registered and tracked in the key log.
+
+# Key request
+- type: textarea
+  attributes:
+    label: Request Details
+    description: Describe the reason for requesting the key, including collaborator details and any relevant deadlines or project information.
+    placeholder: |
+      Collaborator: [Name]
+      Project: [Project Name]
+      Reason for key access: [Description of purpose]
+      Start date: [Start Date]
+      Expected end date: [End Date]
+
+# Key details
+- type: input
+  attributes:
+    label: Key Code
+    description: Enter the unique identifying code for the key being attributed.
+    placeholder: Key code (e.g., KEY-12345)
+
+# Registration in Key Log
+- type: markdown
+  attributes:
+    value: |
+      - Ensure the unique key code is recorded in the Key Log, including the collaborator's name, project, and start date.
+      - Confirm registration in the Key Log before proceeding.
+
+# Key Use Agreement
+- type: textarea
+  attributes:
+    label: Key Use Terms
+    description: List any specific terms or limitations for key use, such as restricted areas, hours, or additional security protocols.
+    placeholder: |
+      Key use is restricted to ...
+
+# Return Process
+- type: markdown
+  attributes:
+    value: |
+      - Schedule a return date for the key, aligned with the end of the collaborator’s project or access needs.
+      - Confirm that the key has been returned by updating the Key Log with the return date.
+      - Report any issues with the key or delays in return.
+
+# Additional Notes
+- type: textarea
+  attributes:
+    label: Additional Notes
+    description: Include any additional information or special instructions related to the key attribution.
+    placeholder: |
+      Other relevant details or notes...
