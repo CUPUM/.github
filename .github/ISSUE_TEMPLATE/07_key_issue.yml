@@ -1,7 +1,7 @@
 name: Key Attribution
 description: "Manage the attribution, tracking, and return of keys for new collaborators and guests."
 title: "Key Attribution: [Key code] to [Borrower’s name] for access to [Access type] [Room number]"
-assignee: "sjinko"
+assignees: "sjinko"
 projects: "33"
 body:
 
