@@ -2,7 +2,7 @@ name: Key Attribution
 description: "Manage the attribution, tracking, and return of keys for new collaborators and guests."
 title: "Key Attribution: [Key code] to [Borrower’s name] for access to [Access type] [Room number]"
 assignees: "sjinko"
-projects: "github/1"
+projects: "cupum/33"
 body:
 
 # Guidelines
