@@ -1,6 +1,6 @@
 name: Key Attribution
 description: "Manage the attribution, tracking, and return of keys for new collaborators and guests."
-title: "Key Attribution: "
+title: "Key Attribution: [Key code] to [Borrower’s name] for access to [Access type] [Room number]"
 projects: "github/33"
 body:
 
@@ -8,8 +8,11 @@ body:
 - type: markdown
   attributes:
     value: |
-      ## General 
-      This template manages the attribution of keys to new collaborators, including request, registration, tracking, and return processes. Each key has a unique identifying code that must be registered and tracked in the key log. Key can be borrowed in exchange of a caution deposit. Please fill all required fields (*).
+      ## General
+      This template manages the attribution of keys to new collaborators, including request, registration, tracking, and return processes. Each key has a unique identifying code that must be registered and tracked in the key log. Key can be borrowed in exchange of a caution deposit. Please fill all required fields (*) :
+      1. Name issue as “Key Attribution: [Key code] to [Borrower’s name] for access to [Access type] [Room number]
+      Eg. *"Epic: Publish 'AI & Cities' paper in *Nature* by Oct. 1"*
+      2. Assign **one** person. The epic assignee is responsible to coordinate listed tasks and deliver the epic on time
       
       ## Roles
       The management of key includes the following roles:
@@ -49,6 +52,15 @@ body:
     label: End date
     description: Enter the date when should the key be returned (if known).
     placeholder: Date (e.g. yyyy-mm-dd)
+
+- type: dropdown
+  attributes:
+    label: Access type
+    options:
+      - Office space
+      - Common space
+      - Locked furniture
+      - Other
 
 - type: textarea
   attributes:
