@@ -1,14 +1,14 @@
 name: News >
 description: "Communication template (for single posts or weekly campaigns)."
 title: "News: "
+assignees: ["sarahtannir"]
+projects: ["CUPUM/5"]
 body:
 
   - type: textarea
     attributes:
       label: Description du projet
       description: Ajoutez un sommaire du projet concerné pour contextualiser la campagne de communication. 
-    validations:
-      required: false
 
   - type: textarea
     attributes:
@@ -20,8 +20,6 @@ body:
         - [ ] Action: Tranduire le communiqué (FR > EN ou EN > FR)
         - [ ] Action: Mettre les communiquées (FR et EN) en ligne sur le site web
         - [ ] Action: Commenter '@sjinko, à qui envoyer ce communiqué?' 
-    validations:
-      required: false
 
   - type: textarea
     attributes:
@@ -34,8 +32,6 @@ body:
         - [ ] Vidéo
         - [ ] Quote
         - [ ] Conférence
-    validations:
-      required: false
 
   - type: textarea
     attributes:
@@ -48,8 +44,6 @@ body:
         - [ ] Produire le(s) visuels en anglais selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
         - [ ] Produire le(s) visuels en français selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
         - [ ] Déposer le(s) visuel(s) dans le dossier selon la nomenclature : nom-projet-aaaammjj
-    validations:
-      required: false
 
   - type: textarea
     attributes:
@@ -58,8 +52,6 @@ body:
         - [ ] Créer un texte pour le(s) visuel(s) à partir du presskit en utilisant le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post)
         - [ ] Ajouter les hashtags à la caption (#)
         - [ ] Ajouter les personnes concernées à la caption (@)
-    validations:
-      required: false
 
   - type: textarea
     attributes:
@@ -71,8 +63,6 @@ body:
         - [ ] Publier visuel 3 sur Instagram, Facebook, Linkedin et Twitter
         - [ ] Publier visuel 4 sur Instagram, Facebook, Linkedin et Twitter (au besoin) 
         - [ ] Publier visuel 5 sur Instagram, Facebook, Linkedin et Twitter (au besoin)
-    validations:
-      required: false
 
 
 
