@@ -2,7 +2,7 @@ name: Key Attribution
 description: "Manage the attribution, tracking, and return of keys for new collaborators and guests."
 title: "Key Attribution: [Key code] to [Borrower’s name] for access to [Access type] [Room number]"
 assignees: ["sjinko"]
-projects: ["CUPUM/33"]
+projects: ["CUPUM/1"]
 body:
 
 # Guidelines
@@ -12,7 +12,7 @@ body:
       ## General
       This template manages the attribution of keys to new collaborators, including request, registration, tracking, and return processes. Each key has a unique identifying code that must be registered and tracked in the key log. Key can be borrowed in exchange of a caution deposit. Please fill all required fields (*) :
       1. Name issue as “Key Attribution: [Key code] to [Borrower’s name] for access to [Access type] [Room number]
-      Eg. *"Epic: Publish 'AI & Cities' paper in *Nature* by Oct. 1"*
+      Eg. *"Key Attribution: 30420-20294 to Shin Koseki for access to office space 4116"*
       2. Assign **one** person. The epic assignee is responsible to coordinate listed tasks and deliver the epic on time
       
       ## Roles
