@@ -31,8 +31,6 @@ body:
     label: Borrower (*)
     description: Enter the name of the person receiving the key.
     placeholder: Name (e.g. First Last)
-  validations:
-    required: true
 
 - type: textarea
   attributes:
@@ -45,8 +43,6 @@ body:
     label: Start date (*)
     description: Enter the date when should the key be received.
     placeholder: Date (e.g. yyyy-mm-dd)
-  validations:
-    required: true
 
 - type: textarea
   attributes:
@@ -59,16 +55,12 @@ body:
     label: Room (*)
     description: Enter the room number associated with the key.
     placeholder: Room number (e.g. 4xxx)
-  validations:
-    required: true
 
 - type: textarea
   attributes:
     label: Key master (*)
     description: Enter name of the person who manages the key set.
     placeholder: Full name (e.g. Sylvain Paquette)
-  validations:
-    required: true
 
 - type: textarea
   attributes:
@@ -78,8 +70,6 @@ body:
       - Amount (e.g. 20$)
       - Name of the Caution holder (e.g. Sylvain Paquette)
       - Date of the caution deposit (e.g. yyyy-mm-dd)
-    validations:
-    required: true
 
 # Key details
 - type: textarea
