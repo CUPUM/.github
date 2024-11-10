@@ -119,9 +119,9 @@ body:
     label: Issue checklist
     description: To create the issue, make sure to ...
     options:
-      - Create or transfer the issue in the repo **General/**
-      - Name the issue according to guidelines
-      - If on GitHub, assign the issue to the Borrower, the Caution holder, the Key master and the Chair holder 
+      - label: Create or transfer the issue in the repo **General/**
+      - label: Name the issue according to guidelines
+      - label: If on GitHub, assign the issue to the Borrower, the Caution holder, the Key master and the Chair holder 
 
 - type: checkboxes
   attributes:
