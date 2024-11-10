@@ -84,6 +84,19 @@ body:
   validations:
     required: false
 
+- type: checkboxes
+  id: issue-actions
+  attributes:
+    label: Issue checklist
+    description: To create the issue, make sure to ... 
+    options:
+      - label: "Create or transfer the issue within the repo **Publications/**"
+      - label: "Name the issue according to guidelines"
+      - label: "Add the issue to the project **@sjinko: Publications** (automatic)"
+      - label: "Add the issue to other associated projects (e.g., research / teaching projects)"
+      - label: "Add project metadata (starting / end date)"
+      - label: "List sub-issues tasks, meetings, workshops required"
+
 - type: markdown
   attributes:
     value: |
@@ -95,11 +108,11 @@ body:
     label: List of tasks
     description: List of all tasks, meetings, workshop required 
     options:
-      - label: Task: Submit abstract for [Title] to [Call Name] by [Call Deadline]
-      - label: Task: Complete publication notes for [Title]
-      - label: Task: Output of material for [Title]
-      - label: Draft manuscript for [Title]
-      - label: Submit [Title] to [Call Name] by [Submission Deadline]
-      - label: Review [Title] to [Call Name] by [Review Deadline]
-      - label: Archive [Title] on repo *Publication*
-      - label: Archive [Title] on a public repository (Arxiv or SocArxiv)
+      - label: "Task: Submit abstract for [Title] to [Call Name] by [Call Deadline]"
+      - label: "Task: Complete publication notes for [Title]"
+      - label: "Task: Output of material for [Title]"
+      - label: "Task: Draft manuscript for [Title]"
+      - label: "Task: Submit [Title] to [Call Name] by [Submission Deadline]"
+      - label: "Task: Review [Title] to [Call Name] by [Review Deadline]"
+      - label: "Task: Archive [Title] on repo *Publication*"
+      - label: "Task: Archive [Title] on a public repository (Arxiv or SocArxiv)"
