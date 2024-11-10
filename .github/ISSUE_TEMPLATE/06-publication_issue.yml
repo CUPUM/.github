@@ -9,7 +9,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      "## Overview"
+      ## Overview
       Publications are managed as an Epic issues containing non-epic sub-issues (tasks, meetings, workshops, etc.). They should be created/transferred within the Publication repo and follow an output oriented life cycle process:
       1. Proposal / Call submission (define the gist and framework)
       2. Publication notes (planning and research)
