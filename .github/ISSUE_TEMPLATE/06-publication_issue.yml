@@ -95,6 +95,40 @@ body:
       - label: "Add project metadata (starting / end date)"
       - label: "List sub-issues tasks, meetings, workshops required"
       - label: "Comment current issue with co-authors' GitHub handles"
+      - label: "Create publication project directory in the **Publication/** repo"
+
+- type: textarea
+  id: context
+  attributes:
+    label: Context of the publication
+      description: In which context is this publication produced ?
+      value: |
+        This publication results from ...
+      render: bash
+    validations:
+      required: true
+
+- type: textarea
+  id: objectives
+  attributes:
+    label: Objectives of the publication
+      description: Explain why the publication is made.
+      value: |
+        This publication aims to ...
+      render: bash
+    validations:
+      required: true
+
+- type: textarea
+  id: resources
+  attributes:
+    label: Resources of the publication
+      description: Where are the resources linked to this publication
+      value: |
+        - URL link to GitHub project folder on Publicaation/ repo: 
+        - URL link to call: 
+    validations:
+      required: true
 
 - type: checkboxes
   id: subissues
