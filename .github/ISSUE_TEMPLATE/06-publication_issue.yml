@@ -6,7 +6,6 @@ projects: ["CUPUM/143"]
 body:
 
 # Guidelines
-body:
 - type: markdown
   attributes:
     value: |
