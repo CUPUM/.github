@@ -114,23 +114,13 @@ body:
   validations:
     required: false
 
-# Lost of the key
-- type: textarea
-  attributes:
-    label: Lost of Key
-    description: Enter a detailed account of the losing, stealing, breaking or destructing of the borrowed key.
-    placeholder: |
-      Detailed account of the events ...
-  validations:
-    required: false
-
 - type: checkboxes
   attributes:
     label: Issue checklist
     description: To create the issue, make sure to ...
     options:
       - Create or transfer the issue in the repo **General/**
-      - Name the issue according to guidelines (e.g., "Key Attribution: 30420-20294 to Shin Koseki for access to office space 4116")
+      - Name the issue according to guidelines
       - If on GitHub, assign the issue to the Borrower, the Caution holder, the Key master and the Chair holder 
 
 - type: checkboxes
@@ -143,3 +133,14 @@ body:
       - label: "Action: Receive key from Key master"
       - label: "Action: Return key to Key master"
       - label: "Action: Receive caution from Caution holder"
+
+# Lost of the key
+- type: textarea
+  attributes:
+    label: Lost of Key Report
+    description: Enter a detailed account of the losing, stealing, breaking or destructing of the borrowed key.
+    placeholder: |
+      Detailed account of the events ...
+    render: bash
+  validations:
+    required: false
