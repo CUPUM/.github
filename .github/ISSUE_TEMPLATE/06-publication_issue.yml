@@ -5,7 +5,10 @@ assignees: []
 projects: ["CUPUM/143"]
 body:
 
-# Guidelines
+- type: markdown
+  attributes:
+    value: "Welcome!"
+
 - type: markdown
   attributes:
     value: Test
