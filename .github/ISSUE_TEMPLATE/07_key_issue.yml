@@ -10,10 +10,7 @@ body:
   attributes:
     value: |
       ## General
-      This template manages the attribution of keys to new collaborators, including request, registration, tracking, and return processes. Each key has a unique identifying code that must be registered and tracked in the key log. Key can be borrowed in exchange of a caution deposit. Please fill all required fields (*) :
-      1. Name issue as “Key Attribution: [Key code] to [Borrower’s name] for access to [Access type] [Room number]
-      Eg. *"Key Attribution: 30420-20294 to Shin Koseki for access to office space 4116"*
-      2. Assign the Borrower, the Chair holder (automatic), the Caution holder and the Key master (if in Account)
+      This template manages the attribution of keys to new collaborators, including request, registration, tracking, and return processes. Each key has a unique identifying code that must be registered and tracked in the key log. Key can be borrowed in exchange of a caution deposit.
       
       ## Roles
       The management of key includes the following roles:
@@ -30,29 +27,37 @@ body:
 
 # Key request
 ## Name
-- type: textarea
+- type: input
   attributes:
-    label: Borrower (*)
+    label: Borrower
     description: Enter the name of the person receiving the key.
     placeholder: Name (e.g. First Last)
+  validations:
+    required: true
 
-- type: textarea
+- type: input
   attributes:
     label: Github username
     description: Enter the github username of the person (if exists).
     placeholder: (Username (e.g. @usename)
+  validations:
+    required: false
 
-- type: textarea
+- type: input
   attributes:
-    label: Start date (*)
+    label: Start date
     description: Enter the date when should the key be received.
     placeholder: Date (e.g. yyyy-mm-dd)
+  validations:
+    required: true
 
-- type: textarea
+- type: input
   attributes:
     label: End date
     description: Enter the date when should the key be returned (if known).
     placeholder: Date (e.g. yyyy-mm-dd)
+  validations:
+    required: false
 
 - type: dropdown
   attributes:
@@ -63,33 +68,41 @@ body:
       - Locked furniture
       - Other
 
-- type: textarea
+- type: input
   attributes:
-    label: Room (*)
+    label: Room
     description: Enter the room number associated with the key.
     placeholder: Room number (e.g. 4xxx)
+  validations:
+    required: true
 
-- type: textarea
+- type: input
   attributes:
-    label: Key master (*)
+    label: Key master
     description: Enter name of the person who manages the key set.
     placeholder: Full name (e.g. Sylvain Paquette)
+  validations:
+    required: true
 
-- type: textarea
+- type: input
   attributes:
-    label: Caution deposit (*)
+    label: Caution deposit
     description: Enter the information about the caution deposit.
     placeholder: |
       - Amount (e.g. 20$)
       - Name of the Caution holder (e.g. Sylvain Paquette)
       - Date of the caution deposit (e.g. yyyy-mm-dd)
+  validations:
+    required: true
 
 # Key details
-- type: textarea
+- type: input
   attributes:
     label: Key Code
     description: Enter the unique identifying code for the key being attributed (when received).
     placeholder: Key code (e.g., KEY-12345)
+  validations:
+    required: false
 
 # Additional Notes
 - type: textarea
@@ -98,6 +111,8 @@ body:
     description: Include any additional information or special instructions related to the key attribution.
     placeholder: |
       Other relevant details or notes...
+  validations:
+    required: false
 
 # Lost of the key
 - type: textarea
@@ -106,14 +121,25 @@ body:
     description: Enter a detailed account of the losing, stealing, breaking or destructing of the borrowed key.
     placeholder: |
       Detailed account of the events ...
+  validations:
+    required: false
 
 - type: checkboxes
   attributes:
-    label: Actions
+    label: Issue checklist
+    description: To create the issue, make sure to ...
+    options:
+      - Create or transfer the issue in the repo **General/**
+      - Name the issue according to guidelines (e.g., "Key Attribution: 30420-20294 to Shin Koseki for access to office space 4116")
+      - If on GitHub, assign the issue to the Borrower, the Caution holder, the Key master and the Chair holder 
+
+- type: checkboxes
+  attributes:
+    label: Listo of actions
     description: Check completed actions
     options:
-      - label: Action — Request key to Key master
-      - label: Action — Pay caution to Caution holder
-      - label: Action — Receive key from Key master
-      - label: Action — Return key to Key master
-      - label: Action — Receive caution from Caution holder
+      - label: "Action: Request key to Key master"
+      - label: "Action: Pay caution to Caution holder"
+      - label: "Action: Receive key from Key master"
+      - label: "Action: Return key to Key master"
+      - label: "Action: Receive caution from Caution holder"
