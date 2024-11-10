@@ -97,10 +97,6 @@ body:
       - label: "Add project metadata (starting / end date)"
       - label: "List sub-issues tasks, meetings, workshops required"
 
-- type: markdown
-  attributes:
-    value: "## List of tasks"
-
 - type: checkboxes
   id: subissues
   attributes:
