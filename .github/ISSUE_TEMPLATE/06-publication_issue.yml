@@ -8,6 +8,10 @@ body:
 # Guidelines
 - type: markdown
   attributes:
+    value: Test
+
+- type: markdown
+  attributes:
     value: |
       ## Overview
       Publications are managed as an Epic issues containing non-epic sub-issues (tasks, meetings, workshops, etc.). They should be created/transferred within the Publication repo and follow an output oriented life cycle process:
