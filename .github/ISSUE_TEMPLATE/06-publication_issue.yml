@@ -84,19 +84,6 @@ body:
   validations:
     required: false
 
-- type: checkboxes
-  id: issue-actions
-  attributes:
-    label: Issue checklist
-    description: To create the issue, make sure to ... 
-    options:
-      - label: Create or transfer the issue within the repo **Publications/**
-      - label: Name the issue according to guidelines
-      - label: Add the issue to the project **@sjinko: Publications** (automatic)
-      - label: Add the issue to other associated projects (e.g., research / teaching projects)
-      - label: Add project metadata (starting / end date)
-      - label: List sub-issues tasks, meetings, workshops required
-
 - type: markdown
   attributes:
     value: |
