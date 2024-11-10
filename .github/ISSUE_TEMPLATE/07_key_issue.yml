@@ -84,7 +84,7 @@ body:
   validations:
     required: true
 
-- type: input
+- type: textarea
   attributes:
     label: Caution deposit
     description: Enter the information about the caution deposit.
@@ -92,6 +92,7 @@ body:
       - Amount (e.g. 20$)
       - Name of the Caution holder (e.g. Sylvain Paquette)
       - Date of the caution deposit (e.g. yyyy-mm-dd)
+    render: bash
   validations:
     required: true
 
