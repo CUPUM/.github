@@ -63,10 +63,10 @@ body:
     label: Author(s) of the publication
     description: List authors and add (GitHub handle) if available
     value: |
-      Author 1 (@author1), Affiliation
-      Author 2 (@author1), Affiliation
+      Author 1 (github handle), Affiliation
+      Author 2 (github handle), Affiliation
       Author 3, Affiliation
-      Author 4 (@author1), Affiliation
+      Author 4, Affiliation
     render: bash
   validations:
     required: true
@@ -96,6 +96,7 @@ body:
       - label: "Add the issue to other associated projects (e.g., research / teaching projects)"
       - label: "Add project metadata (starting / end date)"
       - label: "List sub-issues tasks, meetings, workshops required"
+      - label: "Comment current issue with co-authors' GitHub handles"
 
 - type: checkboxes
   id: subissues
