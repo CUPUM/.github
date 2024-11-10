@@ -9,15 +9,16 @@ body:
 - type: markdown
   attributes:
     value: |
-    Publications are managed as Epic issues containting non-epic sub-issues (tasks, meeting, workshop, etc). They follow an output oriented life cycle process:
-    1. Proposal / Call submission (define the gist and framwork)
-    2. Publication notes (planning and research)
-    3. Output of material (supporting figures, tables, etc.)
-    4. Drafting of manuscript (writing it down)
-    5. Submission (putting things together nicely)
-    6. Review (responding to comments from publisher)
-    7. Publishing (archiving published and non-published material)
-    For all practical matters, we follow the [APA Style](https://apastyle.apa.org), unless instructed otherwise by the publisher.
+      ## Overview
+      Publications are managed as Epic issues containting non-epic sub-issues (tasks, meeting, workshop, etc). They follow an output oriented life cycle process:
+      1. Proposal / Call submission (define the gist and framwork)
+      2. Publication notes (planning and research)
+      3. Output of material (supporting figures, tables, etc.)
+      4. Drafting of manuscript (writing it down)
+      5. Submission (putting things together nicely)
+      6. Review (responding to comments from publisher)
+      7. Publishing (archiving published and non-published material)
+      For all practical matters, we follow the [APA Style](https://apastyle.apa.org), unless instructed otherwise by the publisher.
 
 body:
 - type: input
