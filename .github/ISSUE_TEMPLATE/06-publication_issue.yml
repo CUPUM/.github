@@ -101,34 +101,34 @@ body:
   id: context
   attributes:
     label: Context of the publication
-      description: In which context is this publication produced ?
-      value: |
-        This publication results from ...
-      render: bash
-    validations:
-      required: true
+    description: In which context is this publication produced ?
+    value: |
+      This publication results from ...
+    render: bash
+  validations:
+    required: true
 
 - type: textarea
   id: objectives
   attributes:
     label: Objectives of the publication
-      description: Explain why the publication is made.
-      value: |
-        This publication aims to ...
-      render: bash
-    validations:
-      required: true
+    description: Explain why the publication is made.
+    value: |
+      This publication aims to ...
+    render: bash
+  validations:
+    required: true
 
 - type: textarea
   id: resources
   attributes:
     label: Resources of the publication
-      description: Where are the resources linked to this publication
-      value: |
-        - URL link to GitHub project folder on Publicaation/ repo: 
-        - URL link to call: 
-    validations:
-      required: true
+    description: Where are the resources linked to this publication
+    value: |
+      - URL link to GitHub project folder on Publicaation/ repo: 
+      - URL link to call: 
+  validations:
+    required: true
 
 - type: checkboxes
   id: subissues
