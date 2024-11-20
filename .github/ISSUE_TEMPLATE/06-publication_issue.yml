@@ -142,5 +142,6 @@ body:
       - label: "Task: Draft manuscript for [Title]"
       - label: "Task: Submit [Title] to [Call Name] by [Submission Deadline]"
       - label: "Task: Review [Title] to [Call Name] by [Review Deadline]"
+      - label: "Task: Add [Title] to CUPUM's Zotero group (in publications coll.)
       - label: "Task: Archive [Title] on repo *Publication*"
       - label: "Task: Archive [Title] on a public repository (Arxiv or SocArxiv)"
