@@ -41,8 +41,8 @@ body:
       - Other (based on Collective Agreement)
       - Prolongated absence from office
       - Work trip
-    validations:
-      required: true
+  validations:
+    required: true
 
 - type: textarea
   attributes:
