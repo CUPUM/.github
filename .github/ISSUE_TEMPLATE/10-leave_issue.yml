@@ -68,12 +68,9 @@ body:
   validations:
     required: true
 
-- type: markdown
-  attributes:
-    value: "## List of actions"
-
 - type: checkboxes
   attributes:
+    label: "## List of actions"
     options:
       - label: "Action: Name issue accordint to template format"
       - label: "Action: Add self to issue assignees"
