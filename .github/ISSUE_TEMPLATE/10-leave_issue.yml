@@ -11,7 +11,7 @@ body:
       ## Overview
       Leaves are managed according to the University's regulation and bylaws, which hold precedence on any internal process. For more detailed information about internal processes, please refer to [*dedicated aide-memoires* on the general/ repo](https://github.com/CUPUM/general/tree/main/leaves). For information about the University's regulation, check out your union's Collective Agreement and MonUdeM.
 
-      Leaves concern any regulated leaves:
+      Leaves concern regulated leaves:
       - Vacation
       - Sick leave
       - Medical appointments
@@ -21,13 +21,14 @@ body:
       As well as non-regulated leaves:
       - Prolongated absence from office (more than 2 continuous days)
       - Work trip (external events, training and teaching)
+      - Overtime compensation
 
       As a general rule, leaves should:
       1. Respect the university's regulation
       2. Not impact projects and teams negatively
       3. Be notified ahead of time to insure project coordination
       4. Be taken within deadlines (for vacation time)
-      5. Be taken as soon as possible (for overtime)
+      5. Be taken as soon as possible (for overtime compensation)
 
       
 - type: dropdown
@@ -41,6 +42,7 @@ body:
       - Other (based on Collective Agreement)
       - Prolongated absence from office
       - Work trip
+      - Overtime compensation
   validations:
     required: true
 
@@ -72,7 +74,6 @@ body:
 
 - type: checkboxes
   attributes:
-    label: List of actions
     options:
       - label: "Action: Name issue accordint to template format"
       - label: "Action: Add self to issue assignees"
