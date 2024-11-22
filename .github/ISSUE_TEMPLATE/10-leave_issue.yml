@@ -70,7 +70,8 @@ body:
 
 - type: checkboxes
   attributes:
-    label: "## List of actions"
+    label: |
+      ## List of actions
     options:
       - label: "Action: Name issue accordint to template format"
       - label: "Action: Add self to issue assignees"
