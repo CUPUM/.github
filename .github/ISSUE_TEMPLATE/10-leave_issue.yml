@@ -22,6 +22,7 @@ body:
       - Prolongated absence from office (more than 2 continuous days)
       - Work trip (external events, training and teaching)
       - Overtime compensation
+      - Other (unregulated)
 
       As a general rule, leaves should:
       1. Respect the university's regulation
@@ -43,6 +44,7 @@ body:
       - Prolongated absence from office
       - Work trip
       - Overtime compensation
+      - Other (unregulated)
   validations:
     required: true
 
