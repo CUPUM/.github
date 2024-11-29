@@ -1,6 +1,6 @@
 name: Leave
 description: "Manages leave requests and registration."
-title: "Leave: [Type] leave from [Start date] to [End Date]*"
+title: "Leave: [Name] on [Type] leave from [Start date] to [End Date]"
 assignees: [delphineduplain,sjinko]
 projects: ["CUPUM/33"]
 body:
@@ -19,7 +19,7 @@ body:
       - Other (based on Collective Agreement)
 
       As well as non-regulated leaves:
-      - Prolongated absence from office (more than 2 continuous days)
+      - Short absence from office (2 to 5 continous days)
       - Work trip (external events, training and teaching)
       - Overtime compensation
       - Other (unregulated)
@@ -41,7 +41,7 @@ body:
       - Medical appointments
       - Unpaid time off
       - Other (based on Collective Agreement)
-      - Prolongated absence from office
+      - Short absence from office (2 to 5 continous days)
       - Work trip
       - Overtime compensation
       - Other (unregulated)
@@ -81,7 +81,7 @@ body:
       - label: "Action: Name issue accordint to template format"
       - label: "Action: Add self to issue assignees"
       - label: "Action: Add start and end date to issue projet metadata"
-      - label: "Action: (for regulated issue) follow instructions on dedicated aide-mémoire"
+      - label: "Action: For regulated leaves, follow instructions on dedicated aide-mémoire"
 
     
 
