@@ -53,6 +53,18 @@ body:
     validations:
       required: true
 
+  - type: textearea
+    attributes:
+      label: Budget
+      description: For travel expenses, present a budget in CAD
+      value: |
+        - Transportation:
+        - Accomodation: 
+        - Meals:
+        - Other:
+    validations:
+      required: true
+
   - type: input
     attributes:
       label: Start date
