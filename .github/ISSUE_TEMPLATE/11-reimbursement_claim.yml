@@ -11,6 +11,11 @@ body:
         ## General
         This template manages the demand, claim, and reimbursement of expenses by UNESCO to students, collaborators, members, and external grantees. The claims follow the University's internal guidelines and regulations regarding reimbursements.
 
+        ### Claim kit
+        Please checkout the claim kits:
+        - [English](https://github.com/CUPUM/.github-private/blob/main/kit-reimbursement_claim.zip)
+        - [French](https://github.com/CUPUM/.github-private/blob/main/kit-demande_remboursement.zip)"
+
   - type: input
     attributes:
       label: Name of grantee
@@ -71,7 +76,7 @@ body:
       label: Actions
       description: What to do next
       options:
-        - label: "Action: Download claim kit in [EN](https://github.com/CUPUM/.github-private/blob/main/kit-reimbursement_claim.zip) | [FR](https://github.com/CUPUM/.github-private/blob/main/kit-demande_remboursement.zip)"
+        - label: "Action: Download claim kit"
         - label: "Action: Read claim kit aide-mémoire"
         - label: "Action: Receive confirmation email / letter"
         - label: "Action: Prepare all documents according to claim kit aide-mémoire"
