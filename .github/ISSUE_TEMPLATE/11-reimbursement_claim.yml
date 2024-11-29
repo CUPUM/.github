@@ -1,4 +1,4 @@
-name: Key Attribution
+name: Reimbursement claim
 description: "Manage the demand, claim and reimbursement of expenses by the UNESCO Chair to individuals."
 title: "Reimbursement claim: [Person's name] for [Expense type] made for [Reason] in [Date(s)]"
 assignees: ["sjinko"]
