@@ -53,7 +53,7 @@ body:
     validations:
       required: true
 
-  - type: textearea
+  - type: textarea
     attributes:
       label: Budget
       description: For travel expenses, present a budget in CAD
