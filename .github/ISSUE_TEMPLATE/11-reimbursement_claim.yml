@@ -3,7 +3,7 @@ description: "Manage the demand, claim and reimbursement of expenses by the UNES
 title: "Reimbursement claim: [Person's name] for [Expense type] made for [Reason] in [Date(s)]"
 assignees: ["sjinko"]
 projects: ["CUPUM/33", "CUPUM/145"]
-body
+body:
 
 - type: markdown
   attributes:
