@@ -55,4 +55,27 @@ body:
       label: Start date
       description: First day of the expense period or purchase date
     validations:
-      required:
+      required: true
+
+  - type: input
+    attributes:
+      label: End date
+      description: Last day of the expense period
+    validations:
+      required: false
+
+- type: markdown
+    attributes:
+      value: |
+        ## List of actions
+
+- type: checkboxes
+  attributes:
+    label: Actions
+    description: To do in order
+    options:
+      - label: "Action: Download claim kit in [EN](https://github.com/CUPUM/.github-private/blob/main/kit-reimbursement_claim.zip) | [FR](https://github.com/CUPUM/.github-private/blob/main/kit-demande_remboursement.zip)"
+      - label: "Action: Read claim kit aide-mémoire"
+      - label: "Action: Receive confirmation email / letter"
+      - label: "Action: Prepare all documents according to claim kit aide-mémoire"
+      - label: "Action: Submit all documents"
