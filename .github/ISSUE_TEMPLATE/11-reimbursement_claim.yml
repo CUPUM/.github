@@ -1,6 +1,6 @@
 name: Reimbursement claim
 description: "Manage the demand, claim, and reimbursement of expenses by the UNESCO Chair to individuals."
-title: "Reimbursement claim: [name] for [Expense type] made for [Reason] in [Date(s)]"
+title: "Reimbursement claim: [Name of grantee] for [Expense type] made for [Reason] in [Date(s)]"
 assignees: ["sjinko", "delphineduplain"]
 projects: ["CUPUM/33", "CUPUM/145"]
 
@@ -25,7 +25,7 @@ body:
       options:
         - Travel
         - Equipment
-        - Stationary
+        - Stationery
         - Representation
         - Reception
         - Transport (taxi, local car rental)
@@ -61,19 +61,19 @@ body:
     validations:
       required: false
 
-- type: markdown
-  attributes:
-    value: |
-      ## List of actions
+  - type: markdown
+    attributes:
+      value: |
+        ## List of actions
 
-- type: checkboxes
-  attributes:
-    label: Actions
-    description: What to do next
-    tip: To do in order
-    options:
-      - label: "Action: Download claim kit in [EN](https://github.com/CUPUM/.github-private/blob/main/kit-reimbursement_claim.zip) | [FR](https://github.com/CUPUM/.github-private/blob/main/kit-demande_remboursement.zip)"
-      - label: "Action: Read claim kit aide-mémoire"
-      - label: "Action: Receive confirmation email / letter"
-      - label: "Action: Prepare all documents according to claim kit aide-mémoire"
-      - label: "Action: Submit all documents"
+  - type: checkboxes
+    attributes:
+      label: Actions
+      description: What to do next
+      tip: To do in order
+      options:
+        - label: "Action: Download claim kit in [EN](https://github.com/CUPUM/.github-private/blob/main/kit-reimbursement_claim.zip) | [FR](https://github.com/CUPUM/.github-private/blob/main/kit-demande_remboursement.zip)"
+        - label: "Action: Read claim kit aide-mémoire"
+        - label: "Action: Receive confirmation email / letter"
+        - label: "Action: Prepare all documents according to claim kit aide-mémoire"
+        - label: "Action: Submit all documents"
