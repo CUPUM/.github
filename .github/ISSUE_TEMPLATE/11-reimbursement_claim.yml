@@ -1,0 +1,96 @@
+name: Reimbursement claim
+description: "Manage the demand, claim, and reimbursement of expenses by the UNESCO Chair to individuals."
+title: "Reimbursement claim: [Name of grantee] for [Expense type] made for [Reason] in [Date(s)]"
+assignees: ["sjinko", "delphineduplain"]
+projects: ["CUPUM/33", "CUPUM/145"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## General
+        This template manages the demand, claim, and reimbursement of expenses by UNESCO to students, collaborators, members, and external grantees. The claims follow the University's internal guidelines and regulations regarding reimbursements.
+
+        Most of the information about the process and the documents required can be found in the claim kit:
+        - [English](https://github.com/CUPUM/agora/blob/main/kit-reimbursement_claim.zip)
+        - [French](https://github.com/CUPUM/agora/blob/main/kit-demande_remboursement.zip)
+
+        Before submitting your documents, please make sure you've received approuval from the Chairholder through this issue.
+
+  - type: input
+    attributes:
+      label: Name of grantee
+      description: Enter the name of the person making the demand for reimbursement.
+      placeholder: Name (e.g. First Last)
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Expense type
+      options:
+        - Travel
+        - Equipment
+        - Stationery
+        - Representation
+        - Reception
+        - Transport (taxi, local car rental)
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Reason for expense
+      description: Activity, event, and/or project associated with the expense
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Expected total amount
+      description: Indicate the expected or actual amount of the expense in CAD
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Budget
+      description: For travel expenses, present a budget in CAD
+      value: |
+        - Transportation:
+        - Accommodation: 
+        - Meals:
+        - Other:
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Start date
+      description: First day of the expense period or purchase date
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: End date
+      description: Last day of the expense period
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## List of actions
+
+  - type: checkboxes
+    attributes:
+      label: Actions
+      description: What to do next
+      options:
+        - label: "Action: Download claim kit"
+        - label: "Action: Read claim kit aide-mémoire"
+        - label: "Action: Receive confirmation email / letter"
+        - label: "Action: Prepare all documents according to claim kit aide-mémoire"
+        - label: "Action: Submit all documents"

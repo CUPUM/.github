@@ -1,0 +1,106 @@
+name: Purchase
+description: "Manages the purchase and utilization of goods and services."
+title: "Purchase: [Type] [Quantity] [Product name] from [Vendor] for [User(s)] on [Purchase date]"
+assignees:
+  - delphineduplain
+  - sjinko
+projects:
+  - "CUPUM/33"
+  - "CUPUM/145"
+body:
+
+- type: markdown
+  attributes:
+    value: |
+      ## Purchasing process
+      This issue concerns a purchase and acquisitions made directly by the UNESCO Chair in Urban Landscape. This includes consumable and durable products and services:
+      - Consumable:
+        - Office supplies
+        - Food and drinks
+        - Subscriptions
+      - Durable:
+        - Books
+        - Software
+        - Equipment
+        - Furniture
+      Use ONE issue per product/service (the markdown content can be copy-pasted).
+
+- type: dropdown
+  attributes:
+    label: "What is the type of purchase"
+    options:
+      - Office supplies
+      - Food and drinks
+      - Subscription
+      - Book
+      - Software
+      - Equipment
+      - Furniture
+  validations:
+    required: true
+
+
+- type: input
+  attributes:
+    label: "Quantity"
+    description: "How many units are in the product/service (e.g., items, hours, counts)"
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: "Product name"
+    description: "Give precise name, model, and version"
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: "Product brand"
+    description: "Who produces this product or service or TBD"
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: "Vendor"
+    description: "Company name selling the product or service or TBD"
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: "User(s)"
+    description: "Who will be using this?"
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: "Reason for purchase"
+    description: "Justify the need for purchase"
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: "Price"
+    description: "Indicate the actual or estimated total price for all items including taxes"
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: "Location"
+    description: "Where will this purchase be located"
+  validations:
+    required: false
+
+- type: checkboxes
+  attributes:
+    label: "List of actions"
+    description: "Please complete in order"
+    options:
+      - label: "Action: Confirm purchase"
+      - label: "Action: Make purchase"
+      - label: "Action: Attribute purchase to users"

@@ -1,0 +1,82 @@
+name: Workshop
+description: "Plan, organize, record and follow up on workshops"
+title: "Workshop: "
+body:
+
+- type: markdown
+  attributes:
+    value: |
+      Workshop issues serve to plan, organize, record and follow up on internal and external workshops. 
+      1. Name the worksop issue specifying the mode, group and date of the workshop:
+      *e.g. "Workshop: Ideation session about PublicSpace.AI with @cupum/Team on Mar. 15"*
+      2. Assign the workshop issue to all internal participants
+      3. Add the workshop issue to the relevant projects
+      4. Link back the workshop issue to the epic or task issue it supports 
+
+- type: textarea
+  attributes:
+    label: Workshop description
+    description: Describe the objective, context and key information
+    placeholder: This workshop serves to ...
+
+- type: textarea
+  attributes:
+    label: List of actions
+    description: Actions to organize meeting
+    value: |
+      - [ ] Action: Schedule workshop with guests
+      - [ ] Action: Define workshop format and deliverable
+      - [ ] Action: Share workshop preparation documents with guests
+      - [ ] Action: Hold workshop and produce deliverable
+      - [ ] Action: Convert actionable items to issues
+      - [ ] Action: Write back to guest(s) with next steps
+
+- type: textarea
+  attributes:
+    label: External participants
+    description: List full names and affiliation of non-chair participants to the meeting
+    placeholder: |
+      - Lucie Pigeon (Université du Québec à Montréal)
+      - René Petit (ONU Habitat)
+
+- type: input
+  attributes:
+    label: Location
+    description: Specify where the workshop takes place. e.g. "Faculté de l’aménagement", "Zoom", "Phone", "UNESCO HQ"
+    placeholder: Phone/Zoom/Teams/Building...
+
+- type: input
+  attributes:
+    label: Date and time
+    description: Indicate when the workshop takes place. e.g. `2024-12-31 22:05`
+    placeholder: YYYY-MM-DD HH:MM
+
+- type: textarea
+  attributes:
+    label: Workshop agenda
+    description: Clearly describe each activity to be held, its duration, objectives, means, etc.
+    placeholder: |
+      # Activity 1 (15 minutes)
+      This activity serve to ... it last 15 minutes and is animated by *** and ***. 
+      In the first five minutes ... 
+      
+      # Activity 2 (10 minutes)
+      ...
+       
+- type: textarea
+  attributes:
+    label: Workshop notes
+    description: Based on the agenda, summarize key information, decisions and resources 
+    value: |
+      - ...
+      - ...
+   
+- type: textarea
+  attributes:
+    label: Actionable items
+    description: List workshop outcomes to turn into issues
+    value: |
+      - [ ] Task: ...
+      - [ ] Task: ...
+      - [ ] Task: ...
+

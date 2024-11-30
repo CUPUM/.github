@@ -1,0 +1,55 @@
+name: Epic
+description: "Complex sets of tasks"
+title: "Epic: "
+body:
+
+# Guidelines
+- type: markdown
+  attributes:
+    value: |
+      Epics issues serve to manage and track complex sets of tasks. They are managed by one assignee who organizes, documents, tracks and closes the epic. To create an epic:
+      1. Name the epic clearly by stating what will be achieverd using an action verb the details
+      Eg. *"Epic: Publish 'AI & Cities' paper in *Nature* by Oct. 1"*
+      2. Assign **one** person. The epic assignee is responsible to coordinate listed tasks and deliver the epic on time
+      3. Add to relevant projects. Project managers are responsible to coordinate epics and deliver projects on time 
+
+# Epic description
+- type: textarea
+  attributes:
+    label: Epic context
+    description: Clearly describe what prompts you to create this Epic issue. State any important information such as deadlines, collaborators, limitations, warnings, etc.
+    placeholder: |
+      This epic results from the decision taken to ...
+- type: textarea
+  attributes:
+    label: Epic objectives
+    description: Clearly describe the 'why' of the epic. 
+    placeholder: |
+      This epic serves to ...
+- type: textarea
+  attributes:
+    label: Epic ressources
+    description: Clearly describe 'how' to manage this epic. To facilitate working with related documents, put a GitHub hyperlink to the concerned folder and external URLs.
+    placeholder: |
+      To realize this epic issue we ...
+      Project folder: https://github.com/CUPUM/...
+      More info on website: https://...
+- type: textarea
+  attributes:
+    label: Epic delivrables
+    description: Clearly describe the outputs of the epic. List all documents, events and changes that will result from accomplishing the tasks listes in the epic. 
+    placeholder: |
+      At the end of this epic, we should have ...
+
+# List of tasks
+- type: textarea
+  attributes:
+    label: List of tasks
+    description: |
+      List tasks required to complete the epic. Tasks can be listed then created as issues or linked using url or \#
+    placeholder: |
+      - [ ] Task: name of tasks
+      - [ ] Task: use the GitHub # hyperlink (if in the same repo)
+      - [ ] Meet: name of meeting
+      - [ ] Workshop: name of workshop
+

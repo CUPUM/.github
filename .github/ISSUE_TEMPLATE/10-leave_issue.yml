@@ -1,0 +1,88 @@
+name: Leave
+description: "Manages leave requests and registration."
+title: "Leave: [Name] on [Type] leave from [Start date] to [End Date]"
+assignees: [delphineduplain,sjinko]
+projects: ["CUPUM/33"]
+body:
+
+- type: markdown
+  attributes:
+    value: |
+      ## Overview
+      Leaves are managed according to the University's regulation and bylaws, which hold precedence on any internal process. For more detailed information about internal processes, please refer to [*dedicated aide-memoires* on the general/ repo](https://github.com/CUPUM/general/tree/main/leaves). For information about the University's regulation, check out your union's Collective Agreement and MonUdeM.
+
+      Leaves concern regulated leaves:
+      - Vacation
+      - Sick leave
+      - Medical appointments
+      - Unpaid time off
+      - Other (based on Collective Agreement)
+
+      As well as non-regulated leaves:
+      - Short absence from office (2 to 5 continous days)
+      - Work trip (external events, training and teaching)
+      - Overtime compensation
+      - Other (unregulated)
+
+      As a general rule, leaves should:
+      1. Respect the university's regulation
+      2. Not impact projects and teams negatively
+      3. Be notified ahead of time to insure project coordination
+      4. Be taken within deadlines (for vacation time)
+      5. Be taken as soon as possible (for overtime compensation)
+
+      
+- type: dropdown
+  attributes:
+    label: Type
+    options:
+      - Vacation
+      - Sick leave
+      - Medical appointments
+      - Unpaid time off
+      - Other (based on Collective Agreement)
+      - Short absence from office (2 to 5 continous days)
+      - Work trip
+      - Overtime compensation
+      - Other (unregulated)
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Details
+    description: "Only for 'Other', 'Prolongated' or 'Work trip', please provide context"
+    render: bash
+  validations:
+    required: false
+
+- type: input
+  attributes: 
+    label: Start date
+    description: First day of leave (e.g., 2024-09-02)
+  validations:
+    required: true
+
+- type: input
+  attributes: 
+    label: End date
+    description: Last day of leave (e.g., 2024-09-05)
+  validations:
+    required: true
+
+- type: markdown
+  attributes:
+    value: "## List of actions"
+
+- type: checkboxes
+  attributes:
+    label: To complete in order
+    options:
+      - label: "Action: Name issue accordint to template format"
+      - label: "Action: Add self to issue assignees"
+      - label: "Action: Add start and end date to issue projet metadata"
+      - label: "Action: For regulated leaves, follow instructions on dedicated aide-mémoire"
+
+    
+
+

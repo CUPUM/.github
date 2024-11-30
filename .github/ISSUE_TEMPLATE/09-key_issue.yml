@@ -1,0 +1,147 @@
+name: Key Attribution
+description: "Manage the attribution, tracking, and return of keys for new collaborators and guests."
+title: "Key Attribution: [Key code] to [Borrower’s name] for access to [Access type] [Room number]"
+assignees: ["sjinko"]
+projects: ["CUPUM/33", "CUPUM/145"]
+body:
+
+# Guidelines
+- type: markdown
+  attributes:
+    value: |
+      ## General
+      This template manages the attribution of keys to new collaborators, including request, registration, tracking, and return processes. Each key has a unique identifying code that must be registered and tracked in the key log. Key can be borrowed in exchange of a caution deposit.
+      
+      ## Roles
+      The management of key includes the following roles:
+       - Borrower: Person who receives a key to access spaces at the UNESCO Chair
+       - Chair holder: Shin Koseki
+       - Caution holder: Person who receives and returns caution deposits
+       - Key master: Person who manages the distribution and retrieval of key
+
+       ## Key Use Agreement
+       The key is the property of the University of Montréal under the full responsibility of the Borrower, and shall be proactively returned in person to the Key master by them at the end of the hosting period (contract, mission or affiliation) with the UNESCO Chair in Urban Landscape no later than the last day of the said period. The key shall also be returned at any moment if requested by the Chair holder or any member of the university’s administration. The Borrower shall not lend the key to anyone, including other members of the university, and shall immediately inform the Chair holder and the Key master if the key is lost, stolen, broken or destroyed. If the Borrower is not able to return the key after the termination of their hosting period, they can be held responsible of any material and financial lost associated with the misuse of the key by them or by others.
+
+       ## Caution Deposit
+       In order to receive a key, the Borrower may be required to make the deposit of a caution to the Caution holder. It is the sole reponsibility of the *Borrower* to arrange the return of the key and caution in due time and claim the deposit back from the *Caution holder* when returning the key. A deposit not claimed within 30 days after the end of the hosting period shall be considered forfeited.
+
+# Key request
+## Name
+- type: input
+  attributes:
+    label: Borrower
+    description: Enter the name of the person receiving the key.
+    placeholder: Name (e.g. First Last)
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: Github username
+    description: Enter the github username of the person (if exists).
+    placeholder: (Username (e.g. @usename)
+  validations:
+    required: false
+
+- type: input
+  attributes:
+    label: Start date
+    description: Enter the date when should the key be received.
+    placeholder: Date (e.g. yyyy-mm-dd)
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: End date
+    description: Enter the date when should the key be returned (if known).
+    placeholder: Date (e.g. yyyy-mm-dd)
+  validations:
+    required: false
+
+- type: dropdown
+  attributes:
+    label: Access type
+    options:
+      - Office space
+      - Common space
+      - Locked furniture
+      - Other
+
+- type: input
+  attributes:
+    label: Room
+    description: Enter the room number associated with the key.
+    placeholder: Room number (e.g. 4xxx)
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: Key master
+    description: Enter name of the person who manages the key set.
+    placeholder: Full name (e.g. Sylvain Paquette)
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Caution deposit
+    description: Enter the information about the caution deposit.
+    placeholder: |
+      - Amount (e.g. 20$)
+      - Name of the Caution holder (e.g. Sylvain Paquette)
+      - Date of the caution deposit (e.g. yyyy-mm-dd)
+    render: bash
+  validations:
+    required: true
+
+# Key details
+- type: input
+  attributes:
+    label: Key Code
+    description: Enter the unique identifying code for the key being attributed (when received).
+    placeholder: Key code (e.g., KEY-12345)
+  validations:
+    required: false
+
+# Additional Notes
+- type: textarea
+  attributes:
+    label: Additional Notes
+    description: Include any additional information or special instructions related to the key attribution.
+    placeholder: |
+      Other relevant details or notes...
+  validations:
+    required: false
+
+- type: checkboxes
+  attributes:
+    label: Issue checklist
+    description: To create the issue, make sure to ...
+    options:
+      - label: Create or transfer the issue in the repo **General/**
+      - label: Name the issue according to guidelines
+      - label: If on GitHub, assign the issue to the Borrower, the Caution holder, the Key master and the Chair holder 
+
+- type: checkboxes
+  attributes:
+    label: Listo of actions
+    description: Check completed actions
+    options:
+      - label: "Action: Request key to Key master"
+      - label: "Action: Pay caution to Caution holder"
+      - label: "Action: Receive key from Key master"
+      - label: "Action: Return key to Key master"
+      - label: "Action: Receive caution from Caution holder"
+
+# Lost of the key
+- type: textarea
+  attributes:
+    label: Lost of Key Report
+    description: Enter a detailed account of the losing, stealing, breaking or destructing of the borrowed key.
+    placeholder: |
+      Detailed account of the events ...
+    render: bash
+  validations:
+    required: false

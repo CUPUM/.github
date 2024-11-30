@@ -1,0 +1,76 @@
+name: Meeting
+description: "Plan, organize, record and follow up on meetings"
+title: "Meet: "
+body:
+
+- type: markdown
+  attributes:
+    value: |
+      Meeting issues serve to plan, organize, record and follow up on internal and external meetings. 
+      1. Name the meeting issue specifying mode, persons and date of the meeting:
+      *e.g. “Meet: Phone call with Martin Duchamp and Carine Genou about PublicSpace.AI on Jan. 23”*
+      2. Assign the meeting issue to internal participants
+      3. Add the meeting issue to the relevant project
+      4. Link back the meeting issue to the epic or task issues it supports
+
+- type: textarea
+  attributes:
+    label: Meeting description
+    description: Describe the objective, context and key information
+    placeholder: This meeting serves to ...
+
+- type: textarea
+  attributes:
+    label: List of actions
+    description: Actions to organize meeting
+    value: |
+      - [ ] Action: Schedule meeting with guests
+      - [ ] Action: Define meeting agenda
+      - [ ] Action: Share meeting agenda with guests
+      - [ ] Action: Hold meeting and take notes
+      - [ ] Action: Convert actionable items to issues
+      - [ ] Action: Write back to guest(s) with next steps
+
+- type: textarea
+  attributes:
+    label: External participants
+    description: List full names and affiliation of non-chair participants to the meeting
+    placeholder: |
+     - Carine Genou (Ville de Laval)
+     - Martin Duchamp (Ville de Montréal)
+
+- type: input
+  attributes:
+    label: Location
+    description: Specify where the meeting takes place. e.g. “Faculté de l’aménagement”, “Zoom”, ”Phone", ”UNESCO HQ“
+    placeholder: Phone/Zoom/Teams/Building...
+
+- type: input
+  attributes:
+    label: Date and time
+    description: Indicate when the meeting take place. e.g. `2024-12-31 22:05`
+    placeholder: YYYY-MM-DD HH:MM
+
+- type: textarea
+  attributes:
+    label: Meeting agenda
+    description: List points to be discussed from most to least important
+    placeholder: "TBD"
+
+- type: textarea
+  attributes:
+    label: Meeting notes
+    description: Based on the agenda, summarize key information, decisions and resources 
+    value: |
+      - ...
+      - ...
+   
+- type: textarea
+  attributes:
+    label: Actionable items
+    description: List meeting points to turn into issues
+    value: |
+      - [ ] Task: ...
+      - [ ] Task: ...
+      - [ ] Task: ...
+
