@@ -102,9 +102,9 @@ body:
 
 - type: input
   attributes:
-    lavel: "Serial number"
+    label: "Serial or license number"
     description: "Input serial number or license number after reception, put 'Pending' if not received or 'NA' if not applicable."
-  validation:
+  validations:
     required: true
 
 - type: checkboxes
@@ -115,7 +115,7 @@ body:
       - label: "Action: Confirm purchase with Chairholder"
       - label: "Action: Make purchase"
       - label: "Action: Create a 'Reimbursement claim' if paid by chairmember"
-      - laebl: "Action: Drop payment receipt in issue box"
+      - label: "Action: Drop payment receipt in issue box"
       - label: "Action: Forward payment receipt to admins"
       - label: "Action: Receive purchase"
       - label: "Action: Add serial or licence number (if applicable)"
