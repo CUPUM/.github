@@ -26,6 +26,7 @@ body:
         - Software
         - Equipment
         - Furniture
+        - Other
       
       Use ONE issue per product/service (the markdown content can be copy-pasted on blank issues).
 
