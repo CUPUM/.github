@@ -108,6 +108,13 @@ body:
   validations:
     required: true
 
+- type: input
+  attributes:
+    label: "Project code"
+    description: "Specify which financial project has been used, put 'Pending' if unknown."
+  validation:
+    required: true
+
 - type: checkboxes
   attributes:
     label: "List of actions"
@@ -120,5 +127,6 @@ body:
       - label: "Action: Forward payment receipt to admins"
       - label: "Action: Receive purchase"
       - label: "Action: Add serial or licence number (if applicable)"
+      - label: "Action: Ask Chairholder to specify financial project"
       - label: "Action: (re)Attribute issue to direct user(s)"
       - label: "Action: Add any updates (lost, broken, stolen, transfer) in comments"
