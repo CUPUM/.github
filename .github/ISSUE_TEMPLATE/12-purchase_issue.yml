@@ -40,9 +40,9 @@ body:
       - Software
       - Equipment
       - Furniture
+      - Other
   validations:
     required: true
-
 
 - type: input
   attributes:
