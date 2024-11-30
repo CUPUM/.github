@@ -104,7 +104,7 @@ body:
   attributes:
     lavel: "Serial number"
     description: "Input serial number or license number after reception, put 'Pending' if not received or 'NA' if not applicable."
-  validation:
+  validations:
     required: true
 
 - type: checkboxes
