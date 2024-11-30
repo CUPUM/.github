@@ -13,7 +13,10 @@ body:
   attributes:
     value: |
       ## Purchasing process
-      This issue concerns a purchase and acquisitions made directly by the UNESCO Chair in Urban Landscape. This includes consumable and durable products and services:
+
+      This issue concerns a purchase and acquisitions made by the UNESCO Chair in Urban Landscape. 
+      
+      This includes consumable and durable products and services:
       - Consumable:
         - Office supplies
         - Food and drinks
@@ -23,7 +26,8 @@ body:
         - Software
         - Equipment
         - Furniture
-      Use ONE issue per product/service (the markdown content can be copy-pasted).
+      
+      Use ONE issue per product/service (the markdown content can be copy-pasted on blank issues).
 
 - type: dropdown
   attributes:
@@ -43,64 +47,77 @@ body:
 - type: input
   attributes:
     label: "Quantity"
-    description: "How many units are in the product/service (e.g., items, hours, counts)"
+    description: "How many units are in the product/service (e.g., items, hours, counts, etc.)."
   validations:
     required: true
 
 - type: input
   attributes:
     label: "Product name"
-    description: "Give precise name, model, and version"
+    description: "Give precise name, model, and version of the purchased product or service."
   validations:
     required: true
 
 - type: input
   attributes:
     label: "Product brand"
-    description: "Who produces this product or service or TBD"
+    description: "Who produces this product or service, put 'TBD' if unknown."
   validations:
     required: true
 
 - type: input
   attributes:
     label: "Vendor"
-    description: "Company name selling the product or service or TBD"
+    description: "Company name selling the product or service, put 'TBD' if unknown."
   validations:
     required: true
 
 - type: input
   attributes:
     label: "User(s)"
-    description: "Who will be using this?"
+    description: "Who will be using this product or service, put 'All' if for everyone."
   validations:
     required: true
 
 - type: textarea
   attributes:
     label: "Reason for purchase"
-    description: "Justify the need for purchase"
+    description: "Explain the motivation and context for which this purchase is made."
   validations:
     required: true
 
 - type: input
   attributes:
     label: "Price"
-    description: "Indicate the actual or estimated total price for all items including taxes"
+    description: "Indicate the actual or estimated total price for all items including taxes."
   validations:
     required: true
 
 - type: input
   attributes:
     label: "Location"
-    description: "Where will this purchase be located"
+    description: "Where will this purchase be located, put 'TBD' if unknown."
   validations:
-    required: false
+    required: true
+
+- type: input
+  attributes:
+    lavel: "Serial number"
+    description: "Input serial number or license number after reception, put 'Pending' if not received or 'NA' if not applicable."
+  validation:
+    required: true
 
 - type: checkboxes
   attributes:
     label: "List of actions"
     description: "Please complete in order"
     options:
-      - label: "Action: Confirm purchase"
+      - label: "Action: Confirm purchase with Chairholder"
       - label: "Action: Make purchase"
-      - label: "Action: Attribute purchase to users"
+      - label: "Action: Create a 'Reimbursement claim' if paid by chairmember"
+      - laebl: "Action: Drop payment receipt in issue box"
+      - label: "Action: Forward payment receipt to admins"
+      - label: "Action: Receive purchase"
+      - label: "Action: Add serial or licence number (if applicable)"
+      - label: "Action: (re)Attribute issue to direct user(s)"
+      - label: "Action: Add any updates (lost, broken, stolen, transfer) in comments"
