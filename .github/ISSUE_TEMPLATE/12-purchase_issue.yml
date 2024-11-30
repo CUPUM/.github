@@ -112,7 +112,7 @@ body:
   attributes:
     label: "Project code"
     description: "Specify which financial project has been used, put 'Pending' if unknown."
-  validation:
+  validations:
     required: true
 
 - type: checkboxes
