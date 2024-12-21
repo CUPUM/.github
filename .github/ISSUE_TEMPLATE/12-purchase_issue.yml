@@ -2,7 +2,6 @@ name: Purchase
 description: "Manages the purchase and utilization of goods and services."
 title: "Purchase: [Type] [Quantity] [Product name] from [Vendor] for [User(s)] on [Purchase date]"
 assignees:
-  - delphineduplain
   - sjinko
 projects:
   - "CUPUM/33"
@@ -28,7 +27,7 @@ body:
         - Furniture
         - Other
       
-      Use ONE issue per product/service (the markdown content can be copy-pasted on blank issues).
+      Use ONE issue per product/service/bundle (the markdown content can be copy-pasted on blank issues).
 
 - type: dropdown
   attributes:
@@ -96,10 +95,17 @@ body:
 
 - type: input
   attributes:
-    label: "Location"
-    description: "Where will this purchase be located, put 'TBD' if unknown."
+    label: "Project code"
+    description: "Specify which financial project has been used, put 'Pending' if unknown."
   validations:
     required: true
+
+- type: input
+  attributes:
+    label: "Receipt"
+    description: "Drop purchase receipt when available"
+  validations:
+    required: false
 
 - type: input
   attributes:
@@ -110,10 +116,17 @@ body:
 
 - type: input
   attributes:
-    label: "Project code"
-    description: "Specify which financial project has been used, put 'Pending' if unknown."
+    label: "Location"
+    description: "Room number, equipment or URL, put 'TBD' if unknown."
   validations:
     required: true
+
+- type: input
+  attributes:
+    label: "Photo"
+    description: "Drop photo of purchased items or screenshot for online"
+  validations:
+    required: false
 
 - type: checkboxes
   attributes:
@@ -123,10 +136,16 @@ body:
       - label: "Action: Confirm purchase with Chairholder"
       - label: "Action: Make purchase"
       - label: "Action: Create a 'Reimbursement claim' if paid by chairmember"
-      - label: "Action: Drop payment receipt in issue box"
+      - label: "Action: Drop payment receipt in issue main box"
       - label: "Action: Forward payment receipt to admins"
       - label: "Action: Receive purchase"
       - label: "Action: Add serial or licence number (if applicable)"
       - label: "Action: Ask Chairholder to specify financial project"
-      - label: "Action: (re)Attribute issue to direct user(s)"
       - label: "Action: Add any updates (lost, broken, stolen, transfer) in comments"
+
+- type: markdown
+  attributes:
+    value: |
+    ### List of users/borrowers
+    - [ ] Task: Borrowed by [name] on [start date] until [end date]
+    - [ ] Task: Borrowed by [name] on [start date] until [end date]
