@@ -146,6 +146,6 @@ body:
 - type: markdown
   attributes:
     value: |
-    ### List of users/borrowers
-    - [ ] Task: Borrowed by [name] on [start date] until [end date]
-    - [ ] Task: Borrowed by [name] on [start date] until [end date]
+      ### List of users/borrowers
+      - [ ] Task: Borrowed by [name] on [start date] until [end date]
+      - [ ] Task: Borrowed by [name] on [start date] until [end date]
