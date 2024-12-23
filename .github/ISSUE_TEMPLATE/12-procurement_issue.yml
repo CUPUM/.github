@@ -1,5 +1,5 @@
-name: Purchase
-description: "Manages the purchase and utilization of goods and services."
+name: Procurement
+description: "Manages the purchase and utilization of goods and services for chair activities."
 title: "Purchase: [Type] [Quantity] [Product name] from [Vendor] for [User(s)] on [Purchase date]"
 assignees:
   - sjinko
@@ -11,9 +11,11 @@ body:
 - type: markdown
   attributes:
     value: |
-      ## Purchasing process
+      ## Procurement process
 
-      This issue concerns a purchase and acquisitions made by the UNESCO Chair in Urban Landscape. 
+      This issue concerns a purchase or subscription made by the UNESCO Chair in Urban Landscape. For reantls, please use an epic task.
+      For certain conventionned products (e.g. computers) and procurements above a certain amount (5000 CAD), refer to the University’s guidelines
+      This template does not cover produrement of professional services such as freelance.
       
       This includes consumable and durable products and services:
       - Consumable:
@@ -109,8 +111,8 @@ body:
 
 - type: input
   attributes:
-    label: "Serial or license number"
-    description: "Input serial number or license number after reception, put 'Pending' if not received or 'NA' if not applicable."
+    label: "Serial, license or contract number"
+    description: "Input serial number, license number or contract number after reception, put 'Pending' if not received or 'NA' if not applicable."
   validations:
     required: true
 
@@ -141,13 +143,15 @@ body:
     description: "Please complete in order"
     options:
       - label: "Action: Confirm purchase with Chairholder"
-      - label: "Action: Make purchase"
-      - label: "Action: Create a 'Reimbursement claim' if paid by chairmember"
-      - label: "Action: Drop payment receipt in issue main box"
-      - label: "Action: Forward payment receipt to admins"
-      - label: "Action: Receive purchase"
-      - label: "Action: Add serial or licence number (if applicable)"
       - label: "Action: Ask Chairholder to specify financial project"
+      - label: "Action: Make purchase"
+      - label: "Action: Create a 'Reimbursement claim' if paid by memebre or employee"
+      - label: "Action: Add associated projects to issue (e.g. equipment bought for specific project)"
+      - label: "Action: Drop payment receipt in issue main box"
+      - label: "Action: Receive purchase"
+      - label: "Action: Add serial, licence or contract number (if applicable)"
+      - label: "Action: Add warranty dates and conditions (if applicable)"
+      - label: "Action: Add photo of actual product or screenshot if digital"
       - label: "Action: Add any updates (lost, broken, stolen, transfer) in comments"
 
 - type: markdown
