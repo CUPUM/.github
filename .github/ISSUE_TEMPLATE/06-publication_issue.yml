@@ -24,16 +24,25 @@ body:
   attributes:
     label: What type of publication is it?
     options:
-      - Peer-reviewed journal article
-      - Book
-      - Book chapter
-      - Conference proceeding
-      - Report
-      - Thesis
-      - Presentation
-      - Poster
-      - Data set
-      - Other format
+      - Books
+      - Brochures
+      - Book chapters
+      - Journal articles (peer-reviewed)
+      - Conference proceedings (peer-reviewed)
+      - Conference abstract (peer-reviewed)
+      - Conference posters (peer-reviewed)
+      - Journal contributions (non-peer reviewed, e.g., book review, introduction or commentary)
+      - News and editorial articles (including official blogs)
+      - Exhibition
+      - Videos
+      - Inventions
+      - Application and software
+      - Algorithmic models
+      - Data sets
+      - Reports
+      - Theses
+      - Presentations
+      - Other formats
   validations:
     required: true
 
