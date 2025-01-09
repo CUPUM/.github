@@ -2,7 +2,11 @@
 name: Order IT material
 about: Managing the order process for goods and services.
 title: 'Order: [Product name] for [purpose or end user]'
+labels: ''
+assignees: ''
+
 ---
+
 <!-- 1. Describe order -->
 ## Order description
 ### End user / purpose
