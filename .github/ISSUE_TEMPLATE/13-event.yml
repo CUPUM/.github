@@ -42,17 +42,12 @@ body:
         Identifier sous quelle juridiction est l’espace convoité pour
         l’événement:
 
-        Faculté de l'aménagement
 
-        - [ ] Faire la réservation auprès de la personne responsable des événements. 
+        - [ ] **Faculté de l'aménagement**: Faire la réservation auprès de la personne responsable des événements. 
 
-        Galerie de l'Université de Montréal 
+        - [ ] **Galerie de l'Université de Montréal**: Obtenir l’approbation écrite du directeur de la Galerie, puis faire une demande de réservation des es-paces auprès de la DI. 
 
-        - [ ] Obtenir l’approbation écrite du directeur de la Galerie, puis faire une demande de réservation des es-paces auprès de la DI. 
-
-        Direction des immeubles
-
-        - [ ] Faire une demande de réservation des espaces auprès de la DI sur le [portail libre-service] (https://di.umontreal.ca/services/reservation-de-salles-de-cours-et-despaces-publics/). 
+        - [ ] **Direction des immeubles**: Faire une demande de réservation des espaces auprès de la DI sur le [portail libre-service] (https://di.umontreal.ca/services/reservation-de-salles-de-cours-et-despaces-publics/). 
   - type: textarea
     attributes:
       label: Direction de la prévention et de la sécurité (DPS)
