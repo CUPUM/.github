@@ -1,7 +1,6 @@
 name: Contact
 description: "Manage contact information for members and external partners"
 title: "Contact: [Full Name], [Position] at [Organization]"
-assignees: []
 projects: ["CUPUM/179"]
 body:
 
