@@ -2,134 +2,133 @@ name: Contact
 description: "Manage contact information for members and external partners"
 title: "Contact: [Full Name], [Position] at [Organization]"
 assignees: []
-projects: ["CUPUM/33", "CUPUM/145"]
+projects: ["CUPUM/179"]
 body:
 
-  # Guidelines
-- type: markdown
-  attributes:
-    value: |
-      ## General
-      This template manages the registration, tracking and note-taking about contacts of the UNESCO Chair in Urban Landscape. This concerns both the contact information of members and external leads.
+# Guidelines
+  - type: markdown
+    attributes:
+      value: |
+        ## General
+        This template manages the registration, tracking and note-taking about contacts of the UNESCO Chair in Urban Landscape. This concerns both the contact information of members and external leads.
   
-
-# Contact information
-- type: input
-  attributes:
-    label: First
-    description: First name
-    placeholder: 
-  validations:
-    required: true
-
-- type: input
-  attributes:
-    label: Last
-    description: Last name
-    placeholder: 
-  validations:
-    required: true
-
-- type: dropdown
-  attributes:
-    label: Type
-    options:
-      - Chair member
-      - UdeM employee
-      - UdeM student
-      - External academic
-      - External student
-      - External non-academic
+  # Contact information
+  - type: input
+    attributes:
+      label: First
+      description: First name
+      placeholder: 
     validations:
       required: true
-
-- type: input
-  attributes:
-    label: Github username
-    description: Enter the github username of the person (if exists).
-    placeholder: (Username (e.g. @usename)
-  validations:
-    required: false
-
-- type: input
-  attributes:
-    label: Email_1
-    description: Email address (professional, ideally)
-    placeholder: 
-  validations:
-    required: false
-
-- type: input
-  attributes:
-    label: Email_2
-    description: Email address (personnal, ideally)
-    placeholder: 
-  validations:
-    required: false
-
-- type: input
-  attributes:
-    label: Phone_1
-    description: Phone number, including international code (professional, ideally)
-    placeholder: 
-  validations:
-    required: false
-
-- type: input
-  attributes:
-    label: Phone_2
-    description: Phone number, including international code (personnal, ideally)
-    placeholder: 
-  validations:
-    required: false
-
-- type: dropdown
-  attributes:
-    label: Lead status
-    options:
-      - New
-      - Open
-      - In progress
-      - Open deal
-      - Unqualified
-      - Attempted to contact
-      - Connected
-      - Bad timing
+  
+  - type: input
+    attributes:
+      label: Last
+      description: Last name
+      placeholder: 
+    validations:
+      required: true
+  
+  - type: dropdown
+    attributes:
+      label: Type
+      options:
+        - Chair member
+        - UdeM employee
+        - UdeM student
+        - External academic
+        - External student
+        - External non-academic
+      validations:
+        required: true
+  
+  - type: input
+    attributes:
+      label: Github username
+      description: Enter the github username of the person (if exists).
+      placeholder: (Username (e.g. @usename)
     validations:
       required: false
-
-- type: input
-  attributes:
-    label: Favorite content topic
-    description: What’s their main interest professional or personnal
-    placeholder: 
-  validations:
-    required: false
-
-- type: input
-  attributes:
-    label: Preferred channel
-    description: How do they prefer to be contacted
-    placeholder: 
-  validations:
-    required: false
-
-- type: textarea
-  attributes:
-    label: Notes
-    description: Enter the information about the contact.
-    placeholder: 
-  validations:
-    required: false
-
-- type: checkboxes
-  attributes:
-    label: Listo of actions
-    description: Check completed actions
-    options:
-      - label: "Action: Register contact"
-      - label: "Action: Identify lead relevant background"
-      - label: "Action: Identify proper contact channel"
-      - label: "Action: Craft personalized message that provides value for them and call to action"
-      - label: "Action: Message/call contact"
-      - label: "Follow up contact"
+  
+  - type: input
+    attributes:
+      label: Email_1
+      description: Email address (professional, ideally)
+      placeholder: 
+    validations:
+      required: false
+  
+  - type: input
+    attributes:
+      label: Email_2
+      description: Email address (personnal, ideally)
+      placeholder: 
+    validations:
+      required: false
+  
+  - type: input
+    attributes:
+      label: Phone_1
+      description: Phone number, including international code (professional, ideally)
+      placeholder: 
+    validations:
+      required: false
+  
+  - type: input
+    attributes:
+      label: Phone_2
+      description: Phone number, including international code (personnal, ideally)
+      placeholder: 
+    validations:
+      required: false
+  
+  - type: dropdown
+    attributes:
+      label: Lead status
+      options:
+        - New
+        - Open
+        - In progress
+        - Open deal
+        - Unqualified
+        - Attempted to contact
+        - Connected
+        - Bad timing
+      validations:
+        required: false
+  
+  - type: input
+    attributes:
+      label: Favorite content topic
+      description: What’s their main interest professional or personnal
+      placeholder: 
+    validations:
+      required: false
+  
+  - type: input
+    attributes:
+      label: Preferred channel
+      description: How do they prefer to be contacted
+      placeholder: 
+    validations:
+      required: false
+  
+  - type: textarea
+    attributes:
+      label: Notes
+      description: Enter the information about the contact.
+      placeholder: 
+    validations:
+      required: false
+  
+  - type: checkboxes
+    attributes:
+      label: Listo of actions
+      description: Check completed actions
+      options:
+        - label: "Action: Register contact"
+        - label: "Action: Identify lead relevant background"
+        - label: "Action: Identify proper contact channel"
+        - label: "Action: Craft personalized message that provides value for them and call to action"
+        - label: "Action: Message/call contact"
+        - label: "Follow up contact"
