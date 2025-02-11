@@ -36,8 +36,8 @@ body:
       - External academic
       - External student
       - External non-academic
-    validations:
-      required: true
+  validations:
+    required: true
 
 - type: input
   attributes:
@@ -93,8 +93,8 @@ body:
       - Attempted to contact
       - Connected
       - Bad timing
-    validations:
-      required: false
+  validations:
+    required: false
 
 - type: input
   attributes:
