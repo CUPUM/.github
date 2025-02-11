@@ -1,0 +1,24 @@
+name: Parse Contact Form
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  parse_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Extract Issue Data
+        id: extract
+        run: |
+          echo "FIRST_NAME=$(jq -r '.issue.body | capture("First Name: (?<name>.*)").name' <<< '${{ toJson(github.event) }}')" >> $GITHUB_ENV
+          echo "LAST_NAME=$(jq -r '.issue.body | capture("Last Name: (?<name>.*)").name' <<< '${{ toJson(github.event) }}')" >> $GITHUB_ENV
+
+      - name: Assign Issue to GitHub Project
+        run: |
+          gh project item-add 179 --field "First Name" --value "$FIRST_NAME"
+          gh project item-add 179 --field "Last Name" --value "$LAST_NAME"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
