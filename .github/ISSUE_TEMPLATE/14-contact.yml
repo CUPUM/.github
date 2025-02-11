@@ -15,6 +15,7 @@ body:
 - type: input
   attributes:
     label: First
+    id: first_name
     description: First name
   validations:
     required: true
@@ -22,6 +23,7 @@ body:
 - type: input
   attributes:
     label: Last
+    id: last_name
     description: Last name
   validations:
     required: true
