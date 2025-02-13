@@ -59,18 +59,37 @@ body:
 
 - type: textarea
   attributes:
-    label: Meeting notes
+    label: Decisions
     description: Based on the agenda, summarize key information, decisions and resources 
     value: |
       - ...
       - ...
-   
+
 - type: textarea
   attributes:
-    label: Actionable items
+    label: Tasks
     description: List meeting points to turn into issues
     value: |
       - [ ] Task: ...
       - [ ] Task: ...
       - [ ] Task: ...
+
+- type: textarea
+  attributes:
+    label: Executive summary
+    description: Three to four lines summary of meeting notes 
+    value: |
+      - ...
+      - ...
+
+- type: textarea
+  attributes:
+    label: Meeting notes
+    description: Theme based notes of the meeting discussion
+    value: |
+      - ...
+      - ...
+   
+   
+
 
