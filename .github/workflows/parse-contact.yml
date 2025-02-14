@@ -58,11 +58,17 @@ jobs:
           query($projectId: ID!) {
             node(id: $projectId) {
               ... on ProjectV2 {
-                fields(first: 20) {
+                fields(first: 50) {
                   nodes {
                     id
                     name
-                    ... on ProjectV2FieldConfiguration {
+                    ... on ProjectV2SingleSelectField {
+                      id
+                    }
+                    ... on ProjectV2Field {
+                      id
+                    }
+                    ... on ProjectV2IterationField {
                       id
                     }
                   }
@@ -70,6 +76,8 @@ jobs:
               }
             }
           }')
+
+          echo "Raw Field Data: $FIELD_DATA"
 
           FIRST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id')
           LAST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id')
