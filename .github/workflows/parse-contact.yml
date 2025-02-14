@@ -62,6 +62,9 @@ jobs:
                   nodes {
                     id
                     name
+                    ... on ProjectV2FieldConfiguration {
+                      id
+                    }
                   }
                 }
               }
@@ -99,19 +102,6 @@ jobs:
           echo "FIRST_NAME=$FIRST_NAME" >> $GITHUB_ENV
           echo "LAST_NAME=$LAST_NAME" >> $GITHUB_ENV
           echo "ORGANIZATION=$ORGANIZATION" >> $GITHUB_ENV
-
-      - name: Get Issue ID
-        id: get_issue_id
-        run: |
-          ISSUE_ID=$(gh issue view ${{ github.event.issue.number }} --json id --jq '.id')
-          if [[ -z "$ISSUE_ID" ]]; then
-            echo "❌ ERROR: Failed to retrieve ISSUE_ID!"
-            exit 1
-          fi
-          echo "✅ Retrieved ISSUE_ID: $ISSUE_ID"
-          echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}
 
       - name: Assign Issue to GitHub Project
         run: |
