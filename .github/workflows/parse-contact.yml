@@ -2,7 +2,6 @@ name: Parse Contact Form
 on:
   issues:
     types: [opened]
-  workflow_call:
 
 jobs:
   parse_issue:
@@ -11,11 +10,40 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Extract Issue Data
+      - name: Extract Issue Form Data
         id: extract
         run: |
-          FIRST_NAME=$(echo '${{ github.event.issue.body }}' | grep -oP '(?<=\*\*First\*\*: ).*')
-          LAST_NAME=$(echo '${{ github.event.issue.body }}' | grep -oP '(?<=\*\*Last\*\*: ).*')
+          ISSUE_BODY=$(jq -r '.issue.body' <<< '${{ toJson(github.event) }}')
+
+          FIRST_NAME=$(echo "$ISSUE_BODY" | awk -F "\*\*First Name\*\*" '{print $2}' | awk -F "\n" '{print $1}' | xargs)
+          LAST_NAME=$(echo "$ISSUE_BODY" | awk -F "\*\*Last Name\*\*" '{print $2}' | awk -F "\n" '{print $1}' | xargs)
+          ORGANIZATION=$(echo "$ISSUE_BODY" | awk -F "\*\*Organization\*\*" '{print $2}' | awk -F "\n" '{print $1}' | xargs)
 
           echo "FIRST_NAME=$FIRST_NAME" >> $GITHUB_ENV
-          echo "LAST_NAME=$LAST_NAME" >> $GITHUB
+          echo "LAST_NAME=$LAST_NAME" >> $GITHUB_ENV
+          echo "ORGANIZATION=$ORGANIZATION" >> $GITHUB_ENV
+
+      - name: Debug Extracted Data
+        run: |
+          echo "Extracted First Name: $FIRST_NAME"
+          echo "Extracted Last Name: $LAST_NAME"
+          echo "Extracted Organization: $ORGANIZATION"
+
+      - name: Get Issue ID
+        id: get_issue_id
+        run: |
+          ISSUE_ID=$(gh issue view ${{ github.event.issue.number }} --json id --jq '.id')
+          echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Assign Issue to GitHub Project
+        run: |
+          gh project item-add --project-id 179 --content-id $ISSUE_ID \
+            --field "First Name" --value "$FIRST_NAME"
+          gh project item-add --project-id 179 --content-id $ISSUE_ID \
+            --field "Last Name" --value "$LAST_NAME"
+          gh project item-add --project-id 179 --content-id $ISSUE_ID \
+            --field "Organization" --value "$ORGANIZATION"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
