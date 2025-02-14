@@ -51,11 +51,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
-      - name: Retrieve All Field Data
-        id: get_all_fields
+      - name: Retrieve Field Node IDs (Final Fix)
+        id: get_field_ids
         run: |
           echo "🔍 Fetching all project fields..."
-          
+
           FIELD_DATA=$(gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
           query($projectId: ID!) {
             node(id: $projectId) {
@@ -70,20 +70,12 @@ jobs:
             }
           }')
 
+          echo "✅ Successfully retrieved field data!"
           echo "Raw Field Data: $FIELD_DATA"  # ✅ Debugging output
 
-          echo "$FIELD_DATA" > fields.json  # Save raw data for later processing
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}
-
-      - name: Extract Field IDs
-        id: get_field_ids
-        run: |
-          echo "🔍 Extracting specific field IDs..."
-
-          FIRST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id' fields.json)
-          LAST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id' fields.json)
-          ORGANIZATION_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id' fields.json)
+          FIRST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id')
+          LAST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id')
+          ORGANIZATION_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id')
 
           if [[ -z "$FIRST_NAME_FIELD_ID" || "$FIRST_NAME_FIELD_ID" == "null" ]] || 
              [[ -z "$LAST_NAME_FIELD_ID" || "$LAST_NAME_FIELD_ID" == "null" ]] || 
