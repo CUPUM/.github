@@ -54,6 +54,8 @@ jobs:
       - name: Retrieve Field Node IDs
         id: get_field_ids
         run: |
+          echo "🔍 Retrieving field node IDs..."
+
           FIELD_DATA=$(gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
           query($projectId: ID!) {
             node(id: $projectId) {
@@ -62,29 +64,23 @@ jobs:
                   nodes {
                     id
                     name
-                    ... on ProjectV2SingleSelectField {
-                      id
-                    }
-                    ... on ProjectV2Field {
-                      id
-                    }
-                    ... on ProjectV2IterationField {
-                      id
-                    }
+                    __typename  # ✅ Identifies the correct type
                   }
                 }
               }
             }
           }')
 
-          echo "Raw Field Data: $FIELD_DATA"
+          echo "Raw Field Data: $FIELD_DATA"  # ✅ Debugging output
 
           FIRST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id')
           LAST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id')
           ORGANIZATION_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id')
 
-          if [[ -z "$FIRST_NAME_FIELD_ID" || -z "$LAST_NAME_FIELD_ID" || -z "$ORGANIZATION_FIELD_ID" ]]; then
-            echo "❌ ERROR: Failed to retrieve field IDs!"
+          if [[ -z "$FIRST_NAME_FIELD_ID" || "$FIRST_NAME_FIELD_ID" == "null" ]] || 
+             [[ -z "$LAST_NAME_FIELD_ID" || "$LAST_NAME_FIELD_ID" == "null" ]] || 
+             [[ -z "$ORGANIZATION_FIELD_ID" || "$ORGANIZATION_FIELD_ID" == "null" ]]; then
+            echo "❌ ERROR: Failed to retrieve one or more field IDs!"
             exit 1
           fi
 
