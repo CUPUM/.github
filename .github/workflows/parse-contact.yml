@@ -55,7 +55,7 @@ jobs:
         id: get_field_ids
         run: |
           echo "🔍 Fetching all project fields..."
-
+          
           FIELD_DATA=$(gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
           query($projectId: ID!) {
             node(id: $projectId) {
@@ -64,6 +64,22 @@ jobs:
                   nodes {
                     id
                     name
+                    __typename
+                    ... on ProjectV2SingleSelectField {
+                      id
+                    }
+                    ... on ProjectV2Field {
+                      id
+                    }
+                    ... on ProjectV2IterationField {
+                      id
+                    }
+                    ... on ProjectV2NumberField {
+                      id
+                    }
+                    ... on ProjectV2TextField {
+                      id
+                    }
                   }
                 }
               }
@@ -71,7 +87,7 @@ jobs:
           }')
 
           echo "✅ Successfully retrieved field data!"
-          echo "Raw Field Data: $FIELD_DATA"  # ✅ Debugging output
+          echo "Raw Field Data: $FIELD_DATA"
 
           FIRST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id')
           LAST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id')
