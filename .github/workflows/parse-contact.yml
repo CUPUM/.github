@@ -34,7 +34,7 @@ jobs:
           ISSUE_ID=$(gh issue view ${{ github.event.issue.number }} --json id --jq '.id')
           echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
         env:
-          GITHUB_TOKEN: ${{ secrets.ORG_PAT }}
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
 
       - name: Assign Issue to GitHub Project
         run: |
@@ -89,4 +89,4 @@ jobs:
             }
           }'
         env:
-          GITHUB_TOKEN: ${{ secrets.ORG_PAT }}
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
