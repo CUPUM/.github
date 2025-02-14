@@ -5,11 +5,14 @@ on:
 jobs:
   parse_issue:
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.ORG_PAT }}  # ✅ Set GH_TOKEN globally for all steps
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
+      - name: Set GH_TOKEN from ORG_PAT
+        run: echo "GH_TOKEN=${{ secrets.ORG_PAT }}" >> $GITHUB_ENV
+        env:
+          ORG_PAT: ${{ secrets.ORG_PAT }}
 
       - name: Debug GH_TOKEN Before Authentication
         run: |
@@ -19,12 +22,10 @@ jobs:
           fi
           echo "✅ GH_TOKEN is set."
 
-      - name: Authenticate GitHub CLI
+      - name: Check Authentication Status
         run: |
           echo "🔍 Checking authentication with gh auth status..."
-          gh auth logout || true
-          echo "$GH_TOKEN" | gh auth login --with-token
-          gh auth status
+          gh auth status || { echo "❌ ERROR: Not authenticated!"; exit 1; }
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
@@ -41,18 +42,9 @@ jobs:
           echo "LAST_NAME=$LAST_NAME" >> $GITHUB_ENV
           echo "ORGANIZATION=$ORGANIZATION" >> $GITHUB_ENV
 
-      - name: Debug Extracted Data
-        run: |
-          echo "✅ Extracted First Name: $FIRST_NAME"
-          echo "✅ Extracted Last Name: $LAST_NAME"
-          echo "✅ Extracted Organization: $ORGANIZATION"
-
       - name: Get Issue ID
         id: get_issue_id
         run: |
-          echo "🔍 Checking authentication with gh auth status..."
-          gh auth status || { echo "❌ ERROR: Not authenticated!"; exit 1; }
-
           ISSUE_ID=$(gh issue view ${{ github.event.issue.number }} --json id --jq '.id')
           if [[ -z "$ISSUE_ID" ]]; then
             echo "❌ ERROR: Failed to retrieve ISSUE_ID!"
@@ -60,6 +52,8 @@ jobs:
           fi
           echo "✅ Retrieved ISSUE_ID: $ISSUE_ID"
           echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
 
       - name: Assign Issue to GitHub Project
         run: |
@@ -120,3 +114,5 @@ jobs:
           }' || { echo "❌ ERROR: Failed to update Organization field"; exit 1; }
 
           echo "✅ Successfully updated all fields."
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
