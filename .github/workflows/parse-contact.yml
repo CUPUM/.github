@@ -1,7 +1,6 @@
 name: Parse Contact Form
 on:
-  issues:
-    types: [opened]
+  workflow_call:
 
 jobs:
   parse_issue:
