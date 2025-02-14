@@ -51,7 +51,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
-      - name: Retrieve Field Node IDs (Final Fix)
+      - name: Retrieve Field Node IDs (Guaranteed Fix)
         id: get_field_ids
         run: |
           echo "🔍 Fetching all project fields..."
@@ -64,22 +64,6 @@ jobs:
                   nodes {
                     id
                     name
-                    __typename
-                    ... on ProjectV2SingleSelectField {
-                      id
-                    }
-                    ... on ProjectV2Field {
-                      id
-                    }
-                    ... on ProjectV2IterationField {
-                      id
-                    }
-                    ... on ProjectV2NumberField {
-                      id
-                    }
-                    ... on ProjectV2TextField {
-                      id
-                    }
                   }
                 }
               }
@@ -87,12 +71,14 @@ jobs:
           }')
 
           echo "✅ Successfully retrieved field data!"
-          echo "Raw Field Data: $FIELD_DATA"
+          echo "$FIELD_DATA" > fields.json  # ✅ Save the raw data for debugging
 
-          FIRST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id')
-          LAST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id')
-          ORGANIZATION_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id')
+          # Extract field IDs without selecting on a union
+          FIRST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id' fields.json)
+          LAST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id' fields.json)
+          ORGANIZATION_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id' fields.json)
 
+          # Ensure all fields were found
           if [[ -z "$FIRST_NAME_FIELD_ID" || "$FIRST_NAME_FIELD_ID" == "null" ]] || 
              [[ -z "$LAST_NAME_FIELD_ID" || "$LAST_NAME_FIELD_ID" == "null" ]] || 
              [[ -z "$ORGANIZATION_FIELD_ID" || "$ORGANIZATION_FIELD_ID" == "null" ]]; then
@@ -104,6 +90,7 @@ jobs:
           echo "✅ Last Name Field ID: $LAST_NAME_FIELD_ID"
           echo "✅ Organization Field ID: $ORGANIZATION_FIELD_ID"
 
+          # Save extracted values to the environment
           echo "FIRST_NAME_FIELD_ID=$FIRST_NAME_FIELD_ID" >> $GITHUB_ENV
           echo "LAST_NAME_FIELD_ID=$LAST_NAME_FIELD_ID" >> $GITHUB_ENV
           echo "ORGANIZATION_FIELD_ID=$ORGANIZATION_FIELD_ID" >> $GITHUB_ENV
