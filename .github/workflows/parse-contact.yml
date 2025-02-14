@@ -9,6 +9,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Set GH_TOKEN
+        run: echo "GH_TOKEN=${{ secrets.ORG_PAT }}" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
+
       - name: Extract Issue Form Data
         id: extract
         run: |
@@ -30,13 +35,19 @@ jobs:
 
       - name: Get Issue ID
         id: get_issue_id
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}  # ✅ Explicitly set GH_TOKEN
         run: |
+          echo "Checking authentication with gh auth status..."
+          gh auth status
+
           ISSUE_ID=$(gh issue view ${{ github.event.issue.number }} --json id --jq '.id')
           echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}
+          echo "Retrieved ISSUE_ID: $ISSUE_ID"
 
       - name: Assign Issue to GitHub Project
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}  # ✅ Explicitly set GH_TOKEN
         run: |
           PROJECT_ID="179"  # Replace with your actual GitHub Project ID
 
@@ -88,5 +99,3 @@ jobs:
               clientMutationId
             }
           }'
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}
