@@ -13,12 +13,8 @@ jobs:
       - name: Extract Issue Data
         id: extract
         run: |
-          echo "FIRST_NAME=$(jq -r '.issue.body | capture("First Name: (?<name>.*)").name' <<< '${{ toJson(github.event) }}')" >> $GITHUB_ENV
-          echo "LAST_NAME=$(jq -r '.issue.body | capture("Last Name: (?<name>.*)").name' <<< '${{ toJson(github.event) }}')" >> $GITHUB_ENV
+          FIRST_NAME=$(echo '${{ github.event.issue.body }}' | grep -oP '(?<=\*\*First\*\*: ).*')
+          LAST_NAME=$(echo '${{ github.event.issue.body }}' | grep -oP '(?<=\*\*Last\*\*: ).*')
 
-      - name: Assign Issue to GitHub Project
-        run: |
-          gh project item-add 179 --field "First Name" --value "$FIRST_NAME"
-          gh project item-add 179 --field "Last Name" --value "$LAST_NAME"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          echo "FIRST_NAME=$FIRST_NAME" >> $GITHUB_ENV
+          echo "LAST_NAME=$LAST_NAME" >> $GITHUB
