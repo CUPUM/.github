@@ -51,11 +51,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
-      - name: Retrieve Field Node IDs
-        id: get_field_ids
+      - name: Retrieve All Field Data
+        id: get_all_fields
         run: |
-          echo "🔍 Retrieving field node IDs..."
-
+          echo "🔍 Fetching all project fields..."
+          
           FIELD_DATA=$(gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
           query($projectId: ID!) {
             node(id: $projectId) {
@@ -64,16 +64,6 @@ jobs:
                   nodes {
                     id
                     name
-                    __typename  # ✅ Ensures correct type selection
-                    ... on ProjectV2SingleSelectField {
-                      id
-                    }
-                    ... on ProjectV2Field {
-                      id
-                    }
-                    ... on ProjectV2IterationField {
-                      id
-                    }
                   }
                 }
               }
@@ -82,9 +72,18 @@ jobs:
 
           echo "Raw Field Data: $FIELD_DATA"  # ✅ Debugging output
 
-          FIRST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="First Name" and (.typename=="ProjectV2Field" or .typename=="ProjectV2SingleSelectField")) | .id')
-          LAST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Last Name" and (.typename=="ProjectV2Field" or .typename=="ProjectV2SingleSelectField")) | .id')
-          ORGANIZATION_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Organization" and (.typename=="ProjectV2Field" or .typename=="ProjectV2SingleSelectField")) | .id')
+          echo "$FIELD_DATA" > fields.json  # Save raw data for later processing
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
+
+      - name: Extract Field IDs
+        id: get_field_ids
+        run: |
+          echo "🔍 Extracting specific field IDs..."
+
+          FIRST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id' fields.json)
+          LAST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id' fields.json)
+          ORGANIZATION_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id' fields.json)
 
           if [[ -z "$FIRST_NAME_FIELD_ID" || "$FIRST_NAME_FIELD_ID" == "null" ]] || 
              [[ -z "$LAST_NAME_FIELD_ID" || "$LAST_NAME_FIELD_ID" == "null" ]] || 
