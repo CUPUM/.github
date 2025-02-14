@@ -46,4 +46,4 @@ jobs:
           gh project item-add --project-id 179 --content-id $ISSUE_ID \
             --field "Organization" --value "$ORGANIZATION"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ORG_PAT }}
