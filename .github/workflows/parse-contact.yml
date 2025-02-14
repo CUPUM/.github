@@ -5,14 +5,16 @@ on:
 jobs:
   parse_issue:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.ORG_PAT }}  # ✅ Set GH_TOKEN globally for all steps
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set GH_TOKEN
-        run: echo "GH_TOKEN=${{ secrets.ORG_PAT }}" >> $GITHUB_ENV
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}
+      - name: Authenticate GitHub CLI
+        run: |
+          echo "Checking authentication with gh auth status..."
+          gh auth status || gh auth login --with-token <<< "$GH_TOKEN"
 
       - name: Extract Issue Form Data
         id: extract
@@ -35,8 +37,6 @@ jobs:
 
       - name: Get Issue ID
         id: get_issue_id
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}  # ✅ Explicitly set GH_TOKEN
         run: |
           echo "Checking authentication with gh auth status..."
           gh auth status
@@ -46,8 +46,6 @@ jobs:
           echo "Retrieved ISSUE_ID: $ISSUE_ID"
 
       - name: Assign Issue to GitHub Project
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}  # ✅ Explicitly set GH_TOKEN
         run: |
           PROJECT_ID="179"  # Replace with your actual GitHub Project ID
 
