@@ -29,6 +29,7 @@ body:
     required: true
 
 - type: dropdown
+  id: type
   attributes:
     label: Type
     options:
@@ -42,13 +43,15 @@ body:
     required: true
 
 - type: input
+  id: organization
   attributes:
     label: Organization
     description: Organization to which they are associated mainly
   validations:
-    required: false
+    required: true
 
 - type: input
+  id: position
   attributes:
     label: Position
     description: Role within the organization
@@ -56,6 +59,7 @@ body:
     required: false
 
 - type: input
+  id: email_1
   attributes:
     label: Email_1
     description: Email address (professional, ideally)
@@ -63,6 +67,7 @@ body:
     required: false
 
 - type: input
+  id: email_2
   attributes:
     label: Email_2
     description: Email address (personnal, ideally)
@@ -70,6 +75,7 @@ body:
     required: false
 
 - type: input
+  id: phone_1
   attributes:
     label: Phone_1
     description: Phone number, including international code (professional, ideally)
@@ -77,6 +83,7 @@ body:
     required: false
 
 - type: input
+  id: phone_2
   attributes:
     label: Phone_2
     description: Phone number, including international code (personnal, ideally)
@@ -84,6 +91,7 @@ body:
     required: false
 
 - type: dropdown
+  id: lead_status
   attributes:
     label: Lead status
     options:
@@ -99,6 +107,7 @@ body:
     required: false
 
 - type: input
+  id: content_topic
   attributes:
     label: Favorite content topic
     description: What’s their main interest professional or personnal
@@ -106,6 +115,7 @@ body:
     required: false
 
 - type: input
+  id: pref_channel
   attributes:
     label: Preferred channel
     description: How do they prefer to be contacted
@@ -113,6 +123,7 @@ body:
     required: false
 
 - type: textarea
+  id: notes
   attributes:
     label: Notes
     description: Enter the information about the contact.
