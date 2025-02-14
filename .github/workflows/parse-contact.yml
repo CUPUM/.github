@@ -51,6 +51,42 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
+      - name: Retrieve Field Node IDs
+        id: get_field_ids
+        run: |
+          FIELD_DATA=$(gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
+          query($projectId: ID!) {
+            node(id: $projectId) {
+              ... on ProjectV2 {
+                fields(first: 20) {
+                  nodes {
+                    id
+                    name
+                  }
+                }
+              }
+            }
+          }')
+
+          FIRST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id')
+          LAST_NAME_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id')
+          ORGANIZATION_FIELD_ID=$(echo "$FIELD_DATA" | jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id')
+
+          if [[ -z "$FIRST_NAME_FIELD_ID" || -z "$LAST_NAME_FIELD_ID" || -z "$ORGANIZATION_FIELD_ID" ]]; then
+            echo "❌ ERROR: Failed to retrieve field IDs!"
+            exit 1
+          fi
+
+          echo "✅ First Name Field ID: $FIRST_NAME_FIELD_ID"
+          echo "✅ Last Name Field ID: $LAST_NAME_FIELD_ID"
+          echo "✅ Organization Field ID: $ORGANIZATION_FIELD_ID"
+
+          echo "FIRST_NAME_FIELD_ID=$FIRST_NAME_FIELD_ID" >> $GITHUB_ENV
+          echo "LAST_NAME_FIELD_ID=$LAST_NAME_FIELD_ID" >> $GITHUB_ENV
+          echo "ORGANIZATION_FIELD_ID=$ORGANIZATION_FIELD_ID" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
+
       - name: Extract Issue Form Data
         id: extract
         run: |
@@ -97,7 +133,7 @@ jobs:
           echo "✅ Added issue to project with ITEM_ID: $ITEM_ID"
 
           echo "🔄 Updating project fields..."
-          gh api graphql --method POST -F projectId="$PROJECT_NODE_ID" -F itemId="$ITEM_ID" -F fieldId="first_name" -F value="$FIRST_NAME" -f query='
+          gh api graphql --method POST -F projectId="$PROJECT_NODE_ID" -F itemId="$ITEM_ID" -F fieldId="$FIRST_NAME_FIELD_ID" -F value="$FIRST_NAME" -f query='
           mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: String!) {
             updateProjectV2ItemFieldValue(input: {
               projectId: $projectId
@@ -109,7 +145,7 @@ jobs:
             }
           }' || { echo "❌ ERROR: Failed to update First Name field"; exit 1; }
 
-          gh api graphql --method POST -F projectId="$PROJECT_NODE_ID" -F itemId="$ITEM_ID" -F fieldId="last_name" -F value="$LAST_NAME" -f query='
+          gh api graphql --method POST -F projectId="$PROJECT_NODE_ID" -F itemId="$ITEM_ID" -F fieldId="$LAST_NAME_FIELD_ID" -F value="$LAST_NAME" -f query='
           mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: String!) {
             updateProjectV2ItemFieldValue(input: {
               projectId: $projectId
@@ -121,7 +157,7 @@ jobs:
             }
           }' || { echo "❌ ERROR: Failed to update Last Name field"; exit 1; }
 
-          gh api graphql --method POST -F projectId="$PROJECT_NODE_ID" -F itemId="$ITEM_ID" -F fieldId="organization" -F value="$ORGANIZATION" -f query='
+          gh api graphql --method POST -F projectId="$PROJECT_NODE_ID" -F itemId="$ITEM_ID" -F fieldId="$ORGANIZATION_FIELD_ID" -F value="$ORGANIZATION" -f query='
           mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: String!) {
             updateProjectV2ItemFieldValue(input: {
               projectId: $projectId
