@@ -38,7 +38,7 @@ jobs:
         run: |
           ISSUE_ID=$(gh api graphql -f query='
           query {
-            repository(owner:"'${{ github.repository_owner }}'", name:"'${{ github.event.repository.name }}'") {
+            repository(name: "'${{ github.repository }}'") {
               issue(number: '${{ github.event.issue.number }}') {
                 id
               }
