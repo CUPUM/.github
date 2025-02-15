@@ -36,13 +36,23 @@ jobs:
 
       - name: Get Issue ID
         run: |
-          ISSUE_ID=$(gh api graphql -f query='query {
-            repository(owner:"CUPUM", name:"${{ github.event.repository.name }}") {
-              issue(number: ${{ github.event.issue.number }}) {
+          ISSUE_ID=$(gh api graphql -f query='
+          query {
+            repository(owner:"CUPUM", name:"'${{ github.repository_owner }}'") {
+              issue(number: '${{ github.event.issue.number }}') {
                 id
               }
             }
           }' --jq '.data.repository.issue.id')
+          
+          if [[ -z "$ISSUE_ID" || "$ISSUE_ID" == "null" ]]; then
+            echo "❌ ERROR: ISSUE_ID is empty or null!"
+            exit 1
+          fi
+          
+          echo "✅ Retrieved ISSUE_ID: $ISSUE_ID"
+          
+          echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
 
           echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
 
