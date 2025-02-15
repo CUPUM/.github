@@ -51,40 +51,31 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
-      - name: Retrieve All Field Data (Avoiding Unions)
-        id: get_all_fields
+      - name: Retrieve Project Fields Using REST API (Avoid GraphQL)
+        id: get_fields_rest
         run: |
-          echo "🔍 Fetching all project fields..."
+          echo "🔍 Fetching project fields using REST API..."
           
-          # We query only 'id' and 'name' fields—no selections that could invoke the union error
-          gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
-          query($projectId: ID!) {
-            node(id: $projectId) {
-              ... on ProjectV2 {
-                fields(first: 50) {
-                  nodes {
-                    id
-                    name
-                  }
-                }
-              }
-            }
-          }' > fields.json
+          # Use REST API to get all fields in the project
+          FIELDS_JSON=$(gh api --method GET \
+            -H "Authorization: token $GH_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "/projects/$PROJECT_NODE_ID/fields")
 
-          echo "✅ Successfully retrieved field data!"
-          cat fields.json  # Debugging output
+          echo "$FIELDS_JSON" > fields.json
+          echo "✅ Successfully retrieved project fields!"
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
       - name: Extract Field IDs Using JQ
-        id: get_field_ids
+        id: extract_field_ids
         run: |
           echo "🔍 Extracting specific field IDs..."
 
-          # Extract field IDs in Bash, completely avoiding GraphQL selection issues
-          FIRST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id' fields.json)
-          LAST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id' fields.json)
-          ORGANIZATION_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id' fields.json)
+          # Extract field IDs from REST response
+          FIRST_NAME_FIELD_ID=$(jq -r '.[] | select(.name=="First Name") | .id' fields.json)
+          LAST_NAME_FIELD_ID=$(jq -r '.[] | select(.name=="Last Name") | .id' fields.json)
+          ORGANIZATION_FIELD_ID=$(jq -r '.[] | select(.name=="Organization") | .id' fields.json)
 
           # Ensure all fields were found
           if [[ -z "$FIRST_NAME_FIELD_ID" || "$FIRST_NAME_FIELD_ID" == "null" ]] || 
@@ -106,7 +97,7 @@ jobs:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
       - name: Extract Issue Form Data
-        id: extract
+        id: extract_issue_form
         run: |
           ISSUE_BODY=$(jq -r '.issue.body' <<< '${{ toJson(github.event) }}')
 
