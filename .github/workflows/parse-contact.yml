@@ -1,9 +1,7 @@
 name: Add Issue to GitHub Project (Org-Wide)
 on:
-  workflow_call:
-    secrets:
-      ORG_PAT:
-        required: true  # ✅ Ensures secret is passed from the calling workflow
+  issues:
+    types: [opened]
 
 jobs:
   add_to_project:
@@ -14,6 +12,9 @@ jobs:
       contents: read
 
     steps:
+      - name: Set Project ID
+        run: echo "PROJECT_ID=PVT_kwDOBNGg4c4AyAI_" >> $GITHUB_ENV
+
       - name: Authenticate GitHub CLI
         run: |
           echo "GH_TOKEN=${{ secrets.ORG_PAT }}" >> $GITHUB_ENV
@@ -36,6 +37,7 @@ jobs:
 
       - name: Get Issue ID
         run: |
+          echo "🔍 Retrieving ISSUE_ID..."
           ISSUE_ID=$(gh api graphql -f query='
           query($owner: String!, $repo: String!, $number: Int!) {
             repository(owner: $owner, name: $repo) {
@@ -44,17 +46,18 @@ jobs:
               }
             }
           }' -F owner="${{ github.repository_owner }}" -F repo="${{ github.event.repository.name }}" -F number="${{ github.event.issue.number }}" --jq '.data.repository.issue.id')
-          
+
           if [[ -z "$ISSUE_ID" || "$ISSUE_ID" == "null" ]]; then
             echo "❌ ERROR: ISSUE_ID is empty or null!"
             exit 1
           fi
-          
+
           echo "✅ Retrieved ISSUE_ID: $ISSUE_ID"
           echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
 
       - name: Add Issue to Project
         run: |
+          echo "🔍 Adding issue to project..."
           ITEM_ID=$(gh api graphql -f query='
           mutation($projectId: ID!, $contentId: ID!) {
             addProjectV2ItemById(input: {projectId: $projectId, contentId: $contentId}) {
@@ -64,10 +67,25 @@ jobs:
             }
           }' -F projectId="$PROJECT_ID" -F contentId="$ISSUE_ID" --jq '.data.addProjectV2ItemById.item.id')
 
+          if [[ -z "$ITEM_ID" || "$ITEM_ID" == "null" ]]; then
+            echo "❌ ERROR: Failed to add issue to project. ITEM_ID is empty!"
+            echo "📌 Debugging Information:"
+            echo "  - PROJECT_ID: $PROJECT_ID"
+            echo "  - ISSUE_ID: $ISSUE_ID"
+            echo "❗ Possible Causes:"
+            echo "  1️⃣ The GitHub token might not have the correct permissions (needs 'project' scope)."
+            echo "  2️⃣ The issue might already be in the project."
+            echo "  3️⃣ The project might not be correctly set up for automation."
+            exit 1
+          fi
+
+          echo "✅ Added issue to project with ITEM_ID: $ITEM_ID"
           echo "ITEM_ID=$ITEM_ID" >> $GITHUB_ENV
 
       - name: Update Fields
         run: |
+          echo "🔄 Updating project fields..."
+
           gh api graphql -f query='
           mutation($projectId: ID!, $itemId: ID!, $fieldName: String!, $value: String!) {
             updateProjectV2ItemFieldValueByName(input: {
