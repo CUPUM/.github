@@ -37,13 +37,13 @@ jobs:
       - name: Get Issue ID
         run: |
           ISSUE_ID=$(gh api graphql -f query='
-          query {
-            repository(owner: "'${{ github.repository_owner }}'", name: "'${{ github.event.repository.name }}'") {
-              issue(number: '${{ github.event.issue.number }}') {
+          query($owner: String!, $repo: String!, $number: Int!) {
+            repository(owner: $owner, name: $repo) {
+              issue(number: $number) {
                 id
               }
             }
-          }' --jq '.data.repository.issue.id')
+          }' -F owner="${{ github.repository_owner }}" -F repo="${{ github.event.repository.name }}" -F number="${{ github.event.issue.number }}" --jq '.data.repository.issue.id')
           
           if [[ -z "$ISSUE_ID" || "$ISSUE_ID" == "null" ]]; then
             echo "❌ ERROR: ISSUE_ID is empty or null!"
