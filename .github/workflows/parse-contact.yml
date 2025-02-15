@@ -26,9 +26,9 @@ jobs:
         run: |
           ISSUE_BODY=$(jq -r '.issue.body' <<< '${{ toJson(github.event) }}')
 
-          FIRST_NAME=$(echo "$ISSUE_BODY" | grep -oP '(?<=\*\*First Name\*\*: ).*')
-          LAST_NAME=$(echo "$ISSUE_BODY" | grep -oP '(?<=\*\*Last Name\*\*: ).*')
-          ORGANIZATION=$(echo "$ISSUE_BODY" | grep -oP '(?<=\*\*Organization\*\*: ).*')
+          FIRST_NAME=$(echo "$ISSUE_BODY" | awk -F'### First' '{print $2}' | awk 'NR==1{print $1}')
+          LAST_NAME=$(echo "$ISSUE_BODY" | awk -F'### Last' '{print $2}' | awk 'NR==1{print $1}')
+          ORGANIZATION=$(echo "$ISSUE_BODY" | awk -F'### Organization' '{print $2}' | awk 'NR==1{print $1}')
 
           echo "FIRST_NAME=$FIRST_NAME" >> $GITHUB_ENV
           echo "LAST_NAME=$LAST_NAME" >> $GITHUB_ENV
