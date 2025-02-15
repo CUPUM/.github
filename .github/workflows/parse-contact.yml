@@ -51,13 +51,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
-      - name: Retrieve Project Fields (Bypassing Unions)
-        id: get_fields_graphql
+      # Fetching field IDs one-by-one to completely avoid union-related errors
+      - name: Retrieve First Name Field ID
+        id: get_first_name_field
         run: |
-          echo "🔍 Fetching all project fields..."
-
-          # Query the fields while avoiding unions
-          FIELDS_JSON=$(gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
+          FIRST_NAME_FIELD_ID=$(gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
           query($projectId: ID!) {
             node(id: $projectId) {
               ... on ProjectV2 {
@@ -69,38 +67,68 @@ jobs:
                 }
               }
             }
-          }')
+          }' --jq '.data.node.fields.nodes[] | select(.name=="First Name") | .id')
 
-          echo "$FIELDS_JSON" > fields.json
-          echo "✅ Successfully retrieved project fields!"
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}
-
-      - name: Extract Field IDs Using JQ
-        id: extract_field_ids
-        run: |
-          echo "🔍 Extracting specific field IDs..."
-
-          # Extract field IDs from JSON output
-          FIRST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id' fields.json)
-          LAST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id' fields.json)
-          ORGANIZATION_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id' fields.json)
-
-          # Ensure all fields were found
-          if [[ -z "$FIRST_NAME_FIELD_ID" || "$FIRST_NAME_FIELD_ID" == "null" ]] || 
-             [[ -z "$LAST_NAME_FIELD_ID" || "$LAST_NAME_FIELD_ID" == "null" ]] || 
-             [[ -z "$ORGANIZATION_FIELD_ID" || "$ORGANIZATION_FIELD_ID" == "null" ]]; then
-            echo "❌ ERROR: Failed to retrieve one or more field IDs!"
+          if [[ -z "$FIRST_NAME_FIELD_ID" || "$FIRST_NAME_FIELD_ID" == "null" ]]; then
+            echo "❌ ERROR: Failed to retrieve First Name field ID!"
             exit 1
           fi
 
           echo "✅ First Name Field ID: $FIRST_NAME_FIELD_ID"
-          echo "✅ Last Name Field ID: $LAST_NAME_FIELD_ID"
-          echo "✅ Organization Field ID: $ORGANIZATION_FIELD_ID"
-
-          # Save extracted values to the environment
           echo "FIRST_NAME_FIELD_ID=$FIRST_NAME_FIELD_ID" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
+
+      - name: Retrieve Last Name Field ID
+        id: get_last_name_field
+        run: |
+          LAST_NAME_FIELD_ID=$(gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
+          query($projectId: ID!) {
+            node(id: $projectId) {
+              ... on ProjectV2 {
+                fields(first: 50) {
+                  nodes {
+                    id
+                    name
+                  }
+                }
+              }
+            }
+          }' --jq '.data.node.fields.nodes[] | select(.name=="Last Name") | .id')
+
+          if [[ -z "$LAST_NAME_FIELD_ID" || "$LAST_NAME_FIELD_ID" == "null" ]]; then
+            echo "❌ ERROR: Failed to retrieve Last Name field ID!"
+            exit 1
+          fi
+
+          echo "✅ Last Name Field ID: $LAST_NAME_FIELD_ID"
           echo "LAST_NAME_FIELD_ID=$LAST_NAME_FIELD_ID" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
+
+      - name: Retrieve Organization Field ID
+        id: get_organization_field
+        run: |
+          ORGANIZATION_FIELD_ID=$(gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
+          query($projectId: ID!) {
+            node(id: $projectId) {
+              ... on ProjectV2 {
+                fields(first: 50) {
+                  nodes {
+                    id
+                    name
+                  }
+                }
+              }
+            }
+          }' --jq '.data.node.fields.nodes[] | select(.name=="Organization") | .id')
+
+          if [[ -z "$ORGANIZATION_FIELD_ID" || "$ORGANIZATION_FIELD_ID" == "null" ]]; then
+            echo "❌ ERROR: Failed to retrieve Organization field ID!"
+            exit 1
+          fi
+
+          echo "✅ Organization Field ID: $ORGANIZATION_FIELD_ID"
           echo "ORGANIZATION_FIELD_ID=$ORGANIZATION_FIELD_ID" >> $GITHUB_ENV
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
