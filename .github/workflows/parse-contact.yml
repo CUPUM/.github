@@ -51,12 +51,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
-      - name: Fetch All Project Fields (Bypassing Union Selection)
+      - name: Fetch All Project Fields (Avoiding Union Errors)
         id: get_all_fields
         run: |
           echo "🔍 Fetching all project fields..."
 
-          # Fetch all fields WITHOUT making selections on a union
           gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
           query($projectId: ID!) {
             node(id: $projectId) {
@@ -65,6 +64,7 @@ jobs:
                   nodes {
                     id
                     name
+                    __typename
                   }
                 }
               }
@@ -76,15 +76,15 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
-      - name: Extract Field IDs in Bash (No GraphQL Errors)
+      - name: Extract Field IDs (Filtering Out Union Fields)
         id: extract_field_ids
         run: |
           echo "🔍 Extracting specific field IDs..."
 
-          # Extract field IDs from JSON output in Bash
-          FIRST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id' fields.json)
-          LAST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id' fields.json)
-          ORGANIZATION_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id' fields.json)
+          # Filter out ProjectV2FieldConfiguration types
+          FIRST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="First Name" and .__typename!="ProjectV2FieldConfiguration") | .id' fields.json)
+          LAST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Last Name" and .__typename!="ProjectV2FieldConfiguration") | .id' fields.json)
+          ORGANIZATION_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Organization" and .__typename!="ProjectV2FieldConfiguration") | .id' fields.json)
 
           # Ensure all fields were found
           if [[ -z "$FIRST_NAME_FIELD_ID" || "$FIRST_NAME_FIELD_ID" == "null" ]] || 
