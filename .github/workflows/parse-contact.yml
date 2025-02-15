@@ -51,16 +51,25 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
-      - name: Retrieve Project Fields Using REST API (Avoid GraphQL)
-        id: get_fields_rest
+      - name: Retrieve Project Fields (Bypassing Unions)
+        id: get_fields_graphql
         run: |
-          echo "🔍 Fetching project fields using REST API..."
-          
-          # Use REST API to get all fields in the project
-          FIELDS_JSON=$(gh api --method GET \
-            -H "Authorization: token $GH_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "/projects/$PROJECT_NODE_ID/fields")
+          echo "🔍 Fetching all project fields..."
+
+          # Query the fields while avoiding unions
+          FIELDS_JSON=$(gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
+          query($projectId: ID!) {
+            node(id: $projectId) {
+              ... on ProjectV2 {
+                fields(first: 50) {
+                  nodes {
+                    id
+                    name
+                  }
+                }
+              }
+            }
+          }')
 
           echo "$FIELDS_JSON" > fields.json
           echo "✅ Successfully retrieved project fields!"
@@ -72,10 +81,10 @@ jobs:
         run: |
           echo "🔍 Extracting specific field IDs..."
 
-          # Extract field IDs from REST response
-          FIRST_NAME_FIELD_ID=$(jq -r '.[] | select(.name=="First Name") | .id' fields.json)
-          LAST_NAME_FIELD_ID=$(jq -r '.[] | select(.name=="Last Name") | .id' fields.json)
-          ORGANIZATION_FIELD_ID=$(jq -r '.[] | select(.name=="Organization") | .id' fields.json)
+          # Extract field IDs from JSON output
+          FIRST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id' fields.json)
+          LAST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id' fields.json)
+          ORGANIZATION_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id' fields.json)
 
           # Ensure all fields were found
           if [[ -z "$FIRST_NAME_FIELD_ID" || "$FIRST_NAME_FIELD_ID" == "null" ]] || 
