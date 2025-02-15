@@ -1,125 +1,45 @@
-name: Add Issue to GitHub Project (Org-Wide)
+name: Parse Contact Form
 on:
-  workflow_call:
-    secrets:
-      ORG_PAT:
-        required: true  # ✅ Ensures the calling repo passes the secret
+  repository_dispatch:
+    types: [github-webhook]
 
 jobs:
-  add_to_project:
+  process_webhook:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      repository-projects: write
-      contents: read
-
     steps:
-      - name: Set Project ID
-        run: echo "PROJECT_ID=PVT_kwDOBNGg4c4AyAI_" >> $GITHUB_ENV
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Authenticate GitHub CLI
+      - name: Extract Webhook Data
         run: |
-          echo "GH_TOKEN=${{ secrets.ORG_PAT }}" >> $GITHUB_ENV
-          gh auth status || gh auth login --with-token <<< "$GH_TOKEN"
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}
-
-      - name: Extract Issue Data
-        id: extract_data
-        run: |
-          ISSUE_BODY=$(jq -r '.issue.body' <<< '${{ toJson(github.event) }}')
-
-          FIRST_NAME=$(echo "$ISSUE_BODY" | awk -F'### First' '{print $2}' | awk 'NR==1{print $1}')
-          LAST_NAME=$(echo "$ISSUE_BODY" | awk -F'### Last' '{print $2}' | awk 'NR==1{print $1}')
-          ORGANIZATION=$(echo "$ISSUE_BODY" | awk -F'### Organization' '{print $2}' | awk 'NR==1{print $1}')
+          echo "Webhook Payload: ${{ toJson(github.event) }}"
+          
+          FIRST_NAME=$(jq -r '.client_payload.issue.body | capture("### First Name\\n\\n(?<name>.*)\\n\\n###") | .name' <<< '${{ toJson(github.event) }}')
+          LAST_NAME=$(jq -r '.client_payload.issue.body | capture("### Last Name\\n\\n(?<name>.*)\\n\\n###") | .name' <<< '${{ toJson(github.event) }}')
+          ORGANIZATION=$(jq -r '.client_payload.issue.body | capture("### Organization\\n\\n(?<name>.*)\\n\\n###") | .name' <<< '${{ toJson(github.event) }}')
 
           echo "FIRST_NAME=$FIRST_NAME" >> $GITHUB_ENV
           echo "LAST_NAME=$LAST_NAME" >> $GITHUB_ENV
           echo "ORGANIZATION=$ORGANIZATION" >> $GITHUB_ENV
 
-      - name: Get Issue ID
+      - name: Debug Extracted Data
         run: |
-          echo "🔍 Retrieving ISSUE_ID..."
-          ISSUE_ID=$(gh api graphql -f query='
-          query($owner: String!, $repo: String!, $number: Int!) {
-            repository(owner: $owner, name: $repo) {
-              issue(number: $number) {
-                id
-              }
-            }
-          }' -F owner="${{ github.repository_owner }}" -F repo="${{ github.event.repository.name }}" -F number="${{ github.event.issue.number }}" --jq '.data.repository.issue.id')
+          echo "Extracted First Name: $FIRST_NAME"
+          echo "Extracted Last Name: $LAST_NAME"
+          echo "Extracted Organization: $ORGANIZATION"
 
-          if [[ -z "$ISSUE_ID" || "$ISSUE_ID" == "null" ]]; then
-            echo "❌ ERROR: ISSUE_ID is empty or null!"
-            exit 1
-          fi
-
-          echo "✅ Retrieved ISSUE_ID: $ISSUE_ID"
-          echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
-
-      - name: Add Issue to Project
+      - name: Update GitHub Project Fields
         run: |
-          echo "🔍 Adding issue to project..."
-          ITEM_ID=$(gh api graphql -f query='
-          mutation($projectId: ID!, $contentId: ID!) {
-            addProjectV2ItemById(input: {projectId: $projectId, contentId: $contentId}) {
-              item {
-                id
-              }
-            }
-          }' -F projectId="$PROJECT_ID" -F contentId="$ISSUE_ID" --jq '.data.addProjectV2ItemById.item.id')
-
-          if [[ -z "$ITEM_ID" || "$ITEM_ID" == "null" ]]; then
-            echo "❌ ERROR: Failed to add issue to project. ITEM_ID is empty!"
-            echo "📌 Debugging Information:"
-            echo "  - PROJECT_ID: $PROJECT_ID"
-            echo "  - ISSUE_ID: $ISSUE_ID"
-            echo "❗ Possible Causes:"
-            echo "  1️⃣ The GitHub token might not have the correct permissions (needs 'project' scope)."
-            echo "  2️⃣ The issue might already be in the project."
-            echo "  3️⃣ The project might not be correctly set up for automation."
-            exit 1
-          fi
-
-          echo "✅ Added issue to project with ITEM_ID: $ITEM_ID"
-          echo "ITEM_ID=$ITEM_ID" >> $GITHUB_ENV
-
-      - name: Update Fields
-        run: |
-          echo "🔄 Updating project fields..."
-
-          gh api graphql -f query='
+          gh api graphql --method POST -F projectId="PVT_kwDOBNGg4c4AyAI_" -F itemId="${{ github.event.client_payload.issue.node_id }}" -F fieldName="First Name" -F value="$FIRST_NAME" -f query='
           mutation($projectId: ID!, $itemId: ID!, $fieldName: String!, $value: String!) {
-            updateProjectV2ItemFieldValueByName(input: {
+            updateProjectV2ItemFieldValue(input: {
               projectId: $projectId
               itemId: $itemId
-              fieldName: $fieldName
-              value: { text: $value }
+              field: {name: $fieldName}
+              value: {text: $value}
             }) {
               clientMutationId
             }
-          }' -F projectId="$PROJECT_ID" -F itemId="$ITEM_ID" -F fieldName="First Name" -F value="$FIRST_NAME"
-
-          gh api graphql -f query='
-          mutation($projectId: ID!, $itemId: ID!, $fieldName: String!, $value: String!) {
-            updateProjectV2ItemFieldValueByName(input: {
-              projectId: $projectId
-              itemId: $itemId
-              fieldName: $fieldName
-              value: { text: $value }
-            }) {
-              clientMutationId
-            }
-          }' -F projectId="$PROJECT_ID" -F itemId="$ITEM_ID" -F fieldName="Last Name" -F value="$LAST_NAME"
-
-          gh api graphql -f query='
-          mutation($projectId: ID!, $itemId: ID!, $fieldName: String!, $value: String!) {
-            updateProjectV2ItemFieldValueByName(input: {
-              projectId: $projectId
-              itemId: $itemId
-              fieldName: $fieldName
-              value: { text: $value }
-            }) {
-              clientMutationId
-            }
-          }' -F projectId="$PROJECT_ID" -F itemId="$ITEM_ID" -F fieldName="Organization" -F value="$ORGANIZATION"
+          }'
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
