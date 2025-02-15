@@ -1,7 +1,9 @@
 name: Add Issue to GitHub Project (Org-Wide)
 on:
-  issues:
-    types: [opened]
+  workflow_call:
+    secrets:
+      ORG_PAT:
+        required: true  # ✅ Ensures the calling repo passes the secret
 
 jobs:
   add_to_project:
