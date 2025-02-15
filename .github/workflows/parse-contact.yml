@@ -38,7 +38,7 @@ jobs:
         run: |
           ISSUE_ID=$(gh api graphql -f query='
           query {
-            repository(owner:"CUPUM", name:"'${{ github.repository_owner }}'") {
+            repository(owner:"'${{ github.repository_owner }}'", name:"'${{ github.event.repository.name }}'") {
               issue(number: '${{ github.event.issue.number }}') {
                 id
               }
@@ -51,9 +51,6 @@ jobs:
           fi
           
           echo "✅ Retrieved ISSUE_ID: $ISSUE_ID"
-          
-          echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
-
           echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
 
       - name: Add Issue to Project
