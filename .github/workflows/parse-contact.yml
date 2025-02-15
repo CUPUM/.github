@@ -51,12 +51,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
-      - name: Retrieve Field Node IDs (Guaranteed Fix)
-        id: get_field_ids
+      - name: Retrieve All Field Data (Avoiding Unions)
+        id: get_all_fields
         run: |
           echo "🔍 Fetching all project fields..."
-          
-          FIELD_DATA=$(gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
+
+          # Query the field list separately to avoid unions
+          gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
           query($projectId: ID!) {
             node(id: $projectId) {
               ... on ProjectV2 {
@@ -68,12 +69,19 @@ jobs:
                 }
               }
             }
-          }')
+          }' > fields.json
 
           echo "✅ Successfully retrieved field data!"
-          echo "$FIELD_DATA" > fields.json  # ✅ Save the raw data for debugging
+          cat fields.json  # Debugging output
+        env:
+          GH_TOKEN: ${{ secrets.ORG_PAT }}
 
-          # Extract field IDs without selecting on a union
+      - name: Extract Field IDs Using JQ
+        id: get_field_ids
+        run: |
+          echo "🔍 Extracting specific field IDs..."
+
+          # Extract field IDs in Bash, completely avoiding GraphQL selection issues
           FIRST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="First Name") | .id' fields.json)
           LAST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Last Name") | .id' fields.json)
           ORGANIZATION_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Organization") | .id' fields.json)
