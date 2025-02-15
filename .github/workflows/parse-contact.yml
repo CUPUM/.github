@@ -55,8 +55,8 @@ jobs:
         id: get_all_fields
         run: |
           echo "🔍 Fetching all project fields..."
-
-          # Query the field list separately to avoid unions
+          
+          # We query only 'id' and 'name' fields—no selections that could invoke the union error
           gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
           query($projectId: ID!) {
             node(id: $projectId) {
