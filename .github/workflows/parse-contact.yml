@@ -1,119 +1,98 @@
-name: Parse Contact Form
+name: Add Issue to GitHub Project (Org-Wide)
 on:
-  workflow_call:
+  workflow_call:  # Allows all repos to call this workflow
 
 jobs:
-  parse_issue:
+  add_to_project:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      repository-projects: write
+      contents: read
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Set Project ID
+        run: echo "PROJECT_ID=PVT_kwDOBNGg4c4AyAI_" >> $GITHUB_ENV
 
-      - name: Set GH_TOKEN from ORG_PAT
-        run: echo "GH_TOKEN=${{ secrets.ORG_PAT }}" >> $GITHUB_ENV
-        env:
-          ORG_PAT: ${{ secrets.ORG_PAT }}
-
-      - name: Debug GH_TOKEN Before Authentication
+      - name: Authenticate GitHub CLI
         run: |
-          if [[ -z "$GH_TOKEN" ]]; then
-            echo "❌ ERROR: GH_TOKEN is empty!"
-            exit 1
-          fi
-          echo "✅ GH_TOKEN is set."
-
-      - name: Check Authentication Status
-        run: |
-          echo "🔍 Checking authentication with gh auth status..."
-          gh auth status || { echo "❌ ERROR: Not authenticated!"; exit 1; }
+          echo "GH_TOKEN=${{ secrets.ORG_PAT }}" >> $GITHUB_ENV
+          gh auth status || gh auth login --with-token <<< "$GH_TOKEN"
         env:
           GH_TOKEN: ${{ secrets.ORG_PAT }}
 
-      - name: Retrieve Project Node ID
-        id: get_project_id
-        run: |
-          PROJECT_NODE_ID=$(gh api graphql -F organization="CUPUM" -f query='
-          query($organization: String!) {
-            organization(login: $organization) {
-              projectV2(number: 179) {
-                id
-              }
-            }
-          }' --jq '.data.organization.projectV2.id')
-
-          if [[ -z "$PROJECT_NODE_ID" ]]; then
-            echo "❌ ERROR: Failed to retrieve project node ID!"
-            exit 1
-          fi
-
-          echo "✅ Project Node ID: $PROJECT_NODE_ID"
-          echo "PROJECT_NODE_ID=$PROJECT_NODE_ID" >> $GITHUB_ENV
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}
-
-      - name: Fetch All Project Fields (Avoiding Union Errors)
-        id: get_all_fields
-        run: |
-          echo "🔍 Fetching all project fields..."
-
-          gh api graphql -F projectId="$PROJECT_NODE_ID" -f query='
-          query($projectId: ID!) {
-            node(id: $projectId) {
-              ... on ProjectV2 {
-                fields(first: 50) {
-                  nodes {
-                    id
-                    name
-                    __typename
-                  }
-                }
-              }
-            }
-          }' > fields.json
-
-          echo "✅ Successfully retrieved project fields!"
-          cat fields.json  # Debugging output
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}
-
-      - name: Extract Field IDs (Filtering Out Union Fields)
-        id: extract_field_ids
-        run: |
-          echo "🔍 Extracting specific field IDs..."
-
-          # Filter out ProjectV2FieldConfiguration types
-          FIRST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="First Name" and .__typename!="ProjectV2FieldConfiguration") | .id' fields.json)
-          LAST_NAME_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Last Name" and .__typename!="ProjectV2FieldConfiguration") | .id' fields.json)
-          ORGANIZATION_FIELD_ID=$(jq -r '.data.node.fields.nodes[] | select(.name=="Organization" and .__typename!="ProjectV2FieldConfiguration") | .id' fields.json)
-
-          # Ensure all fields were found
-          if [[ -z "$FIRST_NAME_FIELD_ID" || "$FIRST_NAME_FIELD_ID" == "null" ]] || 
-             [[ -z "$LAST_NAME_FIELD_ID" || "$LAST_NAME_FIELD_ID" == "null" ]] || 
-             [[ -z "$ORGANIZATION_FIELD_ID" || "$ORGANIZATION_FIELD_ID" == "null" ]]; then
-            echo "❌ ERROR: Failed to retrieve one or more field IDs!"
-            exit 1
-          fi
-
-          echo "✅ First Name Field ID: $FIRST_NAME_FIELD_ID"
-          echo "✅ Last Name Field ID: $LAST_NAME_FIELD_ID"
-          echo "✅ Organization Field ID: $ORGANIZATION_FIELD_ID"
-
-          # Save extracted values to the environment
-          echo "FIRST_NAME_FIELD_ID=$FIRST_NAME_FIELD_ID" >> $GITHUB_ENV
-          echo "LAST_NAME_FIELD_ID=$LAST_NAME_FIELD_ID" >> $GITHUB_ENV
-          echo "ORGANIZATION_FIELD_ID=$ORGANIZATION_FIELD_ID" >> $GITHUB_ENV
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}
-
-      - name: Extract Issue Form Data
-        id: extract_issue_form
+      - name: Extract Issue Data
+        id: extract_data
         run: |
           ISSUE_BODY=$(jq -r '.issue.body' <<< '${{ toJson(github.event) }}')
 
-          FIRST_NAME=$(echo "$ISSUE_BODY" | awk -F "\*\*First Name\*\*" '{print $2}' | awk -F "\n" '{print $1}' | xargs)
-          LAST_NAME=$(echo "$ISSUE_BODY" | awk -F "\*\*Last Name\*\*" '{print $2}' | awk -F "\n" '{print $1}' | xargs)
-          ORGANIZATION=$(echo "$ISSUE_BODY" | awk -F "\*\*Organization\*\*" '{print $2}' | awk -F "\n" '{print $1}' | xargs)
+          FIRST_NAME=$(echo "$ISSUE_BODY" | grep -oP '(?<=\*\*First Name\*\*: ).*')
+          LAST_NAME=$(echo "$ISSUE_BODY" | grep -oP '(?<=\*\*Last Name\*\*: ).*')
+          ORGANIZATION=$(echo "$ISSUE_BODY" | grep -oP '(?<=\*\*Organization\*\*: ).*')
 
           echo "FIRST_NAME=$FIRST_NAME" >> $GITHUB_ENV
           echo "LAST_NAME=$LAST_NAME" >> $GITHUB_ENV
           echo "ORGANIZATION=$ORGANIZATION" >> $GITHUB_ENV
+
+      - name: Get Issue ID
+        run: |
+          ISSUE_ID=$(gh api graphql -f query='query {
+            repository(owner:"CUPUM", name:"${{ github.event.repository.name }}") {
+              issue(number: ${{ github.event.issue.number }}) {
+                id
+              }
+            }
+          }' --jq '.data.repository.issue.id')
+
+          echo "ISSUE_ID=$ISSUE_ID" >> $GITHUB_ENV
+
+      - name: Add Issue to Project
+        run: |
+          ITEM_ID=$(gh api graphql -f query='
+          mutation($projectId: ID!, $contentId: ID!) {
+            addProjectV2ItemById(input: {projectId: $projectId, contentId: $contentId}) {
+              item {
+                id
+              }
+            }
+          }' -F projectId="$PROJECT_ID" -F contentId="$ISSUE_ID" --jq '.data.addProjectV2ItemById.item.id')
+
+          echo "ITEM_ID=$ITEM_ID" >> $GITHUB_ENV
+
+      - name: Update Fields
+        run: |
+          gh api graphql -f query='
+          mutation($projectId: ID!, $itemId: ID!, $fieldName: String!, $value: String!) {
+            updateProjectV2ItemFieldValueByName(input: {
+              projectId: $projectId
+              itemId: $itemId
+              fieldName: $fieldName
+              value: { text: $value }
+            }) {
+              clientMutationId
+            }
+          }' -F projectId="$PROJECT_ID" -F itemId="$ITEM_ID" -F fieldName="First Name" -F value="$FIRST_NAME"
+
+          gh api graphql -f query='
+          mutation($projectId: ID!, $itemId: ID!, $fieldName: String!, $value: String!) {
+            updateProjectV2ItemFieldValueByName(input: {
+              projectId: $projectId
+              itemId: $itemId
+              fieldName: $fieldName
+              value: { text: $value }
+            }) {
+              clientMutationId
+            }
+          }' -F projectId="$PROJECT_ID" -F itemId="$ITEM_ID" -F fieldName="Last Name" -F value="$LAST_NAME"
+
+          gh api graphql -f query='
+          mutation($projectId: ID!, $itemId: ID!, $fieldName: String!, $value: String!) {
+            updateProjectV2ItemFieldValueByName(input: {
+              projectId: $projectId
+              itemId: $itemId
+              fieldName: $fieldName
+              value: { text: $value }
+            }) {
+              clientMutationId
+            }
+          }' -F projectId="$PROJECT_ID" -F itemId="$ITEM_ID" -F fieldName="Organization" -F value="$ORGANIZATION"
