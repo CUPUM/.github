@@ -1,6 +1,9 @@
 name: Add Issue to GitHub Project (Org-Wide)
 on:
-  workflow_call:  # Allows all repos to call this workflow
+  workflow_call:
+    secrets:
+      ORG_PAT:
+        required: true  # ✅ Ensures secret is passed from the calling workflow
 
 jobs:
   add_to_project:
@@ -11,9 +14,6 @@ jobs:
       contents: read
 
     steps:
-      - name: Set Project ID
-        run: echo "PROJECT_ID=PVT_kwDOBNGg4c4AyAI_" >> $GITHUB_ENV
-
       - name: Authenticate GitHub CLI
         run: |
           echo "GH_TOKEN=${{ secrets.ORG_PAT }}" >> $GITHUB_ENV
