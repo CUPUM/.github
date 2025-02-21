@@ -52,8 +52,8 @@ body:
       - label: "Affiliate member"
       - label: "Alumni member"
       - label: "Non member"
-    validations:
-      required: true
+  validations:
+    required: true
 
 - type: input
   id: membership_start
