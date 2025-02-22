@@ -95,7 +95,6 @@ body:
     label: Email_1
     description: Email address (professional, ideally)
     placeholder: "ex. email@example.com"
-    render: bash
   validations:
     required: false
 
@@ -105,7 +104,6 @@ body:
     label: Email_2
     description: Email address (personal, ideally)
     placeholder: "ex. email@example.com"
-    render: bash
   validations:
     required: false
 
@@ -115,7 +113,6 @@ body:
     label: Phone_1
     description: Phone number, including international code (professional, ideally)
     placeholder: "ex. +X XXX XXX-XXXX"
-    render: bash
   validations:
     required: false
 
@@ -125,7 +122,6 @@ body:
     label: Phone_2
     description: Phone number, including international code (personal, ideally)
     placeholder: "ex. +X XXX XXX-XXXX"
-    render: bash
   validations:
     required: false
 
