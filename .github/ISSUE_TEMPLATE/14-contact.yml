@@ -11,6 +11,9 @@ body:
       ## General
       This template manages the registration, tracking and note-taking about contacts of the UNESCO Chair in Urban Landscape. This concerns both the contact information of members and external leads.
 
+      ## Repositories
+      Make sure that you are creating the contact in the right repository. Project or strategy based contacts should be located in the associated repository. For general contacts, such as chairmembers, use the _General_ repository.
+
 # Contact information
 - type: input
   id: first_name
