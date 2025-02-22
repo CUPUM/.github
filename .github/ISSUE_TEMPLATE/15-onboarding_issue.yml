@@ -1,0 +1,139 @@
+name: Onboarding
+description: "Streamline the onboarding of a new chair member or collaborator."
+title: "Onboarding: [First] [Last] as new [Role] starting on [Start date]"
+assignees: ["delphineduplain"]
+projet: projects: ["CUPUM/33", "CUPUM/145"]
+body:
+
+# Guidelines
+- type: markdown
+  attributes:
+    value: |
+      ## General
+      
+      This template manages the onboarding of new collaborators upon their arrival at the UNESCO Chair in Urban Landscape. 
+
+      ## Roles
+
+      The unbording of new collaborators involves the following people:
+
+      - The Chairholder
+      - The person responsible for the unbording, ideally the project lead, who can be the chairholder
+      - The project lead, with which the person will work
+      - The onboardee (new student, new collaborator, new intern, or new guest)
+
+- type: input
+  id: first_name
+  attributes:
+    label: First name
+  validations:
+    required: true
+
+- type: input
+  id: last_name
+  attribues:
+    label: Last name
+  validations:
+    required: true
+
+- type: dropdown
+  id: role
+  attributes:
+    label: What role for this new person
+    multiple: true
+    options:
+      - New student
+      - New employee
+      - New intern
+      - New guest
+      - Other
+   validations:
+     required: true
+
+- type: input
+  id: start_date
+  attributes:
+    label: First day at the UNESCO Chair (onboarding day)
+    placeholder: yyyy-mm-dd
+  validations:
+    required: true
+
+- type: markdown
+  attributes: 
+    value: |
+      ## Before arriving at the UNESCO Chair
+
+      In the weeks and days prior to the onbordee at the UNESCO Chair, the following tasks and actions should be completed.
+
+      1. Create a SIM Account for the person (by the issue assignee)
+      2. Send an information email to the new comer to inform them of the onboarding process and require some actions (e.g. create GitHub account)
+      3. ...
+
+      ...
+      A SIM account provides access to the University’s digital accesses and resources.  
+      
+      Création d’un compte SIM pour invité institutionnel
+
+      nom, prénom et la date de naissance de l'invité ainsi que l'adresse de courriel ou le code d'accès du parrain (personne en autorité à l'UdeM).
+
+      Source: https://wiki.umontreal.ca/display/SIE/Compte+utilisateur
+      
+- type: checkboxes
+  id: actions_priors
+  attribued:
+    label: To complete before start date
+    description: Check or activate as issue in General repo
+    options:
+      - label: Task: Email [First Name] as new [Role] about onboarding process
+      - label: [Key attribution: [Key code] to [Borrower’s name] to access [Access type] [Room number]](https://github.com/CUPUM/general/issues/new?template=09-key_issue.yml)
+
+
+- type: textarea
+  id: email_onboardee
+  attributes:
+    label: Email to onboardee prior to arrival
+    description: "Send minimum one week before arrival to UNESCO Chair"
+    value: |
+      Bonjour,
+
+      En prévision de votre arrivé à la Chaire UNESCO en paysage urbain, nous vous invitons à compléter les étapes suivantes avant votre première journée:
+      1. [Créer un compte SIM temporaire](https://ti.umontreal.ca/formulaires/formulaire-de-demande-pour-les-services-client-unite/) (si vous n’être pas affilié à l’Université de Montraél) 
+      
+      ([See additionnal information here])
+      2. Créer un compte sur https://github.com avec votre adresse de l’Université de Montréal, si vous n’avez pas encore de compte GitHub ; 
+      3. 
+
+    render: bash
+    validations:
+      required: true
+
+
+      
+- type: textarea
+  attributes:
+    label: Project teams
+    description: |
+      List the teams for which the onboardee should gain access to work on their assigned projects.
+      You can find a list of the organisation's teams [here](https://github.com/orgs/CUPUM/teams).
+    placeholder: |
+      - [ ] ...
+
+- type: textarea
+  attributes:
+    label: List of actions for chair staff
+    value: |
+      - [ ] [Invite onboardee to the organization](https://github.com/orgs/CUPUM/people)
+      - [ ] [Add onboardee to relevant team(s)](https://github.com/orgs/CUPUM/teams)
+      - [ ] Schedule an onboarding meeting with the arriving collaborator
+      - [ ] @delphineduplain: Schedule an introduction meeting with the arriving collaborator
+      - [ ] @team: Schedule an introduction meeting with the arriving collaborator
+      - [ ] @team: Make sure the onboardee is added to the list of invited people the relevant calendar events
+
+- type: textarea
+  attributes:
+    label: To do for arriving collaborator
+    description: "List the steps to complete in order to fully onboard the new member once they have arrived."
+    value: |
+      - [ ] Register on GitHub
+      - [ ] Skim through the documentation on [Getting started with GitHub](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
+      - [ ] 🎉 Open your first issue! 🎉
