@@ -31,7 +31,7 @@ body:
 - type: dropdown
   id: type
   attributes:
-    label: Type
+    label: Contact type
     options:
       - UdeM employee
       - UdeM student
@@ -81,8 +81,8 @@ body:
 - type: input
   id: position
   attributes:
-    label: Position
-    description: Role within the organization
+    label: Positions
+    description: Exact roles within their organization
   validations:
     required: false
 
