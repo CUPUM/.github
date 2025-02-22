@@ -94,6 +94,7 @@ body:
   attributes:
     label: Email_1
     description: Email address (professional, ideally)
+    render: bash
   validations:
     required: false
 
@@ -102,6 +103,7 @@ body:
   attributes:
     label: Email_2
     description: Email address (personnal, ideally)
+    render: bash
   validations:
     required: false
 
@@ -110,6 +112,7 @@ body:
   attributes:
     label: Phone_1
     description: Phone number, including international code (professional, ideally)
+    render: bash
   validations:
     required: false
 
@@ -118,6 +121,7 @@ body:
   attributes:
     label: Phone_2
     description: Phone number, including international code (personnal, ideally)
+    render: bash
   validations:
     required: false
 
