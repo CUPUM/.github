@@ -161,7 +161,7 @@ body:
   id: notes
   attributes:
     label: Notes
-    description: Enter the information about the contact.
+    description: Important information about the contact.
   validations:
     required: false
 
