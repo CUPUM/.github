@@ -94,8 +94,8 @@ body:
   attributes:
     label: Email_1
     description: Email address (professional, ideally)
-    placeholder: "username@company.xxx"
-  render: bash
+    placeholder: "ex. email@example.com"
+    render: bash
   validations:
     required: false
 
@@ -103,8 +103,8 @@ body:
   id: email_2
   attributes:
     label: Email_2
-    description: Email address (personnal, ideally)
-    placeholder: "username@email.xxx"
+    description: Email address (personal, ideally)
+    placeholder: "ex. email@example.com"
     render: bash
   validations:
     required: false
@@ -114,7 +114,7 @@ body:
   attributes:
     label: Phone_1
     description: Phone number, including international code (professional, ideally)
-    placeholder: "+X XXX XXX-XXXX"
+    placeholder: "ex. +X XXX XXX-XXXX"
     render: bash
   validations:
     required: false
@@ -123,8 +123,8 @@ body:
   id: phone_2
   attributes:
     label: Phone_2
-    description: Phone number, including international code (personnal, ideally)
-    placeholder: "+X XXX XXX-XXXX"
+    description: Phone number, including international code (personal, ideally)
+    placeholder: "ex. +X XXX XXX-XXXX"
     render: bash
   validations:
     required: false
@@ -170,6 +170,7 @@ body:
     required: false
 
 - type: checkboxes
+  id: actions  
   attributes:
     label: List of actions (for leads)
     description: Check completed actions
