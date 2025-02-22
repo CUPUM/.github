@@ -41,17 +41,16 @@ body:
   validations:
     required: true
 
-- type: checkboxes
+- type: dropdown
   id: membership
   attributes:
     label: Membership status
-    description: Check corresponding UNESCO Chair membership
     options:
-      - label: "Core member"
-      - label: "Associate member"
-      - label: "Affiliate member"
-      - label: "Alumni member"
-      - label: "Non member"
+      - Non member
+      - Core member
+      - Associate member
+      - Affiliate member
+      - Alumni member
   validations:
     required: true
 
