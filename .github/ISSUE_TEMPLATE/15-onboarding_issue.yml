@@ -2,7 +2,7 @@ name: Onboarding
 description: "Streamline the onboarding of a new chair member or collaborator."
 title: "Onboarding: [First] [Last] as new [Role] starting on [Start date]"
 assignees: ["delphineduplain"]
-projet: ["CUPUM/33", "CUPUM/145"]
+projects: ["CUPUM/33", "CUPUM/145"]
 body:
 
 # Guidelines
@@ -15,22 +15,21 @@ body:
 
       ## Roles
 
-      The unbording of new collaborators involves the following people:
+      The onboarding of new collaborators involves the following people:
 
       - The Chairholder
-      - The Project coordinator (who will oversee the Onboardee’s work)
+      - The Project Coordinator (who will oversee the Onboardee’s work)
       - The Onboarder
       - The Onboardee 
 
       ## Description 
-      The onboarding aims to ease the rapid and seamless integration to new comers at the UNESCO Chair through three phases:
+      The onboarding aims to ensure a smooth integration for newcomers at the UNESCO Chair through three phases:
 
-      1. Pre arrival
+      1. Pre-arrival
       2. Arrival
-      3. Post arrival
+      3. Post-arrival
 
-      Each phases serves a specific purpose and should be completed deligently.
-      
+      Each phase serves a specific purpose and should be completed diligently.
       
 - type: input
   id: first_name
@@ -41,7 +40,7 @@ body:
 
 - type: input
   id: last_name
-  attribues:
+  attributes:
     label: Last name
   validations:
     required: true
@@ -49,7 +48,7 @@ body:
 - type: dropdown
   id: role
   attributes:
-    label: What role for this new person
+    label: What role is this new person taking?
     multiple: true
     options:
       - New student
@@ -57,8 +56,8 @@ body:
       - New intern
       - New guest
       - Other
-   validations:
-     required: true
+  validations:
+    required: true
 
 - type: input
   id: start_date
@@ -71,19 +70,19 @@ body:
 - type: checkboxes
   id: pre_arrival_actions
   attributes:
-    label: Pre arrival actions  
-    description: Four to two week before the Onboardee _Start date_. 
+    label: Pre-arrival actions  
+    description: Two to four weeks before the Onboardee’s start date.  
     options:
-      - label: Action: Schedule a 30-minute onboarding meeting with Chairholder on Starting date (use issue comments)
-      - label: Action: Schedule a one-hour onboarding meeting with the Project lead on Starting date (use issue comments)
-      - label: Action: Schedule a one-hour introduction to GitHub with team member on Starting date (use issue comments)
-      - label: Action: Schedule a onboarding tea or lunch with chair members on Starting date (create calendar invite)
-      - label: Action: Email Onboardee information and request actions, cc Chairholder and Project coordinator (use template below)
-      - label: Action: Add onboardee to all events and event series listed in email 
-      - label: Action: Request key to access to office space (use [Key attribution issue template](https://github.com/CUPUM/general/issues/new?template=09-key_issue.yml))
-      - label: Action: For non-UdeM Onboardee, create a SIM Account to access UdeM online systems (use link below)
-      - label: Action: Once GitHub personal account set up, add Onboardee to UNESCO Chair’s organization GitHub Account and teams
-      - label: Action: Ask Slack account administrators to add Onboardee to Slack (use issue comments)
+      - label: Schedule a 30-minute onboarding meeting with Chairholder on Starting Date (use issue comments)
+      - label: Schedule a one-hour onboarding meeting with the Project Lead on Starting Date (use issue comments)
+      - label: Schedule a one-hour introduction to GitHub with a team member on Starting Date (use issue comments)
+      - label: Schedule an onboarding tea or lunch with chair members on Starting Date (create a calendar invite)
+      - label: Email Onboardee information and request actions, cc Chairholder and Project Coordinator (use template below)
+      - label: Add Onboardee to all events and event series listed in email 
+      - label: Request a key to access office space (use the [Key Attribution Issue Template](https://github.com/CUPUM/general/issues/new?template=09-key_issue.yml))
+      - label: For non-UdeM Onboardees, create a SIM Account to access UdeM online systems (use link below)
+      - label: Once GitHub personal account is set up, add Onboardee to the UNESCO Chair’s organization GitHub account and teams
+      - label: Ask Slack account administrators to add Onboardee to Slack (use issue comments)
 
 - type: markdown
   id: resources
@@ -92,44 +91,40 @@ body:
       ### Pre-arrival resources
 
       #### SIM Account
-      The SIM account is required to access digital services at the University of Montreal (wifi, library, MonUdeM, Syncho, etc.). It is _de facto_ the University’s digital identity credentials.
+      The SIM account is required to access digital services at the University of Montreal (WiFi, library, MonUdeM, Syncho, etc.). It is _de facto_ the University’s digital identity credentials.
       
-
       #### Pre-arrival email template
 
-      ´´´
+      ```
       Dear [First name],
 
-      In prevision to your arrival to the UNESCO Chair in Urban Landscape, please take the time to read the followin email and complete the listed actions at least one week before your starting date.
+      In preparation for your arrival at the UNESCO Chair in Urban Landscape, please take the time to read the following email and complete the listed actions at least one week before your starting date.
 
-      **Starting day**
-      Your first day at the UNESCO Chair is planned as follow:
-      - HH.MM to HH.MM — Welcome meeting with Shin Koseki
-      - HH.MM to HH.MM — Project onboarding meeting with [Project coordinator]
-      - HH.MM to HH.MM — GitHub introduction session with [Designated chair member]
-      - HH.MM to HH.MM — Welcoming [tea/lunch] with members of the UNESCO Chair
+      **Starting Day Schedule**
+      Your first day at the UNESCO Chair is planned as follows:
+      - HH:MM – HH:MM — Welcome meeting with Shin Koseki
+      - HH:MM – HH:MM — Project onboarding meeting with [Project Coordinator]
+      - HH:MM – HH:MM — GitHub introduction session with [Designated Chair Member]
+      - HH:MM – HH:MM — Welcoming [tea/lunch] with members of the UNESCO Chair
 
-      **Upcoming events**
-      As part of your affiliation at the UNESCO Chair, you are invited to attend the following reccuring meetings:
+      **Upcoming Events**
+      As part of your affiliation with the UNESCO Chair, you are invited to attend the following recurring meetings:
       - Project meeting series 1
       - Project meeting series 2
       - ...
 
-      Here are also some additional social events at which we are looking forward to seeing you:
-      - Chaire sociale event 1
-      - Chaire sociale event 2
+      Additionally, here are some upcoming social events where we look forward to seeing you:
+      - Chair social event 1
+      - Chair social event 2
       - ...
-      
+
       Electronic calendar invitations for these events will follow.
 
-      **Required actions**
-      1. Create an account on https://github.com/ using your @umontreal.ca email address (unless you already have an account)
-      2. Create an account on Slack using your @umontreal.ca email address
-      3. Email us back your date of birth. This is required to create an UdeM digital access code (SIM).
+      **Required Actions**
+      1. Create an account on https://github.com/ using your @umontreal.ca email address (unless you already have an account).
+      2. Create an account on Slack using your @umontreal.ca email address.
+      3. Email us back your date of birth. This is required to create your UdeM digital access code (SIM).
 
-      Best reagards,
+      Best regards,  
       [Onboarder]
-
-      ´´´
-
-
+      ```
