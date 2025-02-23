@@ -125,7 +125,7 @@ body:
   id: pre_arrival_actions
   attributes:
     label: Pre-arrival actions  
-    description: Two to four weeks before the Onboardee’s start date.  
+    description: Two to four weeks before the Onboardee’s Star date.  
     options:
       - label: "Action: Create a calendar invite to schedule a 30-minute onboarding meeting with Chairholder on the Starting date"
       - label: "Action: Create a calendar invite to schedule a one-hour onboarding meeting with the Project coordinator on the Starting date"
@@ -137,3 +137,25 @@ body:
       - label: "Action: For non-UdeM Onboardees, ask Chairholder to request a SIM Account to access UdeM online systems"
       - label: "Action: Once GitHub personal account is set up, ask CUPUM GitHub account administrator to add Onboardee to corresponding teams"
       - label: "Action: Ask Slack account administrator to add Onboardee to CUPUM Slack"
+
+- type: checkboxes
+  id: arrival_actions
+  attributes:
+    lable: Arrival actions
+    description: On the Start date of the Onboardee.
+    options:
+      - label: "Meet: In person with S. Koseki to welcome [Onboardee] on [Start date]
+      - label: "Meet: In person with [Project coordinator] to onboard [Onboardee] on [Start date]
+      - label: "Workshop: In person with [Chair member] and [Onboardee] about GitHUb on [Start date]
+      - label: "Event: [Onboardee]’s welcome tea/lunch on [Start date]
+      - label: "Action: Create a calendar invitation to schedule a post-arrival onboarding feedback with S. Koseki
+      - label: "Action: Create a calendar invitation to schedule a post-arrival proejct feedback with [Project coordiantor]
+
+- type: checkboxes
+  id: post_arrival_actions
+  attributes: 
+    label: Post-arrival actions
+    description: 10 to 14 days after Start date
+    options:
+      - label: "Meet: In person with S. Koseki about [Onboardee] onboarding feedback on [MM DD]
+      - label: "Meet: In person with [Project coordinator] about project feedback on [MM DD]
