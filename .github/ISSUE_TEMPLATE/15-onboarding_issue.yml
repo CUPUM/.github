@@ -18,10 +18,20 @@ body:
       The unbording of new collaborators involves the following people:
 
       - The Chairholder
-      - The person responsible for the unbording, ideally the project lead, who can be the chairholder
-      - The project lead, with which the person will work
-      - The onboardee (new student, new collaborator, new intern, or new guest)
+      - The Project coordinator (who will oversee the Onboardee’s work)
+      - The Onboarder
+      - The Onboardee 
 
+      ## Description 
+      The onboarding aims to ease the rapid and seamless integration to new comers at the UNESCO Chair through three phases:
+
+      1. Pre arrival
+      2. Arrival
+      3. Post arrival
+
+      Each phases serves a specific purpose and should be completed deligently.
+      
+      
 - type: input
   id: first_name
   attributes:
@@ -61,22 +71,53 @@ body:
 - type: markdown
   attributes: 
     value: |
-      ## Before arriving at the UNESCO Chair
+      ## Pre arrival 
 
-      In the weeks and days prior to the onbordee at the UNESCO Chair, the following tasks and actions should be completed.
-
-      1. Create a SIM Account for the person (by the issue assignee)
-      2. Send an information email to the new comer to inform them of the onboarding process and require some actions (e.g. create GitHub account)
-      3. ...
-
-      ...
-      A SIM account provides access to the University’s digital accesses and resources.  
+      Four to two week before the Onboardee arrival date. 
       
-      Création d’un compte SIM pour invité institutionnel
+      1. Schedule a 30-minute onboarding meeting with Chairholder on Starting date
+      2. Schedule a one-hour onboarding meeting with the Project lead on Starting date
+      3. Schedule a one-hour introduction to GitHub with team memebr on Starting date
+      3. Schedule a onboarding tea or lunch with chair members on Starting date
+      4. Email Onboardee, Chairholder and Project coordinator to share information and request actions (use email templates below)
+      5. Add onboardee to all events and event series listed in email
+      6. Request key using a Key attribution issue
+      7. For non-UdeM Onboardee, create a SIM Account to access UdeM online systems (requires birth date and full name)
+      8. Add Onboardee to relevant calendar events (project and social)  
+      9. Once GitHub personal account set up, add Onboardee to UNESCO Chair’s organization GitHub Account and teams
+      10. Add Onboardee to Slack
 
-      nom, prénom et la date de naissance de l'invité ainsi que l'adresse de courriel ou le code d'accès du parrain (personne en autorité à l'UdeM).
+      ´´´
+      Dear [First name],
 
-      Source: https://wiki.umontreal.ca/display/SIE/Compte+utilisateur
+      In prevision to your arrival to the UNESCO Chair in Urban Landscape, please take the time to read the followin email and complete the listed actions at least one week before your starting date.
+
+      **Starting day**
+      Your first day at the UNESCO Chair is planned as follow:
+      - HH.MM to HH.MM — Welcome meeting with Shin Koseki
+      - HH.MM to HH.MM — Project onboarding meeting with [Project coordinator]
+      - HH.MM to HH.MM — GitHub introduction session with [Designated chair member]
+      - HH.MM to HH.MM — Welcoming [tea/lunch] with members of the UNESCO Chair
+
+      **Upcoming events**
+      As part of your affiliation at the UNESCO Chair, you are invited to attend the following reccuring meetings:
+      - Project meeting series 1
+      - Project meeting series 2
+      - ...
+
+      Here are also some additional social events we are looking forward to seeing you at:
+      - Chaire sociale event 1
+      - Chaire sociale event 2
+      - ...
+      
+      Calendar invitations for these events will follow.
+
+      **Required actions**
+      1. Create an account on GitHub using your UdeM email address
+      2. Create an account on Slack using your UdeM email address
+      3. Email us back your full name and date of birth. This is required to create an UdeM digital access code (SIM).
+
+      ´´´
       
 - type: checkboxes
   id: actions_priors
