@@ -144,12 +144,12 @@ body:
     lable: Arrival actions
     description: On the Start date of the Onboardee.
     options:
-      - label: "Meet: In person with S. Koseki to welcome [Onboardee] on [Start date]
-      - label: "Meet: In person with [Project coordinator] to onboard [Onboardee] on [Start date]
-      - label: "Workshop: In person with [Chair member] and [Onboardee] about GitHUb on [Start date]
-      - label: "Event: [Onboardee]’s welcome tea/lunch on [Start date]
-      - label: "Action: Create a calendar invitation to schedule a post-arrival onboarding feedback with S. Koseki
-      - label: "Action: Create a calendar invitation to schedule a post-arrival proejct feedback with [Project coordiantor]
+      - label: "Meet: In person with S. Koseki to welcome [Onboardee] on [Start date]"
+      - label: "Meet: In person with [Project coordinator] to onboard [Onboardee] on [Start date]"
+      - label: "Workshop: In person with [Chair member] and [Onboardee] about GitHUb on [Start date]"
+      - label: "Event: [Onboardee]’s welcome tea/lunch on [Start date]"
+      - label: "Action: Create a calendar invitation to schedule a post-arrival onboarding feedback with S. Koseki"
+      - label: "Action: Create a calendar invitation to schedule a post-arrival proejct feedback with [Project coordiantor]"
 
 - type: checkboxes
   id: post_arrival_actions
@@ -157,5 +157,5 @@ body:
     label: Post-arrival actions
     description: 10 to 14 days after Start date
     options:
-      - label: "Meet: In person with S. Koseki about [Onboardee] onboarding feedback on [MM DD]
-      - label: "Meet: In person with [Project coordinator] about project feedback on [MM DD]
+      - label: "Meet: In person with S. Koseki about [Onboardee] onboarding feedback on [MM DD]"
+      - label: "Meet: In person with [Project coordinator] about project feedback on [MM DD]"
