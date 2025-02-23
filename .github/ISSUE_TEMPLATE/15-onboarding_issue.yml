@@ -11,18 +11,8 @@ body:
     value: |
       ## General
       
-      This template manages the onboarding of new collaborators upon their arrival at the UNESCO Chair in Urban Landscape. 
-
-      ## Roles
-
-      The onboarding of new collaborators involves the following people:
-
-      - The Chairholder
-      - The Project Coordinator (who will oversee the Onboardee’s work)
-      - The Onboarder
-      - The Onboardee 
-
-      ## Description 
+      This template manages the onboarding of new collaborators upon their arrival at the UNESCO Chair in Urban Landscape.
+      
       The onboarding aims to ensure a smooth integration for newcomers at the UNESCO Chair through three phases:
 
       1. Pre-arrival
@@ -31,6 +21,15 @@ body:
 
       Each phase serves a specific purpose and should be completed diligently.
       
+      ## Roles
+
+      The onboarding of new collaborators involves the following people:
+
+      - The Chairholder
+      - The Project Coordinator (who will oversee the Onboardee’s work)
+      - The Onboarder (who is responsible to process the onboarding task)
+      - The Onboardee (new comer)
+
 - type: input
   id: first_name
   attributes:
@@ -48,7 +47,7 @@ body:
 - type: dropdown
   id: role
   attributes:
-    label: What role is this new person taking?
+    label: What role(s) is this new person taking?
     multiple: true
     options:
       - New student
@@ -66,23 +65,6 @@ body:
     placeholder: yyyy-mm-dd
   validations:
     required: true
-
-- type: checkboxes
-  id: pre_arrival_actions
-  attributes:
-    label: Pre-arrival actions  
-    description: Two to four weeks before the Onboardee’s start date.  
-    options:
-      - label: Schedule a 30-minute onboarding meeting with Chairholder on Starting Date (use issue comments)
-      - label: Schedule a one-hour onboarding meeting with the Project Lead on Starting Date (use issue comments)
-      - label: Schedule a one-hour introduction to GitHub with a team member on Starting Date (use issue comments)
-      - label: Schedule an onboarding tea or lunch with chair members on Starting Date (create a calendar invite)
-      - label: Email Onboardee information and request actions, cc Chairholder and Project Coordinator (use template below)
-      - label: Add Onboardee to all events and event series listed in email 
-      - label: Request a key to access office space (use the [Key Attribution Issue Template](https://github.com/CUPUM/general/issues/new?template=09-key_issue.yml))
-      - label: For non-UdeM Onboardees, create a SIM Account to access UdeM online systems (use link below)
-      - label: Once GitHub personal account is set up, add Onboardee to the UNESCO Chair’s organization GitHub account and teams
-      - label: Ask Slack account administrators to add Onboardee to Slack (use issue comments)
 
 - type: markdown
   id: resources
@@ -128,3 +110,20 @@ body:
       Best regards,  
       [Onboarder]
       ```
+
+- type: checkboxes
+  id: pre_arrival_actions
+  attributes:
+    label: Pre-arrival actions  
+    description: Two to four weeks before the Onboardee’s start date.  
+    options:
+      - label: Schedule a 30-minute onboarding meeting with Chairholder on Starting Date (use issue comments)
+      - label: Schedule a one-hour onboarding meeting with the Project Lead on Starting Date (use issue comments)
+      - label: Schedule a one-hour introduction to GitHub with a team member on Starting Date (use issue comments)
+      - label: Schedule an onboarding tea or lunch with chair members on Starting Date (create a calendar invite)
+      - label: Email Onboardee information and request actions, cc Chairholder and Project Coordinator (use template above)
+      - label: Add Onboardee to all events and event series listed in email 
+      - label: Request a key to access office space (use the [Key Attribution Issue Template](https://github.com/CUPUM/general/issues/new?template=09-key_issue.yml))
+      - label: For non-UdeM Onboardees, create a SIM Account to access UdeM online systems (use link above)
+      - label: Once GitHub personal account is set up, add Onboardee to the UNESCO Chair’s organization GitHub account and teams
+      - label: Ask Slack account administrators to add Onboardee to Slack (use issue comments)
