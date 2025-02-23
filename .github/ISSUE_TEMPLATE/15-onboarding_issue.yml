@@ -30,6 +30,11 @@ body:
       - The Onboarder (who is responsible to process the onboarding task)
       - The Onboardee (new comer)
 
+- type: markdown
+  attributes:
+    value: |
+      ## Onboardee information
+
 - type: input
   id: first_name
   attributes:
@@ -70,7 +75,9 @@ body:
   id: resources
   attributes:
     value: |
-      ### Pre-arrival resources
+      ## 1. Pre-arrival
+    
+      ### Information and resources
 
       #### SIM Account
       The SIM account is required to access digital services at the University of Montreal (WiFi, library, MonUdeM, Syncho, etc.). It is _de facto_ the University’s digital identity credentials.
