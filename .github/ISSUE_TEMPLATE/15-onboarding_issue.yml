@@ -80,7 +80,7 @@ body:
       - label: Action: Schedule a onboarding tea or lunch with chair members on Starting date (create calendar invite)
       - label: Action: Email Onboardee information and request actions, cc Chairholder and Project coordinator (use template below)
       - label: Action: Add onboardee to all events and event series listed in email 
-      - label: Action: Request key to access to office space (use Key attribution issue template)
+      - label: Action: Request key to access to office space (use [Key attribution issue template](https://github.com/CUPUM/general/issues/new?template=09-key_issue.yml))
       - label: Action: For non-UdeM Onboardee, create a SIM Account to access UdeM online systems (use link below)
       - label: Action: Once GitHub personal account set up, add Onboardee to UNESCO Chair’s organization GitHub Account and teams
       - label: Action: Ask Slack account administrators to add Onboardee to Slack (use issue comments)
@@ -89,11 +89,13 @@ body:
   id: resources
   attributes:
     value: |
-      ## Resources
+      ### Pre-arrival resources
 
-      ### SIM Account
+      #### SIM Account
+      The SIM account is required to access digital services at the University of Montreal (wifi, library, MonUdeM, Syncho, etc.). It is _de facto_ the University’s digital identity credentials.
+      
 
-      ### Pre-arrival email template
+      #### Pre-arrival email template
 
       ´´´
       Dear [First name],
@@ -113,76 +115,21 @@ body:
       - Project meeting series 2
       - ...
 
-      Here are also some additional social events we are looking forward to seeing you at:
+      Here are also some additional social events at which we are looking forward to seeing you:
       - Chaire sociale event 1
       - Chaire sociale event 2
       - ...
       
-      Calendar invitations for these events will follow.
+      Electronic calendar invitations for these events will follow.
 
       **Required actions**
-      1. Create an account on GitHub using your UdeM email address
-      2. Create an account on Slack using your UdeM email address
-      3. Email us back your full name and date of birth. This is required to create an UdeM digital access code (SIM).
+      1. Create an account on https://github.com/ using your @umontreal.ca email address (unless you already have an account)
+      2. Create an account on Slack using your @umontreal.ca email address
+      3. Email us back your date of birth. This is required to create an UdeM digital access code (SIM).
+
+      Best reagards,
+      [Onboarder]
 
       ´´´
-      
-- type: checkboxes
-  id: actions_priors
-  attribued:
-    label: To complete before start date
-    description: Check or activate as issue in General repo
-    options:
-      - label: Task: Email [First Name] as new [Role] about onboarding process
-      - label: [Key attribution: [Key code] to [Borrower’s name] to access [Access type] [Room number]](https://github.com/CUPUM/general/issues/new?template=09-key_issue.yml)
 
 
-- type: textarea
-  id: email_onboardee
-  attributes:
-    label: Email to onboardee prior to arrival
-    description: "Send minimum one week before arrival to UNESCO Chair"
-    value: |
-      Bonjour,
-
-      En prévision de votre arrivé à la Chaire UNESCO en paysage urbain, nous vous invitons à compléter les étapes suivantes avant votre première journée:
-      1. [Créer un compte SIM temporaire](https://ti.umontreal.ca/formulaires/formulaire-de-demande-pour-les-services-client-unite/) (si vous n’être pas affilié à l’Université de Montraél) 
-      
-      ([See additionnal information here])
-      2. Créer un compte sur https://github.com avec votre adresse de l’Université de Montréal, si vous n’avez pas encore de compte GitHub ; 
-      3. 
-
-    render: bash
-    validations:
-      required: true
-
-
-      
-- type: textarea
-  attributes:
-    label: Project teams
-    description: |
-      List the teams for which the onboardee should gain access to work on their assigned projects.
-      You can find a list of the organisation's teams [here](https://github.com/orgs/CUPUM/teams).
-    placeholder: |
-      - [ ] ...
-
-- type: textarea
-  attributes:
-    label: List of actions for chair staff
-    value: |
-      - [ ] [Invite onboardee to the organization](https://github.com/orgs/CUPUM/people)
-      - [ ] [Add onboardee to relevant team(s)](https://github.com/orgs/CUPUM/teams)
-      - [ ] Schedule an onboarding meeting with the arriving collaborator
-      - [ ] @delphineduplain: Schedule an introduction meeting with the arriving collaborator
-      - [ ] @team: Schedule an introduction meeting with the arriving collaborator
-      - [ ] @team: Make sure the onboardee is added to the list of invited people the relevant calendar events
-
-- type: textarea
-  attributes:
-    label: To do for arriving collaborator
-    description: "List the steps to complete in order to fully onboard the new member once they have arrived."
-    value: |
-      - [ ] Register on GitHub
-      - [ ] Skim through the documentation on [Getting started with GitHub](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
-      - [ ] 🎉 Open your first issue! 🎉
