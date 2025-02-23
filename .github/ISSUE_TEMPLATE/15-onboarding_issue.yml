@@ -63,28 +63,37 @@ body:
 - type: input
   id: start_date
   attributes:
-    label: First day at the UNESCO Chair (onboarding day)
+    label: Start date at the UNESCO Chair
     placeholder: yyyy-mm-dd
   validations:
     required: true
 
 - type: checkboxes
-  id: pre_arrival
+  id: pre_arrival_actions
   attributes:
     label: Pre arrival actions  
-    description: Four to two week before the Onboardee arrival date. 
+    description: Four to two week before the Onboardee _Start date_. 
     options:
-      - label: Action: Schedule a 30-minute onboarding meeting with Chairholder on Starting date
-      - label: Action: Schedule a one-hour onboarding meeting with the Project lead on Starting date
-      - label: Action: Schedule a one-hour introduction to GitHub with team memebr on Starting date
-      - label: Action: Schedule a onboarding tea or lunch with chair members on Starting date
-      - label: Action: Email Onboardee, Chairholder and Project coordinator to share information and request actions (use email templates below)
-      - label: Action: Add onboardee to all events and event series listed in email
-      - label: Action: Request key using a Key attribution issue
-      - label: Action: For non-UdeM Onboardee, create a SIM Account to access UdeM online systems (requires birth date and full name)
-      - label: Action: Add Onboardee to relevant calendar events (project and social)  
+      - label: Action: Schedule a 30-minute onboarding meeting with Chairholder on Starting date (use issue comments)
+      - label: Action: Schedule a one-hour onboarding meeting with the Project lead on Starting date (use issue comments)
+      - label: Action: Schedule a one-hour introduction to GitHub with team member on Starting date (use issue comments)
+      - label: Action: Schedule a onboarding tea or lunch with chair members on Starting date (create calendar invite)
+      - label: Action: Email Onboardee information and request actions, cc Chairholder and Project coordinator (use template below)
+      - label: Action: Add onboardee to all events and event series listed in email 
+      - label: Action: Request key to access to office space (use Key attribution issue template)
+      - label: Action: For non-UdeM Onboardee, create a SIM Account to access UdeM online systems (use link below)
       - label: Action: Once GitHub personal account set up, add Onboardee to UNESCO Chair’s organization GitHub Account and teams
-      - label: Action: Add Onboardee to Slack
+      - label: Action: Ask Slack account administrators to add Onboardee to Slack (use issue comments)
+
+- type: markdown
+  id: resources
+  attributes:
+    value: |
+      ## Resources
+
+      ### SIM Account
+
+      ### Pre-arrival email template
 
       ´´´
       Dear [First name],
