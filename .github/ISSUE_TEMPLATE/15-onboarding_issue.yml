@@ -141,7 +141,7 @@ body:
 - type: checkboxes
   id: arrival_actions
   attributes:
-    lable: Arrival actions
+    label: Arrival actions
     description: On the Start date of the Onboardee.
     options:
       - label: "Meet: In person with S. Koseki to welcome [Onboardee] on [Start date]"
