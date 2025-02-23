@@ -68,24 +68,23 @@ body:
   validations:
     required: true
 
-- type: markdown
-  attributes: 
-    value: |
-      ## Pre arrival 
-
-      Four to two week before the Onboardee arrival date. 
-      
-      1. Schedule a 30-minute onboarding meeting with Chairholder on Starting date
-      2. Schedule a one-hour onboarding meeting with the Project lead on Starting date
-      3. Schedule a one-hour introduction to GitHub with team memebr on Starting date
-      3. Schedule a onboarding tea or lunch with chair members on Starting date
-      4. Email Onboardee, Chairholder and Project coordinator to share information and request actions (use email templates below)
-      5. Add onboardee to all events and event series listed in email
-      6. Request key using a Key attribution issue
-      7. For non-UdeM Onboardee, create a SIM Account to access UdeM online systems (requires birth date and full name)
-      8. Add Onboardee to relevant calendar events (project and social)  
-      9. Once GitHub personal account set up, add Onboardee to UNESCO Chair’s organization GitHub Account and teams
-      10. Add Onboardee to Slack
+- type: checkboxes
+  id: pre_arrival
+  attributes:
+    label: Pre arrival actions  
+    description: Four to two week before the Onboardee arrival date. 
+    options:
+      - label: Action: Schedule a 30-minute onboarding meeting with Chairholder on Starting date
+      - label: Action: Schedule a one-hour onboarding meeting with the Project lead on Starting date
+      - label: Action: Schedule a one-hour introduction to GitHub with team memebr on Starting date
+      - label: Action: Schedule a onboarding tea or lunch with chair members on Starting date
+      - label: Action: Email Onboardee, Chairholder and Project coordinator to share information and request actions (use email templates below)
+      - label: Action: Add onboardee to all events and event series listed in email
+      - label: Action: Request key using a Key attribution issue
+      - label: Action: For non-UdeM Onboardee, create a SIM Account to access UdeM online systems (requires birth date and full name)
+      - label: Action: Add Onboardee to relevant calendar events (project and social)  
+      - label: Action: Once GitHub personal account set up, add Onboardee to UNESCO Chair’s organization GitHub Account and teams
+      - label: Action: Add Onboardee to Slack
 
       ´´´
       Dear [First name],
