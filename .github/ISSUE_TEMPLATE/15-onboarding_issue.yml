@@ -2,7 +2,7 @@ name: Onboarding
 description: "Streamline the onboarding of a new chair member or collaborator."
 title: "Onboarding: [First] [Last] as new [Role] starting on [Start date]"
 assignees: ["delphineduplain"]
-projet: projects: ["CUPUM/33", "CUPUM/145"]
+projet: ["CUPUM/33", "CUPUM/145"]
 body:
 
 # Guidelines
