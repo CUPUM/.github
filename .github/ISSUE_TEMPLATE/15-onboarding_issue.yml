@@ -124,13 +124,13 @@ body:
     label: Pre-arrival actions  
     description: Two to four weeks before the Onboardee’s start date.  
     options:
-      - label: Schedule a 30-minute onboarding meeting with Chairholder on Starting Date (use issue comments)
-      - label: Schedule a one-hour onboarding meeting with the Project Lead on Starting Date (use issue comments)
-      - label: Schedule a one-hour introduction to GitHub with a team member on Starting Date (use issue comments)
-      - label: Schedule an onboarding tea or lunch with chair members on Starting Date (create a calendar invite)
-      - label: Email Onboardee information and request actions, cc Chairholder and Project Coordinator (use template above)
-      - label: Add Onboardee to all events and event series listed in email 
-      - label: Request a key to access office space (use the [Key Attribution Issue Template](https://github.com/CUPUM/general/issues/new?template=09-key_issue.yml))
-      - label: For non-UdeM Onboardees, create a SIM Account to access UdeM online systems (use link above)
-      - label: Once GitHub personal account is set up, add Onboardee to the UNESCO Chair’s organization GitHub account and teams
-      - label: Ask Slack account administrators to add Onboardee to Slack (use issue comments)
+      - label: "Action: Schedule a 30-minute onboarding meeting with Chairholder on Starting Date (use issue comments)"
+      - label: "Action: Schedule a one-hour onboarding meeting with the Project Lead on Starting Date (use issue comments)"
+      - label: "Action: Schedule a one-hour introduction to GitHub with a team member on Starting Date (use issue comments)"
+      - label: "Action: Schedule an onboarding tea or lunch with chair members on Starting Date (create a calendar invite)"
+      - label: "Action: Email Onboardee information and request actions, cc Chairholder and Project Coordinator (use template above)"
+      - label: "Action: Add Onboardee to all events and event series listed in email"
+      - label: "Action: Request a key to access office space (use the [Key Attribution Issue Template](https://github.com/CUPUM/general/issues/new?template=09-key_issue.yml))"
+      - label: "Action: For non-UdeM Onboardees, create a SIM Account to access UdeM online systems (use link above)"
+      - label: "Action: Once GitHub personal account is set up, add Onboardee to the UNESCO Chair’s organization GitHub account and teams"
+      - label: "Action: Ask Slack account administrators to add Onboardee to Slack (use issue comments)"
