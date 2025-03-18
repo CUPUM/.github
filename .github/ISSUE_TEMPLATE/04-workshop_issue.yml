@@ -21,15 +21,15 @@ body:
 
 - type: textarea
   attributes:
-    label: List of actions
-    description: Actions to organize meeting
+    label: List of sub-issues
+    description: Tasks to organize meeting
     value: |
-      - [ ] Action: Schedule workshop with guests
-      - [ ] Action: Define workshop format and deliverable
-      - [ ] Action: Share workshop preparation documents with guests
-      - [ ] Action: Hold workshop and produce deliverable
-      - [ ] Action: Convert actionable items to issues
-      - [ ] Action: Write back to guest(s) with next steps
+      - [ ] Task: Schedule workshop with guests
+      - [ ] Task: Define workshop format and deliverable
+      - [ ] Task: Share workshop preparation documents with guests
+      - [ ] Task: Hold workshop and produce deliverable
+      - [ ] Task: Convert actionable items to issues
+      - [ ] Task: Write back to guest(s) with next steps
 
 - type: textarea
   attributes:
