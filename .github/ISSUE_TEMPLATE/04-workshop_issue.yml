@@ -1,6 +1,6 @@
 name: Workshop
 description: "Plan, organize, record and follow up on workshops"
-title: "Workshop: "
+title: "Workshop: [Location] with [Participants] for [Topic] on [Date]"
 body:
 
 - type: markdown
