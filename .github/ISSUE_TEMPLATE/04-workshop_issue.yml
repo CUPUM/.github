@@ -62,15 +62,7 @@ body:
       
       # Activity 2 (10 minutes)
       ...
-       
-- type: textarea
-  attributes:
-    label: Workshop notes
-    description: Based on the agenda, summarize key information, decisions and resources 
-    value: |
-      - ...
-      - ...
-   
+
 - type: textarea
   attributes:
     label: Actionable items
@@ -79,4 +71,13 @@ body:
       - [ ] Task: ...
       - [ ] Task: ...
       - [ ] Task: ...
+
+- type: textarea
+  attributes:
+    label: Workshop notes
+    description: Based on the agenda, summarize key information, decisions and resources 
+    value: |
+      - ...
+      - ...
+  
 
