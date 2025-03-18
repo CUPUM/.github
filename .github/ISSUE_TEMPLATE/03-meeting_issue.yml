@@ -21,15 +21,15 @@ body:
 
 - type: textarea
   attributes:
-    label: List of actions
-    description: Actions to organize meeting
+    label: List of sub-issues
+    description: Tasks or actions to organize meetin
     value: |
-      - [ ] Action: Schedule meeting with guests
-      - [ ] Action: Define meeting agenda
-      - [ ] Action: Share meeting agenda with guests
-      - [ ] Action: Hold meeting and take notes
-      - [ ] Action: Convert actionable items to issues
-      - [ ] Action: Write back to guest(s) with next steps
+      - [ ] Task: Schedule meeting with guests
+      - [ ] Task: Define meeting agenda
+      - [ ] Task: Share meeting agenda with guests
+      - [ ] Task: Hold meeting and take notes
+      - [ ] Task: Convert actionable items to issues
+      - [ ] Task: Write back to guest(s) with next steps
 
 - type: textarea
   attributes:
