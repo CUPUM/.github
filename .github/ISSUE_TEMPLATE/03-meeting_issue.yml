@@ -36,10 +36,10 @@ body:
 - type: textarea
   attributes:
     label: External participants
-    description: Search for contact issue using \#
+    description: Copy contact issue URL from [sjinko: contacts](https://github.com/orgs/CUPUM/projects/179)
     placeholder: |
-     - [ ] #
-     - [ ] #
+     - [ ] https://github.com/CUPUM/...
+     - [ ] https://github.com/CUPUM/...
 
 - type: input
   attributes:
