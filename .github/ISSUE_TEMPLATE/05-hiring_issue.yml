@@ -1,6 +1,10 @@
 name: Hire research assistants
 description: "Steps to hire a new collaborator or extend contracts"
 title: "Hire: [student name] as research assistant for [Project name] for [semester]"
+assignees:
+  - delphineduplain
+projects:
+  - "CUPUM/145"
 body:
 
 # Guidelines
