@@ -19,25 +19,28 @@ body:
     description: Describe the objective, context and key information
     placeholder: This workshop serves to ...
 
-- type: textarea
+- type: checkboxes
+  id: subissues
   attributes:
-    label: List of sub-issues
-    description: Tasks to organize meeting
-    value: |
-      - [ ] Task: Schedule workshop with guests
-      - [ ] Task: Define workshop format and deliverable
-      - [ ] Task: Share workshop preparation documents with guests
-      - [ ] Task: Hold workshop and produce deliverable
-      - [ ] Task: Convert actionable items to issues
-      - [ ] Task: Write back to guest(s) with next steps
+    label: What to do for the meeting to take place
+    description: Can be ticked off or converted to sub-issues if complexity requires
+    options:
+      - label: "Task: Schedule workshop with guests"
+      - label: "Task: Create contact issues for external participants"
+      - label: "Task: Define workshop agenda"
+      - label: "Task: Share workshop agenda with guests"
+      - label: "Task: Hold workshop and take notes"
+      - label: "Task: Convert actionable items to issues"
+      - label: "Task: Write back to guest(s) with next steps"
 
 - type: textarea
   attributes:
     label: External participants
-    description: List full names and affiliation of non-chair participants to the meeting
+    description: Copy contact issue URL from [sjinko: contacts](https://github.com/orgs/CUPUM/projects/179)
     placeholder: |
-      - Lucie Pigeon (Université du Québec à Montréal)
-      - René Petit (ONU Habitat)
+     - [ ] https://github.com/CUPUM/...
+     - [ ] https://github.com/CUPUM/...
+
 
 - type: input
   attributes:
