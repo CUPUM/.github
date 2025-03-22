@@ -19,25 +19,27 @@ body:
     description: Describe the objective, context and key information
     placeholder: This meeting serves to ...
 
-- type: textarea
+- type: checkboxes
+  id: subissues
   attributes:
-    label: List of sub-issues
-    description: Tasks or actions to organize meetin
-    value: |
-      - [ ] Task: Schedule meeting with guests
-      - [ ] Task: Define meeting agenda
-      - [ ] Task: Share meeting agenda with guests
-      - [ ] Task: Hold meeting and take notes
-      - [ ] Task: Convert actionable items to issues
-      - [ ] Task: Write back to guest(s) with next steps
+    label: What to do for the meeting to take place
+    description: Can be ticked off or converted to sub-issues if complexity requires
+    options:
+      - label: "[ ] Task: Schedule meeting with guests"
+      - label: "[ ] Task: Create contact issues for external participants"
+      - label: "[ ] Task: Define meeting agenda"
+      - label: "[ ] Task: Share meeting agenda with guests"
+      - label: "[ ] Task: Hold meeting and take notes"
+      - label: "[ ] Task: Convert actionable items to issues"
+      - label: "[ ] Task: Write back to guest(s) with next steps"
 
 - type: textarea
   attributes:
     label: External participants
-    description: List full names and affiliation of non-chair participants to the meeting
+    description: Search for contact issue using \#
     placeholder: |
-     - Carine Genou (Ville de Laval)
-     - Martin Duchamp (Ville de Montréal)
+     - [ ] #
+     - [ ] #
 
 - type: input
   attributes:
