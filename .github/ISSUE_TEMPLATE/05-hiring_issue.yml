@@ -23,7 +23,8 @@ body:
       - Program (new assistant only):
       - Start date:
       - End date:
-      - Project:
+      - Project name: 
+      - Financial project code:
       - Total number of hours:
       - Work days:
         - [ ] Monday
@@ -43,24 +44,25 @@ body:
       | Recruit participants | 29 participants | 75% |
 
 # List of actions
-- type: textarea
+- type: checkboxes
+  id: action-pre
   attributes:
-    label: List of actions
-    value: |
-      _Preliminary steps for 35h+ new contract or candidate recruitment:_
-      
-      - [ ] Action: Complete job posting form
-      - [ ] Action: Send form to I. Couillard
-      - [ ] Action: Receive applications
-      - [ ] Action: Evaluate applications
-      - [ ] Action: Confirm position to the choosen candidate
-      
-      _Mandatory steps:_
-      
-      - [ ] Action: Create statement of work
-      - [ ] Action: Get statement of work approuved by @sjinko
-      - [ ] Action: Confirm account with @sjinko 
-      - [ ] Action: Fill research assistants Excel form
-      - [ ] Action: Send research assistants Excel form to I. Couillard
-      - [ ] Action: Send statement of work to research assistant
-      - [ ] Action: Meet research assistant for feedback session @sjinko
+    label: Preliminary steps for 35h+ new contract
+    description: Please complete in order
+    options:
+      - label: Fill URBAPA job posting form
+      - label: Email form to I. Couillard for posting
+      - label: Receive applications
+      - label: Evaluate applications
+      - label: Confirm position to the choosen candidate
+
+- type: checkboxes
+  id: action-post
+  attributes:
+    label: Sub-issues
+    description: Check off or convert to sub-issues if needed
+    options:
+      - label: "Task: Output statement of work"
+      - label: "Task: Create entry on koseki-log-studetns_contract.xlxs"
+      - label: "Task: Email I. Couillard with log entry for contract creation"
+      - label: "Task: Email [Student name] with statement of work"
