@@ -1,6 +1,6 @@
 name: Procurement
 description: "Manages the purchase and utilization of goods and services for chair activities."
-title: "Purchase: [Type] [Quantity] [Product name] from [Vendor] for [User(s)] on [Purchase date]"
+title: "Procurement: [Type] [Quantity] [Product name] from [Vendor] for [User(s)] on [Purchase date]"
 assignees:
   - sjinko
 projects:
