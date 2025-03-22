@@ -36,7 +36,7 @@ body:
 - type: textarea
   attributes:
     label: External participants
-    description: Copy contact issue URL from [sjinko: contacts](https://github.com/orgs/CUPUM/projects/179)
+    description: Copy contact issue URL from [contacts](https://github.com/orgs/CUPUM/projects/179)
     placeholder: |
      - [ ] https://github.com/CUPUM/...
      - [ ] https://github.com/CUPUM/...
