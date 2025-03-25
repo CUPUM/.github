@@ -13,10 +13,10 @@ body:
         This template manages news announcements made by the UNESCO Chair in Urban Landscape. This concerns news published on the UNESCO Chair’s website and social media, as well as those published by our partners.
         News publications follow the Chair’s communication strategy and require active engagement from the person at the origin of the news.
         
-        There are two types of news:
+        ### News types
         
-        1. Announcement (inform of upcoming story, e.g. announcing an upcoming event)
-        2. Coverage (inform of an ongoing or past story, e.g. covering a new publication or award)
+        1. Announce (inform of upcoming story, e.g. announcing an upcoming event)
+        2. Cover (inform of an ongoing or past story, e.g. covering a new publication or award)
 
         News includes, but is not limited to:
         
@@ -51,6 +51,16 @@ body:
         - label: Assign news subject(s) to issue
         - label: Confirm with external subjects (collaborating persons or organizations) they agree to be mentioned
         - label: Proofread content using Antidote
+
+  - type: dropdown
+    id: download
+    attributes:
+      label: How did you download the software?
+      options:
+        - Announce
+        - Cover
+    validations:
+      required: true
 
   - type: input
     id: story-title-en
