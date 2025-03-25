@@ -1,6 +1,6 @@
 name: News
 description: "Communication template (for single posts or weekly campaigns)."
-title: "News: [Type] [Story] featuring [Subject] by [Deadline]"
+title: "News: [Type] [Story short title] featuring [Subject] by [Deadline]"
 assignees: ["roxanekasprzyk"]
 projects: ["CUPUM/5"]
 body:
@@ -140,7 +140,7 @@ body:
     attributes:
       label: Press kit folder
       description: "URL to press kit folder on Communication repo"
-      placeholder: "https://github.com/CUPUM/communication/tree/main/visuals/<yyyymmdd-story_subtitle/>"
+      placeholder: "https://github.com/CUPUM/communication/tree/main/visuals/<yyyymmdd-story_short_title/>"
 
   - type: checkboxes
     id: subissues-manager
