@@ -73,6 +73,7 @@ body:
     attributes:
       label: Story caption in English
       description: "Three-paragraph impactful story (ask ChatGPT if needed)"
+      render: bash
 
   - type: input
     id: hashtag-en
@@ -91,6 +92,7 @@ body:
     attributes:
       label: Story caption in French
       description: "Three-paragraph impactful story (ask ChatGPT if needed)"
+      render: bash
 
   - type: input
     id: hashtag-fr
