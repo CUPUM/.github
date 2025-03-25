@@ -111,7 +111,8 @@ body:
       description: Activate as sub-issues and assign to Subject
       options:
         - label: "Task: Send communication manager cover and closing pictures of the story (use Slack > team-communication)"
-        - label: "Task: Send communication manager self-made pictures and short films (vertical) during preparation and unfolding of the story (use Slack > team-communication)"
+        - label: "Task: Send communication manager self-made formal pictures and short films (vertical) of the story (use Slack > team-communication)"
+        - label: "Task: Send communication manager self-made informal pictures and short films (vertical) of the story (use Slack > team-communication)"
 
   - type: markdown
     attributes:
