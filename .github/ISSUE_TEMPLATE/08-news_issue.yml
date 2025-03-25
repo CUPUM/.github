@@ -34,8 +34,15 @@ body:
        - Communication manager: The person managing and curating the news
        - Chair holder: Shin Koseki
 
+  - type: markdown
+     attributes:
+     value: |
+       ## Phase 1 — Preparation by subject
+
+       This first phase must be completed by the subject (chair member) featured in the story. Subject should refer to Communication manager for help and support if needed.
+
   - type: checkboxes
-    id: checklist
+    id: checklist-subject
     attributes:
       label: Check list
       description: Make sure this has been done first
@@ -44,15 +51,6 @@ body:
         - label: Assign news subject(s) to issue
         - label: Confirm with External subjects (collaborating persons or organizations) they agree to be mentionned
         - label: Proofread content using Antidote
-        - label: Clearly mention Benefactors if any
-        - label: Tag School, Faculty, University, Venue, External subjects and Benefactors
-
-  - type: markdown
-     attributes:
-     value: |
-       ## Phase 1 — Preparation by subject
-
-       This first phase must be completed by the subject (chair member) featured in the story. Subject should refer to Communication manager for help and support if needed.
 
   - type: input
     id: story-title-en
@@ -63,7 +61,7 @@ body:
   - type: textarea
     id: story-en
     attributes:
-      label: Story in English
+      label: Story caption in English
       description: "Three paragraph impactful story (ask ChatGPT if needed)"
 
   - type: input
@@ -81,7 +79,7 @@ body:
   - type: textarea
     id: story-fr
     attributes:
-      label: Story in French
+      label: Story caption in French
       description: "Three paragraph impactful story (ask ChatGPT if needed)"
   
   - type: input
@@ -96,25 +94,43 @@ body:
       label: External subjects
       description: List all external subjects (persons or organizations) mentioned in the story (add URL from Contacts issues if present).   
         
-   - type: checkboxes
-     id: subissues-subject
-     attributes:
-       label: Subject sub-issues
-       description: Activate as sub-issues and complete
-       options:
-         - label: "Task: Send communication manager with a cover picture of the story (use Slack > team-communication)"
-         - label: "Task: Send communication manager with self made pictures and short films (vertical) during preparation and unfolding of the story (use Slack > team-communication)"
+  - type: checkboxes
+    id: subissues-subject
+    attributes:
+      label: Subject sub-issues
+      description: Activate as sub-issues and complete
+      options:
+        - label: "Task: Send communication manager with a cover and closing pictures of the story (use Slack > team-communication)"
+        - label: "Task: Send communication manager with self made pictures and short films (vertical) during preparation and unfolding of the story (use Slack > team-communication)"
 
-   - type: markdown
-     attributes:
-     value: |
-       ## Phase 2 — Publication by the communcation manager
+  - type: markdown
+    attributes:
+    value: |
+      ## Phase 2 — Publication by the communcation manager
+      
+      Use templates provided in Communication/template/ accordingly:
+      
+        - Instagram: In English without UNESCO Chair sticker
+        - LinkedIn: In English with square template and UNESCO Chair sticker
+        - Facebook: In French with square template and UNESCO Chair sticker
+        - Website: In English without UNESCO Chair sticker
+
+  - type: checkboxes
+    id: checklist-subject
+    attributes:
+      label: Check list
+      description: Make sure this has been done first
+      options:
+        - label: Proofread content using Antidote
+        - label: Clearly mention Benefactors if any
+        - label: Tag School, Faculty, University, Venue, External subjects and Benefactors
 
    - type: input
      id: presskit
      attributes:
        label: Press kit folder
-       description: ""
+       description: "URL to presskit foler on Communication repo"
+       placeholder: "https://github.com/CUPUM/communication/tree/main/visuals/<yyyymmdd-story_subtitle/>"
 
    - type: checkboxes
      id: subissues-manager
@@ -122,120 +138,8 @@ body:
        label: Communication manager sub-issues
        description: Activate as sub-issues and complete
        options:
-         - label: "Task: Publish story on IG, FB, LK post using templates"
-         - label: "Task: Publish story on UNESCO Chair website"
-
-
-
-
-
-
-
-
-  - type: textarea
-    attributes:
-      label: Description du projet
-      description: Ajoutez un sommaire du projet concerné pour contextualiser la campagne de communication. 
-
-  - type: textarea
-    attributes:
-      label: Création du presskit
-      value: |
-        - [ ] Action: Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/press_kits) selon cette nomenclature : aaaammjj-press_kit-noms-news_title
-        - [ ] Action: Créer le communiqué de presse en FR selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_fr-20211228.docx) ou en EN selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_en-20211228.docx) et le déposer dans le dossier
-        - [ ] Action: Tag @sjinko pour valider le communiqué
-        - [ ] Action: Tranduire le communiqué (FR > EN ou EN > FR)
-        - [ ] Action: Mettre les communiquées (FR et EN) en ligne sur le site web
-        - [ ] Action: Commenter '@sjinko, à qui envoyer ce communiqué?' 
-
-  - type: textarea
-    attributes:
-      label: Types de publications
-      description: "Pour une campagne : Min 3 posts - Max 5 posts."
-      value: |
-        > Pour une campagne : Min 3 posts - Max 5 posts.
-        - [ ] News 
-        - [ ] Photo
-        - [ ] Vidéo
-        - [ ] Quote
-        - [ ] Conférence
-
-  - type: textarea
-    attributes:
-      label: Production des visuels
-      value: |
-        > Des images gratuites et libres de droit se trouvent [içi](https://unsplash.com)  
-        > La charte graphique de la chaire se trouve [içi](https://github.com/CUPUM/communication/blob/main/templates/CHAIRE_UNESCO_PaysageUrbain_chartegraphique.pdf)
-
-        - [ ] Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/visuals) selon cette nomenclature : aaaammjj-projet
-        - [ ] Produire le(s) visuels en anglais selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
-        - [ ] Produire le(s) visuels en français selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
-        - [ ] Déposer le(s) visuel(s) dans le dossier selon la nomenclature : nom-projet-aaaammjj
-
-  - type: textarea
-    attributes:
-      label: Production des _captions_
-      value: |
-        - [ ] Créer un texte pour le(s) visuel(s) à partir du presskit en utilisant le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post)
-        - [ ] Ajouter les hashtags à la caption (#)
-        - [ ] Ajouter les personnes concernées à la caption (@)
-
-  - type: textarea
-    attributes:
-      label: Publication sur les réseaux sociaux
-      value: |
-        > Seuls les publications sur Facebook sont en français 
-        - [ ] Publier visuel 1 sur Instagram, Facebook, Linkedin et Twitter
-        - [ ] Publier visuel 2 sur Instagram, Facebook, Linkedin et Twitter
-        - [ ] Publier visuel 3 sur Instagram, Facebook, Linkedin et Twitter
-        - [ ] Publier visuel 4 sur Instagram, Facebook, Linkedin et Twitter (au besoin) 
-        - [ ] Publier visuel 5 sur Instagram, Facebook, Linkedin et Twitter (au besoin)
-
-
-
-# ---
-# name: News
-# about: Communication template (for single posts or weekly campaigns)
-# ---
-# # Description du projet
-# Décrire le projet içi.
-
-# # Création du presskit
-# - [ ] Action: Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/press_kits) selon cette nomenclature : aaaammjj-press_kit-noms-news_title
-# - [ ] Action: Créer le communiqué de presse en FR selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_fr-20211228.docx) ou en EN selon le [template](https://github.com/CUPUM/communication/blob/main/templates/press_release/wulff-template-press_release_en-20211228.docx) et le déposer dans le dossier
-# - [ ] Action: Tag @sjinko pour valider le communiqué
-# - [ ] Action: Tranduire le communiqué (FR > EN ou EN > FR)
-# - [ ] Action: Mettre les communiquées (FR et EN) en ligne sur le site web
-# - [ ] Action: Commenter '@sjinko, à qui envoyer ce communiqué?' 
-
-# # Types de posts
-# > Pour une campagne : Min 3 posts - Max 5 posts
-
-# - [ ] News 
-# - [ ] Photo
-# - [ ] Vidéo
-# - [ ] Quote
-# - [ ] Conférence
-
-# # Production des visuels
-# > Des images gratuites et libres de droit se trouvent [içi](https://unsplash.com)  
-# > La charte graphique de la chaire se trouve [içi](https://github.com/CUPUM/communication/blob/main/templates/CHAIRE_UNESCO_PaysageUrbain_chartegraphique.pdf)
-
-# - [ ] Créer un dossier [ici](https://github.com/CUPUM/communication/tree/main/visuals) selon cette nomenclature : aaaammjj-projet
-# - [ ] Produire le(s) visuels en anglais selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
-# - [ ] Produire le(s) visuels en français selon le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post) adapté 
-# - [ ] Déposer le(s) visuel(s) dans le dossier selon la nomenclature : nom-projet-aaaammjj
-
-# # Production des captions 
-# - [ ] Créer un texte pour le(s) visuel(s) à partir du presskit en utilisant le [template](https://github.com/CUPUM/communication/tree/main/templates/social_media_post)
-# - [ ] Ajouter les hashtags à la caption (#)
-# - [ ] Ajouter les personnes concernées à la caption (@)
-
-# # Publication sur les réseaux sociaux
-#  > Seuls les posts sur Facebook sont en français 
-
-# - [ ] Publier visuel 1 sur Instagram, Facebook, Linkedin et Twitter
-# - [ ] Publier visuel 2 sur Instagram, Facebook, Linkedin et Twitter
-# - [ ] Publier visuel 3 sur Instagram, Facebook, Linkedin et Twitter
-# - [ ] Publier visuel 4 sur Instagram, Facebook, Linkedin et Twitter (au besoin) 
-# - [ ] Publier visuel 5 sur Instagram, Facebook, Linkedin et Twitter (au besoin) 
+         - label: "Task: Publish cover story and picture on UNESCO Chair website"
+         - label: "Task: Publish cover story and picture on IG, FB, LK post using templates"
+         - label: "Task: Publish self made pictures and short films as “story” on IG and FB post"
+         - label: "Task: Publish closing story on IG and FB post using templates"
+         - label: "Task: Ask Chair holder to send story material to Faculty communication team"
