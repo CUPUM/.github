@@ -70,6 +70,12 @@ body:
       label: Hashtags in English
       description: "List four hashtags related to story, two common, two specific"
 
+  - type: input
+    id: story-title-fr
+    attributes:
+      label: Story title in French
+      description: "Short original catchy title focused on subject"
+
   - type: textarea
     id: story-fr
     attributes:
@@ -92,7 +98,7 @@ body:
     id: subissues-subject
     attributes:
       label: Subject sub-issues
-      description: Activate as sub-issues and complete
+      description: Activate as sub-issues and assign to Subject
       options:
         - label: "Task: Send communication manager cover and closing pictures of the story (use Slack > team-communication)"
         - label: "Task: Send communication manager self-made pictures and short films (vertical) during preparation and unfolding of the story (use Slack > team-communication)"
@@ -130,7 +136,7 @@ body:
     id: subissues-manager
     attributes:
       label: Communication manager sub-issues
-      description: Activate as sub-issues and complete
+      description: Activate as sub-issues and assign to Communication manager
       options:
         - label: "Task: Publish cover story and picture on UNESCO Chair website"
         - label: "Task: Publish cover story and picture on IG, FB, LK using templates"
