@@ -37,7 +37,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Phase 1 — Preparation by subject
+        ## Phase 1 — Preparation by _Subject_
 
         This first phase must be completed by the subject (chair member) featured in the story. Subject should refer to Communication manager for help and support if needed.
 
@@ -116,7 +116,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Phase 2 — Publication by the communication manager
+        ## Phase 2 — Publication by the _Communication manager_
 
         Use templates provided in Communication/template/ accordingly:
 
