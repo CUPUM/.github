@@ -53,9 +53,9 @@ body:
         - label: Proofread content using Antidote
 
   - type: dropdown
-    id: download
+    id: type
     attributes:
-      label: How did you download the software?
+      label: News type
       options:
         - Announce
         - Cover
