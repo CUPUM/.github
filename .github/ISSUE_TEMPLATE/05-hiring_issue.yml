@@ -1,6 +1,6 @@
 name: Hire research assistants
 description: "Steps to hire a new collaborator or extend contracts"
-title: "Hire: [student name] as research assistant for [Project name] for [semester]"
+title: "Hire: [student name] as [position] for [mission] in [semester]"
 assignees:
   - delphineduplain
 projects:
@@ -11,42 +11,141 @@ body:
 - type: markdown
   attributes:
     value: |
-      Give an adequate title to your hiring issue.
-      - Specify the student's name
-      - Specify the semester, example: `A25` for _automne 2025_
+      # General
 
+      This issue template serves to create hiring of students at the UNESCO Chair in Urban Landscape
+      
 # Details of hiree and employment
-- type: textarea
+- type: input
+  id: first_name
   attributes:
-    label: Hiring details
-    value: |
-      - Last name:
-      - First name:
-      - Email (new assistant only):
-      - Study cycle (new assistant only):
-      - Program (new assistant only):
-      - Start date:
-      - End date:
-      - Project name: 
-      - Financial project code:
-      - Total number of hours:
-      - Work days:
-        - [ ] Monday
-        - [ ] Tuesday
-        - [ ] Wednesday
-        - [ ] Thursday
-        - [ ] Friday
+    label: First name
+    description: Hiree first name
+  validations:
+    required: true
+
+- type: input
+  id: last_name
+  attributes:
+    label: Last name
+    description: Hiree last name
+  validations:
+    required: true
+
+- type: input
+  id: email
+  attributes:
+    label: Email
+    description: Only if first contract
+  validations:
+    required: true
+
+- type: dropdown
+  id: cycle
+  attributes:
+    label: Hiree study cycle
+    options:
+      - 1st (BSc)
+      - 2nd (MSc)
+      - 3rd (PhD)
+      - Other
+  validations:
+    required: true
+
+- type: input
+  id: program
+  attributes:
+    label: Study program
+    description: In which program is the hiree registered
+  validations:
+    required: true
+
+- type: input
+  id: start_date
+  attributes:
+    label: Start date
+    description: First day of work
+  validations:
+    required: true
+
+- type: input
+  id: end_date
+  attributes:
+    label: End date
+    description: Last day of work
+  validations:
+    required: true
+
+- type: dropdown
+  id: position
+  attributes:
+    label: Hirement position
+    options:
+      - Research assistant
+      - Teaching assistant
+      - Technical assistant
+      - Other
+  validations:
+    required: true
+
+- type: input
+  id: mission
+  attributes:
+    label: Mission
+    description: What project/function will the hiree work on
+  validations:
+    required: true
+
+- type: input
+  id: funds
+  attributes:
+    label: Financial project number
+    description: What FP from which to pay contract 
+  validations:
+    required: false
+
+- type: dropdown
+  id: days
+  attributes:
+    label: Which days of the week will the hiree work
+    options:
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+    multiple: true
+  validations:
+    required: true
+
+- type: input
+  id: hours
+  attributes:
+    label: Hours of contract
+    description: How many hours will be worked/paid
+  validations:
+    required: true
 
 # Responsabilities and KPIs outline
 - type: textarea
+  id: scope
   attributes:
     label: Statement of work
     value: |
-      | Task | Key Performance Indicator | Percentage |
-      | :--    | :--        | :--            |
-      | Apply for funding | 5000$ | 25% |
-      | Recruit participants | 29 participants | 75% |
-
+      | Tâche           | Indicateur clé | Taux |
+      |-----------------|--------------  |------|
+      | Describe task 1 | KPI 1          | XX%  |
+      | Describe task 1 | KPI 2          | 75%  |
+    render: bash
+  
+- type: input
+  id: contact
+  attributes:
+    label: Hiree contact issue URL
+    description: Plase copy-paste from [contact project](https://github.com/orgs/CUPUM/projects/179/views/1)
+  validations:
+    required: false
+    
 # List of actions
 - type: checkboxes
   id: action-pre
@@ -54,11 +153,8 @@ body:
     label: Preliminary steps for 35h+ new contract
     description: Please complete in order
     options:
-      - label: Fill URBAPA job posting form
-      - label: Email form to I. Couillard for posting
-      - label: Receive applications
-      - label: Evaluate applications
-      - label: Confirm position to the choosen candidate
+      - label: "Task: Email Department job posting"
+      - label: "Task: Select hiree from candidacies"
 
 - type: checkboxes
   id: action-post
@@ -66,7 +162,5 @@ body:
     label: Sub-issues
     description: Check off or convert to sub-issues if needed
     options:
-      - label: "Task: Output statement of work"
-      - label: "Task: Create entry on koseki-log-studetns_contract.xlxs"
-      - label: "Task: Email I. Couillard with log entry for contract creation"
-      - label: "Task: Email [Student name] with statement of work"
+      - label: "Task: Email hiree statement of work"
+      - label: "Task: Email Department hiree contract details"
