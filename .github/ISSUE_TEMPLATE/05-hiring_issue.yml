@@ -164,3 +164,4 @@ body:
     options:
       - label: "Task: Email hiree statement of work"
       - label: "Task: Email Department hiree contract details"
+      - label: "Task: Add hiring issue URL to hiree contact issue"
