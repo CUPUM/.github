@@ -68,13 +68,12 @@ body:
   id: authors
   attributes:
     label: Author(s) of the publication
-    description: List authors and add (GitHub handle) if available
+    description: List authors as [Contact](https://github.com/orgs/CUPUM/projects/179) issue URL
     value: |
-      Author 1 (github handle), Affiliation
-      Author 2 (github handle), Affiliation
-      Author 3, Affiliation
-      Author 4, Affiliation
-    render: bash
+      - https://github.com/CUPUM/...
+      - https://github.com/CUPUM/...
+      - https://github.com/CUPUM/...
+      ...
   validations:
     required: true
 
@@ -82,12 +81,12 @@ body:
   id: funding
   attributes:
     label: Name of funding(s) supporting this publication
-    description: List all sources of funding used so far
+    description: List funding as [Subvention management](https://github.com/orgs/CUPUM/projects/140) issue
     value: |
-      Funding 1
-      Funding 2
+      - https://github.com/CUPUM/...
+      - https://github.com/CUPUM/...
+      - https://github.com/CUPUM/...
       ...
-    render: bash
   validations:
     required: false
 
@@ -97,14 +96,14 @@ body:
     label: Issue checklist
     description: To create the issue, make sure to ... 
     options:
-      - label: "Create or transfer the issue within the repo **Publications/**"
-      - label: "Name the issue according to guidelines"
-      - label: "Add the issue to the project **@sjinko: Publications** (automatic)"
-      - label: "Add the issue to other associated projects (e.g., research / teaching projects)"
-      - label: "Add project metadata (starting / end date)"
-      - label: "List sub-issues tasks, meetings, workshops required"
-      - label: "Comment current issue with co-authors' GitHub handles"
-      - label: "Create publication project directory in the **Publication/** repo"
+      - label: "Action: Create or transfer the issue within the repo **Publications/**"
+      - label: "Action: Name the issue according to guidelines"
+      - label: "Action: Add the issue to the project **@sjinko: Publications** (automatic)"
+      - label: "Action: Add the issue to other associated projects (e.g., research / teaching projects)"
+      - label: "Action: Add project metadata (starting / end date)"
+      - label: "Action: List sub-issues tasks, meetings, workshops required"
+      - label: "Action: Comment current issue with co-authors' GitHub handles"
+      - label: "Action: Create publication project directory in the **Publication/** repo"
 
 - type: textarea
   id: context
@@ -113,7 +112,6 @@ body:
     description: In which context is this publication produced ?
     value: |
       This publication results from ...
-    render: bash
   validations:
     required: true
 
@@ -124,7 +122,6 @@ body:
     description: Explain why the publication is made.
     value: |
       This publication aims to ...
-    render: bash
   validations:
     required: true
 
@@ -134,7 +131,7 @@ body:
     label: Resources of the publication
     description: Where are the resources linked to this publication
     value: |
-      - URL link to GitHub project folder on Publicaation/ repo: 
+      - URL link to GitHub project folder on Publication/ repo: 
       - URL link to call: 
   validations:
     required: true
@@ -142,8 +139,8 @@ body:
 - type: checkboxes
   id: subissues
   attributes:
-    label: List of tasks
-    description: List of all tasks, meetings, workshop required 
+    label: List of subissues
+    description: List of all tasks, meetings, workshop required (to convert to subissues)
     options:
       - label: "Task: Submit abstract for [Title] to [Call Name] by [Call Deadline]"
       - label: "Task: Complete publication notes for [Title]"
