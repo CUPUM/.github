@@ -32,17 +32,17 @@ body:
     value: |
       - [ ] Action: ...
 
-  # Check list
-  - type: checkboxes
-    id: checkboxes
-    attributes:
-      label: Task issue checklist
-      description: To complete before putting in “Ready”
-      options:
-        - label: Name the task clearly by stating what will be achieved using an action verb
-        - label: Assign **one** person. The task assignee is responsible to coordinate listed actions and deliver the task on time
-        - label: Add to relevant projects
-        - label: Link back to parent issue (e.g. Epic)
-        - label: Complete _Task description_ section
-        - label: Complete _Task resources_ section
-        - label: Complete _List of actions_ section
+# Check list
+- type: checkboxes
+  id: checkboxes
+  attributes:
+    label: Task issue checklist
+    description: To complete before putting in “Ready”
+    options:
+      - label: Name the task clearly by stating what will be achieved using an action verb
+      - label: Assign **one** person. The task assignee is responsible to coordinate listed actions and deliver the task on time
+      - label: Add to relevant projects
+      - label: Link back to parent issue (e.g. Epic)
+      - label: Complete _Task description_ section
+      - label: Complete _Task resources_ section
+      - label: Complete _List of actions_ section
