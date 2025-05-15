@@ -22,6 +22,7 @@ body:
     description:  Clearly list all the resources associated with this task (file URL, hyperlinks, contacts, etc.)
     placeholder: |
       - URLs
+      
 # List of actions
 - type: textarea
   attributes:
@@ -29,7 +30,19 @@ body:
     description: |
       List actions required to complete the task. Actions can be listed then created as issues and assigned to others.
     value: |
-      - [ ] Action: Name the task clearly by stating what will be achieverd using an action verb the details
-      - [ ] Action: Assign **one** person. The task assignee is responsible to coordinate listed actions and deliver the task on time
-      - [ ] Action: Add to relevant projects
-      - [ ] Action: Link back to parent issue (e.g. Epic)
+      - [ ] Action: ...
+
+  # Check list
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Task issue checklist
+      description: To complete before putting in “Ready”
+      options:
+        - label: Name the task clearly by stating what will be achieved using an action verb
+        - label: Assign **one** person. The task assignee is responsible to coordinate listed actions and deliver the task on time
+        - label: Add to relevant projects
+        - label: Link back to parent issue (e.g. Epic)
+        - label: Complete _Task description_ section
+        - label: Complete _Task resources_ section
+        - label: Complete _List of actions_ section
