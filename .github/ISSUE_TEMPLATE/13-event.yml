@@ -29,7 +29,7 @@ body:
     attributes:
       label: Participants
       description: Specify the participants.
-      placeholder: e.g. 50 people, Faculty members
+      placeholder: e.g. CUPUM members, Faculty members
     validations:
       required: true
 
@@ -60,7 +60,6 @@ body:
   - type: checkboxes
     id: authorisations
     attributes:
-      label: Authorisations
       options:
         - label: Request a reservation
         - label: If need be, request authorization from Direction de la prevention et de la sécurité (for DI space only)
@@ -72,7 +71,6 @@ body:
         ### Logistics
 
   - type: checkboxes
-    id: logistics
     attributes:
       label: Logistics
       options:
@@ -86,7 +84,6 @@ body:
         For internal events, calendar invitations can be used. For events with a wider audience, use a platform such as Eventbrite.
 
   - type: checkboxes
-    id: invitations
     attributes:
       label: Invitations
       options:
@@ -101,7 +98,6 @@ body:
   - type: checkboxes
     id: communication
     attributes:
-      label: Communication
       options:
         - label: Create an issue news to announce the event
         - label: Create an issue news to cover the event
