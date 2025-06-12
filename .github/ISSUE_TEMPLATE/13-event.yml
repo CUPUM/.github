@@ -40,15 +40,15 @@ body:
     id: location
     attributes:
       label: Location
-      description: Specify where the workshop takes place. e.g. "Hall de la Faculté de l'aménagement", "4133", "Teams"
+      description: Specify where the workshop takes place.
       placeholder: Faculté de l'aménagement, 4133, Teams...
 
   - type: input
     id: datetime
     attributes:
       label: Date and time
-      description: Indicate when the workshop takes place. e.g. `2025-06-01 06:15`
-      placeholder: YYYY-MM-DD HH:MM
+      description: Indicate when the workshop takes place using this format YYYY-MM-DD HH:MM
+      placeholder: 2025-06-01 06:15
 
   - type: input
     id: host
