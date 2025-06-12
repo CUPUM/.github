@@ -1,6 +1,6 @@
 name: Event Organization
-description: Template to organize an event with phases and checklist.
-title: "Event: [Type] with [Participants] at [Location] on [Date]"
+description: This template manages the organization of events by the UNESCO Chair in Urban Landscape.
+title: "Event: [Type] with [Guest(s)] at [Location] on [Date]"
 labels: event
 assignees: []
 
@@ -9,7 +9,18 @@ body:
     attributes:
       value: |
         ### General
-        The organization of an event usually includes four phases: obtaining authorizations (if needed), logistics, invitations, and communication.
+        This template manages the organization of events by the UNESCO Chair in Urban Landscape.
+
+        The organization is divided into three phases:
+
+        1. Pre-event  
+        2. Event  
+        3. Post-event
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Event information
 
   - type: dropdown
     id: type
@@ -18,93 +29,105 @@ body:
       description: Select the type of event.
       options:
         - label: Conference
+        - label: Seminar
         - label: Exhibition
         - label: Launch
         - label: Networking
     validations:
       required: true
 
-  - type: input
-    id: participants
+  - type: textarea
+    id: host
     attributes:
-      label: Participants
-      description: Specify the participants.
-      placeholder: e.g. CUPUM members, Faculty members, community members
+      label: Host
+      description: Specify who is hosting the event. The host is not necessarily the organizer.
+      placeholder: e.g. Shin Koseki
     validations:
       required: true
 
-  - type: input
-    id: location
+  - type: textarea
+    id: guests
     attributes:
-      label: Location
-      description: Specify where the event takes place (e.g., "Faculté de l'aménagement", "Zoom", "Teams").
-      placeholder: Location
+      label: Guest(s)
+      description: Specify who the guest(s) of the event are.
+      placeholder: e.g. Carmella Cucuzzella, Valérie Plante
     validations:
       required: true
 
-  - type: input
-    id: datetime
+  - type: textarea
+    id: attendees
     attributes:
-      label: Date and time
-      description: Indicate when the event takes place (e.g., 2025-06-01 06:15).
-      placeholder: YYYY-MM-DD HH:mm
+      label: Attendees
+      description: Specify who is attending the event.
+      placeholder: e.g. CUPUM members, UNESCO Studio students, UdeM community
     validations:
       required: true
 
   - type: markdown
     attributes:
       value: |
-        ### Authorisations
-        In-person events often require a reservation for the space to be used. Reservation needs to be made with the entity responsable for the space, e.g.: CUPUM, School of Urban Planning and Landscape Architedcture, Faculty of Environemental Design or Direction des immeubles. See contact list for details. 
+        ### Pre-event tasks  
+        Not all tasks apply to every event. Please select the ones relevant to this event.
 
   - type: checkboxes
-    id: authorisations
+    id: pre_event_tasks
     attributes:
-      label: Authorisations checklist
+      label: Pre-event tasks
       options:
-        - label: Request a reservation
-        - label: Request authorization from Direction de la prévention et de la sécurité (for DI space only)
-        - label: Obtain an alcohol permit
+        - label: Book a guest
+        - label: Create online event
+        - label: Reserve room
+        - label: Order furniture
+        - label: Order audiovisual equipment
+        - label: Order food and drinks
+        - label: Obtain authorization from Direction de la prévention et de la sécurité
+        - label: Obtain alcohol permit
+        - label: Hire internal team
+        - label: Hire professionals (photographer, DJ, circus artist)
+        - label: Invite attendees
 
   - type: markdown
     attributes:
       value: |
-        ### Logistics
+        ### Event
 
   - type: checkboxes
-    id: logistics
+    id: event_tasks
     attributes:
-      label: Logistics checklist
+      label: Event tasks
       options:
-        - label: Prepare audiovisual material
-        - label: Prepare drinks and/or beverages for participants
+        - label: Set up space
+        - label: Welcome people
+        - label: Take pictures
+        - label: Take notes
+        - label: Dismantle space
 
   - type: markdown
     attributes:
       value: |
-        ### Invitations
-        For internal events, calendar invitations can be used. For events with a wider audience, use a platform such as Eventbrite.
+        ### Post-event
 
   - type: checkboxes
-    id: invitations
+    id: post_event_tasks
     attributes:
-      label: Invitations checklist
+      label: Post-event tasks
       options:
-        - label: Create guestlist
-        - label: Send invitations
+        - label: Return equipment
+        - label: Write back to the guest(s)
+        - label: Write back to attendees
+        - label: Create a news issue to cover the event
 
   - type: markdown
     attributes:
       value: |
-        ### Communication
+        ### List of actions
 
   - type: checkboxes
-    id: communication
+    id: list_of_actions
     attributes:
-      label: Communication checklist
+      label: Actions
       options:
-        - label: Create an issue news to announce the event
-        - label: Create an issue news to cover the event
-        - label: Contact the communication advisor at the Faculty of Environmental Design for diffusion within the Faculty
-        - label: Contact the communication advisor at the University of Montreal for diffusion with UdeM
-        - label: Contact the edition technician for UdeM TV diffusion
+        - label: Name issue according to template format
+        - label: Assign issue to event organizer
+        - label: Add related project to issue
+        - label: Add beginning and end dates to the issue
