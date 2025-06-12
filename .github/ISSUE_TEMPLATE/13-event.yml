@@ -29,10 +29,15 @@ body:
       description: Select the type of event.
       options:
         - label: Conference
+          value: Conference
         - label: Seminar
+          value: Seminar
         - label: Exhibition
+          value: Exhibition
         - label: Launch
+          value: Launch
         - label: Networking
+          value: Networking
     validations:
       required: true
 
