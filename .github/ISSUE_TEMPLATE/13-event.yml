@@ -9,7 +9,7 @@ body:
     attributes:
       value: |
         ### General
-        The organization of an event includes four phases: obtaining authorizations (if needed), logistics, invitations, and communication.
+        The organization of an event usually includes four phases: obtaining authorizations (if needed), logistics, invitations, and communication.
 
   - type: dropdown
     id: type
