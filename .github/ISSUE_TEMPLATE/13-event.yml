@@ -1,56 +1,4 @@
-name: Event organization
-description: Template to organize an event with phases and checklist.
-title: "Event: [Type] with [Participants] at [Location] on [Date]"
-labels: event
-assignees: []
-
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ### General
-        The organization of an event includes four phases: obtaining authorizations (if needed), logistics, invitations, and communication.
-
-  - type: dropdown
-    id: type
-    attributes:
-      label: Type
-      description: Select the type of event.
-      options:
-        - label: Conference
-        - label: Exhibition
-        - label: Launch
-        - label: Networking
-    validations:
-      required: true
-
-  - type: input
-    id: participants
-    attributes:
-      label: Participants
-      description: Specify the participants.
-      placeholder: e.g. CUPUM members, Faculty members
-    validations:
-      required: true
-
-  - type: input
-    id: location
-    attributes:
-      label: Location
-      description: Specify where the event takes place (e.g., "Faculté de l'aménagement", "Zoom", "Teams").
-      placeholder: Location
-    validations:
-      required: true
-
-  - type: input
-    id: datetime
-    attributes:
-      label: Date and time
-      description: Indicate when the event takes place (e.g., 2025-06-01 06:15).
-      placeholder: YYYY-MM-DD HH:mm
-    validations:
-      required: true
-
   - type: markdown
     attributes:
       value: |
@@ -60,10 +8,11 @@ body:
   - type: checkboxes
     id: authorisations
     attributes:
+      label: Authorisations checklist
       options:
         - label: Request a reservation
-        - label: If need be, request authorization from Direction de la prevention et de la sécurité (for DI space only)
-        - label: If need be, obtain an alcohol permit
+        - label: Request authorization from Direction de la prevention et de la sécurité (for DI space only)
+        - label: Obtain an alcohol permit
 
   - type: markdown
     attributes:
@@ -71,11 +20,12 @@ body:
         ### Logistics
 
   - type: checkboxes
+    id: logistics
     attributes:
-      label: Logistics
+      label: Logistics checklist
       options:
         - label: Prepare audiovisual material
-        - label: If need be, prepare drinks and/or beverages for participants
+        - label: Prepare drinks and/or beverages for participants
 
   - type: markdown
     attributes:
@@ -84,8 +34,9 @@ body:
         For internal events, calendar invitations can be used. For events with a wider audience, use a platform such as Eventbrite.
 
   - type: checkboxes
+    id: invitations
     attributes:
-      label: Invitations
+      label: Invitations checklist
       options:
         - label: Create guestlist
         - label: Send invitations
@@ -98,9 +49,10 @@ body:
   - type: checkboxes
     id: communication
     attributes:
+      label: Communication checklist
       options:
         - label: Create an issue news to announce the event
         - label: Create an issue news to cover the event
-        - label: Contact the communication advisor at the Faculty of Environmental Design for diffusion within the Faculty
-        - label: Contact the communication advisor at the University of Montreal for diffusion with UdeM
-        - label: Contact the edition technician for UdeM TV diffusion
+        - label: Contact communication advisor at Faculty of Environmental Design
+        - label: Contact communication advisor at University of Montreal
+        - label: Contact edition technician for UdeM TV diffusion
