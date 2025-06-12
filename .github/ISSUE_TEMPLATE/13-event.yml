@@ -121,5 +121,5 @@ body:
         - label: "Action: Assign issue to event organizer"
         - label: "Action: Add related project to issue"
         - label: "Action: Add beginning and end dates to the issue"
-            validations:
+    validations:
       required: true
