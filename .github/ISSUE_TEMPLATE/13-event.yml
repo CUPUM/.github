@@ -56,7 +56,6 @@ body:
       value: |
         ### Authorisations
         In-person events often require a reservation for the space to be used. Reservation needs to be made with the entity responsable for the space, e.g.: CUPUM, School of Urban Planning and Landscape Architedcture, Faculty of Environemental Design or Direction des immeubles. 
-
 See contact list for details. 
 
   - type: checkboxes
