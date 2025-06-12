@@ -36,6 +36,18 @@ body:
     validations:
       required: true
 
+- type: input
+  attributes:
+    label: Location
+    description: Specify where the workshop takes place. e.g. "Hall de la Faculté de l'aménagement", "4133", "Teams"
+    placeholder: Faculté de l'aménagement, 4133, Teams...
+
+- type: input
+  attributes:
+    label: Date and time
+    description: Indicate when the workshop takes place. e.g. `20245-01-01 06:15`
+    placeholder: YYYY-MM-DD HH:MM
+
   - type: input
     id: host
     attributes:
