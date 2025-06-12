@@ -1,8 +1,8 @@
 name: Event Organization
 description: This template manages the organization of events by the UNESCO Chair in Urban Landscape.
 title: "Event: [Type] with [Guest(s)] at [Location] on [Date]"
-labels: event
-assignees: []
+assignees:
+projects: ["CUPUM/148"]
 
 body:
   - type: markdown
