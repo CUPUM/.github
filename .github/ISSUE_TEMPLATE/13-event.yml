@@ -47,7 +47,7 @@ body:
     id: datetime
     attributes:
       label: Date and time
-      description: Indicate when the workshop takes place. e.g. `2025-01-01 06:15`
+      description: Indicate when the workshop takes place. e.g. `2025-06-01 06:15`
       placeholder: YYYY-MM-DD HH:MM
 
   - type: input
