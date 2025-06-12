@@ -1,4 +1,4 @@
-name: Event 
+name: Event
 description: This template manages the organization of events by the UNESCO Chair in Urban Landscape.
 title: "Event: [Type] with [Guest(s)] at [Location] on [Date]"
 assignees: []
@@ -36,17 +36,19 @@ body:
     validations:
       required: true
 
-- type: input
-  attributes:
-    label: Location
-    description: Specify where the workshop takes place. e.g. "Hall de la Faculté de l'aménagement", "4133", "Teams"
-    placeholder: Faculté de l'aménagement, 4133, Teams...
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Specify where the workshop takes place. e.g. "Hall de la Faculté de l'aménagement", "4133", "Teams"
+      placeholder: Faculté de l'aménagement, 4133, Teams...
 
-- type: input
-  attributes:
-    label: Date and time
-    description: Indicate when the workshop takes place. e.g. `20245-01-01 06:15`
-    placeholder: YYYY-MM-DD HH:MM
+  - type: input
+    id: datetime
+    attributes:
+      label: Date and time
+      description: Indicate when the workshop takes place. e.g. `2025-01-01 06:15`
+      placeholder: YYYY-MM-DD HH:MM
 
   - type: input
     id: host
