@@ -29,7 +29,7 @@ body:
     attributes:
       label: Participants
       description: Specify the participants.
-      placeholder: e.g. 50 people, Faculty members
+      placeholder: e.g. CUPUM members, Faculty members, community members
     validations:
       required: true
 
