@@ -1,86 +1,111 @@
 ---
-name: Event 
-description: Organization of events at the Faculty of Environmental Design
-title: "Event: "
-assignees: []
-projects: []
+name: Event organization
+description: Template to organize an event with phases and checklist.
+title: "Event: [Type] with [Participants] at [Location] on [Date]"
+labels: event
+assignees: ''
+
 body:
-  - type: textarea
+  - type: markdown
     attributes:
-      label: Description de l'événement
-      description: Ajoutez un sommaire du projet concerné pour contextualiser
-        l'organisation de l'événement
-  - type: textarea
+      value: |
+        ### General
+        The organization of an event includes four phases: obtaining authorizations (if needed), logistics, invitations, and communication.
+
+  - type: dropdown
+    id: type
     attributes:
-      label: Soutien de l'équipe de l'équipe de communication de la Faculté de
-        l'aménagement
-      value: >
-        - [ ] Action: Contacter la personne responsable de l'organisation des
-        événements à la Faculté de l'aménagement pour obtenir son soutien:
-        [claudia.rivard-vachon@umontreal.ca]
-        (claudia.rivard-vachon@umontreal.ca)
-  - type: textarea
+      label: Type
+      description: Select the type of event.
+      options:
+        - Conference
+        - Exhibition
+        - Launch
+        - Networking
+    validations:
+      required: true
+
+  - type: input
+    id: participants
     attributes:
-      label: Direction de l'École d'urbanisme et d'architecture de paysage
-      value: >
-        - [ ] Action: Contacter la direction de l'École d'urbanisme et
-        d'architecture de paysage pour l'informer de la tenue de l'événement:
+      label: Participants
+      description: Specify the participants.
+      placeholder: e.g. 50 people, Faculty members
+    validations:
+      required: true
 
-        - Titre de l'événement
-
-        - Type d'événement (atelier, conférence, exposition, etc.)
-
-        - Jour et heure
-
-        - Lieu
-
-        - Préciser si l'événement est public ou privé
-  - type: textarea
+  - type: input
+    id: location
     attributes:
-      label: Réservation des espaces
-      value: >
-        Identifier sous quelle juridiction est l’espace convoité pour
-        l’événement:
+      label: Location
+      description: Specify where the event takes place (e.g., "Faculté de l'aménagement", "Zoom", "Teams").
+      placeholder: Location
+    validations:
+      required: true
 
-
-        - [ ] **Faculté de l'aménagement**: Faire la réservation auprès de la personne responsable des événements. 
-
-        - [ ] **Galerie de l'Université de Montréal**: Obtenir l’approbation écrite du directeur de la Galerie, puis faire une demande de réservation des es-paces auprès de la DI. 
-
-        - [ ] **Direction des immeubles**: Faire une demande de réservation des espaces auprès de la DI sur le [portail libre-service] (https://di.umontreal.ca/services/reservation-de-salles-de-cours-et-despaces-publics/). 
-  - type: textarea
+  - type: input
+    id: datetime
     attributes:
-      label: Direction de la prévention et de la sécurité (DPS)
-      value: >
-        - [ ] Lorsque la réservation des espaces est obtenue et au moins 10 jours
-        avant l’événement, remplir le formulaire d’événements spéciaux de la
-        [DPS](https://forms.office.com/Pages/ResponsePage.aspx?id=7O9-0kcq50uYHg-Jd_ox2AsXhPMUgpVMscrDtdT9_ttUOFNDRlFRMk9INVczSDEwWDhFWkYyMTJFNiQlQCN0PWcu)
-  - type: textarea
-    attributes:
-      label: Mobilier
-      value: >
-        - [ ] Quatre semaines à l’avance, faire la demande de location de
-        mobilier à travers le système [Maximo]
-        (https://forms.office.com/Pages/ResponsePage.aspx?id=7O9-0kcq50uYHg-Jd_ox2AsXhPMUgpVMscrDtdT9_ttUOFNDRlFRMk9INVczSDEwWDhFWkYyMTJFNiQlQCN0PWcu)
-  - type: textarea
-    attributes:
-      label: Équipement audiovisuel
-      value: >
-        - [ ] Faire la demande d'équipement audiovisuel
+      label: Date and time
+      description: Indicate when the event takes place (e.g., 2025-06-01 06:15).
+      placeholder: YYYY-MM-DD HH:mm
+    validations:
+      required: true
 
-        La demande de location d’équipement audiovisuel peut se faire gratuitement auprès du point de ser-vices techniques (PST) : pst-my@ti.umontreal.ca OU 514-343-7681. Ils n’ont toutefois tous les types d’équipement (par exemple, ils n’ont pas de projecteur). 
-
-        Alternativement, la location (payante) peut se faire à partir du service de TI de l’université. 
-
-        Il est possible exceptionnellement d’emprunter du matériel audiovisuel auprès de l’École d’urbanisme et d’architecture de paysage en contactant l’adjointe à la direction : nathalie.blanchard.1@umontreal.ca. 
-  - type: textarea
+  - type: markdown
     attributes:
-      label: Permis d'alcool
-      value: >
-        Il est possible d’éviter la demande d’un permis d’alcool si les
-        conditions suivantes sont remplies - événement privé (sur invitation
-        seulement, aucune diffusion possible), moins de 200 personnes et service
-        d’alcool seulement (vente interdite). Pour obtenir un permis d’alcool,
-        il faut remplir le formulaire sur le [site de la Régie des alcools, des
-        courses et des jeux]
-        (https://www.racj.gouv.qc.ca/formulaires-et-publications/formulaires/alcool/reunions.html)"
+      value: |
+        ### Authorisations
+        In-person events often require a reservation for the space to be used.
+
+  - type: checkboxes
+    id: authorisations
+    attributes:
+      label: Authorisations
+      options:
+        - Request a reservation
+        - If need be, request authorization from Direction de la prevention et de la sécurité (for DI space only)
+        - If need be, obtain an alcohol permit
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Logistics
+
+  - type: checkboxes
+    id: logistics
+    attributes:
+      label: Logistics
+      options:
+        - Prepare audiovisual material
+        - If need be, prepare drinks and/or beverages for participants
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Invitations
+        For internal events, calendar invitations can be used. For events with a wider audience, use a platform such as Eventbrite.
+
+  - type: checkboxes
+    id: invitations
+    attributes:
+      label: Invitations
+      options:
+        - Create guestlist
+        - Send invitations
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Communication
+
+  - type: checkboxes
+    id: communication
+    attributes:
+      label: Communication
+      options:
+        - Create an issue news to announce the event
+        - Create an issue news to cover the event
+        - Contact the communication advisor at the Faculty of Environmental Design for diffusion within the Faculty
+        - Contact the communication advisor at the University of Montreal for diffusion with UdeM
+        - Contact the edition technician for UdeM TV diffusion
