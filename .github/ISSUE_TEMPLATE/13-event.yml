@@ -1,9 +1,8 @@
----
 name: Event organization
 description: Template to organize an event with phases and checklist.
 title: "Event: [Type] with [Participants] at [Location] on [Date]"
 labels: event
-assignees: ''
+assignees: []
 
 body:
   - type: markdown
@@ -18,10 +17,10 @@ body:
       label: Type
       description: Select the type of event.
       options:
-        - Conference
-        - Exhibition
-        - Launch
-        - Networking
+        - label: Conference
+        - label: Exhibition
+        - label: Launch
+        - label: Networking
     validations:
       required: true
 
@@ -63,9 +62,9 @@ body:
     attributes:
       label: Authorisations
       options:
-        - Request a reservation
-        - If need be, request authorization from Direction de la prevention et de la sécurité (for DI space only)
-        - If need be, obtain an alcohol permit
+        - label: Request a reservation
+        - label: If need be, request authorization from Direction de la prevention et de la sécurité (for DI space only)
+        - label: If need be, obtain an alcohol permit
 
   - type: markdown
     attributes:
@@ -77,8 +76,8 @@ body:
     attributes:
       label: Logistics
       options:
-        - Prepare audiovisual material
-        - If need be, prepare drinks and/or beverages for participants
+        - label: Prepare audiovisual material
+        - label: If need be, prepare drinks and/or beverages for participants
 
   - type: markdown
     attributes:
@@ -91,8 +90,8 @@ body:
     attributes:
       label: Invitations
       options:
-        - Create guestlist
-        - Send invitations
+        - label: Create guestlist
+        - label: Send invitations
 
   - type: markdown
     attributes:
@@ -104,8 +103,8 @@ body:
     attributes:
       label: Communication
       options:
-        - Create an issue news to announce the event
-        - Create an issue news to cover the event
-        - Contact the communication advisor at the Faculty of Environmental Design for diffusion within the Faculty
-        - Contact the communication advisor at the University of Montreal for diffusion with UdeM
-        - Contact the edition technician for UdeM TV diffusion
+        - label: Create an issue news to announce the event
+        - label: Create an issue news to cover the event
+        - label: Contact the communication advisor at the Faculty of Environmental Design for diffusion within the Faculty
+        - label: Contact the communication advisor at the University of Montreal for diffusion with UdeM
+        - label: Contact the edition technician for UdeM TV diffusion
