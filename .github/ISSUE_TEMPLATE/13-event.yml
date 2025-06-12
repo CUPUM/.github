@@ -74,17 +74,17 @@ body:
     attributes:
       label: Pre-event tasks
       options:
-        - label: Task: Book a guest
-        - label: Task: Create online event
-        - label: Task: Reserve room
-        - label: Task: Order furniture
-        - label: Task: Order audiovisual equipment
-        - label: Task: Order food and drinks
-        - label: Task: Obtain authorization from Direction de la prévention et de la sécurité
-        - label: Task: Obtain alcohol permit
-        - label: Task: Hire internal team
-        - label: Task: Hire professionals (photographer, DJ, circus artist)
-        - label: Task: Invite attendees
+        - label: "Task: Book a guest"
+        - label: "Task: Create online event"
+        - label: "Task: Reserve room"
+        - label: "Task: Order furniture"
+        - label: "Task: Order audiovisual equipment"
+        - label: "Task: Order food and drinks"
+        - label: "Task: Obtain authorization from Direction de la prévention et de la sécurité"
+        - label: "Task: Obtain alcohol permit"
+        - label: "Task: Hire internal team"
+        - label: "Task: Hire professionals (photographer, DJ, circus artist)"
+        - label: "Task: Invite attendees"
 
   - type: markdown
     attributes:
@@ -96,11 +96,11 @@ body:
     attributes:
       label: Event tasks
       options:
-        - label: Task: Set up space
-        - label: Task: Welcome people
-        - label: Task: Take pictures
-        - label: Task: Take notes
-        - label: Task: Dismantle space
+        - label: "Task: Set up space"
+        - label: "Task: Welcome people"
+        - label: "Task: Take pictures"
+        - label: "Task: Take notes"
+        - label: "Task: Dismantle space"
 
   - type: markdown
     attributes:
@@ -112,10 +112,10 @@ body:
     attributes:
       label: Post-event tasks
       options:
-        - label: Task: Return equipment
-        - label: Task: Write back to the guest(s)
-        - label: Task: Write back to attendees
-        - label: Task: Create a news issue to cover the event
+        - label: "Task: Return equipment"
+        - label: "Task: Write back to the guest(s)"
+        - label: "Task: Write back to attendees"
+        - label: "Task: Create a news issue to cover the event"
 
   - type: markdown
     attributes:
@@ -127,7 +127,7 @@ body:
     attributes:
       label: Actions
       options:
-        - label: Action: Name issue according to template format
-        - label: Action: Assign issue to event organizer
-        - label: Action: Add related project to issue
-        - label: Action: Add beginning and end dates to the issue
+        - label: "Action: Name issue according to template format"
+        - label: "Action: Assign issue to event organizer"
+        - label: "Action: Add related project to issue"
+        - label: "Action: Add beginning and end dates to the issue"
