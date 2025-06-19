@@ -83,6 +83,8 @@ body:
         ### Tasks
         Not all tasks apply to every event. Please select the ones relevant to this event.
 
+        For information available rentals (space, furniture, audiovisual equipement), please see [Rental memo](https://github.com/CUPUM/events/blob/main/duplain-memo-rentals-20250619.md). 
+
   - type: checkboxes
     id: pre_event_tasks
     attributes:
@@ -90,7 +92,7 @@ body:
       options:
         - label: "Task: Book a guest"
         - label: "Task: Create online event"
-        - label: "Task: Reserve room"
+        - label: "Task: Reserve space"
         - label: "Task: Order furniture"
         - label: "Task: Order audiovisual equipment"
         - label: "Task: Order food and drinks"
