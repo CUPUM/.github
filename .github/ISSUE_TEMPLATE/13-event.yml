@@ -35,17 +35,17 @@ body:
         - Networking
     validations:
       required: true
-      
+
   - type: dropdown
-  id: format
-  attributes:
-    label: Format
-    options:
-      - In-person
-      - Online
-      - Hybrid
-  validations:
-    required: true
+    id: format
+    attributes:
+      label: Format
+      options:
+        - In-person
+        - Online
+        - Hybrid
+    validations:
+      required: true
 
   - type: input
     id: location
