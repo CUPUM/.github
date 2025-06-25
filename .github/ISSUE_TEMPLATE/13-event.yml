@@ -53,6 +53,7 @@ body:
       label: Location
       description: Specify where the workshop takes place.
       placeholder: Faculté de l'aménagement, 4133, Teams...
+        required: true
 
   - type: input
     id: datetime
@@ -60,6 +61,7 @@ body:
       label: Date and time
       description: Indicate when the workshop takes place using this format YYYY-MM-DD HH:MM
       placeholder: 2025-06-01 06:15
+        required: true
 
   - type: input
     id: host
