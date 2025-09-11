@@ -1,0 +1,127 @@
+name: Organization
+description: "Manage organisational leads and partners information"
+title: "Organization: [Name] ([Type])"
+projects: ["CUPUM/179"]
+body:
+
+# Guidelines
+- type: markdown
+  attributes:
+    value: |
+      ## General
+      This issue template manages the registration, tracking and note-taking about organizations relevant to the UNESCO Chair in Urban Landscape. This concerns both:
+      1. Partner organizations: with whom we collaborate ;
+      2. Lead organizations: with whom we do not collaborate but of interest to our activities.
+
+      ## Repositories
+      Make sure that you are creating the organization issue in the associated repository. For project specific organizations, use the associated repo. For general or administrative organization, use the _General_ or _Admin_ repos.
+
+# Contact information
+- type: input
+  id: name
+  attributes:
+    label: Name  
+    description: Use official short name if any (eg. UNESCO) or full name
+  validations:
+    required: true
+
+- type: dropdown
+  id: type
+  attributes:
+    label: Organization type
+    options:
+      - Partner
+      - Lead
+  validations:
+    required: true
+
+- type: dropdown
+  id: legal_format
+  attributes:
+    label: Legal format
+    options:
+      - For profit
+      - Non profit
+      - Public
+      - Government
+      - Charity or Foundation
+      - Informal
+      - Other
+  validations:
+    required: true
+
+- type: input
+  id: partnership_start
+  attributes:
+    label: Partnership start date
+    description: yyyy-mm-dd
+  validations:
+    required: false
+
+- type: input
+  id: partnership_end
+  attributes:
+    label: Partnership end date
+    description: yyyy-mm-dd
+  validations:
+    required: false
+
+- type: input
+  id: contact_person
+  attributes:
+    label: Contact person
+    description: Main contact person at the organisation, use or [create contact issue](https://github.com/orgs/CUPUM/projects/179)
+  validations:
+    required: false
+
+- type: input
+  id: email_1
+  attributes:
+    label: Email_1
+    description: General email address
+    placeholder: "ex. info@organization.com"
+  validations:
+    required: false
+
+- type: input
+  id: email_2
+  attributes:
+    label: Email_2
+    description: Other general email address
+    placeholder: "ex. custsv@organization.com"
+  validations:
+    required: false
+
+- type: input
+  id: phone_1
+  attributes:
+    label: Phone_1
+    description: Phone number, including international code
+    placeholder: "ex. +X XXX XXX-XXXX"
+  validations:
+    required: false
+
+- type: input
+  id: phone_2
+  attributes:
+    label: Phone_2
+    description: Phone number, including international code
+    placeholder: "ex. +X XXX XXX-XXXX"
+  validations:
+    required: false
+
+- type: input
+  id: pref_channel
+  attributes:
+    label: Preferred channel
+    description: How do they prefer to be contacted
+  validations:
+    required: false
+
+- type: textarea
+  id: notes
+  attributes:
+    label: Notes
+    description: Important information about the organization.
+  validations:
+    required: false
