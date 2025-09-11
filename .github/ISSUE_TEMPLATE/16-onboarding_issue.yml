@@ -121,12 +121,49 @@ body:
       [Onboarder]
       ```
 
+      ```
+      Cher/Chère [Prénom],
+
+      En préparation à votre arrivée à la Chaire UNESCO en paysage urbain, nous vous invitons à lire attentivement le présent courriel et à compléter les actions indiquées au moins une semaine avant votre date de début.
+
+      **Programme de la première journée**  
+      Votre première journée à la Chaire UNESCO est prévue comme suit :  
+      - HH:MM – HH:MM — Rencontre de bienvenue avec Shin Koseki  
+      - HH:MM – HH:MM — Réunion d’intégration au projet avec [Coordonnateur·trice du projet]  
+      - HH:MM – HH:MM — Séance d’introduction à GitHub avec [Membre désigné·e de la Chaire]  
+      - HH:MM – HH:MM — Accueil autour d’un [thé/déjeuner] avec les membres de la Chaire UNESCO  
+
+      **Événements à venir**  
+      Dans le cadre de votre affiliation à la Chaire UNESCO, vous êtes invité·e à participer aux réunions récurrentes suivantes :  
+      - Série de réunions de projet 1  
+      - Série de réunions de projet 2  
+      - …  
+
+      De plus, voici quelques événements sociaux à venir auxquels nous serons heureux de vous voir participer :  
+      - Événement social de la Chaire 1  
+      - Événement social de la Chaire 2  
+      - …  
+
+      Des invitations électroniques seront envoyées pour chacun de ces événements.
+
+      **Actions requises**  
+      1. Créez un compte sur https://github.com/. Veuillez utiliser votre adresse courriel @umontreal.ca si vous en avez une.  
+      2. Créez un compte sur https://slack.com. Veuillez utiliser votre adresse courriel @umontreal.ca si vous en avez une.  
+      3. Téléchargez l’application Slack sur votre ordinateur ou votre téléphone portable.  
+      4. Envoyez-nous par courriel votre nom d’utilisateur GitHub ainsi que votre date de naissance (nécessaire pour créer votre compte numérique UdeM [SIM]).  
+
+      Cordialement,  
+      [Responsable de l’onboarding]
+      ```
+    
+
 - type: checkboxes
   id: pre_arrival_actions
   attributes:
     label: Pre-arrival actions  
     description: Two to four weeks before the Onboardee’s Star date.  
     options:
+      - label: "Action: Create a [contact issue](https://github.com/CUPUM/general/issues/new?template=14-contact.yml)"
       - label: "Action: Create a calendar invite to schedule a 30-minute onboarding meeting with Chairholder on the Starting date"
       - label: "Action: Create a calendar invite to schedule a one-hour onboarding meeting with the Project coordinator on the Starting date"
       - label: "Action: Create a calendar invite to schedule a one-hour introduction to GitHub with a team member on the Starting date"
