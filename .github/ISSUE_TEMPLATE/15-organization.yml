@@ -74,6 +74,14 @@ body:
   validations:
     required: false
 
+- type: textarea
+  id: key_people
+  attributes:
+    label: People
+    description: List of known employees or members, use or [create contact issue](https://github.com/orgs/CUPUM/projects/179)
+  validations:
+    required: false
+
 - type: input
   id: email_1
   attributes:
@@ -110,11 +118,11 @@ body:
   validations:
     required: false
 
-- type: input
-  id: pref_channel
+- type: textarea
+  id: projects
   attributes:
-    label: Preferred channel
-    description: How do they prefer to be contacted
+    label: Related UNESCO Chair projects
+    description: List of UNESCO Chair projects involving the organization
   validations:
     required: false
 
