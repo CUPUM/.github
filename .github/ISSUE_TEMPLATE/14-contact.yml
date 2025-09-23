@@ -5,7 +5,7 @@ projects: ["CUPUM/179"]
 body:
 
 # Guidelines
-- type: markdon
+- type: markdo
   attributes:
     value: |
       ## General
