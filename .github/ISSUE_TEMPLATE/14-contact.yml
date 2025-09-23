@@ -52,9 +52,8 @@ body:
       - Active
       - Passive
       - Honorary
-      - Non-collaborator
   validations:
-    required: true
+    required: false
 
 - type: dropdown
   id: collaboration_type
