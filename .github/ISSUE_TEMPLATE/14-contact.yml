@@ -5,7 +5,7 @@ projects: ["CUPUM/179"]
 body:
 
 # Guidelines
-- type: markdown
+- type: markdon
   attributes:
     value: |
       ## General
@@ -32,12 +32,12 @@ body:
     required: true
 
 - type: dropdown
-  id: type
+  id: contact_type
   attributes:
     label: Contact type
     options:
-      - UdeM employee
       - UdeM student
+      - UdeM employee
       - External academic
       - External student
       - External non-academic
@@ -45,31 +45,54 @@ body:
     required: true
 
 - type: dropdown
-  id: membership
-  attributes:
-    label: Membership status
+  id: collaboration_state
+  attribues:
+    label: State of collaboration
     options:
-      - Non member
-      - Core member
-      - Associate member
-      - Affiliate member
-      - Alumni member
+      - Active
+      - Passive
+      - Honorary
+      - Non-collaborator
   validations:
     required: true
 
-- type: input
-  id: membership_start
+- type: dropdown
+  id: collaboration_type
   attributes:
-    label: Membership start date
+    label: Collaborator type
+    options:
+      - External
+      - Internal
+      - Lead
+      - Intern
+  validations:
+    required: false
+
+- type: input
+  id: collaboration_start
+  attributes:
+    label: Start date of collaboration
     description: yyyy-mm-dd
   validations:
     required: false
 
 - type: input
-  id: membership_end
+  id: collaboration_end
   attributes:
-    label: Membership end date
+    label: End date of collaboration
     description: yyyy-mm-dd
+  validations:
+    required: false
+
+- type: textarea
+  id: collaboration_projects
+  attributes:
+    label: Projects involved
+    description: "List URL from [UNESCO Chair project list](https://github.com/orgs/CUPUM/projects)"
+    value: |
+      - https://github.com/orgs/CUPUM/projects/...
+      - https://github.com/orgs/CUPUM/projects/...
+      - https://github.com/orgs/CUPUM/projects/...
   validations:
     required: false
 
@@ -128,7 +151,7 @@ body:
 - type: dropdown
   id: lead_status
   attributes:
-    label: Lead status
+    label: Lead status (for new contacts)
     options:
       - New
       - Open
