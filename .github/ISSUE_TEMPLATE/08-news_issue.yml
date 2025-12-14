@@ -134,7 +134,7 @@ body:
       label: Checklist
       description: Make sure this has been done
       options:
-        - label: [Get autorization for media dissemination](https://gist.github.com/sjinko/6718034d2d7d827eca8575d62e9d9fea)
+        - label: Get autorization for media dissemination [**](https://gist.github.com/sjinko/6718034d2d7d827eca8575d62e9d9fea)
         - label: Clearly mention funding and support if any
         - label: Proofread content using Antidote
         - label: Tag School, Faculty, University, Venue, External subjects, Funding agency, Suppor organizations, etc.
