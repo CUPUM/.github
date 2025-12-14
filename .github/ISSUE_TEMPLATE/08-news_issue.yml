@@ -37,7 +37,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Phase 1 — Preparation by _Subject_
+        ## Phase 1 — Preparation by _Subject_
 
         This first phase must be completed by the subject (chair member) featured in the story. Subject should refer to Communication manager for help and support if needed.
 
@@ -134,9 +134,10 @@ body:
       label: Checklist
       description: Make sure this has been done
       options:
+        - label: !![Get autorization for media dissemination](https://gist.github.com/sjinko/6718034d2d7d827eca8575d62e9d9fea)!!
+        - label: !!Clearly mention funding and support if any!!
         - label: Proofread content using Antidote
-        - label: Clearly mention Benefactors if any
-        - label: Tag School, Faculty, University, Venue, External subjects and Benefactors
+        - label: Tag School, Faculty, University, Venue, External subjects, Funding agency, Suppor organizations, etc.
 
   - type: input
     id: presskit
