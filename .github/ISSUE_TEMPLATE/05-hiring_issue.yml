@@ -14,49 +14,12 @@ body:
       # General
 
       This issue template serves to create hiring of students at the UNESCO Chair in Urban Landscape
-      
-# Details of hiree and employment
-- type: input
-  id: first_name
-  attributes:
-    label: First name
-    description: Hiree first name
-  validations:
-    required: true
 
 - type: input
-  id: last_name
+  id: contact
   attributes:
-    label: Last name
-    description: Hiree last name
-  validations:
-    required: true
-
-- type: input
-  id: email
-  attributes:
-    label: Email
-    description: Only if first contract
-  validations:
-    required: true
-
-- type: dropdown
-  id: cycle
-  attributes:
-    label: Hiree study cycle
-    options:
-      - 1st (BSc)
-      - 2nd (MSc)
-      - 3rd (PhD)
-      - Other
-  validations:
-    required: true
-
-- type: input
-  id: program
-  attributes:
-    label: Study program
-    description: In which program is the hiree registered
+    label: Hiree contact issue URL
+    description: Plase copy-paste from [contact project](https://github.com/orgs/CUPUM/projects/179/views/1)
   validations:
     required: true
 
@@ -92,7 +55,7 @@ body:
   id: mission
   attributes:
     label: Mission
-    description: What project/function will the hiree work on
+    description: What project/function will the hiree work on 
   validations:
     required: true
 
@@ -100,7 +63,7 @@ body:
   id: funds
   attributes:
     label: Financial project number
-    description: What FP from which to pay contract 
+    description: Plase copy-paste from [funding management project](https://github.com/orgs/CUPUM/projects/140/views/1)
   validations:
     required: false
 
@@ -137,14 +100,6 @@ body:
       | Describe task 1 | KPI 1          | XX%  |
       | Describe task 1 | KPI 2          | 75%  |
     render: bash
-  
-- type: input
-  id: contact
-  attributes:
-    label: Hiree contact issue URL
-    description: Plase copy-paste from [contact project](https://github.com/orgs/CUPUM/projects/179/views/1)
-  validations:
-    required: false
     
 # List of actions
 - type: checkboxes
