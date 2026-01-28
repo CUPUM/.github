@@ -48,7 +48,7 @@ body:
   id: organization
   attributes:
     label: Organization
-    description: "Paste URL from [List of organizations](https://github.com/orgs/CUPUM/projects/179/views/11)
+    description: "Paste URL from [List of organizations](https://github.com/orgs/CUPUM/projects/179/views/11)"
   validations:
     required: true
 
