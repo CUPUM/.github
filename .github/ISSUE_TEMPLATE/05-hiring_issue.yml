@@ -2,7 +2,7 @@ name: Hire research assistants
 description: "Steps to hire a new collaborator or extend contracts"
 title: "Hire: [student name] as [position] for [mission] in [semester]"
 assignees:
-  - delphineduplain
+  - sjinko
 projects:
   - "CUPUM/145"
 body:
@@ -20,6 +20,7 @@ body:
   attributes:
     label: Hiree contact issue URL
     description: Plase copy-paste from [contact project](https://github.com/orgs/CUPUM/projects/179/views/1)
+    placeholder: "- https://github.com/CUPUM/general/issues/..."
   validations:
     required: true
 
@@ -64,6 +65,7 @@ body:
   attributes:
     label: Financial project number
     description: Plase copy-paste from [funding management project](https://github.com/orgs/CUPUM/projects/140/views/1)
+    placeholder: "https://github.com/CUPUM/subventions/issues/...”
   validations:
     required: false
 
@@ -117,6 +119,5 @@ body:
     label: Sub-issues
     description: Check off or convert to sub-issues if needed
     options:
-      - label: "Task: Email hiree statement of work"
       - label: "Task: Email Department hiree contract details"
-      - label: "Task: Add hiring issue URL to hiree contact issue"
+      - label: "Task: Email hiree statement of work"
