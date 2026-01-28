@@ -65,7 +65,7 @@ body:
   attributes:
     label: Financial project number
     description: Plase copy-paste from [funding management project](https://github.com/orgs/CUPUM/projects/140/views/1)
-    placeholder: "https://github.com/CUPUM/subventions/issues/...”
+    placeholder: "- https://github.com/CUPUM/subventions/issues/..."
   validations:
     required: false
 
