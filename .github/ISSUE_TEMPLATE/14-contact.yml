@@ -44,62 +44,11 @@ body:
   validations:
     required: true
 
-- type: dropdown
-  id: collaboration_state
-  attributes:
-    label: State of collaboration
-    options:
-      - Active
-      - Passive
-      - Honorary
-  validations:
-    required: false
-
-- type: dropdown
-  id: collaboration_type
-  attributes:
-    label: Collaborator type
-    options:
-      - External
-      - Internal
-      - Lead
-      - Intern
-  validations:
-    required: false
-
-- type: input
-  id: collaboration_start
-  attributes:
-    label: Start date of collaboration
-    description: yyyy-mm-dd
-  validations:
-    required: false
-
-- type: input
-  id: collaboration_end
-  attributes:
-    label: End date of collaboration
-    description: yyyy-mm-dd
-  validations:
-    required: false
-
-- type: textarea
-  id: collaboration_projects
-  attributes:
-    label: Projects involved
-    description: "List URL from [UNESCO Chair project list](https://github.com/orgs/CUPUM/projects)"
-    value: |
-      - https://github.com/orgs/CUPUM/projects/...
-      - https://github.com/orgs/CUPUM/projects/...
-      - https://github.com/orgs/CUPUM/projects/...
-  validations:
-    required: false
-
 - type: input
   id: organization
   attributes:
     label: Organization
-    description: Organization to which they are associated mainly
+    description: "Paste URL from [List of organizations](https://github.com/orgs/CUPUM/projects/179/views/11)
   validations:
     required: true
 
@@ -160,6 +109,57 @@ body:
       - Attempted to contact
       - Connected
       - Bad timing
+  validations:
+    required: false
+
+- type: dropdown
+  id: collaboration_state
+  attributes:
+    label: State of collaboration
+    options:
+      - Active
+      - Passive
+      - Honorary
+  validations:
+    required: false
+
+- type: dropdown
+  id: collaboration_type
+  attributes:
+    label: Collaborator type
+    options:
+      - External
+      - Internal
+      - Lead
+      - Intern
+  validations:
+    required: false
+
+- type: input
+  id: collaboration_start
+  attributes:
+    label: Start date of collaboration
+    description: yyyy-mm-dd
+  validations:
+    required: false
+
+- type: input
+  id: collaboration_end
+  attributes:
+    label: End date of collaboration
+    description: yyyy-mm-dd
+  validations:
+    required: false
+
+- type: textarea
+  id: collaboration_projects
+  attributes:
+    label: Projects involved
+    description: "List URL from [UNESCO Chair project list](https://github.com/orgs/CUPUM/projects)"
+    value: |
+      - https://github.com/orgs/CUPUM/projects/...
+      - https://github.com/orgs/CUPUM/projects/...
+      - https://github.com/orgs/CUPUM/projects/...
   validations:
     required: false
 
