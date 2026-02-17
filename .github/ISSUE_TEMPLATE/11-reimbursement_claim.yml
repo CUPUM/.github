@@ -20,8 +20,8 @@ body:
   - type: input
     attributes:
       label: Name of grantee
-      description: Enter the name of the person making the demand for reimbursement.
-      placeholder: Name (e.g. First Last)
+      description: List grantee URL from [Contact list](https://github.com/orgs/CUPUM/projects/179/views/1)
+      placeholder: - https://github.com/CUPUM/...
     validations:
       required: true
 
@@ -94,3 +94,4 @@ body:
         - label: "Action: Receive confirmation email / letter"
         - label: "Action: Prepare all documents according to claim kit aide-mémoire"
         - label: "Action: Submit all documents"
+        - label: "Action: Receive reimbursement"
