@@ -31,7 +31,7 @@ body:
       options:
         - Travel
         - Equipment
-        - Stationery
+        - Material
         - Representation
         - Reception
         - Transport (taxi, local car rental)
