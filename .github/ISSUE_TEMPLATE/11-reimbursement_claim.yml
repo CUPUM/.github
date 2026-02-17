@@ -21,7 +21,7 @@ body:
     attributes:
       label: Name of grantee
       description: List grantee URL from [Contact list](https://github.com/orgs/CUPUM/projects/179/views/1)
-      placeholder: - https://github.com/CUPUM/...
+      placeholder: "- https://github.com/CUPUM/..."
     validations:
       required: true
 
