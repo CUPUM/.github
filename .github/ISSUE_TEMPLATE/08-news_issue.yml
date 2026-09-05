@@ -85,72 +85,54 @@ body:
   - type: textarea
     id: subjects-externals
     attributes:
-      label: External subjects
-      description: List all external subjects (persons or organizations) mentioned in the story (add URL from Contacts issues if present).
+      label: News subjects
+      description: List all subjects (persons or organizations) mentioned in the story.
+      placeholder: |
+        - UNESCO Chair in Urban Landscape
+        - Name of person or organization 1
+        - Name of person or organization 2
+        - Name of person or organization 3
     validations:
       required: false
 
   - type: checkboxes
-    id: subissues-subject
-    attributes:
-      label: Subject sub-issues
-      description: "Activate as sub-issues. After sending files via Slack, add a comment on this issue with the direction (folder/link) to where the media files were saved, for tracking purposes."
-      options:
-        - label: "Task: Send communication manager cover and closing pictures of the story (use Slack > team-communication, then comment the file direction on this issue)"
-        - label: "Task: Send communication manager self-made formal pictures and short films (vertical) of the story (use Slack > team-communication, then comment the file direction on this issue)"
-        - label: "Task: Send communication manager self-made informal pictures and short films (vertical) of the story (use Slack > team-communication, then comment the file direction on this issue)"
-
-  - type: checkboxes
-    id: checklist-subject-phase1
-    attributes:
-      label: Checklist
-      description: Make sure this has been done first
-      options:
-        - label: Name the news issues following the proposed structure
-        - label: Assign news subject(s) to issue
-        - label: Confirm with external subjects (collaborating persons or organizations) they agree to be mentioned
-        - label: Proofread content using Antidote
-
-  - type: markdown
-    attributes:
-      value: |
-        ## Phase 2 — Publication by the _Communication manager_
-
-        Use templates provided in Communication/template/ accordingly:
-
-        - Instagram: In English without UNESCO Chair sticker
-        - LinkedIn: In English with square template and UNESCO Chair sticker
-        - Facebook: In French with square template and UNESCO Chair sticker
-        - Website: In English without UNESCO Chair sticker
-
-  - type: checkboxes
-    id: checklist-manager-phase2
+    id: checklist-news_content
     attributes:
       label: Checklist
       description: Make sure this has been done
       options:
-        - label: <a href="https://gist.github.com/sjinko/6718034d2d7d827eca8575d62e9d9fea" target="_blank">Get autorization for media dissemination</a>
-        - label: Clearly mention funding and support if any
-        - label: Proofread content using ChatGPT or Claude
-        - label: Tag School, Faculty, University, Venue, External subjects, Funding agency, Support organizations, etc.
+        - label: Action: <a href="https://gist.github.com/sjinko/6718034d2d7d827eca8575d62e9d9fea" target="_blank">Get authorization from mentioned individuals for media dissemination</a>
+        - label: Action: Clearly mention funding and support if any
+        - label: Action: List necessary @ tags (School, Faculty, University, Venue, External subjects, Funding agency, Support organizations, etc.)
+        - label: Action: Proofread content using ChatGPT or Claude
+
+  - type: checkboxes
+    id: subissues-subject
+    attributes:
+      label: Media files
+      description: "Collect or produce media files (pictures, short films) for the story."
+      options:
+        - label: "Action: Drop cover pictures in issue comments"
+        - label: "Action: Drop short interview reel (vertical) in issue comments"
 
   - type: checkboxes
     id: subissues-manager
     attributes:
-      label: Communication manager sub-issues
-      description: Activate as sub-issues and assign to Communication manager
+      label: Publish
+      description: Publish prepared material on the Chair’s website and social media channels.
       options:
-        - label: "Task: Publish cover story and picture on UNESCO Chair website"
-        - label: "Task: Publish cover story and picture on IG, FB, LK using templates"
-        - label: "Task: Publish self-made pictures and short films as 'story' on IG and FB"
-        - label: "Task: Publish closing story on IG and FB using templates"
+        - label: "Action: Publish news on UNESCO Chair website"
+        - label: "Action: Publish news on Instagram and add to story"
+        - label: "Action: Publish news on Facebook and add to story"
+        - label: "Action: Publish news on LinkedIn"  
+        - label: "Action: Publish reel on IG and FB"
 
   - type: checkboxes
     id: subissues-diffusion
     attributes:
       label: Ask chairholder if diffusion is needed
-      description: Activate as sub-issues and assign to Communication manager
+      description: Complete after validating with Chairholder
       options:
-        - label: "Task: Send story material to Faculty communication team"
-        - label: "Task: Send story material to University social media team"
-        - label: "Task: Send story material to UdeM TV team"
+        - label: "Action: Email story material to Faculty communication team"
+        - label: "Action: Email story material to University social media team"
+        - label: "Task: Submit material to UdeM TV team"
