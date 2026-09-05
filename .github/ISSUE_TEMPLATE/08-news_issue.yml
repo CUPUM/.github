@@ -20,7 +20,7 @@ body:
       description: "Date by which this story should be published (YYYY-MM-DD)"
       placeholder: "2026-09-19"
     validations:
-      required: true
+      required: false
 
   - type: input
     id: story-title-en
@@ -28,7 +28,7 @@ body:
       label: Story title in English
       description: "Short original catchy title focused on Chairmember"
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: story-en
@@ -41,7 +41,7 @@ body:
         Paragraph 2: Details - facts, context, quotes.
         Paragraph 3: Impact - outcomes, next steps, call to action.
     validations:
-      required: true
+      required: false
 
   - type: input
     id: hashtag-en
@@ -50,7 +50,7 @@ body:
       description: "List four hashtags related to story, two common, two specific"
       placeholder: "#UrbanLandscape #UNESCOChair #YourSpecificTag #AnotherSpecificTag"
     validations:
-      required: true
+      required: false
 
   - type: input
     id: story-title-fr
@@ -58,7 +58,7 @@ body:
       label: Story title in French
       description: "Short original catchy title focused on Chairmember"
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: story-fr
@@ -71,7 +71,7 @@ body:
         Paragraphe 2: Détails - faits, contexte, citations.
         Paragraphe 3: Impact - résultats, prochaines étapes, appel à l'action.
     validations:
-      required: true
+      required: false
 
   - type: input
     id: hashtag-fr
@@ -80,7 +80,7 @@ body:
       description: "List four hashtags related to story, two common, two specific"
       placeholder: "#PaysageUrbain #ChaireUNESCO #VotreMotClicSpecifique #AutreMotClicSpecifique"
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: subjects-externals
@@ -93,7 +93,7 @@ body:
         - Name of person or organization 2
         - Name of person or organization 3
     validations:
-      required: true
+      required: false
 
   - type: checkboxes
     id: checklist-news_content
