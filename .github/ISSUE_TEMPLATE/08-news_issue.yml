@@ -14,10 +14,21 @@ body:
         News publications follow the Chair’s communication strategy and require active engagement from the person at the origin of the news.
 
   - type: input
+    id: deadline
+    attributes:
+      label: Publication deadline
+      description: "Date by which this story should be published (YYYY-MM-DD)"
+      placeholder: "2026-09-19"
+    validations:
+      required: true
+
+  - type: input
     id: story-title-en
     attributes:
       label: Story title in English
       description: "Short original catchy title focused on Chairmember"
+    validations:
+      required: true
 
   - type: textarea
     id: story-en
@@ -25,18 +36,29 @@ body:
       label: Story caption in English
       description: "Three-paragraph impactful story based on facts and quotes"
       render: bash
+      value: |
+        Paragraph 1: Hook - who, what, why this matters.
+        Paragraph 2: Details - facts, context, quotes.
+        Paragraph 3: Impact - outcomes, next steps, call to action.
+    validations:
+      required: true
 
   - type: input
     id: hashtag-en
     attributes:
       label: Hashtags in English
       description: "List four hashtags related to story, two common, two specific"
+      placeholder: "#UrbanLandscape #UNESCOChair #YourSpecificTag #AnotherSpecificTag"
+    validations:
+      required: true
 
   - type: input
     id: story-title-fr
     attributes:
       label: Story title in French
       description: "Short original catchy title focused on Chairmember"
+    validations:
+      required: true
 
   - type: textarea
     id: story-fr
@@ -44,28 +66,39 @@ body:
       label: Story caption in French
       description: "Three-paragraph impactful story based on facts and quotes"
       render: bash
+      value: |
+        Paragraphe 1: Accroche - qui, quoi, pourquoi c'est important.
+        Paragraphe 2: Détails - faits, contexte, citations.
+        Paragraphe 3: Impact - résultats, prochaines étapes, appel à l'action.
+    validations:
+      required: true
 
   - type: input
     id: hashtag-fr
     attributes:
       label: Hashtags in French
       description: "List four hashtags related to story, two common, two specific"
+      placeholder: "#PaysageUrbain #ChaireUNESCO #VotreMotClicSpecifique #AutreMotClicSpecifique"
+    validations:
+      required: true
 
   - type: textarea
     id: subjects-externals
     attributes:
       label: External subjects
       description: List all external subjects (persons or organizations) mentioned in the story (add URL from Contacts issues if present).
+    validations:
+      required: false
 
   - type: checkboxes
     id: subissues-subject
     attributes:
       label: Subject sub-issues
-      description: Activate as sub-issues
+      description: "Activate as sub-issues. After sending files via Slack, add a comment on this issue with the direction (folder/link) to where the media files were saved, for tracking purposes."
       options:
-        - label: "Task: Send communication manager cover and closing pictures of the story (use Slack > team-communication)"
-        - label: "Task: Send communication manager self-made formal pictures and short films (vertical) of the story (use Slack > team-communication)"
-        - label: "Task: Send communication manager self-made informal pictures and short films (vertical) of the story (use Slack > team-communication)"
+        - label: "Task: Send communication manager cover and closing pictures of the story (use Slack > team-communication, then comment the file direction on this issue)"
+        - label: "Task: Send communication manager self-made formal pictures and short films (vertical) of the story (use Slack > team-communication, then comment the file direction on this issue)"
+        - label: "Task: Send communication manager self-made informal pictures and short films (vertical) of the story (use Slack > team-communication, then comment the file direction on this issue)"
 
   - type: checkboxes
     id: checklist-subject-phase1
@@ -99,7 +132,7 @@ body:
         - label: <a href="https://gist.github.com/sjinko/6718034d2d7d827eca8575d62e9d9fea" target="_blank">Get autorization for media dissemination</a>
         - label: Clearly mention funding and support if any
         - label: Proofread content using ChatGPT or Claude
-        - label: Tag School, Faculty, University, Venue, External subjects, Funding agency, Suppor organizations, etc.
+        - label: Tag School, Faculty, University, Venue, External subjects, Funding agency, Support organizations, etc.
 
   - type: checkboxes
     id: subissues-manager
@@ -111,7 +144,7 @@ body:
         - label: "Task: Publish cover story and picture on IG, FB, LK using templates"
         - label: "Task: Publish self-made pictures and short films as 'story' on IG and FB"
         - label: "Task: Publish closing story on IG and FB using templates"
-  
+
   - type: checkboxes
     id: subissues-diffusion
     attributes:
