@@ -93,7 +93,7 @@ body:
         - Name of person or organization 2
         - Name of person or organization 3
     validations:
-      required: false
+      required: true
 
   - type: checkboxes
     id: checklist-news_content
@@ -101,10 +101,11 @@ body:
       label: Checklist
       description: Make sure this has been done
       options:
-        - label: Action: <a href="https://gist.github.com/sjinko/6718034d2d7d827eca8575d62e9d9fea" target="_blank">Get authorization from mentioned individuals for media dissemination</a>
-        - label: Action: Clearly mention funding and support if any
-        - label: Action: List necessary @ tags (School, Faculty, University, Venue, External subjects, Funding agency, Support organizations, etc.)
-        - label: Action: Proofread content using ChatGPT or Claude
+        - label: 'Action: <a href="https://gist.github.com/sjinko/6718034d2d7d827eca8575d62e9d9fea" target="_blank">Get authorization from mentioned individuals for media dissemination</a>'
+        - label: "Action: Clearly mention funding and support if any"
+        - label: "Action: List necessary @ tags (School, Faculty, University, Venue, External subjects, Funding agency, Support organizations, etc.)"
+        - label: "Action: Proofread content using ChatGPT or Claude"
+        - label: "Action: Check on media diffusion form responses if all invidiuals mentioned in the story have approved to be featured in the story and on social media"
 
   - type: checkboxes
     id: subissues-subject
