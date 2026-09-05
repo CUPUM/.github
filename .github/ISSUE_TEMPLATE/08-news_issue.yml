@@ -122,10 +122,10 @@ body:
       label: Publish
       description: Publish prepared material on the Chair’s website and social media channels.
       options:
-        - label: "Action: Publish news on UNESCO Chair website"
-        - label: "Action: Publish news on Instagram and add to story"
-        - label: "Action: Publish news on Facebook and add to story"
-        - label: "Action: Publish news on LinkedIn"  
+        - label: "Action: Publish news in French on Facebook and add to story"
+        - label: "Action: Publish news in English on UNESCO Chair website"
+        - label: "Action: Publish news in English on Instagram and add to story"
+        - label: "Action: Publish news in English on LinkedIn"  
         - label: "Action: Publish reel on IG and FB"
 
   - type: checkboxes
