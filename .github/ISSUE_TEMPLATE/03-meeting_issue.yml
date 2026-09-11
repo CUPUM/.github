@@ -1,6 +1,8 @@
 name: Meeting
 description: "Plan, organize, record and follow up on meetings"
 title: "Meet: [Location] with [Participants] for [Topic] on [Date]"
+projects:
+  - "CUPUM/210"
 body:
 
 - type: markdown

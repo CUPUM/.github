@@ -1,7 +1,9 @@
 name: Organization
 description: "Manage organisational leads and partners information"
 title: "Organization: [Name] ([Type])"
-projects: ["CUPUM/179"]
+projects:
+  - "CUPUM/179"
+  - "CUPUM/210"
 body:
 
 # Guidelines

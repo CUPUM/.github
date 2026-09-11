@@ -1,9 +1,12 @@
 name: Reimbursement claim
 description: "Manage the demand, claim, and reimbursement of expenses by the UNESCO Chair to individuals."
 title: "Reimbursement claim: [Name of grantee] for [Expense type] made for [Reason] in [Date(s)]"
-assignees: ["sjinko", "delphineduplain"]
-projects: ["CUPUM/33", "CUPUM/145"]
-
+assignees: 
+  -"sjinko"
+projects:
+  - "CUPUM/33"
+  - "CUPUM/145"
+  - "CUPUM/210"
 body:
   - type: markdown
     attributes:

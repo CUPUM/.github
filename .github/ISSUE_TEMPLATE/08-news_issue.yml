@@ -1,8 +1,9 @@
 name: News
 description: "Communication template (for single posts or weekly campaigns)."
 title: "News: [Story short title] featuring [Subject] by [Deadline]"
-assignees: ["sjinko"]
-projects: ["CUPUM/5"]
+projects:
+  - "CUPUM/5"
+  - "CUPUM/210"
 body:
 
   - type: markdown

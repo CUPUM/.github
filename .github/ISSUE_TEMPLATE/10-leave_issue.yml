@@ -1,8 +1,12 @@
 name: Leave
 description: "Manages leave requests and registration."
 title: "Leave: [Name] on [Type] leave from [Start date] to [End Date]"
-assignees: [delphineduplain,sjinko]
-projects: ["CUPUM/33"]
+assignees: 
+  - "sjinko"
+projects:
+  - "CUPUM/33"
+  - "CUPUM/145"
+  - "CUPUM/210"
 body:
 
 - type: markdown

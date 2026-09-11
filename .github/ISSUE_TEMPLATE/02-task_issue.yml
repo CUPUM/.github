@@ -21,8 +21,7 @@ body:
     label: Task resources
     description:  Clearly list all the resources associated with this task (file URL, hyperlinks, contacts, etc.)
     placeholder: |
-      - URLs
-      
+      - URLs      
 # List of actions
 - type: textarea
   attributes:
