@@ -1,0 +1,248 @@
+name: Account
+description: "Manage a funding account: rules, budget, expenses, and reporting"
+title: "Account: [Funder] funding for [Purpose] ([Fund code])"
+assignees:
+  - sjinko
+projects: ["CUPUM/210"]
+body:
+
+# Guidelines
+- type: markdown
+  attributes:
+    value: |
+      Account issues serve to manage and track a specific funding account or grant, from receipt to closure. They are automatically assigned to @sjinko, the sole account manager, and added to the [@sjinko: Operations](https://github.com/orgs/CUPUM/projects/210) project. To create an account issue:
+      1. Name it clearly, stating the funder, the purpose, and the fund code.
+      Eg. *"Account: IVADO Scholarship to Eddy Damaris Nono Defo (RNA80335)"*
+      2. Look up funders, recipients, partners and stakeholders in the [@sjinko: Contacts](https://github.com/orgs/CUPUM/projects/179) project (Contact list / Organizations views) and paste their issue URL as a list item — GitHub will format it automatically.
+
+# Funder, purpose, recipients
+- type: textarea
+  id: funder
+  attributes:
+    label: Funder
+    description: Paste the URL to the funder's entry in the [Organizations panel](https://github.com/orgs/CUPUM/projects/179/views/11) of the Contacts project.
+    placeholder: |
+      - https://github.com/CUPUM/...
+  validations:
+    required: true
+- type: textarea
+  id: purpose
+  attributes:
+    label: Purpose
+    description: Clearly describe what the funds are for and any context behind the award.
+    placeholder: |
+      This account manages funding for ...
+  validations:
+    required: true
+- type: textarea
+  id: recipients
+  attributes:
+    label: Recipients
+    description: List all recipients. There can be more than one — indicate each person's role before their entry (e.g. Lead-PI, Co-PI, Collaborator, Scholar), followed by a colon and the URL to their entry in the [Contact list](https://github.com/orgs/CUPUM/projects/179/views/1).
+    placeholder: |
+      - Lead-PI: https://github.com/CUPUM/...
+      - Collaborator: https://github.com/CUPUM/...
+  validations:
+    required: true
+
+# Account information
+- type: input
+  id: start_date
+  attributes:
+    label: Start date
+    placeholder: YYYY-MM-DD
+  validations:
+    required: true
+- type: input
+  id: end_date
+  attributes:
+    label: End date
+    placeholder: YYYY-MM-DD
+  validations:
+    required: true
+- type: input
+  id: total_amount
+  attributes:
+    label: Total amount
+    placeholder: CAD 00,000.00
+  validations:
+    required: true
+- type: input
+  id: usable_amount
+  attributes:
+    label: Usable amount
+    placeholder: CAD 00,000.00
+  validations:
+    required: true
+- type: input
+  id: fir
+  attributes:
+    label: FIR
+    placeholder: e.g. A000000
+- type: input
+  id: funding_number
+  attributes:
+    label: Funding number
+    placeholder: e.g. RNA00000
+  validations:
+    required: true
+- type: input
+  id: reference_number
+  attributes:
+    label: Reference number
+    placeholder: e.g. REF-000000
+- type: input
+  id: ethics_number
+  attributes:
+    label: Ethics number
+    description: Leave blank if not applicable.
+    placeholder: e.g. CERSES-00-000-D
+- type: input
+  id: funder_contact
+  attributes:
+    label: Funder contact
+    description: Program officer name/email at the funding organization.
+    placeholder: Name, email, phone
+
+# Partners and stakeholders
+- type: textarea
+  id: partners_and_stakeholders
+  attributes:
+    label: Partners and stakeholders
+    description: List organizations and individuals involved beyond the recipients. Indicate their role before a colon, followed by the URL to their entry in the [Organizations panel](https://github.com/orgs/CUPUM/projects/179/views/11) or [Contact list](https://github.com/orgs/CUPUM/projects/179/views/1).
+    placeholder: |
+      - Partner: https://github.com/CUPUM/...
+      - Stakeholder: https://github.com/CUPUM/...
+
+# Budget
+- type: textarea
+  id: planned_budget
+  attributes:
+    label: Planned budget
+    description: Break down the original/planned allocation using standard UdeM budget categories.
+    value: |
+      | Category | Amount |
+      | --- | --- |
+      | Salaries and benefits | |
+      | Scholarships | |
+      | Travel | |
+      | Materials and supplies | |
+      | Professional services | |
+      | Knowledge dissemination | |
+      | Overhead / indirect costs | |
+      | Other | |
+      | **Total** | |
+- type: textarea
+  id: actual_expenses
+  attributes:
+    label: Actual expenses
+    description: Log real expenses as they occur, against the planned budget above.
+    value: |
+      | Date | Category | Description | Amount |
+      | --- | --- | --- | --- |
+      | | | | |
+- type: textarea
+  id: admissible_expenses
+  attributes:
+    label: Admissible expenses
+    description: List expense categories explicitly allowed by the funder.
+- type: textarea
+  id: non_admissible_expenses
+  attributes:
+    label: Non-admissible expenses
+    description: List any expense categories explicitly excluded by the funder.
+
+# Rules and conditions
+- type: textarea
+  id: terms_and_conditions
+  attributes:
+    label: Terms and conditions
+    description: Summarize or quote the funder's rules — reporting obligations, spending window, transferability, renewal conditions, consequences of non-compliance.
+- type: textarea
+  id: visibility_and_communication_guidelines
+  attributes:
+    label: Visibility and communication guidelines
+    description: Note any requirements received from the funder on how to acknowledge or mention them (logo use, wording, tagging, etc.)
+
+# Reporting deadlines
+- type: input
+  id: interim_report_deadline
+  attributes:
+    label: Interim report deadline
+    placeholder: YYYY-MM-DD
+- type: input
+  id: final_report_deadline
+  attributes:
+    label: Final report deadline
+    placeholder: YYYY-MM-DD
+- type: input
+  id: financial_report_deadline
+  attributes:
+    label: Financial report deadline
+    placeholder: YYYY-MM-DD
+- type: input
+  id: renewal_or_extension_deadline
+  attributes:
+    label: Renewal or extension deadline
+    description: Leave blank if not applicable.
+    placeholder: YYYY-MM-DD
+
+# Resources
+- type: textarea
+  id: account_resources
+  attributes:
+    label: Account resources
+    description: Link related folders and documents.
+    placeholder: |
+      - Funding folder: https://github.com/CUPUM/subventions/...
+      - Ethics folder: https://github.com/CUPUM/ethics/...
+      - Other documentation: 
+
+# Budget management / tracking
+- type: textarea
+  id: budget_management
+  attributes:
+    label: Budget management
+    description: Track transactions, contracts, and salary allocations linked to this account as they occur.
+    placeholder: |
+      ### Salaries and benefits
+
+      ### Scholarships
+
+      ### Travel
+
+      ### Materials and supplies
+
+      ### Professional services
+
+      ### Knowledge dissemination
+
+      ### Overhead / indirect costs
+
+      ### Other
+
+# List of tasks
+- type: textarea
+  id: list_of_tasks
+  attributes:
+    label: List of tasks
+    description: |
+      Group tasks by phase. Tasks can be listed then created as issues or linked using # or full URL.
+    value: |
+      ## Administrative & setup
+      - [ ] Task: Confirm internal sub-project/budget setup
+      - [ ] Task: File and archive the award letter / agreement
+
+      ## Compliance & communications
+      - [ ] Task: Establish change-notification path with funder
+
+      ## Disbursement & spending window
+      - [ ] Task: Confirm spending window and set internal milestone reminders
+
+      ## Reporting & closeout
+      - [ ] Task: Prepare interim report
+      - [ ] Task: Prepare final report
+      - [ ] Task: Coordinate final statement of expenses with finance services
+
+      ## Documentation
+      - [ ] Task: Centralize all correspondence and receipts in the account folder
