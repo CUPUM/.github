@@ -103,6 +103,7 @@ body:
       description: Make sure this has been done
       options:
         - label: 'Action: <a href="https://gist.github.com/sjinko/6718034d2d7d827eca8575d62e9d9fea" target="_blank">Get authorization from mentioned individuals for media dissemination</a>'
+        - label: 'Action: Request the authorization using the <a href="https://gist.github.com/sjinko/057c7b2e5eece07a6adc5eb062ee92f9" target="_blank">email draft for photo and video publication</a>'
         - label: "Action: Clearly mention funding and support if any"
         - label: "Action: List necessary @ tags (School, Faculty, University, Venue, External subjects, Funding agency, Support organizations, etc.)"
         - label: "Action: Proofread content using ChatGPT or Claude"
